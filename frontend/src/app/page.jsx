@@ -19,8 +19,7 @@ export default function Home() {
 
       <Container size={640}>
         <Text size="lg" className={classes.description}>
-          Build more reliable software with AI companion. AI is also trained to detect lazy
-          developers who do nothing and just complain on Twitter.
+          Connect with us to gorw more.
         </Text>
       </Container>
 
@@ -30,6 +29,9 @@ export default function Home() {
         </Button>
         <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
           Live demo
+        </Button>
+        <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
+          Signup
         </Button>
       </div>
     </div>
