@@ -38,7 +38,7 @@ export function Login(props) {
 
   return (
     <div>
-      <Container size={500}>
+      <Container size={500} >
         <Paper radius="md" p="xl" withBorder {...props}>
           <Text size="lg" fw={500}>
             Welcome to Mantine, {type} with
