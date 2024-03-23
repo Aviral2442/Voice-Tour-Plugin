@@ -20,8 +20,8 @@ import { GoogleButton } from './GoogleButton';
 import { TwitterButton } from './TwitterButton';
 
 
-export function Login(props) {
-  const [type, toggle] = useToggle(['login', 'register']);
+export function Signup(props) {
+  const [type, toggle] = useToggle(['Signup', 'register']);
   const form = useForm({
     initialValues: {
       email: '',
@@ -98,7 +98,7 @@ export function Login(props) {
                   ? 'Already have an account? Login'
                   : "Don't have an account? Register"}
               </Anchor>
-              <Button type="submit" radius="xl">
+              <Button type="submit" radius="xl">      
                 {upperFirst(type)}
               </Button>
             </Group>
@@ -109,4 +109,4 @@ export function Login(props) {
   )
 }
 
-export default Login
+export default Signup
