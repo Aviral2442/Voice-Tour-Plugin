@@ -95,7 +95,7 @@ function Navbar() {
           <MantineLogo size={30} />
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <a href="http://localhost:3000/" className={classes.link}>
               Home
             </a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
@@ -142,17 +142,17 @@ function Navbar() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
-              Learn
+            <a href="/about" className={classes.link}>
+              About us 
             </a>
-            <a href="#" className={classes.link}>
-              Academy
+            <a href="/contact" className={classes.link}>
+              Contact us
             </a>
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            <Button variant="default"><a href='/login'>Log in</a></Button>
+            <Button><a href='/signup'>Sign up</a></Button>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
