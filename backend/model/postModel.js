@@ -7,3 +7,5 @@ const mySchema = new schema({
     
 
 });
+
+module.exports = module('PostCollections', mySchema)
