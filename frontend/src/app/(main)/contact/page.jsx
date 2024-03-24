@@ -8,7 +8,7 @@ import classes from './GetInTouch.module.css';
 
 const Contact = () => {
   return (
-    <Container size={1000}>
+    <Container size={1000} mt={120}>
       <Paper shadow="md" radius="lg">
         <div className={classes.wrapper}>
           <div className={classes.contacts}>

@@ -38,8 +38,8 @@ export function Signup(props) {
 
   return (
     <div>
-      <Container size={500} >
-        <Paper radius="md" p="xl" withBorder {...props}>
+      <Container size={500} mt={50} px={0} >
+        <Paper radius="md" p="xl" withBorder {...props}    h={500} size="xxs">
           <Text size="lg" fw={500}>
             Welcome to Mantine, {type} with
           </Text>
