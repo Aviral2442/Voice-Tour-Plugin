@@ -1,11 +1,11 @@
 import React from 'react';
-import Footer from './footer';
+import {Footer} from './footer';
 
 const MainLayout = ({ children }) => {
     return (
         <>
             {children}
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

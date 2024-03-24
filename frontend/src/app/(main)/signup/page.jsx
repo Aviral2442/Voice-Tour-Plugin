@@ -18,6 +18,7 @@ import {
 } from '@mantine/core';
 import { GoogleButton } from './GoogleButton';
 import { TwitterButton } from './TwitterButton';
+import Link from 'next/link';
 
 
 export function Signup(props) {
@@ -93,10 +94,8 @@ export function Signup(props) {
             </Stack>
 
             <Group justify="space-between" mt="xl">
-              <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
-                {type === 'register'
-                  ? 'Already have an account? Login'
-                  : "Don't have an account? Register"}
+              <Anchor component={Link} type="button" c="dimmed" href="/login" size="xs">
+                Already have an account? Login
               </Anchor>
               <Button type="submit" radius="xl">      
                 {upperFirst(type)}
