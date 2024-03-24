@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { MantineProvider, createTheme } from "@mantine/core";
 import '@mantine/core/styles.css';
+import Navbar from './(main)/navbar';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       
       <body className={inter.className}>
         <MantineProvider theme={theme} defaultColorScheme="dark">
+          <Navbar/>
           {children}
         </MantineProvider>
       </body>
