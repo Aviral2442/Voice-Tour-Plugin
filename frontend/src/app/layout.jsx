@@ -3,6 +3,7 @@ import "./globals.css";
 import { MantineProvider, createTheme } from "@mantine/core";
 import '@mantine/core/styles.css';
 import Navbar from './(main)/navbar';
+import { Footer } from "./(main)/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <MantineProvider theme={theme} defaultColorScheme="dark">
           <Navbar/>
           {children}
+          <Footer/>
         </MantineProvider>
       </body>
     </html>
