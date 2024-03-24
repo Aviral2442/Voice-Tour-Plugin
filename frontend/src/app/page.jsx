@@ -1,40 +1,80 @@
-import cx from 'clsx';
-import { Title, Text, Container, Button, Overlay } from '@mantine/core';
-// import { GithubIcon } from '@mantinex/dev-icons';
-import classes from './page.module.css';
-import { Icon3dRotate } from '@tabler/icons-react';
+'use client'
+import React from 'react'
+import {
+  Image,
+  Container,
+  Title,
+  Button,
+  Group,
+  Text,
+  List,
+  ThemeIcon,
+  rem
+} from "@mantine/core"
+import { IconCheck } from "@tabler/icons-react"
 
-export default function Home() {
+import classes from "./page.module.css"
+
+const page = () => {
   return (
-    <div className={classes.wrapper}>
-    <Overlay color="#000" opacity={0.65} zIndex={1} />
-
+    <Container size="md" p={0}>
     <div className={classes.inner}>
-      <Title className={classes.title}>
-        Automated AI code reviews for{' '}
-        <Text component="span" inherit className={classes.highlight}>
-          any stack
+      <div className={classes.content}>
+        <Title className={classes.title}>
+          A <span className={classes.highlight}>modern</span> React <br />{" "}
+          components library
+        </Title>
+        <Text c="dimmed" mt="md">
+          Build fully functional accessible web applications faster than ever
+          – Mantine includes more than 120 customizable components and hooks
+          to cover you in any situation
         </Text>
-      </Title>
 
-      <Container size={640}>
-        <Text size="lg" className={classes.description}>
-          Connect with us to gorw more.
-        </Text>
-      </Container>
+        <List
+          mt={30}
+          spacing="sm"
+          size="sm"
+          icon={
+            <ThemeIcon size={20} radius="xl">
+              <IconCheck
+                style={{ width: rem(12), height: rem(12) }}
+                stroke={1.5}
+              />
+            </ThemeIcon>
+          }
+        >
+          <List.Item>
+            <b>TypeScript based</b> – build type safe applications, all
+            components and hooks export types
+          </List.Item>
+          <List.Item>
+            <b>Free and open source</b> – all packages have MIT license, you
+            can use Mantine in any project
+          </List.Item>
+          <List.Item>
+            <b>No annoying focus ring</b> – focus ring will appear only when
+            user navigates with keyboard
+          </List.Item>
+        </List>
 
-      <div className={classes.controls}>
-        <Button className={classes.control} variant="white" size="lg">
-          Get started
-        </Button>
-        <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
-          Live demo
-        </Button>
-        <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
-          Signup
-        </Button>
+        <Group mt={30}>
+          <Button radius="xl" size="md" className={classes.control}>
+            Get started
+          </Button>
+          <Button
+            variant="default"
+            radius="xl"
+            size="md"
+            className={classes.control}
+          >
+            Source code
+          </Button>
+        </Group>
       </div>
+      <Image src="https://png.pngtree.com/background/20230503/original/pngtree-smart-robot-with-cute-face-colorful-plants-picture-image_2500123.jpg" className={classes.image} />
     </div>
-  </div>
-  );
+  </Container>
+  )
 }
+
+export default page

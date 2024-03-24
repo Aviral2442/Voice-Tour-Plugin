@@ -1,11 +1,19 @@
-.Container{
-    width: 700px;
-    height: 500px;
+.responsiveContainer {
+    max-width: rem(300px);
+  
+    @media (min-width: em(400px)) {
+      max-width: rem(400px);
+    }
+  
+    @media (min-width: em(600px)) {
+      max-width: rem(600px);
+    }
+    
+  }
+  .Container{
+     background-image: url('https://www.creativefabrica.com/wp-content/uploads/2022/05/17/Futuristic-Red-Black-Background-Design-Graphics-30694681-1.jpg'); 
+     background-repeat: no-repeat; 
+     background-position: contain; 
+     background-size: cover; 
    
-    background-image: url('https://www.creativefabrica.com/wp-content/uploads/2022/05/17/Futuristic-Red-Black-Background-Design-Graphics-30694681-1.jpg');
-    background-repeat: no-repeat;
-    background-position: contain;
-    background-size: cover;
-    border: solid 2px white;
-    box-shadow: 5px 5px 20px red;
 }
