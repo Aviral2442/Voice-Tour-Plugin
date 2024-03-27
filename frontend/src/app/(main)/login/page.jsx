@@ -64,15 +64,16 @@ export function Login() {
             <Container size="responsive" mt={50} h={700} w={700} >
               <Paper withBorder shadow="md" p={30} mt={30} radius="md" p="xl" withBorder className={classes.Paper}>
                 <Title className={classes.title} >
-                  Welcome to Mantine, Login with
-                </Title>
+                  Welcome to Mantine</Title>
+                   <Text className={classes.text} >Login with
+                </Text>
                 <Group grow mb="md" mt="md">
                   <GoogleButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Google</GoogleButton>
                   <TwitterButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Twitter</TwitterButton>
                 </Group>
 
                 <Divider  label={
-                  <p style={{color: 'red'}}>Or continue with email</p>
+                  <p style={{color: 'black'}}>Or continue with email</p>
                 } labelPosition="center" my="lg" />
                 <form onSubmit={form.onSubmit((values) => console.log(values))}>
 
