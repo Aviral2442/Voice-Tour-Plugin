@@ -85,10 +85,17 @@ export function Signup(props) {
     },
 
     validate: {
-      email: (val) => (/^\S+@\S+$/.test(val) ? null : 'Invalid email'),
-      password: (val) => (val.length <= 6 ? 'Password should include at least 6 characters' : null),
+      email: (val) => (/^\S+@\S+$/.test(val) ? null : 'Invalid email')
     },
   });
+
+  const signupSubmit = (values) => {
+    console.log(values);
+    values.password = value;
+    console.log(values);
+    setValue('');
+    form.reset();
+  }
 
   return (
     <div>
@@ -105,7 +112,7 @@ export function Signup(props) {
 
           <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
-          <form onSubmit={form.onSubmit(() => { })}>
+          <form onSubmit={form.onSubmit(signupSubmit)}>
             <Stack>
                 <TextInput
                   label="Name"
@@ -145,7 +152,6 @@ export function Signup(props) {
                 <Checkbox
                   label="I accept terms and conditions"
                   checked={form.values.terms}
-                  onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
                 />
               
             </Stack>
