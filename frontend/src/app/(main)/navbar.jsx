@@ -31,6 +31,7 @@ import {
   IconChevronDown,
 } from '@tabler/icons-react';
 import classes from './HeaderMegaMenu.module.css';
+import Link from 'next/link';
 
 const mockdata = [
   {
@@ -143,7 +144,7 @@ function Navbar() {
               </HoverCard.Dropdown>
             </HoverCard>
             <a href="/about" className={classes.link}>
-              About us 
+              About us
             </a>
             <a href="/contact" className={classes.link}>
               Contact us
@@ -151,8 +152,8 @@ function Navbar() {
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default"><a href='/login'>Log in</a></Button>
-            <Button><a href='/signup'>Sign up</a></Button>
+            <Button component={Link} variant="default" href='/login'>Log in</Button>
+            <Button component={Link} href='/signup'>Sign up</Button>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />

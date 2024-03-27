@@ -71,7 +71,9 @@ export function Login() {
                   <TwitterButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Twitter</TwitterButton>
                 </Group>
 
-                <Divider label="Or continue with email" labelPosition="center" my="lg" />
+                <Divider  label={
+                  <p style={{color: 'red'}}>Or continue with email</p>
+                } labelPosition="center" my="lg" />
                 <form onSubmit={form.onSubmit((values) => console.log(values))}>
 
                   <TextInput withAsterisk label="Email" placeholder="your@email.com"
