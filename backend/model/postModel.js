@@ -1,11 +1,13 @@
-const {model, schema} = require('../connection');
+const {model, Schema} = require('../connection');
 
-const mySchema = new schema({
+const mySchema = new Schema({
 
     name : String,
-    age : Number,
+    email: String,
+    password: String
+
     
 
 });
 
-module.exports = module('PostCollections', mySchema)
+module.exports = model('PostCollections', mySchema);

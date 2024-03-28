@@ -102,7 +102,23 @@ export function SignUp(props) {
     values.password = value;
     console.log(values);
 
-    
+    fetch('http://localhost:5000/post/add', {
+                method : 'POST',
+                body : JSON.stringify(values),     // convert js to json language
+                headers : {
+                    'Content-Type': 'application/json'
+                }
+
+            })
+
+            .then((response) => {
+                console.log(response.status);
+                toast.success('Post Added successfully');
+
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
 
     setValue('');
     form.reset();
