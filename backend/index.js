@@ -5,11 +5,12 @@ const app = express();
 
 const postRouter = require('./routers/postRouter');
 
+app.use(express.json());
 app.use(cors({
-    origin: 'http//localhost:3000'
+    origin: ['http://localhost:3000']
 }));
 
-app.use(express.json());
+
 
 app.use('/post', postRouter);
 
