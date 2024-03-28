@@ -84,6 +84,7 @@ export function SignUp(props) {
       name: '',
       email: '',
       password: '',
+      confirmPassword: '',
       termsOfService: false,
 
     },
@@ -91,14 +92,18 @@ export function SignUp(props) {
     validate: {
       name: (value) => (value.length < 5 ? 'Name must have at least 5 letters' : null),
       email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-
+      confirmPassword: (v) =>
+        v !== value ? 'Passwords did not match' : null,
     },
   });
- 
+
   const signupSubmit = (values) => {
     console.log(values);
     values.password = value;
     console.log(values);
+
+    
+
     setValue('');
     form.reset();
   }
@@ -129,7 +134,7 @@ export function SignUp(props) {
               }
                 labelPosition="center" my="lg" />
 
-              <form  onSubmit={form.onSubmit(signupSubmit)}>
+              <form onSubmit={form.onSubmit(signupSubmit)}>
 
                 <TextInput label="Name" placeholder="Full Name"  {...form.getInputProps('name')} />
 
@@ -153,7 +158,7 @@ export function SignUp(props) {
                         onChange={event => setValue(event.currentTarget.value)}
                         error={form.errors.password && 'Password should include at least 8 characters'}
                         mt="md"
-                        
+
                         required />
                     </div>
                   </Popover.Target>
@@ -166,7 +171,13 @@ export function SignUp(props) {
                     {checks}
                   </Popover.Dropdown>
                 </Popover>
-               
+                <PasswordInput
+                  mt="sm"
+                  label="Confirm password"
+                  placeholder="Confirm password"
+                  {...form.getInputProps('confirmPassword')}
+                />
+
 
 
                 <Group justify="space-between" mt="lg">
@@ -174,7 +185,6 @@ export function SignUp(props) {
                     checked={form.values.terms}
                     {...form.getInputProps('termsOfService', { type: 'checkbox' })}
                   />
-
                 </Group>
                 <Group justify="space-between" mt="xl">
                   <Anchor component={Link} underline="hover" type="button" c="dimmed" href="/login" size="xs">
