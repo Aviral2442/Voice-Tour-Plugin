@@ -105,65 +105,67 @@ function Navbar() {
     <Box pb={0}>
       <header className={classes.header}>
         <Group justify='space-between' h="100%">
-          <Title order={3} >Voice Tour </Title>
+          <Anchor href="http://localhost:3000/" underline="never">
+            <Title order={3} >Voice Tour </Title>
+          </Anchor>
 
 
           <Group visibleFrom="sm">
-          <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="http://localhost:3000/" className={classes.link}>
-              Home
-            </a>
-            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
-              <HoverCard.Target>
-                <a href="#" className={classes.link}>
-                  <Center inline>
-                    <Box component="span" mr={5}>
-                      Features
-                    </Box>
-                    <IconChevronDown
-                      style={{ width: rem(16), height: rem(16) }}
-                      color={theme.colors.blue[6]}
-                    />
-                  </Center>
-                </a>
-              </HoverCard.Target>
+            <Group h="100%" gap={0} visibleFrom="sm"> 
+              <a href="http://localhost:3000/" className={classes.link}>
+                Home
+              </a>
+              <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+                <HoverCard.Target>
+                  <a href="#" className={classes.link}>
+                    <Center inline>
+                      <Box component="span" mr={5}>
+                        Features
+                      </Box>
+                      <IconChevronDown
+                        style={{ width: rem(16), height: rem(16) }}
+                        color={theme.colors.blue[6]}
+                      />
+                    </Center>
+                  </a>
+                </HoverCard.Target>
 
-              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
-                <Group justify="space-between" px="md">
-                  <Text fw={500}>Features</Text>
-                  <Anchor href="#" fz="xs">
-                    View all
-                  </Anchor>
-                </Group>
-
-                <Divider my="sm" />
-
-                <SimpleGrid cols={2} spacing={0}>
-                  {links}
-                </SimpleGrid>
-
-                <div className={classes.dropdownFooter}>
-                  <Group justify="space-between">
-                    <div>
-                      <Text fw={500} fz="sm">
-                        Get started
-                      </Text>
-                      <Text size="xs" c="dimmed">
-                        Their food sources have decreased, and their numbers
-                      </Text>
-                    </div>
-                    <Button variant="default">Get started</Button>
+                <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
+                  <Group justify="space-between" px="md">
+                    <Text fw={500}>Features</Text>
+                    <Anchor href="#" fz="xs">
+                      View all
+                    </Anchor>
                   </Group>
-                </div>
-              </HoverCard.Dropdown>
-            </HoverCard>
-            <a href="/about" className={classes.link}>
-              About us
-            </a>
-            <a href="/contact" className={classes.link}>
-              Contact us
-            </a>
-          </Group>
+
+                  <Divider my="sm" />
+
+                  <SimpleGrid cols={2} spacing={0}>
+                    {links}
+                  </SimpleGrid>
+
+                  <div className={classes.dropdownFooter}>
+                    <Group justify="space-between">
+                      <div>
+                        <Text fw={500} fz="sm">
+                          Get started
+                        </Text>
+                        <Text size="xs" c="dimmed">
+                          Their food sources have decreased, and their numbers
+                        </Text>
+                      </div>
+                      <Button variant="default">Get started</Button>
+                    </Group>
+                  </div>
+                </HoverCard.Dropdown>
+              </HoverCard>
+              <a href="/about" className={classes.link}>
+                About us
+              </a>
+              <a href="/contact" className={classes.link}>
+                Contact us
+              </a>
+            </Group>
             <TextInput
               placeholder="Search"
               size="xs"
@@ -176,15 +178,15 @@ function Navbar() {
             />
             {/* <Button component={Link} variant="default" href='/login'>Log in</Button> */}
             <Button component={Link} href='/signup'>Sign up</Button>
-          <ActionIcon
-            onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
-            variant="default"
-            size="xl"
-            aria-label="Toggle color scheme"
-          >
-            <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
-            <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
-          </ActionIcon>
+            <ActionIcon
+              onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
+              variant="default"
+              size="xl"
+              aria-label="Toggle color scheme"
+            >
+              <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
+              <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
+            </ActionIcon>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />

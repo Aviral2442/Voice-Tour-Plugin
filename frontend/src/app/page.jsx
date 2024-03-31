@@ -14,7 +14,8 @@ import {
 import { IconCheck } from "@tabler/icons-react"
 
 import classes from "./page.module.css"
-import FeaturesCards from './FeaturesCards';
+import FeaturesCards from './FeaturesCards'
+import Faqsection from './faqSection'
 
 
 const page = () => {
@@ -81,6 +82,9 @@ const page = () => {
       </section>
 
         <FeaturesCards/>
+
+      <Faqsection/>
+
     </>
   )
 }
