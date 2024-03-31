@@ -3,7 +3,7 @@ const cors = require('cors');
 
 const app = express();
 
-const postRouter = require('./routers/postRouter');
+const userRouter = require('./routers/userRouter');
 
 app.use(express.json());
 app.use(cors({
@@ -12,7 +12,7 @@ app.use(cors({
 
 
 
-app.use('/post', postRouter);
+app.use('/user', userRouter);
 
 const port = 5000;
 

@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Module = require('../model/postModel');
+const Model = require('../model/userModel');
 
 
 router.post('/add', (req, res) => {
     console.log(req.body);
-    new Module(req.body).save()
+    new Model(req.body).save()
 
     .then((result) => {
         res.status(200).json(result);
