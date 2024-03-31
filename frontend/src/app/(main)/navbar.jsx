@@ -18,6 +18,7 @@ import {
   ScrollArea,
   rem,
   useMantineTheme,
+  Title,
 } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
@@ -93,7 +94,7 @@ function Navbar() {
     <Box pb={0}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <MantineLogo size={30} />
+          <Title order={3} >Voice Tour </Title>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="http://localhost:3000/" className={classes.link}>
