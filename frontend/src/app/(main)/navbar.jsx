@@ -115,6 +115,12 @@ function Navbar() {
               <a href="http://localhost:3000/" className={classes.link}>
                 Home
               </a>
+              <a href="/voiceAssistant" className={classes.link}>
+                Tour Assistant
+              </a>
+              <a href="/tourGenerator" className={classes.link}>
+                Tour Generator
+              </a>
               <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
                 <HoverCard.Target>
                   <a href="#" className={classes.link}>
