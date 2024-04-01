@@ -116,7 +116,7 @@ function Navbar() {
                 Home
               </a>
               <a href="/voiceAssistant" className={classes.link}>
-                Tour Assistant
+                Voice Assistant
               </a>
               <a href="/tourGenerator" className={classes.link}>
                 Tour Generator

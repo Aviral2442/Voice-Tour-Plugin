@@ -141,11 +141,10 @@ export function SignUp(props) {
 
       >
         <Center p="md">
-          <Container mt={10} w={800} fluid>
+          <Container mt={10} w={700} fluid>
             <Paper withBorder shadow="md" mt={30} {...props} radius="md" p="xl" className={classes.Paper}>
               <Title className={classes.title} >
-                Welcome to
-                <br /> VoiceTour Navigator</Title>
+                Welcome to VoiceTour Navigator</Title>
               <Text className={classes.text}>SignUp with</Text>
 
               <Group grow mb="md" mt="md">
