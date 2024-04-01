@@ -25,11 +25,12 @@
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
-  font-weight: 1000;
+  font-weight: 900;
   text-align: center;
+  font-size: 30px;
 }
 .text{
   text-align: center;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 19px;
 }
