@@ -26,13 +26,15 @@ const page = () => {
           <div className={classes.inner}>
             <div className={classes.content}>
               <Title className={classes.title}>
-                A <span className={classes.highlight}>modern</span> React <br />{" "}
-                components library
+                <span className={classes.subtitle} >Welcome to<br /></span>
+                {/* <span className={classes.highlight}> */}
+                VoiceTour 
+                {/* </span>  */}
+                Navigator <br />{" "}
+                Plugin System
               </Title>
               <Text c="dimmed" mt="md">
-                Build fully functional accessible web applications faster than ever
-                – Mantine includes more than 120 customizable components and hooks
-                to cover you in any situation
+              Revolutionizing Website Navigation with Voice Technology
               </Text>
 
               <List
@@ -48,17 +50,24 @@ const page = () => {
                   </ThemeIcon>
                 }
               >
-                <List.Item>
-                  <b>TypeScript based</b> – build type safe applications, all
+                {/* <List.Item>
+                  <b>Voice-Based Navigation</b> – build type safe applications, all
                   components and hooks export types
+                </List.Item> */}
+                <List.Item>
+                  <b>Voice-Based Navigation</b>
                 </List.Item>
                 <List.Item>
-                  <b>Free and open source</b> – all packages have MIT license, you
-                  can use Mantine in any project
+                  <b>Personalized Website Tours</b>
                 </List.Item>
                 <List.Item>
-                  <b>No annoying focus ring</b> – focus ring will appear only when
-                  user navigates with keyboard
+                  <b>Plugin Customization</b>
+                </List.Item>
+                <List.Item>
+                  <b>Intuitive User Experience</b>
+                </List.Item>
+                <List.Item>
+                  <b>Continuous Improvement</b>
                 </List.Item>
               </List>
 

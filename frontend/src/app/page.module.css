@@ -29,6 +29,11 @@
   }
 }
 
+.subtitle{
+  font-size: 32px;
+  font-weight: 400;
+}
+
 .control {
   @media (max-width: $mantine-breakpoint-xs) {
     flex: 1;

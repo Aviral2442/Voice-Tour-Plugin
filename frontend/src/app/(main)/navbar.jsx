@@ -106,7 +106,7 @@ function Navbar() {
       <header className={classes.header}>
         <Group justify='space-between' h="100%">
           <Anchor href="http://localhost:3000/" underline="never">
-            <Title order={3} >Voice Tour </Title>
+            <Title order={3} >VoiceTour Navigator </Title>
           </Anchor>
 
 
