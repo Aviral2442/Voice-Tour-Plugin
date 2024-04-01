@@ -121,7 +121,7 @@ function Navbar() {
               <a href="/tourGenerator" className={classes.link}>
                 Tour Generator
               </a>
-              <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+              {/* <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
                 <HoverCard.Target>
                   <a href="#" className={classes.link}>
                     <Center inline>
@@ -164,7 +164,7 @@ function Navbar() {
                     </Group>
                   </div>
                 </HoverCard.Dropdown>
-              </HoverCard>
+              </HoverCard> */}
               <a href="/about" className={classes.link}>
                 About us
               </a>

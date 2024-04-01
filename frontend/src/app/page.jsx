@@ -85,7 +85,7 @@ const page = () => {
                 </Button>
               </Group>
             </div>
-            <Image src="https://png.pngtree.com/background/20230503/original/pngtree-smart-robot-with-cute-face-colorful-plants-picture-image_2500123.jpg" className={classes.image} />
+            <Image src="hero.png" className={classes.image} />
           </div>
         </Container>
       </section>
