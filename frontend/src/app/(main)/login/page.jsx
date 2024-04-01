@@ -64,7 +64,7 @@ export function Login() {
             <Container size="responsive" mt={50} h={700} w={700} >
               <Paper withBorder shadow="md" p={30} mt={30} radius="md" p="xl" withBorder className={classes.Paper}>
                 <Title className={classes.title} >
-                  Welcome to Mantine</Title>
+                  Welcome to VoiceTour Navigator</Title>
                    <Text className={classes.text} >Login with
                 </Text>
                 <Group grow mb="md" mt="md">
