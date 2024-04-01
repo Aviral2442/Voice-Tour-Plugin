@@ -85,7 +85,7 @@ const page = () => {
                 </Button>
               </Group>
             </div>
-            <Image src="hero.png" className={classes.image} />
+            <video autoPlay muted src={"/hero_video.mp4"} className={classes.image} ></video>
           </div>
         </Container>
       </section>
