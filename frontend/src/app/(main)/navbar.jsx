@@ -111,7 +111,7 @@ function Navbar() {
 
 
           <Group visibleFrom="sm">
-            <Group h="100%" gap={0} visibleFrom="sm"> 
+            <Group h="100%" gap={0} visibleFrom="sm">
               <a href="http://localhost:3000/" className={classes.link}>
                 Home
               </a>

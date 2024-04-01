@@ -61,7 +61,7 @@ export function Login() {
           h={700}
         >
           <Center p="md">
-            <Container size="responsive" mt={50} h={700} w={700} >
+            <Container size="responsive" mt={45}  w={700} >
               <Paper withBorder shadow="md" p={30} mt={30} radius="md" p="xl" withBorder className={classes.Paper}>
                 <Title className={classes.title} >
                   Welcome to VoiceTour Navigator</Title>
