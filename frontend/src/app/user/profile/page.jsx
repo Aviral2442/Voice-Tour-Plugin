@@ -18,31 +18,28 @@ const WebPage = () => {
   return (
     <Container size={420} my={40}>
     <Title ta="center" className={classes.title}>
-     Web Page For user
+     Create Profile
     </Title>
-    <Text c="dimmed" size="sm" ta="center" mt={5}>
+    {/* <Text c="dimmed" size="sm" ta="center" mt={5}>
       Do not have an account yet?{" "}
       <Anchor size="sm" component="button">
         Fill the Form
       </Anchor>
-    </Text>
+    </Text> */}
 
     <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-      <TextInput label="Email" placeholder="you@mantine.dev" required />
-      <PasswordInput
-        label="Password"
-        placeholder="Your password"
-        required
-        mt="md"
-      />
-      <Group justify="space-between" mt="lg">
+      <TextInput label="Name" placeholder="Enter your name " required />
+      <TextInput label="Address" placeholder="Enter your address" required />
+      <TextInput label="Description" placeholder="Enter your description" required />
+      
+      {/* <Group justify="space-between" mt="lg">
         <Checkbox label="Remember me" />
         <Anchor component="button" size="sm">
           Forgot password?
         </Anchor>
-      </Group>
+      </Group> */}
       <Button fullWidth mt="xl">
-        Sign in
+        Upload Profile
       </Button>
     </Paper>
   </Container>
