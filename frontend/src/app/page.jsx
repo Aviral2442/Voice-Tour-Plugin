@@ -16,11 +16,14 @@ import { IconCheck } from "@tabler/icons-react"
 import classes from "./page.module.css"
 import FeaturesCards from './FeaturesCards'
 import Faqsection from './faqSection'
+import UseCase from './useCase'
 
 
 const page = () => {
   return (
     <>
+
+      {/* HERO SECTION  */}
       <section>
         <Container size="md" p={0}>
           <div className={classes.inner}>
@@ -28,13 +31,13 @@ const page = () => {
               <Title className={classes.title}>
                 <span className={classes.subtitle} >Welcome to<br /></span>
                 {/* <span className={classes.highlight}> */}
-                VoiceTour 
+                VoiceTour
                 {/* </span>  */}
                 Navigator <br />{" "}
                 Plugin System
               </Title>
               <Text c="dimmed" mt="md">
-              Revolutionizing Website Navigation with Voice Technology
+                Revolutionizing Website Navigation with Voice Technology
               </Text>
 
               <List
@@ -90,9 +93,14 @@ const page = () => {
         </Container>
       </section>
 
-        <FeaturesCards/>
+      {/* FEATURE'S CARDS */}
+      <FeaturesCards />
 
-      <Faqsection/>
+      {/* FAQ'S SECTION */}
+      <Faqsection />
+
+      {/* Use Case Section */}
+      <UseCase />
 
     </>
   )
