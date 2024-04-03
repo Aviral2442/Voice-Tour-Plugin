@@ -9,95 +9,101 @@ import {
   Text,
   List,
   ThemeIcon,
-  rem
+  rem,
+  Overlay,
+  Box,
+  BackgroundImage
 } from "@mantine/core"
-import { IconCheck } from "@tabler/icons-react"
+import { IconCheck, IconProgressCheck } from "@tabler/icons-react"
 
 import classes from "./page.module.css"
 import FeaturesCards from './FeaturesCards'
 import Faqsection from './faqSection'
-import UseCase from './useCase'
+import cx from 'clsx';
+import { GithubIcon } from '@mantinex/dev-icons'
 
 
 const page = () => {
   return (
     <>
+      <section  >
+        <Box mx="auto" className={classes.box}>
 
-      {/* HERO SECTION  */}
-      <section>
-        <Container size="md" p={0}>
-          <div className={classes.inner}>
-            <div className={classes.content}>
+          <Container  >
+            <div className={classes.inner}>
+              <div className={classes.content}>
+                <Title className={classes.title}><span className={classes.highlight}>Welcome to</span> <br /><span className={classes.subtitle}>VoiceTourNavigator </span><br />Plugin System</Title>
+                <Text mt="md">
+                  Revolutionizing Website Navigation with Voice Technology
+                </Text>
 
-            <Title className={classes.title}><span className={classes.highlight}>Welcome to</span> <br />
-            <span className={classes.subtitle}>VoiceTourNavigator </span><br />
-            Plugin System</Title>
+                <List className={classes.List} size="md" mt="xl" spacing="sm"
 
-              <Text c="dimmed" mt="md">
-                Revolutionizing Website Navigation with Voice Technology
-              </Text>
+                  icon={
+                    <ThemeIcon size={20} radius="xl" style={{backgroundImage: 'linear-gradient(to right, #01fffb, #4cbbff)'}}>
+                      <IconCheck
+                        style={{ width: rem(12), height: rem(12) }}
+                        stroke={5}
 
-              <List
-                mt={30}
-                spacing="sm"
-                size="sm"
-                icon={
-                  <ThemeIcon size={20} radius="xl" style={{backgroundImage:'linear-gradient( to right, #01fffb, #4cbbff)'}}>
-                    <IconCheck
-                      style={{ width: rem(12), height: rem(12) }}
-                      stroke={1.5}
-                    />
-                  </ThemeIcon>
-                }
-              >
-                {/* <List.Item>
+                      />
+                    </ThemeIcon>
+                  }
+                >
+                  {/* <List.Item>
                   <b>Voice-Based Navigation</b> – build type safe applications, all
                   components and hooks export types
                 </List.Item> */}
-                <List.Item>
-                  <b>Voice-Based Navigation</b>
-                </List.Item>
-                <List.Item>
-                  <b>Personalized Website Tours</b>
-                </List.Item>
-                <List.Item>
-                  <b>Plugin Customization</b>
-                </List.Item>
-                <List.Item>
-                  <b>Intuitive User Experience</b>
-                </List.Item>
-                <List.Item>
-                  <b>Continuous Improvement</b>
-                </List.Item>
-              </List>
+                  <List.Item>
+                    <b>Voice-Based Navigation</b>
+                  </List.Item>
+                  <List.Item>
+                    <b>Personalized Website Tours</b>
+                  </List.Item>
+                  <List.Item>
+                    <b>Plugin Customization</b>
+                  </List.Item>
+                  <List.Item>
+                    <b>Intuitive User Experience</b>
+                  </List.Item>
+                  <List.Item>
+                    <b>Continuous Improvement</b>
+                  </List.Item>
+                </List>
 
-              <Group mt={30}>
-                <Button radius="xl" size="md" className={classes.control}>
-                  Get started
-                </Button>
-                <Button
-                  variant="default"
-                  radius="xl"
-                  size="md"
-                  className={classes.control}
-                >
-                  Source code
-                </Button>
-              </Group>
+
+                <Group className={classes.controls}>
+                  <Button
+                    size="sm"
+                    className={classes.control}
+                    variant="filled"
+                  >
+                    Get started
+                  </Button>
+
+                  <Button
+                    component="a"
+                    href="https://github.com/mantinedev/mantine"
+                    size="sm"
+                    variant="default"
+                    className={classes.control}
+                    leftSection={<GithubIcon size={20} />}
+                  >
+                    GitHub
+                  </Button>
+                </Group>
+
+              </div>
+              <Image src="micimg.png" className={classes.image} />
+                
             </div>
-            <video autoPlay muted src={"/hero_video.mp4"} className={classes.image} ></video>
-          </div>
-        </Container>
+          </Container>
+
+        </Box>
       </section>
 
-      {/* FEATURE'S CARDS */}
       <FeaturesCards />
 
-      {/* FAQ'S SECTION */}
       <Faqsection />
-
-      {/* Use Case Section */}
-      <UseCase />
 
     </>
   )
