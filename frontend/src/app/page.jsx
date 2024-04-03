@@ -21,11 +21,14 @@ import FeaturesCards from './FeaturesCards'
 import Faqsection from './faqSection'
 import cx from 'clsx';
 import { GithubIcon } from '@mantinex/dev-icons'
+import Navbar from './(main)/navbar'
+import { Footer } from './(main)/footer'
 
 
 const page = () => {
   return (
     <>
+    <Navbar/>
       <section  >
         <Box mx="auto" className={classes.box}>
 
@@ -104,6 +107,8 @@ const page = () => {
       <FeaturesCards />
 
       <Faqsection />
+
+      <Footer/>
 
     </>
   )

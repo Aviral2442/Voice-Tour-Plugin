@@ -22,9 +22,9 @@ export default function RootLayout({ children }) {
       
       <body className={inter.className}>
         <MantineProvider theme={theme} defaultColorScheme="light">
-          <Navbar/>
+          
           {children}
-          <Footer/>
+          
         </MantineProvider>
       </body>
     </html>
