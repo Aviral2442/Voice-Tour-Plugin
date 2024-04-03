@@ -33,7 +33,7 @@ const WebPage = () => {
     },
     onSubmit: (values, { resetForm }) => {
       console.log(values);
-    //   resetForm();
+      //   resetForm();
     },
     validationSchema: webpageValidationSchema
   });
@@ -41,12 +41,12 @@ const WebPage = () => {
 
   return (
     <Container size={420} my={40} mt={120}>
-      <Title ta="center" className={classes.title}>
-        Create Profile
-      </Title>
+
 
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-
+        <Title ta="center" className={classes.title}>
+          Webpage
+        </Title>
         <form onSubmit={webpageForm.handleSubmit}>
           <TextInput
             label="Name"
@@ -57,7 +57,7 @@ const WebPage = () => {
             value={webpageForm.values.name}
             className="form-control"
             error={webpageForm.touched.name && webpageForm.errors.name}
-             />
+          />
 
 
           <TextInput label="Address"
@@ -67,11 +67,8 @@ const WebPage = () => {
             onChange={webpageForm.handleChange}
             value={webpageForm.values.address}
             className="form-control"
-            {
-              ...webpageForm.touched.address &&
-              <small class="text-danger">{webpageForm.errors.address}</small>
-            }
-             />
+            error={webpageForm.touched.address && webpageForm.errors.address}
+          />
 
 
           <TextInput label="Description"
@@ -81,13 +78,10 @@ const WebPage = () => {
             onChange={webpageForm.handleChange}
             value={webpageForm.values.description}
             className="form-control"
-            {
-              ...webpageForm.touched.description &&
-              <small class="text-danger">{webpageForm.errors.description}</small>
-            }
-             />
+            error={webpageForm.touched.description && webpageForm.errors.description}
+          />
 
-        
+
           <Button type='submit' fullWidth mt="xl">
             Add WebPage
           </Button>

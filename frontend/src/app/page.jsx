@@ -78,7 +78,7 @@ const page = () => {
                   <Button
                     size="sm"
                     className={classes.control}
-                    variant="filled"
+                    variant="outline"
                   >
                     Get started
                   </Button>
@@ -87,7 +87,7 @@ const page = () => {
                     component="a"
                     href="https://github.com/mantinedev/mantine"
                     size="sm"
-                    variant="default"
+                    variant="outline"
                     className={classes.control}
                     leftSection={<GithubIcon size={20} />}
                   >

@@ -51,7 +51,7 @@
   height: rem(50px);
   padding-left: rem(38px);
   padding-right: rem(38px);
-  background-image: linear-gradient( #01fffb, #4cbbff);
+  
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: rem(54px);

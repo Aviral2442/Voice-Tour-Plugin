@@ -7,6 +7,7 @@ import classes from './GetInTouch.module.css';
 
 
 const Contact = () => {
+  
   return (
     <Container size={1000} mt={120} mb={120}>
       <Paper shadow="md" radius="lg">
@@ -40,7 +41,8 @@ const Contact = () => {
               />
 
               <Group justify="flex-end" mt="md">
-                <Button type="submit" className={classes.control}>
+                <Button type="submit" 
+                  className={classes.control}>
                   Send message
                 </Button>
               </Group>
