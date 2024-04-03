@@ -10,9 +10,9 @@
   }
   
   .title {
-    color: var(--mantine-color-blue-0);
+    color: black;
   }
   
   .description {
-    color: var(--mantine-color-white);
+    color: black;
   }

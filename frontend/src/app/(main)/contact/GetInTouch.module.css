@@ -56,7 +56,7 @@
     border: rem(1px) solid transparent;
     padding: var(--mantine-spacing-xl);
     flex: 0 0 rem(280px);
-    background-image: linear-gradient(to top right, blue, darkblue);
+    background-image: linear-gradient(to top right,  #01fffb, #4cbbff);
   
     @media (max-width: $mantine-breakpoint-sm) {
       margin-bottom: var(--mantine-spacing-sm);
@@ -69,6 +69,8 @@
     font-family:
       Greycliff CF,
       var(--mantine-font-family);
+      text-align: center;
+      
   
     @media (max-width: $mantine-breakpoint-sm) {
       margin-bottom: var(--mantine-spacing-xl);
@@ -76,6 +78,7 @@
   }
   
   .control {
+    background-image: linear-gradient(to top right,  #01fffb, #4cbbff);
     @media (max-width: $mantine-breakpoint-sm) {
       flex: 1;
     }

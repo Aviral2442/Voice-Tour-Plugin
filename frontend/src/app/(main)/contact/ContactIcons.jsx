@@ -7,7 +7,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }) {
   return (
     <div className={classes.wrapper} {...others}>
       <Box mr="md">
-        <Icon style={{ width: rem(24), height: rem(24) }} />
+        <Icon style={{ width: rem(24), height: rem(24),color:'black' }} />
       </Box>
 
       <div>
