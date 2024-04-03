@@ -28,14 +28,11 @@ const page = () => {
         <Container size="md" p={0}>
           <div className={classes.inner}>
             <div className={classes.content}>
-              <Title className={classes.title}>
-                <span className={classes.subtitle} >Welcome to<br /></span>
-                {/* <span className={classes.highlight}> */}
-                VoiceTour
-                {/* </span>  */}
-                Navigator <br />{" "}
-                Plugin System
-              </Title>
+
+            <Title className={classes.title}><span className={classes.highlight}>Welcome to</span> <br />
+            <span className={classes.subtitle}>VoiceTourNavigator </span><br />
+            Plugin System</Title>
+
               <Text c="dimmed" mt="md">
                 Revolutionizing Website Navigation with Voice Technology
               </Text>
@@ -45,7 +42,7 @@ const page = () => {
                 spacing="sm"
                 size="sm"
                 icon={
-                  <ThemeIcon size={20} radius="xl">
+                  <ThemeIcon size={20} radius="xl" style={{backgroundImage:'linear-gradient( to right, #01fffb, #4cbbff)'}}>
                     <IconCheck
                       style={{ width: rem(12), height: rem(12) }}
                       stroke={1.5}

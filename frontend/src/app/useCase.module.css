@@ -37,9 +37,9 @@
   }
   
   .highlight {
-    background-color: var(--mantine-color-blue-light);
-    padding: rem(5px);
-    padding-top: 0;
+    background-image: linear-gradient(to right, #01fffb, #4cbbff);
+    padding: rem(6px);
+    padding-top: 4px;
     border-radius: var(--mantine-radius-sm);
     display: inline-block;
     color: light-dark(inherit, var(--mantine-color-white));
