@@ -18,6 +18,7 @@ import { IconCheck } from "@tabler/icons-react"
 import classes from "./voiceAssistant.module.css"
 import VisionMission from './visionMission'
 import Faq from './faq'
+import Waitingforwhat from './waitingforwhat'
 
 const page = () => {
   return (
@@ -85,7 +86,7 @@ const page = () => {
 
         <Faq />
 
-
+        <Waitingforwhat />
         <br />
         <Footer />
       </>
