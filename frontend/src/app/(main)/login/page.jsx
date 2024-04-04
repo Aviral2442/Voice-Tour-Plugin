@@ -22,6 +22,8 @@ import cx from 'clsx';
 import { MantineProvider, Container, createTheme } from '@mantine/core';
 import Link from 'next/link';
 import { BackgroundImage, Center, Box } from '@mantine/core';
+import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 
 const theme = createTheme({
@@ -36,20 +38,45 @@ const theme = createTheme({
 
 
 export function Login() {
+
+  const router = useRouter();
+
   const form = useForm({
     initialValues: {
       email: '',
-      password: '',
-      terms: true,
-
+      password: ''
     },
 
     validate: {
-      email: val => (/^\S+@\S+$/.test(val) ? null : "Invalid email"), 
+      email: val => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
       password: val =>
         val.length <= 6 ? "Password should include at least 6 characters" : null
     }
   })
+
+  const loginSubmit = (values) => {
+    fetch('http://localhost:5000/user/authenticate', {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          toast.success('loggedin successfully');
+          response.json().then(data => {
+            sessionStorage.setItem('user', JSON.stringify(data));
+            router.push('/');
+          })
+        } else {
+          toast.error('Invalid Credentials')
+        }
+      }).catch((err) => {
+        console.log(err);
+        toast.error('Invalid Credentials')
+      });
+  }
 
 
   return (
@@ -61,21 +88,21 @@ export function Login() {
           h={700}
         >
           <Center p="md">
-            <Container size="responsive" mt={45}  w={700} >
+            <Container size="responsive" mt={45} w={700} >
               <Paper withBorder shadow="md" p={30} mt={30} radius="md" p="xl" withBorder className={classes.Paper}>
                 <Title className={classes.title} >
                   Welcome to VoiceTour Navigator</Title>
-                   <Text className={classes.text} >Login with
+                <Text className={classes.text} >Login with
                 </Text>
                 <Group grow mb="md" mt="md">
                   <GoogleButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Google</GoogleButton>
                   <TwitterButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Twitter</TwitterButton>
                 </Group>
 
-                <Divider  label={
-                  <p style={{color: 'black'}}>Or continue with email</p>
+                <Divider label={
+                  <p style={{ color: 'black' }}>Or continue with email</p>
                 } labelPosition="center" my="lg" />
-                <form onSubmit={form.onSubmit((values) => console.log(values))}>
+                <form onSubmit={form.onSubmit(loginSubmit)}>
 
                   <TextInput withAsterisk label="Email" placeholder="your@email.com"
                     {...form.getInputProps('email')} required />
@@ -85,11 +112,11 @@ export function Login() {
                     onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
                     error={form.errors.password && 'Password should include at least 8 characters'}
                     required mt="md" />
-                    
+
                   <Group justify="space-between" mt="lg">
                     <Checkbox label="Remember me"
-                       checked={form.values.terms}
-                       onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
+                      // checked={form.values.terms}
+                      // onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
                     />
                     <Anchor component="button" size="sm">
                       Forgot password?

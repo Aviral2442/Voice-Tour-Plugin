@@ -41,7 +41,7 @@ const Contact = () => {
               />
 
               <Group justify="flex-end" mt="md">
-                <Button type="submit" 
+                <Button type="submit" variant='gradient'
                   className={classes.control}>
                   Send message
                 </Button>

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import {
   TextInput,
   PasswordInput,
@@ -15,6 +15,7 @@ import {
 import classes from './webPage.module.css'
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
+import toast from 'react-hot-toast';
 
 const WebPage = () => {
 
@@ -24,16 +25,44 @@ const WebPage = () => {
     description: Yup.string().required('Description is Required').min(8, 'Description is Too Short')
   });
 
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+
   const webpageForm = useFormik({
     initialValues: {
+      user: currentUser._id,
       name: '',
       address: '',
-      description: ''
+      description: '',
+      createdAt: new Date()
 
     },
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: (values) => {
+
       console.log(values);
-      //   resetForm();
+
+      fetch('http://localhost:5000/webpage/add', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then((response) => {
+          console.log(response.status);
+          if (response.status === 200) {
+            toast.success('User Registered successfully');
+            webpageForm.resetForm();
+
+          } else {
+            toast.error('Some Error Occured');
+          }
+
+        }).catch((err) => {
+          console.log(err);
+          toast.error('Some Error Occured');
+        });
+
+
     },
     validationSchema: webpageValidationSchema
   });

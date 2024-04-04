@@ -84,8 +84,8 @@
   }
   .Button {
     border: none;
-    color: #fff;
-    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    color: black;
+    background-image: linear-gradient( to top right #01fffb, #4cbbff);
     border-radius: 20px;
     background-size: 100% auto;
     font-family: inherit;
