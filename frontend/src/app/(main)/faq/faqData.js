@@ -5,33 +5,125 @@ const faqData = {
             description: 'Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.'
         },
         {
-            title: 'How does the Voice Assistan work?',
-            description: 'Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.'
+            title: 'Is the Voice Assistant compatible with all websites?',
+            description: 'While our Voice Assistant is designed to work with most websites, there may be some compatibility limitations depending on the website\'s structure and functionality.'
         },
         {
-            title: 'How does the Voice Assistant work?',
-            description: 'Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.'
+            title: 'Can I use the Voice Assistant on mobile devices?',
+            description: 'Yes, our Voice Assistant is compatible with mobile devices, providing seamless voice-based navigation on smartphones and tablets.'
         },
         {
-            title: 'How does the Voice Assistant work?',
-            description: 'Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.'
+            title: 'Can I customize the Voice Assistant\'s language and accent?',
+            description: 'Currently, the Voice Assistant supports a variety of languages and accents, and users can choose their preferred language settings within the platform.'
         },
         {
-            title: 'How does the Voice Assistant work?',
-            description: 'Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.'
+            title: 'Is the Voice Assistant accessible for users with disabilities?',
+            description: 'Yes, our Voice Assistant is designed to enhance accessibility for users with disabilities by providing hands-free navigation and interaction options.'
+        },
+        {
+            title: 'How accurate is the Voice Assistant in understanding commands?',
+            description: 'The accuracy of our Voice Assistant depends on various factors such as pronunciation clarity, background noise, and language settings. We continuously strive to improve accuracy through updates and enhancements.'
+        },
+        {
+            title: 'Can I use the Voice Assistant to perform actions on websites, such as making purchases or filling out forms?',
+            description: ' Yes, our Voice Assistant allows users to perform a variety of actions on websites, including making purchases, filling out forms, and interacting with multimedia content.'
+        },
+        {
+            title: 'Are there any privacy concerns associated with using the Voice Assistant?',
+            description: 'We prioritize user privacy and adhere to strict data protection measures. The Voice Assistant only collects and processes data necessary for its functionality, and user information is securely stored and handled according to our privacy policy.'
+        },
+        {
+            title: 'How do I activate the Voice Assistant on a website?',
+            description: 'You can activate the Voice Assistant by clicking the designated activation button on the website or using a voice command specified for activation.'
+        },
+        {
+            title: 'Can I provide feedback or report issues with the Voice Assistant?',
+            description: 'Yes, we welcome user feedback and actively encourage users to report any issues or suggestions for improvement. You can contact our support team through the provided channels on our website.'
         },
     ],
     tour: [
         {
-            title: 'How does the Voice Assistant work?',
-            description: 'Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.'
-        }
+            title: 'What is the Tour Generator and how does it work?',
+            description: 'The Tour Generator is a feature that allows users to create personalized website tours, guiding them through key sections of any website based on their preferences'
+        },
+        {
+            title: 'Can I customize the content and settings of the tours generated by the Tour Generator?',
+            description: 'Yes, the Tour Generator offers extensive customization options, allowing users to select specific sections, set tour preferences, and personalize the tour experience according to their interests'
+        },
+        {
+            title: 'Is the Tour Generator compatible with all types of websites?',
+            description: 'The Tour Generator is designed to work with most websites, but compatibility may vary depending on the website\'s structure and content. We continuously strive to improve compatibility to ensure a seamless experience for users'
+        },
+        {
+            title: 'Can I share the tours generated by the Tour Generator with others?',
+            description: ' Yes, users can save their customized tours and share them with others through various channels, such as email, social media, or direct links.'
+        },
+        {
+            title: 'Are there any limitations on the number of tours I can create using the Tour Generator?',
+            description: 'There are no limitations on the number of tours users can create using the Tour Generator. Users can create as many tours as they need for their website exploration purposes.'
+        },
+        {
+            title: ' Can I save my progress while taking a tour generated by the Tour Generator?',
+            description: 'Yes, the Tour Generator allows users to save their tour progress, enabling them to resume the tour at a later time from where they left off.'
+        },
+        {
+            title: 'Are there any privacy concerns associated with using the Tour Generator?',
+            description: 'We prioritize user privacy and adhere to strict data protection measures. The Tour Generator only collects and processes data necessary for its functionality, and user information is securely stored and handled according to our privacy policy.'
+        },
+        {
+            title: 'Can I provide feedback or report issues with the Tour Generator?',
+            description: 'Yes, we welcome user feedback and actively encourage users to report any issues or suggestions for improvement. You can contact our support team through the provided channels on our website.'
+        },
+        {
+            title: 'Can the Tour Generator be used for educational purposes?',
+            description: 'Absolutely, the Tour Generator is an excellent tool for creating interactive learning experiences by guiding students through relevant sections of educational websites.'
+        },
+        {
+            title: 'How do I access the Tour Generator feature on your website?',
+            description: 'You can access the Tour Generator feature by navigating to the designated section on our website\'s homepage or through the navigation menu.'
+        },
     ],
     website: [
         {
-            title: 'How does the Voice Assistant work?',
-            description: 'Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.'
-        }
+            title: 'Where can I find your website\'s privacy policy?',
+            description: ' Our website\'s privacy policy can be found in the footer section of our website, or you can access it directly through the Privacy Policy page.'
+        },
+        {
+            title: 'How can I contact your support team for assistance?',
+            description: 'You can contact our support team by filling out the contact form on our website\'s Contact Us page or by sending an email to the provided email address.'
+        },
+        {
+            title: 'Do you offer a help section or knowledge base for users?',
+            description: 'Yes, we have a comprehensive help section or knowledge base available on our website, which includes tutorials, FAQs, troubleshooting guides, and other resources to assist users.'
+        },
+        {
+            title: 'Can I request additional features or improvements for your website?',
+            description: ' Absolutely, we welcome user feedback and suggestions for improving our website. You can submit feature requests or suggestions through our contact form or support channels.'
+        },
+        {
+            title: 'Is there a customer support team available to assist me with website-related issues?',
+            description: ' Yes, we have a dedicated customer support team available to assist you with any website-related issues or inquiries you may have. You can reach out to our support team through the provided contact channels.'
+        },
+        {
+            title: 'How can I access the latest updates or news about your website?',
+            description: 'You can stay informed about the latest updates and news regarding our website by subscribing to our newsletter or following our official social media channels.'
+        },
+        {
+            title: 'Are there any terms and conditions I need to agree to when using your website?',
+            description: 'Yes, there are terms and conditions outlined in our website\'s Terms of Service, which users are required to agree to before using our services.'
+        },
+        {
+            title: 'Can I request assistance for accessibility accommodations on your website?',
+            description: 'Absolutely, we strive to ensure accessibility for all users on our website. If you require specific accommodations, please reach out to our support team, and we will do our best to assist you.'
+        },
+        {
+            title: 'How do I report a technical issue or bug on your website?',
+            description: 'If you encounter a technical issue or bug on our website, please report it to our support team through the provided contact channels, and we will investigate and address it promptly.'
+        },
+        {
+            title: '',
+            description: ''
+        },
     ],
 }
 
