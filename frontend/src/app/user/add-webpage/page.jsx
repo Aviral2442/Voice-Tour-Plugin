@@ -10,7 +10,8 @@ import {
   Text,
   Container,
   Group,
-  Button
+  Button,
+  Textarea
 } from "@mantine/core"
 import classes from './webPage.module.css'
 import * as Yup from 'yup';
@@ -100,7 +101,9 @@ const WebPage = () => {
           />
 
 
-          <TextInput label="Description"
+          <Textarea label="Description"
+          
+          
             placeholder="Enter your description"
             mt="md"
             id="description"

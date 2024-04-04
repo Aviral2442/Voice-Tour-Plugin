@@ -3,6 +3,7 @@ import React from 'react';
 import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import AdminNavbar from './navbar';
+import Sidebar from './sidebar';
 
 const Layout = ({ children }) => {
     const [opened, { toggle }] = useDisclosure();
@@ -21,7 +22,7 @@ const Layout = ({ children }) => {
                 <AdminNavbar />
             </AppShell.Header>
             <AppShell.Navbar p="md">
-               
+            <Sidebar/> 
             </AppShell.Navbar>
             <AppShell.Main>{children}</AppShell.Main>
         </AppShell>
