@@ -15,6 +15,7 @@ import {
 import classes from './webPage.module.css'
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
+import toast from 'react-hot-toast';
 
 const WebPage = () => {
 
@@ -33,7 +34,29 @@ const WebPage = () => {
     },
     onSubmit: (values, { resetForm }) => {
       console.log(values);
-      //   resetForm();
+      
+      fetch('http://localhost:5000/user/add', {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((response) => {
+        console.log(response.status);
+        if (response.status === 200) {
+          toast.success('User Registered successfully');
+          setValue('');
+          form.reset();
+          router.push('/login')
+        } else {
+          toast.error('Some Error Occured');
+        }
+
+      }).catch((err) => {
+        console.log(err);
+        toast.error('Some Error Occured');
+      });
     },
     validationSchema: webpageValidationSchema
   });
