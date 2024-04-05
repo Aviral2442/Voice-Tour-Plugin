@@ -33,9 +33,7 @@
 
 .subtitle {
 
-  background: -webkit-linear-gradient(#01fffb, #4cbbff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #4ECA3E;
 
 }
 
@@ -51,7 +49,8 @@
   height: rem(50px);
   padding-left: rem(38px);
   padding-right: rem(38px);
-  
+ color: black;
+ border-color: black;
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: rem(54px);
@@ -65,7 +64,7 @@
   width: rem(476px);
   height: rem(456px);
   margin-top: 40px;
-  filter: drop-shadow(3px 2px 3px #01fffb);
+  filter: drop-shadow(3px 2px 3px #4ECA3E);
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;
@@ -75,4 +74,12 @@
 .highlight {
   position: relative;
   font-weight: 100;
+}
+.box{
+  background: rgb(78,202,62);
+background: linear-gradient(360deg, rgba(78,202,62,1) 50%, rgba(0,0,0,1) 100%);
+}
+.List{
+  color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
