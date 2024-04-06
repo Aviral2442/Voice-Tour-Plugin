@@ -13,7 +13,8 @@ import {
   Checkbox,
   Anchor,
   Stack,
-  Title
+  Title,
+  Image
 } from "@mantine/core"
 import { GoogleButton } from "./GoogleButton"
 import { TwitterButton } from "./TwitterButton"
@@ -134,28 +135,13 @@ export function SignUp(props) {
 
   return (
 
-    <Box mx="auto" >
-      <BackgroundImage
-        src="https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg"
-        radius="md"
-
-      >
-        <Center p="md">
-          <Container mt={10} w={700} fluid>
-            <Paper withBorder shadow="md" mt={30} {...props} radius="md" p="xl" className={classes.Paper}>
+    <div className={classes.wrapper}>
+      <div className={classes.body}>
+        <Center >
+          <Container w={700} fluid me={10}>
+            <Paper withBorder shadow="md"  {...props} radius="md" p="xl" className={classes.Paper}>
               <Title className={classes.title} >
-                Welcome to VoiceTour Navigator</Title>
-              <Text className={classes.text}>SignUp with</Text>
-
-              <Group grow mb="md" mt="md">
-                <GoogleButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Google</GoogleButton>
-                <TwitterButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Facebook</TwitterButton>
-              </Group>
-
-              <Divider label={
-                <p style={{ color: 'blue' }}>Or continue with email</p>
-              }
-                labelPosition="center" my="lg" />
+                SignUp</Title>
 
               <form onSubmit={form.onSubmit(signupSubmit)}>
 
@@ -213,17 +199,28 @@ export function SignUp(props) {
                   <Anchor component={Link} underline="hover" type="button" c="dimmed" href="/login" size="xs">
                     Already have an account? Login here
                   </Anchor>
-                  <Button type="submit" variant="outline" color="rgba(0, 0, 0, 1)"
+                  <Button type="submit" variant="outline" color="rgba(255, 255, 255, 1)" className={classes.button}
                   >
-                    Sign Up
+                    <p className={classes.p}>Sign Up</p>
                   </Button>
+                </Group>
+                <Divider label={
+                  <p style={{ color: '#4ECA3E' }}>Or Signup with</p>
+                }
+                  labelPosition="center" my="lg" />
+                <Group grow mb="md" mt="md">
+                  <GoogleButton radius="xl" variant="outline" color="rgba(255, 255, 255, 1)" className={classes.control}>Google</GoogleButton>
+                  <TwitterButton radius="xl" variant="outline" color="rgba(255, 255, 255, 1)" className={classes.control}>Facebook</TwitterButton>
                 </Group>
               </form>
             </Paper>
           </Container>
         </Center>
-      </BackgroundImage>
-    </Box>
+
+
+      </div>
+      <Image src="Signup.gif" className={classes.image} />
+    </div>
 
   )
 }

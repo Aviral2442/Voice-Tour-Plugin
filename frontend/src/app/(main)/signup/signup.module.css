@@ -1,22 +1,105 @@
 .Paper {
-    background: rgba( 255, 255, 255, 0.85 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(0px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-    color: black;
-    
+  border-left: 5px solid #4ECA3E;
+  color: white;
+
+}
+
+.title {
+  color: #4ECA3E;
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+  font-weight: 900;
+  text-align: center;
+  font-size: 40px;
+}
+
+.text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.body {
+  padding-right: calc(var(--mantine-spacing-xl) * 4);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding-right: 0;
+    margin-top: var(--mantine-spacing-xl);
   }
-  .title {
-    font-family:
-      Greycliff CF,
-      var(--mantine-font-family);
-    font-weight: 1000;
-    text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--mantine-spacing-xl) * 2);
+  border-radius: var(--mantine-radius-md);
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
+  background-color: black;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column-reverse;
+    padding: var(--mantine-spacing-xl);
   }
-  .text{
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
+}
+
+.image {
+  max-width: 50%;
+  height: 400px;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    max-width: 100%;
   }
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    max-width: 100%;
+  }
+}
+
+.control {
+
+  border-color: #4ECA3E;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #4ECA3E;
+  outline: 3px #4ECA3E solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  position: relative;
+
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 400ms;
+}
+
+
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: rgb(61, 106, 255);
+}
+
+.button:hover svg path {
+  fill: rgb(61, 106, 255);
+}
