@@ -24,6 +24,8 @@ import Link from 'next/link';
 import { BackgroundImage, Center, Box } from '@mantine/core';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import logimg from './logimg.json';
+import Lottie from 'lottie-react';
 
 
 const theme = createTheme({
@@ -80,64 +82,74 @@ export function Login() {
 
 
   return (
-    <MantineProvider theme={theme} >
-      <Box mx="auto" >
-        <BackgroundImage
-          src="https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg"
-          radius="md"
-          h={700}
-        >
-          <Center p="md">
-            <Container size="responsive" mt={45} w={700} >
-              <Paper withBorder shadow="md"  mt={30} radius="md" p="xl"  className={classes.Paper}>
-                <Title className={classes.title} >
-                  Welcome to VoiceTour Navigator</Title>
-                <Text className={classes.text} >Login with
-                </Text>
-                <Group grow mb="md" mt="md">
-                  <GoogleButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Google</GoogleButton>
-                  <TwitterButton radius="xl" variant="outline" color="rgba(0, 0, 0, 1)">Twitter</TwitterButton>
-                </Group>
+    <div className={classes.wrapper}>
+      <div className={classes.body}>
+        <MantineProvider theme={theme} >
+          <Box mx="auto" >
+            <BackgroundImage src=''
+              radius="md">
 
-                <Divider label={
-                  <p style={{ color: 'black' }}>Or continue with email</p>
-                } labelPosition="center" my="lg" />
-                <form onSubmit={form.onSubmit(loginSubmit)}>
 
-                  <TextInput withAsterisk label="Email" placeholder="your@email.com"
-                    {...form.getInputProps('email')} required />
-                  <PasswordInput label="Password"
-                    placeholder="Your password"
-                    value={form.values.password}
-                    onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
-                    error={form.errors.password && 'Password should include at least 8 characters'}
-                    required mt="md" />
+              <Center p="md">
+                <Container size="responsive" w={700} >
+                  <Paper shadow="md" p={30} mt={10} mb={30} radius="md" className={classes.Paper}>
+                    <Title className={classes.title} >
+                      Welcome to <span className={classes.subtitle}>VoiceTour</span> Navigator</Title>
+                    <Text className={classes.text}>Login with</Text>
 
-                  <Group justify="space-between" mt="lg">
-                    <Checkbox label="Remember me"
-                      // checked={form.values.terms}
-                      // onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
-                    />
-                    <Anchor component="button" size="sm">
-                      Forgot password?
-                    </Anchor>
-                  </Group>
-                  <Group justify="space-between" mt="xl">
-                    <Anchor component={Link} underline="hover" type="button" c="dimmed" href="/signup" size="xs">
-                      Don't have an account? Register
-                    </Anchor>
-                    <Button type="submit" variant="outline" color="rgba(0, 0, 0, 1)"
-                    >
-                      Login
-                    </Button>
-                  </Group>
-                </form>
-              </Paper>
-            </Container>
-          </Center>
-        </BackgroundImage>
-      </Box>
-    </MantineProvider>
+                    <Group grow mb="md" mt="md" >
+                      <GoogleButton radius="xl" className={classes.Button}>Google</GoogleButton>
+                      <TwitterButton radius="xl" className={classes.Button}>Facebook</TwitterButton>
+                    </Group>
+
+                    <Divider label={
+                      <p style={{ color: '#4ECA3E' }}>Or continue with email</p>
+                    } labelPosition="center" my="lg" color='white' />
+
+                    <form onSubmit={form.onSubmit(loginSubmit)}>
+
+                      <TextInput withAsterisk variant="filled" label="Email" placeholder="your@email.com"
+                        {...form.getInputProps('email')} required />
+
+                      <PasswordInput label="Password"
+                        variant="filled"
+                        placeholder="Your password"
+                        value={form.values.password}
+                        onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
+                        error={form.errors.password && 'Password should include at least 8 characters'}
+                        required mt="md" />
+
+                      <Group justify="space-between" mt="lg">
+                        <Checkbox label="Remember me"
+                          checked={form.values.terms}
+                          onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
+                        />
+                        <Anchor component={Link} href="/resetPassword" size="sm">
+                          Forgot password?
+                        </Anchor>
+                      </Group>
+                      <Group justify="space-between" mt="xl">
+                        <Anchor component={Link} underline="hover" c="dimmed" href="/signup" size="xs">
+                          Don't have an account? Register
+                        </Anchor>
+                        <Button type="submit" className={classes.button}>
+                          <p className={classes.p}>Login</p>
+                        </Button>
+                      </Group>
+                    </form>
+                  </Paper>
+
+                </Container>
+
+              </Center>
+
+            </BackgroundImage>
+          </Box>
+        </MantineProvider>
+      </div>
+      <Lottie loop={true} animationData={logimg} className={classes.image} />
+
+    </div>
   )
 }
 
