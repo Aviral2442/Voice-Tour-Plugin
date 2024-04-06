@@ -104,7 +104,7 @@ function Navbar() {
   ));
 
   return (
-    <Box pb={0}>
+    <Box >
       <header className={classes.header}>
         <Group justify='space-between' h="100%">
           <Anchor href="http://localhost:3000/" underline="never">
@@ -188,10 +188,10 @@ function Navbar() {
               mt='md'
             />
             {/* <Button component={Link} variant="default" href='/login'>Log in</Button> */}
-            <Button component={Link} href='/signup'variant='outline' color='white' className={classes.button}>
-            <Lottie animationData={avatar} className={classes.avi}/>
+            <Button component={Link} href='/signup' variant='outline' color='white' className={classes.button}>
+              <Lottie animationData={avatar} className={classes.avi} />
               Sign up</Button>
-           
+
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />

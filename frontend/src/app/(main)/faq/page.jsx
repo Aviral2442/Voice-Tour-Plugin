@@ -7,13 +7,16 @@ import {
   UnstyledButton,
   Overlay,
   SimpleGrid,
-  Accordion
+  Accordion,
+  Box
 } from "@mantine/core"
 import classes from './faq.module.css'
 import faqData from './faqData'
 import { ContactIconsList } from '../contact/ContactIcons'
 import Lottie from 'lottie-react'
 import FAQ from './FAQ.json'
+import Navbar from '../navbar'
+import { Footer } from '../footer'
 
 const categories = [
   {
@@ -55,37 +58,44 @@ const Faq = () => {
 
   return (
     <>
-      <Container className={classes.wrapper} size="lg">
-        <div className={classes.header} >
-          <div>
-            <Title className={classes.Title}>Frequently Asked Questions</Title>
+
+<Navbar/>
+
+      <Box style={{background:'black'}}>
+        <Container className={classes.wrapper} size="lg">
+          <div className={classes.header} >
+            <div>
+              <Title className={classes.Title}>Frequently Asked Questions</Title>
+            </div>
+
+            <div className={classes.contact}>
+              <Lottie animationData={FAQ} loop={true} className={classes.image} />
+            </div>
           </div>
 
-          <div className={classes.contact}>
-            <Lottie animationData={FAQ} loop={true}  className={classes.image} />
-          </div>
-        </div>
+          <SimpleGrid cols={{ base: 1, sm: 3 }} onClick={open} >{items}</SimpleGrid>
 
-        <SimpleGrid cols={{ base: 1, sm: 3 }} onClick={open} >{items}</SimpleGrid>
+        </Container>
+        <Container size="md" className={classes.wrapper}>
+          <Title ta="center" className={classes.title}>
+            Frequently Asked Questions
+          </Title>
 
-      </Container>
-      <Container size="md" className={classes.wrapper}>
-        <Title ta="center" className={classes.title}>
-          Frequently Asked Questions
-        </Title>
+          <Accordion variant="separated">
+            {
+              faqList.map((faqItem, index) => (
+                <Accordion.Item className={classes.item} value={faqItem.title} key={index}>
+                  <Accordion.Control>{faqItem.title}</Accordion.Control>
+                  <Accordion.Panel>{faqItem.description}</Accordion.Panel>
+                </Accordion.Item>
+              ))
+            }
 
-        <Accordion variant="separated">
-          {
-            faqList.map((faqItem, index) => (
-              <Accordion.Item className={classes.item} value={faqItem.title} key={index}>
-                <Accordion.Control>{faqItem.title}</Accordion.Control>
-                <Accordion.Panel>{faqItem.description}</Accordion.Panel>
-              </Accordion.Item>
-            ))
-          }
+          </Accordion>
+        </Container>
+      </Box>
 
-        </Accordion>
-      </Container>
+      <Footer/>
     </>
   )
 }
