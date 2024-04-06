@@ -11,6 +11,9 @@ import {
 } from "@mantine/core"
 import classes from './faq.module.css'
 import faqData from './faqData'
+import { ContactIconsList } from '../contact/ContactIcons'
+import Lottie from 'lottie-react'
+import FAQ from './FAQ.json'
 
 const categories = [
   {
@@ -55,25 +58,18 @@ const Faq = () => {
       <Container className={classes.wrapper} size="lg">
         <div className={classes.header} >
           <div>
-            <Title ta='center' className={classes.title}>Frequently Asked Questions</Title>
-            {/* <Title className={classes.titleOverlay} role="presentation">
-            FAQ
-          </Title> */}
+            <Title className={classes.Title}>Frequently Asked Questions</Title>
           </div>
 
-          {/* <div className={classes.contact}>
-          <Text size="xl" fw={500} className={classes.contactTitle}>
-            Contact us
-          </Text>
-
-          <ContactIconsList />
-        </div> */}
+          <div className={classes.contact}>
+            <Lottie animationData={FAQ} loop={true}  className={classes.image} />
+          </div>
         </div>
 
         <SimpleGrid cols={{ base: 1, sm: 3 }} onClick={open} >{items}</SimpleGrid>
 
       </Container>
-      <Container size="sm" className={classes.wrapper}>
+      <Container size="md" className={classes.wrapper}>
         <Title ta="center" className={classes.title}>
           Frequently Asked Questions
         </Title>
