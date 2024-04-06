@@ -49,8 +49,8 @@
   height: rem(50px);
   padding-left: rem(38px);
   padding-right: rem(38px);
- color: black;
- border-color: black;
+ color: #90CDB7;
+ border-color: #90CDB7;
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: rem(54px);
@@ -59,6 +59,7 @@
     flex: 1;
   }
 }
+
 
 .image {
   width: rem(476px);
@@ -75,11 +76,11 @@
   position: relative;
   font-weight: 100;
 }
-.box{
-  background: rgb(78,202,62);
-background: linear-gradient(360deg, rgba(78,202,62,1) 50%, rgba(0,0,0,1) 100%);
-}
+
 .List{
-  color: black;
+  color: white;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.box{
+  background-color: black;
 }

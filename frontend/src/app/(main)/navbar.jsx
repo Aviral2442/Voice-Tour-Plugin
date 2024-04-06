@@ -38,7 +38,7 @@ import classes from './HeaderMegaMenu.module.css';
 import Link from 'next/link';
 import cx from 'clsx';
 import { ActionIcon, useMantineColorScheme, useComputedColorScheme } from '@mantine/core';
-import { IconSun, IconMoon } from '@tabler/icons-react';
+
 
 const mockdata = [
   {
@@ -186,16 +186,8 @@ function Navbar() {
               mt='md'
             />
             {/* <Button component={Link} variant="default" href='/login'>Log in</Button> */}
-            <Button component={Link} href='/signup'>Sign up</Button>
-            <ActionIcon
-              onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
-              variant="default"
-              size="xl"
-              aria-label="Toggle color scheme"
-            >
-              <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
-              <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
-            </ActionIcon>
+            <Button component={Link} href='/signup'variant='filled' color='#90CDB7' className={classes.button}>Sign up</Button>
+           
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />

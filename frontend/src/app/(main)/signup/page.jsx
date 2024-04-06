@@ -89,7 +89,7 @@ export function SignUp(props) {
       password: '',
       confirmPassword: '',
       termsOfService: false,
-
+      createdAt: new Date()
     },
 
     validate: {

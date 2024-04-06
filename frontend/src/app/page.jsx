@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   Image,
   Container,
@@ -23,18 +23,28 @@ import cx from 'clsx';
 import { GithubIcon } from '@mantinex/dev-icons'
 import Navbar from './(main)/navbar'
 import { Footer } from './(main)/footer'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+
 
 
 const page = () => {
+
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <section  >
         <Box mx="auto" className={classes.box}>
 
           <Container  >
             <div className={classes.inner}>
-              <div className={classes.content}>
+              <div className={classes.content} data-aos="fade-up">
                 <Title className={classes.title}><span className={classes.highlight}>Welcome to</span> <br /><span className={classes.subtitle}>VoiceTourNavigator </span><br />Plugin System</Title>
                 <Text mt="md">
                   Revolutionizing Website Navigation with Voice Technology
@@ -43,11 +53,11 @@ const page = () => {
                 <List className={classes.List} size="md" mt="xl" spacing="sm"
 
                   icon={
-                    <ThemeIcon size={20} radius="xl" style={{backgroundColor:'#4ECA3E'}} >
+                    <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#90CDB7' }} >
                       <IconCheck
                         style={{ width: rem(12), height: rem(12) }}
                         stroke={5}
-                       
+
                       />
                     </ThemeIcon>
                   }
@@ -79,6 +89,7 @@ const page = () => {
                     size="sm"
                     className={classes.control}
                     variant="outline"
+                    color='white'
                   >
                     Get started
                   </Button>
@@ -88,6 +99,7 @@ const page = () => {
                     href="https://github.com/mantinedev/mantine"
                     size="sm"
                     variant="outline"
+                    color='white'
                     className={classes.control}
                     leftSection={<GithubIcon size={20} />}
                   >
@@ -96,8 +108,8 @@ const page = () => {
                 </Group>
 
               </div>
-              <Image src="micimg.png" className={classes.image} />
-                
+              <Image src="micimg.png" className={classes.image} data-aos="fade-up"/>
+
             </div>
           </Container>
 
@@ -108,7 +120,7 @@ const page = () => {
 
       <Faqsection />
 
-      <Footer/>
+      <Footer />
 
     </>
   )
