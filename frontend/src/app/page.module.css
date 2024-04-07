@@ -62,10 +62,10 @@
 
 
 .image {
-  width: rem(476px);
-  height: rem(456px);
+  width: rem(400px);
+  height: rem(400px);
   margin-top: 40px;
-  filter: drop-shadow(3px 2px 3px #4ECA3E);
+  
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;

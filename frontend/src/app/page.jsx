@@ -108,7 +108,7 @@ const page = () => {
                 </Group>
 
               </div>
-              <Image src="micimg.png" className={classes.image} data-aos="fade-up"/>
+              <Image src="Heroimg.png" className={classes.image} data-aos="fade-up"/>
 
             </div>
           </Container>
