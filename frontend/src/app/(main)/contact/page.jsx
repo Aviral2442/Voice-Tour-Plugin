@@ -1,15 +1,16 @@
 'use client';
 import React from 'react'
-import { Paper, Text, TextInput, Textarea, Button, Group, SimpleGrid, Container } from '@mantine/core';
+import { Paper, Text, TextInput, Textarea, Button, Group, SimpleGrid, Container, Box } from '@mantine/core';
 import { ContactIconsList } from './ContactIcons';
 // import bg from './bg.svg';
 import classes from './GetInTouch.module.css';
 
 
 const Contact = () => {
-  
+
   return (
-    <Container size={1000} mt={120} mb={120}>
+    <Box className={classes.box}>
+    <Container size={1000} mt={120} mb={120} >
       <Paper shadow="md" radius="lg">
         <div className={classes.wrapper}>
           <div className={classes.contacts}>
@@ -41,7 +42,7 @@ const Contact = () => {
               />
 
               <Group justify="flex-end" mt="md">
-                <Button type="submit" variant='gradient'
+                <Button type="submit" variant='filled' color='#4ECA3E'
                   className={classes.control}>
                   Send message
                 </Button>
@@ -51,6 +52,7 @@ const Contact = () => {
         </div>
       </Paper>
     </Container>
+    </Box>
   )
 }
 
