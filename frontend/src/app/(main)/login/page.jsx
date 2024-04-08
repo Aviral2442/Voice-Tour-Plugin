@@ -57,7 +57,8 @@ export function Login() {
   })
 
   const loginSubmit = (values) => {
-    fetch('http://localhost:5000/user/authenticate', {
+    console.log(values);
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`,{
       method: 'POST',
       body: JSON.stringify(values),
       headers: {
