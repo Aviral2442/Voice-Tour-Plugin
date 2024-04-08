@@ -23,7 +23,8 @@ import cx from 'clsx';
 import { GithubIcon } from '@mantinex/dev-icons'
 import Navbar from './(main)/navbar'
 import { Footer } from './(main)/footer'
-import AOS from 'aos'
+import Aos from 'aos'
+// import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 
@@ -33,7 +34,7 @@ const page = () => {
 
 
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    Aos.init({ duration: 2000 });
   }, []);
 
   return (
