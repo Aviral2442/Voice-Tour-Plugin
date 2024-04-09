@@ -95,10 +95,10 @@ export function Login() {
                 <Container size="responsive" w={700} >
                   <Paper shadow="md" p={30} mt={10} mb={30} radius="md" className={classes.Paper}>
                     <Title className={classes.title} >
-                      Welcome to <span className={classes.subtitle}>VoiceTour</span> Navigator</Title>
-                    <Text className={classes.text}>Login with</Text>
+                       <span className={classes.subtitle}>Login</span> </Title>
+                    {/* <Text className={classes.text}>Login with</Text> */}
 
-                    <Group grow mb="md" mt="md" >
+                    <Group grow mb="md" mt="lg" >
                       <GoogleButton radius="xl" className={classes.Button}>Google</GoogleButton>
                       <TwitterButton radius="xl" className={classes.Button}>Facebook</TwitterButton>
                     </Group>

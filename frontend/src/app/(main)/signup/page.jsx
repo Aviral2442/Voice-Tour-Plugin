@@ -143,6 +143,15 @@ export function SignUp(props) {
               <Title className={classes.title} >
                 SignUp</Title>
 
+              <Group grow mb="md" mt="lg" >
+                <GoogleButton radius="xl" className={classes.Button}>Google</GoogleButton>
+                <TwitterButton radius="xl" className={classes.Button}>Facebook</TwitterButton>
+              </Group>
+
+              <Divider label={
+                <p style={{ color: '#4ECA3E' }}>Or continue with email</p>
+              } labelPosition="center" my="lg" color='white' />
+
               <form onSubmit={form.onSubmit(signupSubmit)}>
 
                 <TextInput label="Name" placeholder="Full Name"  {...form.getInputProps('name')} />
