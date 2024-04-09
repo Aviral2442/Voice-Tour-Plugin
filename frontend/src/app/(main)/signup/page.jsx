@@ -149,8 +149,9 @@ export function SignUp(props) {
               </Group>
 
               <Divider label={
-                <p style={{ color: '#4ECA3E' }}>Or continue with email</p>
-              } labelPosition="center" my="lg" color='white' />
+                <p style={{ color: '#4ECA3E' }}>Or Signup with</p>
+              }
+                labelPosition="center" my="lg" />
 
               <form onSubmit={form.onSubmit(signupSubmit)}>
 
@@ -212,14 +213,6 @@ export function SignUp(props) {
                   >
                     <p className={classes.p}>Sign Up</p>
                   </Button>
-                </Group>
-                <Divider label={
-                  <p style={{ color: '#4ECA3E' }}>Or Signup with</p>
-                }
-                  labelPosition="center" my="lg" />
-                <Group grow mb="md" mt="md">
-                  <GoogleButton radius="xl" variant="outline" color="rgba(255, 255, 255, 1)" className={classes.control}>Google</GoogleButton>
-                  <TwitterButton radius="xl" variant="outline" color="rgba(255, 255, 255, 1)" className={classes.control}>Facebook</TwitterButton>
                 </Group>
               </form>
             </Paper>

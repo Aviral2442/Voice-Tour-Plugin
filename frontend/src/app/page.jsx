@@ -26,6 +26,7 @@ import { Footer } from './(main)/footer'
 import Aos from 'aos'
 // import AOS from 'aos'
 import 'aos/dist/aos.css'
+import CardsCarousel from './CardsCarousel'
 
 
 
@@ -109,7 +110,7 @@ const page = () => {
                 </Group>
 
               </div>
-              <Image src="Heroimg.png" className={classes.image} data-aos="fade-up"/>
+              <Image src="Heroimg.png" className={classes.image} data-aos="fade-up" />
 
             </div>
           </Container>
@@ -120,7 +121,7 @@ const page = () => {
       <FeaturesCards />
 
       <Faqsection />
-
+      <CardsCarousel />
       <Footer />
 
     </>
