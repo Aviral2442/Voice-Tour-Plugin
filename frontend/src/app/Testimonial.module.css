@@ -1,0 +1,44 @@
+.card {
+  position: relative;
+  overflow: visible;
+  padding: 10px;
+  padding-top: 30px;
+  padding-right: 50px;
+  background-color: white;
+  color: black;
+  height: 250px;
+  width: 350px;
+ 
+}
+
+.icon {
+  position: absolute;
+  top: rem(-20px);
+  left: calc(95% - rem(30px));
+}
+
+.name {
+  color: #4ECA3E;
+font-size: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1;
+}
+.review{
+  padding-top: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+.icon1{
+  background-color: #4ECA3E;
+  left: calc(70% - rem(30px));
+}
+.indicator {
+  width: rem(12px);
+  height: rem(4px);
+  transition: width 250ms ease;
+
+  &[data-active] {
+    width: rem(40px);
+  }
+}

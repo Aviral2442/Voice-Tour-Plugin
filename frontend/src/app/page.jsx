@@ -26,7 +26,7 @@ import { Footer } from './(main)/footer'
 import Aos from 'aos'
 // import AOS from 'aos'
 import 'aos/dist/aos.css'
-import CardsCarousel from './CardsCarousel'
+import Testimonial from './Testimonial'
 
 
 
@@ -121,7 +121,7 @@ const page = () => {
       <FeaturesCards />
 
       <Faqsection />
-      <CardsCarousel />
+     <Testimonial />
       <Footer />
 
     </>
