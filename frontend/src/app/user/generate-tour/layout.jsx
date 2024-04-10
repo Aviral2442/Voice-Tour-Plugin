@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
-import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
+import { AppShell } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-
+import UserNavbar from './UserNavbar';
+import NavbarMinimal from './NavbarMinimal';
 
 const Layout = ({ children }) => {
     const [opened, { toggle }] = useDisclosure();
@@ -18,10 +19,10 @@ const Layout = ({ children }) => {
             padding="md"
         >
             <AppShell.Header>
-                AdminNavbar
+                <UserNavbar />
             </AppShell.Header>
             <AppShell.Navbar p="md">
-            Sidebar
+                <NavbarMinimal />
             </AppShell.Navbar>
             <AppShell.Main>{children}</AppShell.Main>
         </AppShell>
