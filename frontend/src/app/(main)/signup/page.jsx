@@ -30,6 +30,16 @@ import { Progress, Popover, rem } from "@mantine/core"
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 
+const theme = createTheme({
+  components: {
+    Container: Container.extend({
+      classNames: (_, { size }) => ({
+        root: cx({ [classes.responsiveContainer]: size === 'responsive' }),
+      }),
+    }),
+  },
+});
+
 function PasswordRequirement({ meets, label }) {
   return (
     <Text
@@ -137,8 +147,11 @@ export function SignUp(props) {
 
     <div className={classes.wrapper}>
       <div className={classes.body}>
-        <Center >
-          <Container w={700} fluid me={10}>
+      <Image src="Signup.gif" className={classes.image} />
+      </div>
+      
+      <MantineProvider theme={theme} >
+          <Container w='900px' size="responsive">
             <Paper withBorder shadow="md"  {...props} radius="md" p="md" className={classes.Paper}>
               <Title className={classes.title} >
                 SignUp</Title>
@@ -217,11 +230,7 @@ export function SignUp(props) {
               </form>
             </Paper>
           </Container>
-        </Center>
-
-
-      </div>
-      <Image src="Signup.gif" className={classes.image} />
+        </MantineProvider>
     </div>
 
   )

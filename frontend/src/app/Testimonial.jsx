@@ -18,8 +18,8 @@ const Testimonial = () => {
 
             height={350}
             slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
-            nextControlIcon={<IconArrowBadgeRight style={{ width: rem(16), height: rem(16) }} />}
-            previousControlIcon={<IconArrowBadgeLeft style={{ width: rem(16), height: rem(16) }} />}
+            nextControlIcon={<IconArrowBadgeRight style={{ width: rem(26), height: rem(26) }} />}
+            previousControlIcon={<IconArrowBadgeLeft style={{ width: rem(26), height: rem(26) }} />}
             loop
             align="center"
             plugins={[autoplay.current]}
