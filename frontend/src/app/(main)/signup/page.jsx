@@ -139,7 +139,7 @@ export function SignUp(props) {
       <div className={classes.body}>
         <Center >
           <Container w={700} fluid me={10}>
-            <Paper withBorder shadow="md"  {...props} radius="md" p="xl" className={classes.Paper}>
+            <Paper withBorder shadow="md"  {...props} radius="md" p="md" className={classes.Paper}>
               <Title className={classes.title} >
                 SignUp</Title>
 
