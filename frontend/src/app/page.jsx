@@ -110,7 +110,7 @@ const page = () => {
                 </Group>
 
               </div>
-              <Image src="Heroimg.png" className={classes.image} data-aos="fade-up" />
+              <Image src="herosection.png" className={classes.image} data-aos="fade-up" />
 
             </div>
           </Container>
