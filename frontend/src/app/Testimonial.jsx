@@ -3,7 +3,7 @@ import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
 import classes from "./Testimonial.module.css"
 import { ThemeIcon, Progress, Text, Group, Badge, Paper, rem, Container, SimpleGrid, Image, ActionIcon, Grid } from '@mantine/core';
-import { IconSwimming } from '@tabler/icons-react';
+import { IconArrowBadgeLeft, IconArrowBadgeRight, IconArrowLeft, IconArrowRight, IconSwimming } from '@tabler/icons-react';
 import { Avatar } from '@mantine/core';
 import { useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
@@ -15,10 +15,11 @@ const Testimonial = () => {
         <Carousel
             withIndicators
             classNames={classes}
-            withControls={false}
+
             height={350}
             slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
-            slideGap={{ base: 0, sm: 'md' }}
+            nextControlIcon={<IconArrowBadgeRight style={{ width: rem(26), height: rem(26) }} />}
+            previousControlIcon={<IconArrowBadgeLeft style={{ width: rem(26), height: rem(26) }} />}
             loop
             align="center"
             plugins={[autoplay.current]}
@@ -26,7 +27,7 @@ const Testimonial = () => {
             onMouseLeave={autoplay.current.reset}
         >
             <Carousel.Slide>
-                <Container p={50} py="xl">
+                <Container className={classes.Container}>
                     <Paper radius="md" withBorder className={classes.card} >
 
                         <Grid grow gutter="xl">
@@ -60,7 +61,7 @@ const Testimonial = () => {
                 </Container>
             </Carousel.Slide>
             <Carousel.Slide>
-                <Container p={50} py="xl" >
+                <Container className={classes.Container} >
                     <Paper radius="md" withBorder className={classes.card} >
 
                         <Grid grow gutter="xl">
@@ -95,7 +96,7 @@ const Testimonial = () => {
             </Carousel.Slide>
 
             <Carousel.Slide>
-                <Container p={50} py="xl" >
+                <Container className={classes.Container}>
                     <Paper radius="md" withBorder className={classes.card} >
 
                         <Grid grow gutter="xl">
@@ -130,7 +131,7 @@ const Testimonial = () => {
             </Carousel.Slide>
 
             <Carousel.Slide>
-                <Container p={50} py="xl" fluid>
+                <Container className={classes.Container}>
                     <Paper radius="md" withBorder className={classes.card} >
 
                         <Grid grow gutter="xl">
@@ -165,7 +166,7 @@ const Testimonial = () => {
             </Carousel.Slide>
 
             <Carousel.Slide>
-                <Container p={50} py="xl" fluid>
+                <Container className={classes.Container}>
                     <Paper radius="md" withBorder className={classes.card} >
 
                         <Grid grow gutter="xl">
@@ -200,7 +201,7 @@ const Testimonial = () => {
             </Carousel.Slide>
 
             <Carousel.Slide>
-                <Container p={50} py="xl" fluid>
+                <Container className={classes.Container}>
                     <Paper radius="md" withBorder className={classes.card} >
 
                         <Grid grow gutter="xl">

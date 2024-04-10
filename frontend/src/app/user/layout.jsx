@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <AppShell
             header={{ height: { base: 60, md: 70, lg: 80 } }}
             navbar={{
-                width: { base: 200, md: 300, lg: 400 },
+                width: { base: 80, md: 80, lg: 80 },
                 breakpoint: 'sm',
                 collapsed: { mobile: !opened },
             }}
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
             <AppShell.Header>
                 <UserNavbar />
             </AppShell.Header>
-            <AppShell.Navbar p="md">
+            <AppShell.Navbar>
                 <NavbarMinimal />
             </AppShell.Navbar>
             <AppShell.Main>{children}</AppShell.Main>

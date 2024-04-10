@@ -1,3 +1,15 @@
+.responsiveContainer {
+	max-width: rem(300px);
+
+	@media (min-width: em(400px)) {
+		max-width: rem(400px);
+	}
+
+	@media (min-width: em(600px)) {
+		max-width: rem(600px);
+	}
+
+}
 .Paper {
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(100px);
@@ -25,38 +37,36 @@
 }
 
 .body {
-  padding-right: calc(var(--mantine-spacing-xl) * 4);
+	padding-right: calc(var(--mantine-spacing-xl) * 4);
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    padding-right: 0;
-    margin-top: var(--mantine-spacing-xl);
-  }
+	@media (max-width: $mantine-breakpoint-sm) {
+		padding-right: 0;
+		margin-top: var(--mantine-spacing-xl);
+	}
 }
 
 .wrapper {
-  display: flex;
-  align-items: center;
-  padding: calc(var(--mantine-spacing-xl) * 2);
-  border-radius: var(--mantine-radius-md);
-  border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
-  background-color: black;
+	display: flex;
+	align-items: center;
+	padding: calc(var(--mantine-spacing-xl) * 2);
+	border-radius: var(--mantine-radius-md);
+	border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
+	background-color: black;
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    flex-direction: column-reverse;
-    padding: var(--mantine-spacing-xl);
-  }
+	@media (max-width: $mantine-breakpoint-sm) {
+		flex-direction: column-reverse;
+		padding: var(--mantine-spacing-xl);
+	}
 }
 
+
 .image {
-  max-width: 50%;
-  height: 400px;
+  
+  height: 600px;
 
-  @media (max-width: $mantine-breakpoint-xs) {
-    max-width: 100%;
-  }
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    max-width: 100%;
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
   }
 }
 
