@@ -8,9 +8,7 @@
   color: black;
   height: 250px;
   width: 350px;
- 
 }
-
 .icon {
   position: absolute;
   top: rem(-20px);
@@ -32,13 +30,23 @@ font-size: 25px;
 .icon1{
   background-color: #4ECA3E;
   left: calc(70% - rem(30px));
+
 }
 .indicator {
   width: rem(12px);
   height: rem(4px);
   transition: width 250ms ease;
+  background-color: #4ECA3E;
 
   &[data-active] {
     width: rem(40px);
   }
+}
+.Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: black;
+
 }
