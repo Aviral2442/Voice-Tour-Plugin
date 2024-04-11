@@ -3,32 +3,36 @@
   overflow: visible;
   padding: 10px;
   padding-top: 30px;
-  padding-right: 50px;
+  padding-right: 30px;
   background-color: black;
   color: white;
   height: 250px;
-  width: 350px;
+  width: 490px;
 }
 .icon {
   position: absolute;
   top: rem(-20px);
   left: calc(95% - rem(30px));
+  margin-top: 8px;
+  background-color: #90CDB7;
 }
 
 .name {
-  color: #4ECA3E;
-font-size: 25px;
+  color: #90CDB7;
+font-size: 29px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1;
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
 .review{
   padding-top: 10px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .icon1{
-  background-color: #4ECA3E;
+  background-color: #90CDB7;
   left: calc(70% - rem(30px));
 
 }
