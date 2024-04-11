@@ -19,7 +19,7 @@ const HeroBulletLeft = () => {
                 </Group>
 
                 <Group className={classes.Left}>
-                    <Text c='green' p={5}>Use Cases</Text>
+                    <Text c='#4ECA3E' p={5}>Use Cases</Text>
                     <Title className={classes.Title}> Enhance Your Projects with<br /> Voice Assistant</Title>
                     <p className={classes.P}> Discover seamless website navigation like never before with our Voice Assistant feature. Say goodbye to traditional browsing methods and embrace the future of hands-free interaction. Experience convenience, efficiency, and accessibility at your fingertips.</p>
                     <Paper shadow="xs" radius="xs" className={classes.paper}>
@@ -32,9 +32,9 @@ const HeroBulletLeft = () => {
                             direction="row"
                             wrap="wrap"
                         >
-                            <Button variant="outline" color="green" radius="md">AI Voice Over for Videos</Button>
-                            <Button variant="outline" color="green" radius="md">Audio Publishing</Button>
-                            <Button variant="outline" color="green" radius="md">Audio story Telling</Button>
+                            <Button variant="outline" color="#4ECA3E" radius="md">AI Voice Over for Videos</Button>
+                            <Button variant="outline" color="#4ECA3E" radius="md">Audio Publishing</Button>
+                            <Button variant="outline" color="#4ECA3E" radius="md">Audio story Telling</Button>
                         </Flex>
                         <Flex
                             mih={50}
@@ -45,10 +45,10 @@ const HeroBulletLeft = () => {
                             direction="row"
                             wrap="wrap"
                         >
-                            <Button variant="outline" color="green" radius="md">Conversational AI</Button>
-                            <Button variant="outline" color="green" radius="md">custom Voice Creation</Button>
-                            <Button variant="outline" color="green" radius="md">E-Learning</Button>
-                            <Button variant="outline" color="green" radius="md">Podcasts</Button>
+                            <Button variant="outline" color="#4ECA3E" radius="md">Conversational AI</Button>
+                            <Button variant="outline" color="#4ECA3E" radius="md">custom Voice Creation</Button>
+                            <Button variant="outline" color="#4ECA3E" radius="md">E-Learning</Button>
+                            <Button variant="outline" color="#4ECA3E" radius="md">Podcasts</Button>
                         </Flex>
                         <Flex
                             mih={50}
@@ -59,10 +59,10 @@ const HeroBulletLeft = () => {
                             direction="row"
                             wrap="wrap"
                         >
-                            <Button variant="outline" color="green" radius="md">Gaming</Button>
-                            <Button variant="outline" color="green" radius="md">IVR Systems</Button>
-                            <Button variant="outline" color="green" radius="md">Translation & Dubbing</Button>
-                            <Button variant="outline" color="green" radius="md">Voice Accesbility</Button>
+                            <Button variant="outline"  color="#4ECA3E"  radius="md">Gaming</Button>
+                            <Button variant="outline"  color="#4ECA3E"  radius="md">IVR Systems</Button>
+                            <Button variant="outline"  color="#4ECA3E"  radius="md">Translation & Dubbing</Button>
+                            <Button variant="outline"  color="#4ECA3E"  radius="md">Voice Accesbility</Button>
                         </Flex>
                         <Flex
                             mih={50}
@@ -73,7 +73,7 @@ const HeroBulletLeft = () => {
                             direction="row"
                             wrap="wrap"
                         >
-                            <Button variant="outline" color="green" radius="md">Voice API</Button>
+                            <Button variant="outline"  color="#4ECA3E"  radius="md">Voice API</Button>
 
                         </Flex>
                     </Paper>
