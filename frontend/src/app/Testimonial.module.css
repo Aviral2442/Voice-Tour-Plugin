@@ -4,8 +4,8 @@
   padding: 10px;
   padding-top: 30px;
   padding-right: 50px;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   height: 250px;
   width: 350px;
 }
@@ -47,6 +47,6 @@ font-size: 25px;
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background-color: black;
+  background-color: ;
 
 }
