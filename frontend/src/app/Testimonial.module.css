@@ -4,10 +4,11 @@
   padding: 10px;
   padding-top: 30px;
   padding-right: 30px;
-  background-color: black;
+  background-color: #1B1919;
   color: white;
   height: 250px;
-  width: 490px;
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(214, 202, 202, 0.2);
 }
 .icon {
   position: absolute;
