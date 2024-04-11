@@ -1,0 +1,67 @@
+.Container {
+    background-color: #1B1919;
+  }
+  
+  .Paper {
+    
+    background-color: #1B1919;
+  
+    @media (max-width: $mantine-breakpoint-md) {
+      display: none;
+    }
+  }
+  
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: calc(var(--mantine-spacing-xl) * 1);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 1);
+  }
+  
+  .Right {
+    padding: 10px;
+  }
+  
+  
+  .Title {
+    margin-top: -40px;
+    font-size: 60px;
+    position: relative;
+    font-weight: 100;
+    line-height: 0.9;
+    text-wrap: balance;
+    @media (max-width: $mantine-breakpoint-sm) {
+      font-size: rem(39px);
+      margin-top: 1px;
+    }
+  }
+  
+  .paper {
+    width: 100%;
+    background-color: #1B1919;
+    text-wrap: balance;
+  }
+  
+  .P {
+    max-width: rem(600px);
+    margin-top: -35px;
+    text-wrap: balance;
+      &::after {
+      display: block;
+      background-color: var(--mantine-color-blue-filled);
+      width: rem(45px);
+      height: rem(2px);
+      margin-top: var(--mantine-spacing-sm);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (max-width: $mantine-breakpoint-md) {
+     margin-top:6px ;
+    }
+  }
+  .Card{
+    width: 700px;
+    height: 500px;
+    background-color: #1B1919;
+  }

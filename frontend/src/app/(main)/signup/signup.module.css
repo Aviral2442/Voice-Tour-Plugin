@@ -10,30 +10,31 @@
 	}
 
 }
+
 .Paper {
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(0px);
-  border-radius: 10px;
-  border-left: 5px solid #4ECA3E;
-  color: white;
+	/* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+	backdrop-filter: blur(100px);
+	-webkit-backdrop-filter: blur(0px);
+	border-radius: 10px;
+	border-left: 5px solid #4ECA3E;
+	color: white;
 
 }
 
 .title {
-  color: #4ECA3E;
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
-  font-weight: 600;
-  text-align: center;
-  font-size: 40px;
+	color: #4ECA3E;
+	font-family:
+		Greycliff CF,
+		var(--mantine-font-family);
+	font-weight: 600;
+	text-align: center;
+	font-size: 40px;
 }
 
 .text {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 14px;
 }
 
 .body {
@@ -49,8 +50,6 @@
 	display: flex;
 	align-items: center;
 	padding: calc(var(--mantine-spacing-xl) * 2);
-	border-radius: var(--mantine-radius-md);
-	border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
 	background-color: black;
 
 	@media (max-width: $mantine-breakpoint-sm) {
@@ -61,57 +60,63 @@
 
 
 .image {
-  
-  height: 600px;
+	height: 600px;
 
+	@media (max-width: $mantine-breakpoint-xs) {
+		max-width: 100%;
+	}
 
-  @media (max-width: $mantine-breakpoint-md) {
-    display: none;
-  }
+	@media (max-width: $mantine-breakpoint-sm) {
+		max-width: 100%;
+	}
+
+	@media (max-width: $mantine-breakpoint-md) {
+		display: none;
+	}
 }
 
 .control {
 
-  border-color: #4ECA3E;
+	border-color: #4ECA3E;
 }
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
-  gap: 15px;
-  background-color: #4ECA3E;
-  outline: 3px #4ECA3E solid;
-  outline-offset: -3px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: 400ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 15px;
+	gap: 15px;
+	background-color: #4ECA3E;
+	outline: 3px #4ECA3E solid;
+	outline-offset: -3px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: 400ms;
 }
 
 .button .text {
-  position: relative;
+	position: relative;
 
-  text-align: center;
-  color: white;
-  font-weight: 600;
-  font-size: 14px;
-  transition: 400ms;
+	text-align: center;
+	color: white;
+	font-weight: 600;
+	font-size: 14px;
+	transition: 400ms;
 }
 
 
 
 .button:hover {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .button:hover .text {
-  color: rgb(61, 106, 255);
+	color: rgb(61, 106, 255);
 }
 
 .button:hover svg path {
-  fill: rgb(61, 106, 255);
+	fill: rgb(61, 106, 255);
 }
 
 .Button {

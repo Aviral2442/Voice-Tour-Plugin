@@ -50,16 +50,16 @@ const GenerateTour = () => {
             justify="flex-start"
             align="flex-start"
             direction="row"
-            > 
+          >
             <Stepper.Step label="First step" description="type of Selector" />
-              <Radio.Group >
-                <Group mt="xs">
-                  <Radio value="ID" label="ID" />
-                  <Radio value="sName" label="Name" />
-                  <Radio value="ng" label="Angular" />
-                </Group>
-              </Radio.Group>
-            
+            <Radio.Group >
+              <Group mt="xs">
+                <Radio value="ID" label="ID" />
+                <Radio value="sName" label="Name" />
+                <Radio value="ng" label="Angular" />
+              </Group>
+            </Radio.Group>
+
           </Flex>
 
           <Flex
@@ -69,14 +69,14 @@ const GenerateTour = () => {
             justify="flex-start"
             align="flex-start"
             direction="row"
-            
-          >
-            <Stepper.Step label="Second step" description="Selector Value"/>
-              <TextInput
-                placeholder="Enter selector value"
-              />
 
-            
+          >
+            <Stepper.Step label="Second step" description="Selector Value" />
+            <TextInput
+              placeholder="Enter selector value"
+            />
+
+
           </Flex>
 
           <Flex
@@ -86,11 +86,11 @@ const GenerateTour = () => {
             justify="flex-start"
             align="flex-start"
             direction="row"
-            
+
           >
-            <Stepper.Step label="Final step" description="Description"/>
-              <Textarea placeholder="Enter Description" />
-           
+            <Stepper.Step label="Final step" description="Description" />
+            <Textarea placeholder="Enter Description" />
+
           </Flex>
           <Stepper.Completed>
             Completed
@@ -98,7 +98,7 @@ const GenerateTour = () => {
         </Stepper>
 
         <Group mt="xl">
-          
+
           <Button variant="default" onClick={prevStep}>Back</Button>
           <Button onClick={nextStep}>Next step</Button>
         </Group>

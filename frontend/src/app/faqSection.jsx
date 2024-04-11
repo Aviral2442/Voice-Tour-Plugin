@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Container, Title, Accordion } from "@mantine/core"
+import { Container, Title, Accordion, Box } from "@mantine/core"
 import classes from "./faqSection.module.css"
 
 const placeholder =
@@ -9,7 +9,8 @@ const placeholder =
 
 export default function Faqsection() {
     return (
-        <Container size="sm" className={classes.wrapper}>
+        <Box bg='#1B1919'>
+        <Container size="md" className={classes.wrapper}>
             <Title ta="center" className={classes.title}>
                 Frequently Asked Questions
             </Title>
@@ -50,5 +51,6 @@ export default function Faqsection() {
                 </Accordion.Item>
             </Accordion>
         </Container>
+        </Box>
     )
 }

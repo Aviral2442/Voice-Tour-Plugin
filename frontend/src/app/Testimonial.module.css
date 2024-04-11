@@ -41,7 +41,7 @@ font-size: 29px;
   width: rem(12px);
   height: rem(4px);
   transition: width 250ms ease;
-  background-color: #4ECA3E;
+  background-color: #90CDB7;
 
   &[data-active] {
     width: rem(40px);
@@ -52,6 +52,6 @@ font-size: 29px;
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background-color: ;
+  background-color:#1B1919 ;
 
 }

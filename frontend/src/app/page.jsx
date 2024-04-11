@@ -27,6 +27,8 @@ import Aos from 'aos'
 // import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Testimonial from './Testimonial'
+import HeroBulletRight from './HeroBulletRight'
+import HeroBulletLeft from './HeroBulletLeft'
 
 
 
@@ -120,8 +122,14 @@ const page = () => {
 
       <FeaturesCards />
 
+      <HeroBulletRight/>
+
+      <HeroBulletLeft/>
+
       <Faqsection />
+
      <Testimonial />
+
       <Footer />
 
     </>
