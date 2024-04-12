@@ -62,7 +62,7 @@ export default function FeaturesCards() {
     ))
 
     return (
-        <Box bg='#1B1919'>
+    
         <Container size="lg" py="xl" >
             <Group justify="center">
                 <Badge variant="filled" size="lg" radius="sm" bg='#4ECA3E' c='black'>
@@ -83,7 +83,7 @@ export default function FeaturesCards() {
                 {features}
             </SimpleGrid>
         </Container>
-        </Box>
+        
     )
 }
 

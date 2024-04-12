@@ -9,7 +9,7 @@ const placeholder =
 
 export default function Faqsection() {
     return (
-        <Box bg='#1B1919'>
+        
         <Container size="md" className={classes.wrapper}>
             <Title ta="center" className={classes.title}>
                 Frequently Asked Questions
@@ -51,6 +51,6 @@ export default function Faqsection() {
                 </Accordion.Item>
             </Accordion>
         </Container>
-        </Box>
+        
     )
 }
