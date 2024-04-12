@@ -7,9 +7,10 @@
   background-color: #1B1919;
   color: white;
   height: 250px;
-  width: 450px;
-  box-shadow: 0 4px 8px 0 rgba(214, 202, 202, 0.2);
+  width: 360px;
+
 }
+
 .icon {
   position: absolute;
   top: rem(-20px);
@@ -20,23 +21,26 @@
 
 .name {
   color: #90CDB7;
-font-size: 29px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 29px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1;
   margin-bottom: 8px;
   margin-top: 8px;
 }
-.review{
+
+.review {
   padding-top: 10px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 13px;
   font-weight: 400;
 }
-.icon1{
+
+.icon1 {
   background-color: #90CDB7;
   left: calc(70% - rem(30px));
 
 }
+
 .indicator {
   width: rem(12px);
   height: rem(4px);
@@ -47,11 +51,12 @@ font-size: 29px;
     width: rem(40px);
   }
 }
-.Container{
+
+.Container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background-color:#1B1919 ;
+  background-color: #1B1919;
 
 }

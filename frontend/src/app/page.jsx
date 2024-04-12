@@ -29,9 +29,10 @@ import 'aos/dist/aos.css'
 import Testimonial from './Testimonial'
 import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
+import { Poppins, Whisper } from 'next/font/google'
+import clsx from 'clsx'
 
-
-
+const whisper = Whisper( {subsets: ['latin'], weight: ['400']});
 
 const page = () => {
 
@@ -49,7 +50,7 @@ const page = () => {
           <Container  >
             <div className={classes.inner}>
               <div className={classes.content} data-aos="fade-up">
-                <Title className={classes.title}><span className={classes.highlight}>Welcome to</span> <br /><span className={classes.subtitle}>VoiceTourNavigator </span><br />Plugin System</Title>
+                <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br /><span className={classes.subtitle}>VoiceTourNavigator </span><br />Plugin System</Title>
                 <Text mt="md">
                   Revolutionizing Website Navigation with Voice Technology
                 </Text>

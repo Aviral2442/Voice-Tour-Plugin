@@ -14,6 +14,8 @@ export const metadata = {
 
 const theme = createTheme({
   /** Put your mantine theme override here */
+  primaryColor: 'cyan',
+  
 });
 
 export default function RootLayout({ children }) {

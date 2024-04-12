@@ -6,7 +6,6 @@ const mySchema = new Schema({
     webpages: Array,
     steps: Array,
     createdAt: Date
-
 });
 
 module.exports = model('tour', mySchema);
