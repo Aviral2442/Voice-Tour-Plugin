@@ -89,3 +89,7 @@
       margin-top: var(--mantine-spacing-xs);
     }
   }
+  .Image{
+    height: 80px;
+     width: 100px;
+   }

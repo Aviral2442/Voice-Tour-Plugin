@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Text, Container, ActionIcon, Group, rem, Title } from '@mantine/core';
+import { Text, Container, ActionIcon, Group, rem, Title, Image } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Footer.module.css';
@@ -63,7 +63,7 @@ export function Footer() {
         <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <div className={classes.logo}>
-                    <Title size={30} c='#90CDB7'>VoiceTourNavigator</Title>
+                <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
                     <Text size="xs" c="dimmed" className={classes.description}>
                         Build fully functional accessible web applications faster than ever
                     </Text>

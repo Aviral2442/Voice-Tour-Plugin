@@ -21,6 +21,7 @@ import {
   Title,
   TextInput,
   Code,
+  Image,
 } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
@@ -108,7 +109,7 @@ function Navbar() {
       <header className={classes.header}>
         <Group justify='space-between' h="100%">
           <Anchor href="http://localhost:3000/" underline="never">
-            <Title order={3} className={classes.title}>VoiceTour Navigator </Title>
+            <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
           </Anchor>
 
 

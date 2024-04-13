@@ -1,5 +1,5 @@
 .header {
-    height: rem(60px);
+    height: rem(70px);
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
@@ -80,9 +80,7 @@
       display: block;
     }
   }
-  .title{
-    color: #90CDB7;
-  }
+  
   .button{
     color:#90CDB7;
     border-color: #90CDB7;
@@ -92,4 +90,7 @@
     height: 100px;
     width: 40px;
   }
-  
+  .Image{
+   height: 80px;
+    width: 100px;
+  }
