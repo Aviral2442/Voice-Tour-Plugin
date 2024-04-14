@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     Badge,
     Group,
@@ -16,6 +16,9 @@ import { IconGauge, IconUser, IconCookie, IconMicrophone, IconMapSearch, IconPlu
 import classes from "./FeaturesCards.module.css"
 import { Josefin_Sans } from 'next/font/google'
 import clsx from 'clsx'
+import Aos from 'aos'
+
+
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['100','400'] });
 
@@ -50,11 +53,13 @@ export default function FeaturesCards() {
             radius="md"
             className={classes.card}
             padding="xl"
+            data-aos="fade-up"
         >
             <feature.icon
                 style={{ width: rem(50), height: rem(50) }}
                 stroke={2}
                 color='#66FF00'
+                
             />
             <Text fz="lg" fw={500} className={clsx(classes.cardTitle,font.className)} mt="md">
                 {feature.title}
@@ -65,9 +70,15 @@ export default function FeaturesCards() {
         </Card>
     ))
 
+    
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+
     return (
     
-        <Container size="lg" py="xl" >
+        <Container size="lg" py="xl" data-aos="fade-up">
             <Group justify="center">
                 <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
                     Best Navigator Plugin ever
