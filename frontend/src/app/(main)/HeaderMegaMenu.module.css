@@ -13,8 +13,9 @@
     padding-right: var(--mantine-spacing-md);
     text-decoration: none;
     color: white;
-    font-weight: 500;
-    font-size: var(--mantine-font-size-sm);
+    font-weight: 400;
+    font-size: var(--mantine-font-size-md);
+    letter-spacing: 1px;
   
     @media (max-width: $mantine-breakpoint-sm) {
       height: rem(42px);
@@ -22,8 +23,9 @@
     }
   
     @mixin hover {
-      color:#90CDB7;
-     border-bottom:2px solid #90CDB7;
+      padding-bottom:6px;
+      color:#66FF00;
+     border-bottom:2px solid #66FF00;
     }
   }
   
@@ -82,8 +84,11 @@
   }
   
   .button{
-    color:#90CDB7;
-    border-color: #90CDB7;
+    font-size: 15PX;
+    letter-spacing: 1px;
+
+    color:#66FF00;
+    border-color: #66FF00;
     
   }
   .avi{
