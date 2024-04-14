@@ -121,7 +121,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                    <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
+                                    <Avatar src='https://cdn4.sharechat.com/Instagramlogo_1b7530b4_1661188919474_sc_cmprsd_75.jpg?tenant=sc&referrer=tag-service&f=rsd_75.jpg' alt="it's me" style={{ width: rem(72), height: rem(72) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -157,7 +157,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                    <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
+                                <Avatar src='https://cdn4.sharechat.com/Instagramlogo_1b7530b4_1661188919474_sc_cmprsd_75.jpg?tenant=sc&referrer=tag-service&f=rsd_75.jpg' alt="it's me" style={{ width: rem(72), height: rem(72) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -191,8 +191,8 @@ const Testimonial = () => {
                             </Grid.Col>
                             <Grid.Col span={2}>
                                 {"  "}
-                                <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                    <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
+                                <ActionIcon className={classes.icon} size={60} radius='md' color='black' >
+                                    <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62),marginTop:'-10px' }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -227,7 +227,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                    <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
+                                <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62),marginTop:'-10px' }} />
 
                                 </ActionIcon>
                             </Grid.Col>

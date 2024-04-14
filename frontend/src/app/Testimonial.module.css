@@ -4,10 +4,11 @@
   padding: 10px;
   padding-top: 30px;
   padding-right: 50px;
-background-color: white;
-color: black;
+background-color: #28282B;
+color: white;
   height: 250px;
   width: 350px;
+  border: 2px solid #66FF00;
  
 }
 
@@ -15,11 +16,12 @@ color: black;
   position: absolute;
   top: rem(-20px);
   left: calc(95% - rem(30px));
-  background-color: #4ECA3E;
+  background-color: black;
+  border: 1px solid #66FF00;
 }
 
 .name {
-  color: #7fff00;
+  color: #66FF00;
 font-size: 25px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1;
@@ -31,14 +33,14 @@ font-size: 25px;
   font-weight: bold;
 }
 .icon1{
-  background-color: #4ECA3E;
+  background-color: #39FF14;
   left: calc(70% - rem(30px));
 }
 .indicator {
   width: rem(12px);
   height: rem(4px);
   transition: width 250ms ease;
-  background-color: #4ECA3E;
+  background-color: #66FF00;
 
   &[data-active] {
     width: rem(40px);

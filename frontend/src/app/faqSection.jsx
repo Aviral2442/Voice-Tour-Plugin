@@ -12,10 +12,10 @@ export default function Faqsection() {
         
         <Container size="md" className={classes.wrapper}>
             <Title ta="center" className={classes.title}>
-                Frequently Asked Questions
+                Frequently <span style={{color:'white'}}>Asked</span> Questions
             </Title>
 
-            <Accordion variant="separated">
+            <Accordion variant="separated" >
                 <Accordion.Item className={classes.item} value="reset-password">
                     <Accordion.Control>How does the Voice Assistant work?</Accordion.Control>
                     <Accordion.Panel>Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.</Accordion.Panel>

@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 
 
   const myStyles = {
-    backgroundColor: ' #262525',
+    backgroundColor: ' black',
   }
 
   return (
