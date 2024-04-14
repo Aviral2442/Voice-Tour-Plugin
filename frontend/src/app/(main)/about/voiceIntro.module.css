@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: calc(var(--mantine-spacing-xl) * 1);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 1);
+}
+
+.Title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 60px;
+    position: relative;
+    font-weight: 100;
+    line-height: 0.9;
+    text-align: center;
+    text-wrap: balance;
+    @media (max-width: $mantine-breakpoint-sm) {
+      font-size: rem(39px);
+      margin-top: 1px;
+    }
+  }
