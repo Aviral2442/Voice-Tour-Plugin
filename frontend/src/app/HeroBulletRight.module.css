@@ -1,11 +1,6 @@
-.Container {
-    background-color: #1B1919;
-  }
+
   
   .Paper {
-    
-    background-color: #1B1919;
-  
     @media (max-width: $mantine-breakpoint-md) {
       display: none;
     }
@@ -38,14 +33,18 @@
   
   .paper {
     width: 100%;
-    background-color: #1B1919;
     text-wrap: balance;
   }
   
   .P {
-    max-width: rem(600px);
-    margin-top: -35px;
-    text-wrap: balance;
+    max-width: rem(700px);
+  margin-top: -35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: rgb(173, 179, 200);
+  background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
+  -webkit-background-clip: text;
+  text-wrap: balance;
+
       &::after {
       display: block;
       background-color: var(--mantine-color-blue-filled);
@@ -63,5 +62,4 @@
   .Card{
     width: 700px;
     height: 500px;
-    background-color: #1B1919;
   }
