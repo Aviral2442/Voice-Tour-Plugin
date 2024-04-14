@@ -1,3 +1,5 @@
+
+
 .inner {
   display: flex;
   justify-content: space-between;
@@ -62,6 +64,7 @@
     flex: 1;
   }
 }
+
 .controlfirst {
   height: rem(50px);
   padding-left: rem(38px);
@@ -80,10 +83,10 @@
 
 
 .image {
-  width: rem(400px);
-  height: rem(400px);
-  margin-top: 40px;
-
+  width: rem(600px);
+  height: rem(700px);
+  margin-left: 60px;
+  margin-top: -110px;
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;

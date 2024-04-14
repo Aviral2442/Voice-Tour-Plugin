@@ -46,9 +46,9 @@ const page = () => {
     <>
       <Navbar />
       <section  >
-        <Box mx="auto" >
+        <Box mx="auto" className={classes.Box} >
 
-          <Container  >
+          <Container  size='lg'>
             <div className={classes.inner}>
               <div className={classes.content} data-aos="fade-up">
                 <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br />
