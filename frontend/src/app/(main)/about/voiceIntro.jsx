@@ -29,7 +29,7 @@ const VoiceIntro = () => {
                     <Paper shadow="xs" radius="xs" p="xl" className={classes.Paper}>
                         <Card shadow="sm" padding="lg" radius="md" withBorder c='#1B1919' className={classes.Card}>
                             <Card.Section>
-                                <Image src='micimg.png' className={classes.image} />
+                                <Image src='voice.png' className={classes.image} />
                             </Card.Section>
                         </Card>
                     </Paper>
