@@ -24,7 +24,10 @@
   font-size: rem(48px);
   line-height: 1.2;
   font-weight: 900;
- 
+  background-color: #e7eff9;
+  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+  -webkit-background-clip: text;
+
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(30px);
@@ -33,7 +36,7 @@
 
 .subtitle {
 
-  color: #4ECA3E;
+  color: #66FF00;
 
 }
 
@@ -49,8 +52,23 @@
   height: rem(50px);
   padding-left: rem(38px);
   padding-right: rem(38px);
- color: #90CDB7;
- border-color: #90CDB7;
+  color: #39FF14;
+  border-color: #39FF14;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: rem(54px);
+    padding-left: rem(18px);
+    padding-right: rem(18px);
+    flex: 1;
+  }
+}
+.controlfirst {
+  height: rem(50px);
+  padding-left: rem(38px);
+  padding-right: rem(38px);
+  color: #262525;
+  border-color: #39FF14;
+  background-color: #39FF14;
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: rem(54px);
@@ -65,7 +83,7 @@
   width: rem(400px);
   height: rem(400px);
   margin-top: 40px;
-  
+
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;
@@ -74,9 +92,20 @@
 
 .highlight {
   position: relative;
+  font-weight: 100;
 }
 
-.List{
-  color: white;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.List {
+  background-color: #e7eff9;
+  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+  -webkit-background-clip: text;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.description {
+  background-color: #e7eff9;
+  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+  -webkit-background-clip: text;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
