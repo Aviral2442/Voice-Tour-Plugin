@@ -12,27 +12,31 @@ import {
     useMantineTheme,
     Box
 } from "@mantine/core"
-import { IconGauge, IconUser, IconCookie } from "@tabler/icons-react"
+import { IconGauge, IconUser, IconCookie, IconMicrophone, IconMapSearch, IconPlugConnected } from "@tabler/icons-react"
 import classes from "./FeaturesCards.module.css"
+import { Josefin_Sans } from 'next/font/google'
+import clsx from 'clsx'
+
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100','400'] });
 
 const mockdata = [
     {
         title: "Activate the Voice Assistant",
         description:
             "Simply click the 'Activate Assistant' button or use the voice command to start interacting with our intelligent assistant.",
-        icon: IconGauge
+        icon: IconMicrophone
     },
     {
         title: "Navigate or Generate a Tour",
         description:
             "Choose between navigating the website using voice commands or generating a personalized tour to explore key sections.",
-        icon: IconUser
+        icon: IconMapSearch
     },
     {
         title: "Enhance with Plugins",
         description:
             "Customize your experience further by installing plugins to add new features or improve existing functionality.",
-        icon: IconCookie
+        icon: IconPlugConnected
     }
 ]
 
@@ -50,12 +54,12 @@ export default function FeaturesCards() {
             <feature.icon
                 style={{ width: rem(50), height: rem(50) }}
                 stroke={2}
-                color='#4ECA3E'
+                color='#66FF00'
             />
-            <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
+            <Text fz="lg" fw={500} className={clsx(classes.cardTitle,font.className)} mt="md">
                 {feature.title}
             </Text>
-            <Text fz="sm" c="dimmed" mt="sm">
+            <Text fz="sm" c="dimmed" mt="sm" className={classes.cardDescription}>
                 {feature.description}
             </Text>
         </Card>
@@ -65,21 +69,21 @@ export default function FeaturesCards() {
     
         <Container size="lg" py="xl" >
             <Group justify="center">
-                <Badge variant="filled" size="lg" radius="sm" bg='#4ECA3E' c='black'>
+                <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
                     Best Navigator Plugin ever
                 </Badge>
             </Group>
 
-            <Title order={2} className={classes.title} ta="center" mt="sm" c='#4ECA3E'>
+            <Title order={2} className={classes.title} ta="center" mt="sm" c='#66FF00'>
             Explore Our <span style={{color:'white'}}>Innovative</span>  Key Features
             </Title>
 
-            <Text c="dimmed" className={classes.description} ta="center" mt="md">
+            <Text  className={classes.description} ta="center" mt="md">
             Discover our standout features: voice-based navigation, personalized tours, 
             and customizable plugins, all designed to enhance your browsing
             </Text>
 
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
+            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={40}>
                 {features}
             </SimpleGrid>
         </Container>
