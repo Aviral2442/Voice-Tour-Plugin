@@ -1,16 +1,21 @@
 .Paper {
   background-color: black;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    display: none;
-  }
 }
 
 .inner {
   display: flex;
   justify-content: space-between;
-  padding-top: calc(var(--mantine-spacing-xl) * 1);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 1);
+  border: 1px solid black;
+  border-radius: 20px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    padding: 5px;
+  }
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+
+  }
 }
 
 .Right {
@@ -28,7 +33,7 @@
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(39px);
-    margin-top: 1px;
+    margin-top: -13px;
   }
 }
 
@@ -58,11 +63,19 @@
   }
 
   @media (max-width: $mantine-breakpoint-md) {
-    margin-top: 6px;
+    margin-top: -8px;
   }
 }
 
 .Card {
   width: 700px;
   height: 500px;
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: var(--mantine-spacing-xl);
+    height: auto;
+    width: auto;
+  }
 }

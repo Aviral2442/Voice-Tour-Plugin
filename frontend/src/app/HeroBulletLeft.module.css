@@ -1,24 +1,32 @@
 .Paper {
   background-color: black;
-  @media (max-width: $mantine-breakpoint-md) {
-    display: none;
-  }
+ 
 }
 
 .inner {
   display: flex;
   justify-content: space-between;
-  padding-top: calc(var(--mantine-spacing-xl) * 1);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 1);
+border-radius: 20px;
+border: 1px solid black;
+
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    padding: 5px;
+  }
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+
+  }
 }
 
-.Right {
+.Left {
   padding: 5px;
 }
 
 
 .Title {
-  margin-top: -60px;
+  margin-top: -40px;
   font-size: 60px;
   position: relative;
   font-weight: 100;
@@ -27,12 +35,13 @@
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(39px);
-    margin-top: 1px;
+    margin-top: -13px;
+    text-wrap: balance;
   }
 }
 
 .paper {
-background-color: black;
+  background-color: black;
   width: 100%;
   text-wrap: balance;
 }
@@ -58,6 +67,7 @@ background-color: black;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: 6px;
+    max-width: 100%;
   }
 }
 
@@ -65,12 +75,13 @@ background-color: black;
   background-color: black;
   width: 700px;
   height: 500px;
-}
 
-.image {
-  width: 100%;
-  padding: 10px;
-  background-position: center;
-  margin-top: -95px;
-
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: var(--mantine-spacing-xl);
+    height: auto;
+    width: auto;
+  }
 }

@@ -29,7 +29,6 @@ const HeroBulletLeft = () => {
                             justify="flex-start"
                             align="flex-start"
                             direction="row"
-                            wrap="wrap"
                         >
                             <Button variant="outline" color="#66FF00" radius="md" >AI Voice Over for Videos</Button>
                             <Button variant="outline" color="#66FF00" radius="md">Audio Publishing</Button>
@@ -41,7 +40,6 @@ const HeroBulletLeft = () => {
                             justify="flex-start"
                             align="flex-start"
                             direction="row"
-                            wrap="wrap"
                         >
                             <Button variant="outline" color="#66FF00" radius="md">Conversational AI</Button>
                             <Button variant="outline" color="#66FF00" radius="md">custom Voice Creation</Button>
@@ -54,7 +52,6 @@ const HeroBulletLeft = () => {
                             justify="flex-start"
                             align="flex-start"
                             direction="row"
-                            wrap="wrap"
                         >
                             <Button variant="outline" color="#66FF00" radius="md">Gaming</Button>
                             <Button variant="outline" color="#66FF00" radius="md">IVR Systems</Button>
@@ -67,7 +64,6 @@ const HeroBulletLeft = () => {
                             justify="flex-start"
                             align="flex-start"
                             direction="row"
-                            wrap="wrap"
                         >
                             <Button variant="outline" color="#66FF00" radius="md">Voice API</Button>
 

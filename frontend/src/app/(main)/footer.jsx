@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
-import { Text, Container, ActionIcon, Group, rem, Title, Image } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+import { Text, Container, ActionIcon, Group, rem, Title, Image, TextInput, Button } from '@mantine/core';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconAt } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Footer.module.css';
 
@@ -57,16 +57,30 @@ export function Footer() {
             </div>
         );
     });
+    const icon = <IconAt style={{ width: rem(16), height: rem(16) }} />;
+
 
     return (
 
         <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <div className={classes.logo}>
-                <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
+                    <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
                     <Text size="xs" c="dimmed" className={classes.description}>
                         Build fully functional accessible web applications faster than ever
                     </Text>
+                    <div>
+                        <TextInput
+                            mt="md"
+                            rightSectionPointerEvents="none"
+                            rightSection={icon}
+                            label="Your email"
+                            placeholder="Your email"
+                            color='#66FF00'
+
+                        />
+                        <Button mt='md' variant='outline' color='#66ff00' className={classes.Btn}>Subscribe</Button>
+                    </div>
                 </div>
                 <div className={classes.groups}>{groups}</div>
             </Container>
