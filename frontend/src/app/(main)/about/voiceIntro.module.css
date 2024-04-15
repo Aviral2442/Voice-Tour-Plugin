@@ -19,3 +19,9 @@
       margin-top: 1px;
     }
   }
+
+  .whychoose{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+  }
