@@ -41,6 +41,10 @@ import cx from 'clsx';
 import { ActionIcon, useMantineColorScheme, useComputedColorScheme } from '@mantine/core';
 import Lottie from 'lottie-react';
 import avatar from './avatar.json'
+import clsx from 'clsx'
+import { Londrina_Solid } from 'next/font/google'
+
+const font =  Londrina_Solid( {subsets: ['latin'], weight: ['100', '300', '400', '900']});
 
 
 const mockdata = [
@@ -115,17 +119,17 @@ function Navbar() {
 
           <Group visibleFrom="sm">
             <Group h="100%" gap={0} visibleFrom="sm">
-              <a href="http://localhost:3000/" className={classes.link}>
-                Home
+              <a href="http://localhost:3000/" className={clsx(classes.link, font.className)}>
+                HOME
               </a>
-              <a href="/voiceAssistant" className={classes.link}>
-                Voice Assistant
+              <a href="/voiceAssistant" className={clsx(classes.link, font.className)}>
+                VOICE ASSISTANT
               </a>
-              <a href="/tourGenerator" className={classes.link}>
-                Tour Generator
+              <a href="/tourGenerator" className={clsx(classes.link, font.className)}>
+                TOUR GENERATOR
               </a>
-              <a href="#" className={classes.link}>
-                Documentation
+              <a href="#" className={clsx(classes.link, font.className)}>
+                DOCUMENTATION
               </a>
               {/* <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
                 <HoverCard.Target>
@@ -171,11 +175,11 @@ function Navbar() {
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard> */}
-              <a href="/about" className={classes.link}>
-                About us
+              <a href="/about" className={clsx(classes.link, font.className)}>
+                ABOUT US
               </a>
-              <a href="/contact" className={classes.link}>
-                Contact us
+              <a href="/contact" className={clsx(classes.link, font.className)}>
+                CONTACT US
               </a>
             </Group>
             <TextInput
@@ -189,7 +193,7 @@ function Navbar() {
               mt='md'
             />
             {/* <Button component={Link} variant="default" href='/login'>Log in</Button> */}
-            <Button component={Link} href='/signup' variant='outline' color='white' className={classes.button}>
+            <Button component={Link} href='/signup' variant='outline' color='white' className={clsx(classes.button,font.className)}>
               <Lottie animationData={avatar} className={classes.avi} />
               Sign up</Button>
 

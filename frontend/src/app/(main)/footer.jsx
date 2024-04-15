@@ -72,7 +72,7 @@ export function Footer() {
             </Container>
             <Container className={classes.afterFooter}>
                 <Text c="dimmed" size="sm">
-                    © 2020 mantine.dev. All rights reserved.
+                    © 2020 VoiceTour Navigator. All rights reserved.
                 </Text>
 
                 <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">

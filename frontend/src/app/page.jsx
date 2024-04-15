@@ -29,10 +29,11 @@ import 'aos/dist/aos.css'
 import Testimonial from './Testimonial'
 import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
-import { Poppins, Whisper } from 'next/font/google'
+import { Poppins, Rammetto_One, Whisper } from 'next/font/google'
 import clsx from 'clsx'
 
-const whisper = Whisper( {subsets: ['latin'], weight: ['400']});
+const whisper = Poppins({ subsets: ['latin'], weight: ['100','400'] });
+const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 const page = () => {
 
@@ -45,24 +46,26 @@ const page = () => {
     <>
       <Navbar />
       <section  >
-        <Box mx="auto" >
+        <Box mx="auto" className={classes.Box} >
 
-          <Container  >
+          <Container  size='lg'>
             <div className={classes.inner}>
               <div className={classes.content} data-aos="fade-up">
-                <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br /><span className={classes.subtitle}>VoiceTourNavigator </span><br />Plugin System</Title>
-                <Text mt="md">
+                <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br />
+                  <span className={clsx(classes.subtitle,font.className)}>VoiceTourNavigator </span><br />
+                  Plugin System</Title>
+                <Text mt="md" className={classes.description}>
                   Revolutionizing Website Navigation with Voice Technology
                 </Text>
 
                 <List className={classes.List} size="md" mt="xl" spacing="sm"
 
                   icon={
-                    <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#90CDB7' }} >
+                    <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#66FF00' }} >
                       <IconCheck
                         style={{ width: rem(12), height: rem(12) }}
                         stroke={5}
-
+                        color='black'
                       />
                     </ThemeIcon>
                   }
@@ -91,20 +94,24 @@ const page = () => {
 
                 <Group className={classes.controls}>
                   <Button
+                  component="a"
+                  href="/"
                     size="sm"
-                    className={classes.control}
-                    variant="outline"
+                    className={classes.controlfirst}
+                    variant="filled"
                     color='white'
+                    radius="md"
                   >
                     Get started
                   </Button>
 
                   <Button
                     component="a"
-                    href="https://github.com/mantinedev/mantine"
+                    href="https://github.com/Aviral2442/Voice-Tour-Plugin"
                     size="sm"
                     variant="outline"
                     color='white'
+                    radius="md"
                     className={classes.control}
                     leftSection={<GithubIcon size={20} />}
                   >
@@ -123,13 +130,13 @@ const page = () => {
 
       <FeaturesCards />
 
-      <HeroBulletRight/>
+      <HeroBulletRight />
 
-      <HeroBulletLeft/>
+      <HeroBulletLeft />
 
       <Faqsection />
 
-     <Testimonial />
+      <Testimonial />
 
       <Footer />
 

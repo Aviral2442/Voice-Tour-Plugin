@@ -120,10 +120,6 @@ const faqData = {
             title: 'How do I report a technical issue or bug on your website?',
             description: 'If you encounter a technical issue or bug on our website, please report it to our support team through the provided contact channels, and we will investigate and address it promptly.'
         },
-        {
-            title: '',
-            description: ''
-        },
     ],
 }
 

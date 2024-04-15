@@ -7,10 +7,24 @@
   
   .title {
     margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+    color: #66FF00;
+    &::after {
+      content: ' ';
+  
+      display: block;
+      background-color: #66FF00;
+      width: rem(45px);
+      height: rem(2px);
+      margin-top: var(--mantine-spacing-sm);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
   .item {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: var(--mantine-radius-md);
     margin-bottom: var(--mantine-spacing-lg);
-    border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    border: rem(1px) solid #66FF00;
   }
+  
