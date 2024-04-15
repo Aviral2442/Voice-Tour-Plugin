@@ -158,7 +158,36 @@ const GenerateTour = () => {
           <Button onClick={nextStep}>Next step</Button>
         </Group>
       </Card> */}
+      <Container  size='md' fluid>
+        <Card withBorder radius="md" p="md" className={classes.card} ta='center'>
+          <Stepper active={active} onStepClick={setActive}>
+            <Stepper.Step label="First step" description="Type of Selector">
+              <Radio.Group  ta='center'>
+                <Group mt="xs">
+                  <Radio value="ID" label="id" />
+                  <Radio value="sName" label="name" />
+                </Group>
+              </Radio.Group>
+            </Stepper.Step>
+            <Stepper.Step label="Second step" description="Selector Value">
+              <TextInput
+                placeholder="Enter selector value"
+              />
+            </Stepper.Step>
+            <Stepper.Step label="Final step" description="Description">
+              <Textarea placeholder="Enter Description" />
+            </Stepper.Step>
+            <Stepper.Completed>
+              Completed
+            </Stepper.Completed>
+          </Stepper>
 
+          <Group justify="center" mt="xl">
+            <Button variant="default" onClick={prevStep}>Back</Button>
+            <Button onClick={nextStep}>Next step</Button>
+          </Group>
+        </Card>
+      </Container>
     </div>
   )
 }
