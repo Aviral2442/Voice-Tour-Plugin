@@ -7,7 +7,7 @@
 .header {
   height: rem(400px);
   padding-top: var(--mantine-spacing-md);
-  background-color: #90CDB7;
+  background-color: #66ff00;
   background-size: cover;
   display: flex;
   align-items: flex-end;
@@ -45,7 +45,7 @@
 }
 
 .title {
-  color: #90CDB7;
+  color: #66ff00;
   position: relative;
   z-index: 1;
   font-size: rem(56px);
@@ -83,6 +83,7 @@
 
 .categoryCard {
   height: rem(160px);
+  width: 90%;
   position: relative;
   background-size: 100%;
   background-position: center;
@@ -94,6 +95,9 @@
 
   @mixin hover {
     background-size: 105%;
+    transition: background-size 300ms ease;
+    transform: scale(1.15);
+  
   }
 }
 
@@ -105,11 +109,11 @@
 .item {
     border-radius: var(--mantine-radius-md);
   margin-bottom: var(--mantine-spacing-lg);
-  border: rem(1px) solid #90CDB7;
+  border: rem(1px) solid #66ff00;
 }
 
 .activeFaq{
-  border: 2px solid white;
-  transform: scale(1.1);
+  border: 2px solid #66ff00;
+  transform: scale(1.05);
   transition-duration: 0.3s;
 }

@@ -53,7 +53,7 @@ export default function FeaturesCards() {
             radius="md"
             className={classes.card}
             padding="xl"
-            data-aos="fade-up"
+           
         >
             <feature.icon
                 style={{ width: rem(50), height: rem(50) }}

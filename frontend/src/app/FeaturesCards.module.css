@@ -53,7 +53,7 @@
 .card:hover {
   /* transform: translateY(-10px); */
   border: 1px solid black;
-  transform: scale(1.05);
+  transform: scale(1.09);
 }
 
 .card:active {
