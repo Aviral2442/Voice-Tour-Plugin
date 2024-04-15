@@ -17,25 +17,19 @@ export function HeroBulletRight() {
                         <Flex
                             mih={50}
                             gap="md"
+                            wrap={'wrap'}
+                            
                             justify="flex-start"
                             align="flex-start"
                             direction="row"
                         >
-                            <Button variant="outline" color="#66FF00" radius="md">AI Voice Over for Videos</Button>
-                            <Button variant="outline" color="#66FF00" radius="md">Audio Publishing</Button>
-                            <Button variant="outline" color="#66FF00" radius="md">Audio story Telling</Button>
-                        </Flex>
-                        <Flex
-                            mih={50}
-                            gap="md"
-                            justify="flex-start"
-                            align="flex-start"
-                            direction="row"
-                        >
-                            <Button variant="outline" color="#66FF00" radius="md">Conversational AI</Button>
-                            <Button variant="outline" color="#66FF00" radius="md">custom Voice Creation</Button>
-                            <Button variant="outline" color="#66FF00" radius="md">E-Learning</Button>
-                            <Button variant="outline" color="#66FF00" radius="md">Podcasts</Button>
+                            <Button style={{flexGrow: 1}} variant="outline" color="#66FF00" radius="md">AI Voice Over for Videos</Button>
+                            <Button style={{flexGrow: 1}} variant="outline" color="#66FF00" radius="md">Audio Publishing</Button>
+                            <Button style={{flexGrow: 1}} variant="outline" color="#66FF00" radius="md">Audio story Telling</Button>
+                            <Button style={{flexGrow: 1}} variant="outline" color="#66FF00" radius="md">Conversational AI</Button>
+                            <Button style={{flexGrow: 1}} variant="outline" color="#66FF00" radius="md">custom Voice Creation</Button>
+                            <Button style={{flexGrow: 1}} variant="outline" color="#66FF00" radius="md">E-Learning</Button>
+                            <Button style={{flexGrow: 1}} variant="outline" color="#66FF00" radius="md">Podcasts</Button>
                         </Flex>
                         <Flex
                             mih={50}

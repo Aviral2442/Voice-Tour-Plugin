@@ -79,7 +79,7 @@ export function Footer() {
                             color='#66FF00'
 
                         />
-                        <Button mt='md' variant='outline' color='#66ff00' className={classes.Btn}>Subscribe</Button>
+                        <Button mt='md' className={classes.Btn}>Suscribe</Button>
                     </div>
                 </div>
                 <div className={classes.groups}>{groups}</div>

@@ -84,9 +84,9 @@
 
 .image {
   width: rem(600px);
-  height: rem(700px);
+  height: rem(600px);
   margin-left: 60px;
-  margin-top: -110px;
+  margin-top: -75px;
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;

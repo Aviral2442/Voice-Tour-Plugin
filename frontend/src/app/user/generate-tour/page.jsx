@@ -47,6 +47,16 @@ const GenerateTour = () => {
   const nextStep = () => setActive((current) => (current < 3 ? current + 1 : current));
   const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
 
+  const updateStep = (index, key, value) => {
+    const newSteps = [...steps];
+    newSteps[index][key] = value;
+    setSteps(newSteps);
+  }
+
+  const addTour = () => {
+    console.log(steps);
+  }
+
   return (
     <div>
 
@@ -57,42 +67,53 @@ const GenerateTour = () => {
           return { value: webpage._id, label: webpage.name }
         })}
       /> */}
+      <Button onClick={addTour} variant='filled' mb={20}>Create Tour</Button>
+      <Card withBorder radius="md" p="md" bg={'#000'}>
+        <Stepper active={active} onStepClick={setActive} orientation="horizontal">
+          {
+            steps.map((step, index) => {
+              return (
+                <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index}>
+                  <Container size={'xl'}>
 
-      <Stepper active={active} onStepClick={setActive} orientation="horizontal">
-        {
-          steps.map((step, index) => {
-            return (
-              <Stepper.Step label={step.stepTitle} description={step.stepDescription}>
-                <Container>
-                  <Card withBorder radius="md" p="md" ta='center'>
-                    <Flex>
-                      <Radio.Group >
-                        <Group mt="xs">
-                          <Radio value="id" label="id" />
-                          <Radio value="class" label="class" />
-                        </Group>
-                      </Radio.Group>
+                    <Radio.Group onChange={v => updateStep(index, 'selectorType', v)} mb={20}>
+                      <Group mt="xs">
+                        <Radio value="id" label="id" />
+                        <Radio value="class" label="class" />
+                      </Group>
+                    </Radio.Group>
 
 
-                      <TextInput
-                        label="Selector Value"
-                        placeholder="Enter selector value"
-                      />
+                    <TextInput mb={20}
+                      onChange={e => updateStep(index, 'selectorValue', e.target.value)}
+                      value={step.selectorValue}
+                      label="Selector Value"
+                      placeholder="Enter selector value"
+                    />
+                    
+                    <TextInput mb={20}
+                      onChange={e => updateStep(index, 'stepTitle', e.target.value)}
+                      value={step.stepTitle}
+                      label="Selector Value"
+                      placeholder="Enter selector value"
+                    />
 
-                      <Textarea
-                        label="Description"
-                        placeholder="Enter Description"
-                      />
+                    <Textarea
+                      mb={20}
+                      onChange={e => updateStep(index, 'stepDescription', e.target.value)}
+                      value={step.stepDescription}
+                      label="Description"
+                      placeholder="Enter Description"
+                    />
 
-                    </Flex>
-                  </Card>
-                </Container>
+                  </Container>
 
-              </Stepper.Step>
-            )
-          })
-        }
-      </Stepper>
+                </Stepper.Step>
+              )
+            })
+          }
+        </Stepper>
+      </Card>
 
       <Button mt={30} onClick={addNewStep}>Add New Step</Button>
 
@@ -158,36 +179,7 @@ const GenerateTour = () => {
           <Button onClick={nextStep}>Next step</Button>
         </Group>
       </Card> */}
-      <Container  size='md' fluid>
-        <Card withBorder radius="md" p="md" className={classes.card} ta='center'>
-          <Stepper active={active} onStepClick={setActive}>
-            <Stepper.Step label="First step" description="Type of Selector">
-              <Radio.Group  ta='center'>
-                <Group mt="xs">
-                  <Radio value="ID" label="id" />
-                  <Radio value="sName" label="name" />
-                </Group>
-              </Radio.Group>
-            </Stepper.Step>
-            <Stepper.Step label="Second step" description="Selector Value">
-              <TextInput
-                placeholder="Enter selector value"
-              />
-            </Stepper.Step>
-            <Stepper.Step label="Final step" description="Description">
-              <Textarea placeholder="Enter Description" />
-            </Stepper.Step>
-            <Stepper.Completed>
-              Completed
-            </Stepper.Completed>
-          </Stepper>
-
-          <Group justify="center" mt="xl">
-            <Button variant="default" onClick={prevStep}>Back</Button>
-            <Button onClick={nextStep}>Next step</Button>
-          </Group>
-        </Card>
-      </Container>
+      
     </div>
   )
 }
