@@ -42,9 +42,12 @@ import { ActionIcon, useMantineColorScheme, useComputedColorScheme } from '@mant
 import Lottie from 'lottie-react';
 import avatar from './avatar.json'
 import clsx from 'clsx'
-import { Londrina_Solid } from 'next/font/google'
+import { Cormorant_Garamond, Londrina_Solid } from 'next/font/google'
 
-const font =  Londrina_Solid( {subsets: ['latin'], weight: ['100', '300', '400', '900']});
+import { useState } from "react"
+import { Spotlight, spotlight } from "@mantine/spotlight"
+
+const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 
 const mockdata = [
@@ -80,6 +83,15 @@ const mockdata = [
   },
 ];
 
+const data = [
+  "Home",
+  "About us",
+  "Contacts",
+  "Blog",
+  "Careers",
+  "Terms of service"
+]
+
 function Navbar() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
@@ -106,8 +118,14 @@ function Navbar() {
     </UnstyledButton>
 
 
-  ));
 
+));
+
+const [query, setQuery] = useState("");
+
+const items = data
+.filter(item => item.toLowerCase().includes(query.toLowerCase().trim()))
+.map(item => <Spotlight.Action key={item} label={item} />)
   return (
     <Box >
       <header className={classes.header}>
@@ -128,7 +146,7 @@ function Navbar() {
               <a href="/tourGenerator" className={clsx(classes.link, font.className)}>
                 TOUR GENERATOR
               </a>
-              <a href="#" className={clsx(classes.link,font.className)}>
+              <a href="#" className={clsx(classes.link, font.className)}>
                 DOCUMENTATION
               </a>
               {/* <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
@@ -182,16 +200,34 @@ function Navbar() {
                 CONTACT US
               </a>
             </Group>
-            <div className={classes.group}>
+
+            <Button onClick={spotlight.open}>Search</Button>
+
+            <Spotlight.Root query={query} onQueryChange={setQuery}>
+              <Spotlight.Search
+                placeholder="Search..."
+                leftSection={<IconSearch stroke={1.5} />}
+              />
+              <Spotlight.ActionsList>
+                {items.length > 0 ? (
+                  items
+                ) : (
+                  <Spotlight.Empty>Nothing found...</Spotlight.Empty>
+                )}
+              </Spotlight.ActionsList>
+            </Spotlight.Root>
+
+
+            {/* <div className={classes.group}>
               <svg className={classes.icon} aria-hidden="true" viewBox="0 0 24 24">
                 <g>
                   <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z" />
                 </g>
               </svg>
               <input placeholder="Search..." type="search" className={classes.input} />
-            </div>
+            </div> */}
             {/* <Button component={Link} variant="default" href='/login'>Log in</Button> */}
-            <Button component={Link} href='/signup' variant='outline' color='white' className={clsx(classes.button,font.className)}>
+            <Button component={Link} href='/signup' variant='outline' color='white' className={clsx(classes.button, font.className)}>
               <Lottie animationData={avatar} className={classes.avi} />
               Sign up</Button>
 

@@ -13,6 +13,7 @@
     "@mantine/core": "^7.6.1",
     "@mantine/form": "^7.6.2",
     "@mantine/hooks": "^7.6.1",
+    "@mantine/spotlight": "^7.8.0",
     "@mantinex/dev-icons": "^1.0.2",
     "@mantinex/mantine-logo": "^1.0.1",
     "@tabler/icons-react": "^2.47.0",
