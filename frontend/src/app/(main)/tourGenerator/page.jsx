@@ -19,6 +19,8 @@ import classes from "./tourGenerator.module.css"
 import VisionMission from './visionMission'
 import Faq from './faq'
 import Waitingforwhat from './waitingforwhat'
+import HeroBulletRight from './HeroBulletRight'
+import HeroBulletLeft from './HeroBulletLeft'
 
 const page = () => {
   return (
@@ -83,6 +85,10 @@ const page = () => {
 
 
         <VisionMission />
+
+        <HeroBulletRight />
+
+        <HeroBulletLeft />
 
         <Faq />
 

@@ -19,6 +19,8 @@ import classes from "./voiceAssistant.module.css"
 import VisionMission from './visionMission'
 import Faq from './faq'
 import Waitingforwhat from './waitingforwhat'
+import HeroBulletLeft from './HeroBulletLeft'
+import HeroBulletRight from './HeroBulletRight'
 
 const page = () => {
   return (
@@ -83,6 +85,10 @@ const page = () => {
 
 
         <VisionMission />
+
+        <HeroBulletLeft />
+        
+        <HeroBulletRight />
 
         <Faq />
 
