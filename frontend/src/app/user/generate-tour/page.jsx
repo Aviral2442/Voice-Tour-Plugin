@@ -117,69 +117,6 @@ const GenerateTour = () => {
 
       <Button mt={30} onClick={addNewStep}>Add New Step</Button>
 
-      {/* <Card withBorder radius="md" p="md" className={classes.card} ta='center'>
-        <Stepper active={active} onStepClick={setActive} orientation="vertical" >
-          <Flex
-            mih={50}
-            bg="rgba(0, 0, 0, .3)"
-            gap="xl"
-            justify="flex-start"
-            align="flex-start"
-            direction="row"
-          >
-            <Stepper.Step label="First step" description="type of Selector" />
-            <Radio.Group >
-              <Group mt="xs">
-                <Radio value="ID" label="ID" />
-                <Radio value="sName" label="Name" />
-                <Radio value="ng" label="Angular" />
-              </Group>
-            </Radio.Group>
-
-          </Flex>
-
-          <Flex
-            mih={50}
-            bg="rgba(0, 0, 0, .3)"
-            gap="xl"
-            justify="flex-start"
-            align="flex-start"
-            direction="row"
-
-          >
-            <Stepper.Step label="Second step" description="Selector Value" />
-            <TextInput
-              placeholder="Enter selector value"
-            />
-
-
-          </Flex>
-
-          <Flex
-            mih={50}
-            bg="rgba(0, 0, 0, .3)"
-            gap="xl"
-            justify="flex-start"
-            align="flex-start"
-            direction="row"
-
-          >
-            <Stepper.Step label="Final step" description="Description" />
-            <Textarea placeholder="Enter Description" />
-
-          </Flex>
-          <Stepper.Completed>
-            Completed
-          </Stepper.Completed>
-        </Stepper>
-
-        <Group mt="xl">
-
-          <Button variant="default" onClick={prevStep}>Back</Button>
-          <Button onClick={nextStep}>Next step</Button>
-        </Group>
-      </Card> */}
-      
     </div>
   )
 }
