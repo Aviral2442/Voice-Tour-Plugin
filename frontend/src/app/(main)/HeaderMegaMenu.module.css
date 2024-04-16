@@ -82,6 +82,12 @@
     display: block;
   }
 }
+.Searchbutton {
+  color: #66FF00;
+  border-color: #66FF00;
+  width: 60px;
+  
+}
 
 .button {
   font-size: 15PX;
@@ -91,6 +97,7 @@
   border-color: #66FF00;
 
 }
+
 
 .avi {
   height: 100px;

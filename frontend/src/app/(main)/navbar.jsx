@@ -203,7 +203,7 @@ function Navbar() {
               </a>
             </Group>
 
-            <Button onClick={spotlight.open}>Search</Button>
+            <Button onClick={spotlight.open}  variant='outline' c='#66ff00' className={classes.Searchbutton}><IconSearch  /></Button>
 
             <Spotlight.Root query={query} onQueryChange={setQuery}>
               <Spotlight.Search
