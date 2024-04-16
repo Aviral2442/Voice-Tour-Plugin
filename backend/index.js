@@ -5,6 +5,7 @@ const app = express();
 
 const userRouter = require('./routers/userRouter');
 const webRouter = require('./routers/webRouter');
+const tourRouter = require('./routers/tourRouter');
 
 app.use(express.json());
 app.use(cors({
@@ -14,6 +15,7 @@ app.use(cors({
 
 app.use('/user', userRouter);
 app.use('/webpage', webRouter);
+app.use('/tour', tourRouter);
 
 const port = 5000;
 

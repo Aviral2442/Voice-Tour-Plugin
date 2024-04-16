@@ -4,6 +4,8 @@ import { Button, Card, Checkbox, Container, Flex, Group, Input, Radio, Select, T
 import { Stepper } from '@mantine/core';
 import classes from './generateTour.module.css';
 import { IconCircleCheck, IconUserCheck } from '@tabler/icons-react';
+import { Form, useForm } from '@mantine/form';
+import { useRouter } from 'next/navigation';
 
 const GenerateTour = () => {
 
@@ -57,6 +59,14 @@ const GenerateTour = () => {
     console.log(steps);
   }
 
+    const router = useRouter();
+
+    const form = useForm({
+      initialValues: {
+        Radio
+      }
+    })
+
   return (
     <div>
 
@@ -76,6 +86,7 @@ const GenerateTour = () => {
                 <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index}>
                   <Container size={'xl'}>
 
+                  <Form>
                     <Radio.Group onChange={v => updateStep(index, 'selectorType', v)} mb={20}>
                       <Group mt="xs">
                         <Radio value="id" label="id" />
@@ -106,6 +117,7 @@ const GenerateTour = () => {
                       placeholder="Enter Description"
                     />
 
+                  </Form>
                   </Container>
 
                 </Stepper.Step>
