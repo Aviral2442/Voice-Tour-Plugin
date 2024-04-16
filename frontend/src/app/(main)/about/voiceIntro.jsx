@@ -66,42 +66,6 @@ const VoiceIntro = () => {
 
 
             </Container>
-
-
-            <Title className={classes.Title} order={4}>Why Choose </Title>
-
-            <div className={classes.Card}>
-                <Container className={classes.whychoose} >
-                    <Group>
-                        <Card shadow="sm" padding="lg" radius="md" withBorder >
-                            <CardSection p={12} >
-                                <Title c='#66FF00' >Innovative Technology</Title><br />
-                                <Divider size="sm" /><br />
-                                <Text  >Our Voice Assistant uses the latest in AI and speech recognition technology to provide an accurate and efficient browsing experience.</Text>
-                            </CardSection>
-                        </Card>
-                    </Group>
-                    <Group>
-                    <Card shadow="sm" padding="lg" radius="md" withBorder >
-                            <CardSection p={12} >
-                                <Title c='#66FF00' >User-Centric Design</Title><br />
-                                <Divider size="sm" /><br />
-                                <Text  >We design with the user in mind, ensuring our technology is easy to use for everyone, including those with disabilities.</Text>
-                            </CardSection>
-                        </Card>
-                    </Group>
-                    <Group>
-                    <Card shadow="sm" padding="lg" radius="md" withBorder >
-                            <CardSection p={12} >
-                                <Title c='#66FF00' >Continuous Improvement</Title><br />
-                                <Divider size="sm" /><br />
-                                <Text  >We are dedicated to evolving & enhancing our Voice Assistant to meet the growing & changing needs of our users.</Text>
-                            </CardSection>
-                        </Card>
-                    </Group>
-                </Container>
-            </div>
-
         </div>
     )
 }
