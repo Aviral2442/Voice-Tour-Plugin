@@ -20,11 +20,12 @@ const HeroBulletLeft = () => {
 
                 <Group className={classes.Left}>
                     <Text c='#66FF00'  >Use Cases</Text>
-                    <Title className={classes.Title}> Enhance Your Projects with Voice Assistant</Title>
-                    <p className={classes.P}> Discover seamless website navigation like never before with our Voice Assistant feature. Say goodbye to traditional browsing methods and embrace the future of hands-free interaction. Experience convenience, efficiency, and accessibility at your fingertips.</p>
+                    <Title className={classes.Title}>Enhance Your Projects with Tour Generator</Title>
+                    <p className={classes.P}> Take control of your website exploration with our Tour Generator feature. Customize your browsing experience by creating personalized tours that guide you through the most relevant sections of any website. Explore with ease and efficiency, tailored to your interests and preferences.
+                    </p>
                     <Paper shadow="xs" radius="xs" className={classes.paper}>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
@@ -32,12 +33,12 @@ const HeroBulletLeft = () => {
                             direction="row"
                             mb={10}
                         >
-                            <Button  variant="outline" color="#66FF00" radius="md">AI Voice Over for Videos</Button>
-                            <Button  variant="outline" color="#66FF00" radius="md">Audio Publishing</Button>
-                            <Button  variant="outline" color="#66FF00" radius="md">Audio story Telling</Button>
+                            <Button variant="outline" color="#66FF00" radius="md">AI Voice Over for Videos</Button>
+                            <Button variant="outline" color="#66FF00" radius="md">Audio Publishing</Button>
+                            <Button variant="outline" color="#66FF00" radius="md">Audio story Telling</Button>
                         </Flex>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
@@ -45,13 +46,13 @@ const HeroBulletLeft = () => {
                             direction="row"
                             mb={10}
                         >
-                            <Button  variant="outline" color="#66FF00" radius="md">Conversational AI</Button>
-                            <Button  variant="outline" color="#66FF00" radius="md">custom Voice Creation</Button>
-                            <Button  variant="outline" color="#66FF00" radius="md">E-Learning</Button>
-                            <Button  variant="outline" color="#66FF00" radius="md">Podcasts</Button>
+                            <Button variant="outline" color="#66FF00" radius="md">Conversational AI</Button>
+                            <Button variant="outline" color="#66FF00" radius="md">custom Voice Creation</Button>
+                            <Button variant="outline" color="#66FF00" radius="md">E-Learning</Button>
+                            <Button variant="outline" color="#66FF00" radius="md">Podcasts</Button>
                         </Flex>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
@@ -64,12 +65,12 @@ const HeroBulletLeft = () => {
                             <Button variant="outline" color="#66FF00" radius="md">Voice Accesbility</Button>
                         </Flex>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
                             align="flex-start"
-                            direction="row" 
+                            direction="row"
                             mb={10}>
                             <Button variant="outline" color="#66FF00" radius="md">Voice API</Button>
 

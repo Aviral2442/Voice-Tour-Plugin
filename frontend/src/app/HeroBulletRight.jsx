@@ -15,7 +15,7 @@ export function HeroBulletRight() {
                     <p className={classes.P}> Discover seamless website navigation like never before with our Voice Assistant feature. Say goodbye to traditional browsing methods and embrace the future of hands-free interaction. Experience convenience, efficiency, and accessibility at your fingertips.</p>
                     <Paper shadow="xs" radius="xs" className={classes.paper}>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
@@ -28,7 +28,7 @@ export function HeroBulletRight() {
                             <Button  variant="outline" color="#66FF00" radius="md">Audio story Telling</Button>
                         </Flex>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
@@ -42,7 +42,7 @@ export function HeroBulletRight() {
                             <Button  variant="outline" color="#66FF00" radius="md">Podcasts</Button>
                         </Flex>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
@@ -55,7 +55,7 @@ export function HeroBulletRight() {
                             <Button variant="outline" color="#66FF00" radius="md">Voice Accesbility</Button>
                         </Flex>
                         <Flex
-                            mih={50}
+                            mih={40}
                             gap="md"
                             wrap={'wrap'}
                             justify="flex-start"
