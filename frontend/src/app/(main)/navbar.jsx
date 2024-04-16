@@ -127,7 +127,7 @@ function Navbar() {
     .filter(item => item.toLowerCase().includes(query.toLowerCase().trim()))
     .map(item => <Spotlight.Action key={item} label={item} />)
 
-    
+
   return (
     <Box >
       <header className={classes.header}>
@@ -203,7 +203,9 @@ function Navbar() {
               </a>
             </Group>
 
-            <Button onClick={spotlight.open}  variant='outline' c='#66ff00' className={classes.Searchbutton}><IconSearch  /></Button>
+            <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{ from: '#66ff00', to: '#39FF14', deg: 0 }}>
+              <IconSearch style={{ width: '70%', height: '70%', color: '#282828' }} stroke={2} />
+            </ActionIcon>
 
             <Spotlight.Root query={query} onQueryChange={setQuery}>
               <Spotlight.Search

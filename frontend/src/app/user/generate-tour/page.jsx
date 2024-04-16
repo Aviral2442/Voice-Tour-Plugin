@@ -39,7 +39,7 @@ const GenerateTour = () => {
   const addNewStep = () => {
     setSteps([...steps, {
       selectorType: 'id',
-      selectorValue: 'some-id',
+      selectorValue: 'Some-id',
       stepTitle: 'Step Title',
       stepDescription: 'Step Description'
     }]);
@@ -78,13 +78,13 @@ const GenerateTour = () => {
         })}
       /> */}
       <Button onClick={addTour} variant='filled' mb={20}>Create Tour</Button>
-      <Card withBorder radius="md" p="md" bg={'#000'}>
-        <Stepper active={active} onStepClick={setActive} orientation="horizontal">
+      <Card withBorder radius="md" p="md" bg={'#000'} className={classes.Card}>
+        <Stepper active={active} onStepClick={setActive} orientation="horizontal" color="#66ff00" radius="md" size="sm">
           {
             steps.map((step, index) => {
               return (
                 <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index}>
-                  <Container size={'xl'}>
+                  <Container size={'md'}>
 
                   <Form>
                     <Radio.Group onChange={v => updateStep(index, 'selectorType', v)} mb={20}>
@@ -101,7 +101,7 @@ const GenerateTour = () => {
                       label="Selector Value"
                       placeholder="Enter selector value"
                     />
-                    
+
                     <TextInput mb={20}
                       onChange={e => updateStep(index, 'stepTitle', e.target.value)}
                       value={step.stepTitle}
@@ -125,9 +125,13 @@ const GenerateTour = () => {
             })
           }
         </Stepper>
+        <Group justify='center'>
+          <Button mt={30} size='sm' variant='outline' color='#66ff00'>Back</Button>
+
+          <Button mt={30} size='sm' onClick={addNewStep} variant='outline' color='#66ff00'>Add New Step</Button>
+        </Group>
       </Card>
 
-      <Button mt={30} onClick={addNewStep}>Add New Step</Button>
 
     </div>
   )

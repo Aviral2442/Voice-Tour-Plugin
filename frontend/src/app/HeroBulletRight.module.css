@@ -29,11 +29,12 @@
   position: relative;
   font-weight: 100;
   line-height: 0.9;
-  text-wrap: balance;
+  text-wrap: wrap;
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(39px);
     margin-top: -13px;
+
   }
 }
 
