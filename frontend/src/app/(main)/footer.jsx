@@ -1,9 +1,10 @@
 'use client'
 import React from 'react';
 import { Text, Container, ActionIcon, Group, rem, Title, Image, TextInput, Button } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconAt } from '@tabler/icons-react';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconAt, IconSquareRoundedArrowUp } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Footer.module.css';
+import { useWindowScroll } from '@mantine/hooks';
 
 
 const data = [
@@ -58,7 +59,7 @@ export function Footer() {
         );
     });
     const icon = <IconAt style={{ width: rem(16), height: rem(16) }} />;
-
+    const [scroll, scrollTo] = useWindowScroll();
 
     return (
 
@@ -98,6 +99,11 @@ export function Footer() {
                     </ActionIcon>
                     <ActionIcon size="lg" color="gray" variant="subtle">
                         <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+                    </ActionIcon>
+                </Group>
+                <Group justify="center">
+                    <ActionIcon onClick={() => scrollTo({ y: 0 })} variant="filled" aria-label="Settings" size="lg"  radius="md" bg={'black'}>
+                    <IconSquareRoundedArrowUp style={{ width: rem(58), height: rem(58), color:'#66ff00' }} stroke={1.5} />
                     </ActionIcon>
                 </Group>
             </Container>
