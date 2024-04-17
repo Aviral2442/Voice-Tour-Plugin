@@ -4,6 +4,8 @@ import Joyride from 'react-joyride';
 
 const App = () => {
 
+  const id = '661fc6950da6c199b065cf5d';
+
   const [steps, setSteps] = useState([
     {
       target: '.section-1-heading',
