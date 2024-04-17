@@ -31,6 +31,7 @@ import { useRouter } from 'next/navigation';
 import { Rammetto_One } from 'next/font/google';
 import clsx from 'clsx';
 import { Container } from '@mantine/core';
+
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 
