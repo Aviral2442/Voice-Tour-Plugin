@@ -6,7 +6,7 @@ import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Footer.module.css';
 import { useWindowScroll } from '@mantine/hooks';
 import clsx from 'clsx';
-import { notifications } from '@mantine/notifications';
+import { Notifications, notifications } from '@mantine/notifications';
 import '@mantine/notifications/styles.css';
 
 
@@ -84,7 +84,7 @@ export function Footer() {
                             placeholder="Your email" />
                         <Button
                             onClick={() =>
-                                notifications.show({
+                                Notifications.show({
                                     color: '#262525',
                                     title: 'Subscribed! 🎉',
                                     message: 'You have successfully subscribed to our website!',

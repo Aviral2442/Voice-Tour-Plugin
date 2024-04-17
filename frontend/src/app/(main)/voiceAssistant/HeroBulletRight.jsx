@@ -9,8 +9,8 @@ export function HeroBulletRight() {
         <Container fluid className={classes.Container}>
             <div className={classes.inner}>
                 <Group className={classes.Right}>
-                    <Text c='#66FF00'>Use Cases</Text><br />
-                    {' '}
+                    {/* <Text c='#66FF00'>Use Cases 1</Text><br />
+                    {' '} */}
                     <Title className={classes.Title}> Enhance Your Projects with Voice Assistant</Title>
                     <p className={classes.P}> Discover seamless website navigation like never before with our Voice Assistant feature. Say goodbye to traditional browsing methods and embrace the future of hands-free interaction. Experience convenience, efficiency, and accessibility at your fingertips.</p>
                     <Paper shadow="xs" radius="xs" className={classes.paper}>

@@ -32,10 +32,9 @@ const page = () => {
           <div className={classes.inner}>
             <div className={classes.content}>
               <Title className={classes.title}>
-                Voice <span className={classes.highlight}>Assistant</span> Plugin <br />{" "}
-                {/* Welcome to the */}
+                Voice Assistant Plugin System
               </Title>
-              <Text c="dimmed" mt="md">
+              <Text c="#FFFFFF" mt="md">
                 Where you'll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to cumbersome mouse clicks and keyboard typing – with our Voice Assistant, browsing becomes intuitive and effortless.</Text>
 
               {/* <List
@@ -69,17 +68,20 @@ const page = () => {
                 <Button radius="xl" size="md" className={classes.control}>
                   Start For free
                 </Button>
-                <Button
+                {/* Button not needed */}
+                
+                {/* <Button
                   variant="default"
                   radius="xl"
                   size="md"
                   className={classes.control}
                 >
                   Customize
-                </Button>
+                </Button> */}
               </Group>
             </div>
             {/* <Image src={image.src} className={classes.image} /> */}
+            <Image src="voicecommand.png" className={classes.image} />
           </div>
         </Container>
 
