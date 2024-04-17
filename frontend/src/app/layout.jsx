@@ -4,6 +4,7 @@ import { MantineProvider, createTheme } from "@mantine/core";
 import '@mantine/core/styles.css';
 import Navbar from './(main)/navbar';
 import { Footer } from "./(main)/footer";
+import { Notifications } from "@mantine/notifications";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
         <MantineProvider theme={theme} defaultColorScheme="dark">
+        <Notifications />
           <div style={myStyles}>
             {children}
           </div>
