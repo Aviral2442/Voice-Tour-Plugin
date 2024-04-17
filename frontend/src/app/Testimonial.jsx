@@ -86,7 +86,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                    <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
+                                <Avatar src='instalogo.jpg' alt="it's me" style={{ width: rem(42), height: rem(42) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -121,7 +121,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                    <Avatar src='instalogo.jpg' alt="it's me" style={{ width: rem(42), height: rem(42) }} />
+                                <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62),marginTop:'-10px' }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -157,7 +157,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62),marginTop:'-10px' }} />
+                                <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
 
                                 </ActionIcon>
                             </Grid.Col>

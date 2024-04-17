@@ -10,9 +10,11 @@
   }
   
   .title {
+    font-weight: bold;
     color: black;
   }
   
   .description {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: black;
   }
