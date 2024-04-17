@@ -4,7 +4,6 @@ const Model = require('../model/userModel');
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
-
 router.post('/add', (req, res) => {
     console.log(req.body);
     new Model(req.body).save()
@@ -73,7 +72,8 @@ router.post('/authenticate', (req, res) => {
             if (result)
             //  res.status(200).json(result)
             {
-                const payload = { _id: result._id, email: result.email, role: result.role };
+                const {_id, email, name, avatar, role} = result;
+                const payload = { _id, email, role };
 
                 //create jwt token
                 jwt.sign(
@@ -87,7 +87,7 @@ router.post('/authenticate', (req, res) => {
                             console.log(err);
                             res.status(500).json(err);
                         } else {
-                            res.status(200).json({ token: token, avatar: result.avatar });
+                            res.status(200).json({ token, avatar, name, role });
                         }
                     }
                 )

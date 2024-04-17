@@ -6,10 +6,13 @@ import classes from './generateTour.module.css';
 import { IconCircleCheck, IconUserCheck } from '@tabler/icons-react';
 import { Form, useForm } from '@mantine/form';
 import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 const GenerateTour = () => {
 
   const [webpageList, setWebpageList] = useState([]);
+
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
 
   const [steps, setSteps] = useState([
     {
@@ -43,6 +46,7 @@ const GenerateTour = () => {
       stepTitle: 'Step Title',
       stepDescription: 'Step Description'
     }]);
+
   }
 
   const [active, setActive] = useState(1);
@@ -57,44 +61,54 @@ const GenerateTour = () => {
 
   const addTour = () => {
     console.log(steps);
-  }
 
-    const router = useRouter();
-
-    const form = useForm({
-      initialValues: {
-        
-      },
-  
-      validate: {
-        
+    fetch('http://localhost:5000/tour/add', {
+      method: 'POST',
+      body: JSON.stringify({
+        steps: steps
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'x-auth-token' : currentUser.token
       }
     })
+      .then((response) => {
+        console.log(response.status);
+        if (response.status === 200) {
+          toast.success('User Registered successfully');
+          // webpageForm.resetForm();
 
-    const Tourgen = (values) => {
-      console.log(values);
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`,{
-        method: 'POST',
-        body: JSON.stringify(values),
-        headers: {
-          'Content-Type': 'application/json'
+        } else {
+          toast.error('Some Error Occured');
         }
-      })
-        .then((response) => {
-          if (response.status === 200) {
-            toast.success('loggedin successfully');
-            response.json().then(data => {
-              sessionStorage.setItem('user', JSON.stringify(data));
-              router.push('/');
-            })
-          } else {
-            toast.error('Invalid Credentials')
-          }
-        }).catch((err) => {
-          console.log(err);
-          toast.error('Invalid Credentials')
-        });
+
+      }).catch((err) => {
+        console.log(err);
+        toast.error('Some Error Occured');
+      });
+  }
+
+  const router = useRouter();
+
+  const form = useForm({
+    initialValues: {
+      user: '',
+      steps: ''
+    },
+
+    validate: {
+      user: (value) => {
+        if (!value) {
+          return 'This field is required';
+        }
+      },
+      steps: (value) => {
+        if (!value) {
+          return 'This field is required';
+        }
+      }
     }
+  })
 
   return (
     <div>
@@ -115,9 +129,9 @@ const GenerateTour = () => {
                 <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index}>
                   <Container size={'md'}>
 
-                  <Form>
+                    {/* <form onSubmit={form.onSubmit(Tourgen)}> */}
                     <Radio.Group onChange={v => updateStep(index, 'selectorType', v)} mb={20}>
-                      <Group mt="xs">
+                      <Group mt="xs" >
                         <Radio value="id" label="id" />
                         <Radio value="class" label="class" />
                       </Group>
@@ -125,6 +139,7 @@ const GenerateTour = () => {
 
 
                     <TextInput mb={20}
+
                       onChange={e => updateStep(index, 'selectorValue', e.target.value)}
                       value={step.selectorValue}
                       label="Selector Value"
@@ -146,7 +161,7 @@ const GenerateTour = () => {
                       placeholder="Enter Description"
                     />
 
-                  </Form>
+                    {/* </form> */}
                   </Container>
 
                 </Stepper.Step>
@@ -155,7 +170,7 @@ const GenerateTour = () => {
           }
         </Stepper>
         <Group justify='center'>
-          <Button mt={30} size='sm' variant='outline' color='#66ff00'>Back</Button>
+          <Button mt={30} size='sm' variant='outline' color='#66ff00' >Back</Button>
 
           <Button mt={30} size='sm' onClick={addNewStep} variant='outline' color='#66ff00'>Add New Step</Button>
         </Group>
