@@ -30,6 +30,41 @@ router.get('/getall', (req, res) => {
         });
 });
 
+router.get('/getbyid/:id', (req, res) => {
+    model.findById(req.params.id)
+        .then((result) => {
+            res.json(result);
+
+        }).catch((err) => {
+            console.log(err)
+            res.json(err)
+        });
+});
+
+router.put('/update/:id', (req, res) => {
+    model.findByIdAndUpdate(req.params._id, req.body, { new: true })
+        .then((result) => {
+            res.json(result);
+
+        }).catch((err) => {
+            console.log(err);
+            res.json(err)
+        });
+});
+
+router.delete('/delete/:id', (req, res) => {
+
+    model.findByIdAndDelete(req.params.id)
+        .then((result) => {
+            res.json(result);
+
+        }).catch((err) => {
+            console.log(err);
+            res.json(err)
+        });
+});
+
+
 router.post('/authenticate', (req, res) => {
     console.log(req.body);
     Model.findOne(req.body)
@@ -66,3 +101,9 @@ router.post('/authenticate', (req, res) => {
 });
 
 module.exports = router;
+
+//getall
+//getbyid
+// update
+//delete
+//product router
