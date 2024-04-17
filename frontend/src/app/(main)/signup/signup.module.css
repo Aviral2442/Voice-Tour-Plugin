@@ -1,28 +1,16 @@
-.responsiveContainer {
-	max-width: rem(300px);
-
-	@media (min-width: em(400px)) {
-		max-width: rem(400px);
-	}
-
-	@media (min-width: em(600px)) {
-		max-width: rem(600px);
-	}
-
-}
 
 .Paper {
-	/* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+	background-color: #28282B;
 	backdrop-filter: blur(100px);
 	-webkit-backdrop-filter: blur(0px);
 	border-radius: 10px;
-	border-left: 5px solid #4ECA3E;
+	border-left: 5px solid #66ff00;
 	color: white;
 
 }
 
 .title {
-	color: #4ECA3E;
+	color: #66ff00;
 	font-family:
 		Greycliff CF,
 		var(--mantine-font-family);
@@ -37,26 +25,7 @@
 	font-size: 14px;
 }
 
-.body {
-	padding-right: calc(var(--mantine-spacing-xl) * 4);
 
-	@media (max-width: $mantine-breakpoint-sm) {
-		padding-right: 0;
-		margin-top: var(--mantine-spacing-xl);
-	}
-}
-
-.wrapper {
-	display: flex;
-	align-items: center;
-	padding: calc(var(--mantine-spacing-xl) * 2);
-	background-color: black;
-
-	@media (max-width: $mantine-breakpoint-sm) {
-		flex-direction: column-reverse;
-		padding: var(--mantine-spacing-xl);
-	}
-}
 
 
 .image {
@@ -77,7 +46,7 @@
 
 .control {
 
-	border-color: #4ECA3E;
+	border-color: #66ff00;
 }
 
 .button {
@@ -86,8 +55,8 @@
 	align-items: center;
 	padding: 10px 15px;
 	gap: 15px;
-	background-color: #4ECA3E;
-	outline: 3px #4ECA3E solid;
+	background-color: #66ff00;
+	outline: 3px #66ff00 solid;
 	outline-offset: -3px;
 	border-radius: 5px;
 	border: none;
@@ -109,6 +78,7 @@
 
 .button:hover {
 	background-color: transparent;
+	color: #66ff00;
 }
 
 .button:hover .text {
@@ -124,7 +94,7 @@
 	width: 50%;
 	padding: 10px 20px;
 	border-radius: 7px;
-	border: 1px solid #4ECA3E;
+	border: 1px solid #66ff00;
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -139,7 +109,7 @@
 }
 
 .Button:hover {
-	background: #4ECA3E;
+	background: #66ff00;
 
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
