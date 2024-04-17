@@ -63,9 +63,38 @@ const GenerateTour = () => {
 
     const form = useForm({
       initialValues: {
-        Radio
+        
+      },
+  
+      validate: {
+        
       }
     })
+
+    const Tourgen = (values) => {
+      console.log(values);
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`,{
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then((response) => {
+          if (response.status === 200) {
+            toast.success('loggedin successfully');
+            response.json().then(data => {
+              sessionStorage.setItem('user', JSON.stringify(data));
+              router.push('/');
+            })
+          } else {
+            toast.error('Invalid Credentials')
+          }
+        }).catch((err) => {
+          console.log(err);
+          toast.error('Invalid Credentials')
+        });
+    }
 
   return (
     <div>
