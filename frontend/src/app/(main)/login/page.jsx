@@ -26,6 +26,11 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import logimg from './logimg.json';
 import Lottie from 'lottie-react';
+import { Rammetto_One } from 'next/font/google';
+import clsx from 'clsx';
+
+const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
+
 
 
 const theme = createTheme({
@@ -95,7 +100,7 @@ export function Login() {
                 <Container size="responsive" w={700} >
                   <Paper shadow="md" p={30} mt={10} mb={30} radius="md" className={classes.Paper}>
                     <Title className={classes.title} >
-                       <span className={classes.subtitle}>Login</span> </Title>
+                       <span className={clsx(classes.subtitle,font.className)}>Login</span> </Title>
                     {/* <Text className={classes.text}>Login with</Text> */}
 
                     <Group grow mb="md" mt="lg" >
@@ -133,7 +138,7 @@ export function Login() {
                         <Anchor component={Link} underline="hover" c="dimmed" href="/signup" size="xs">
                           Don't have an account? Register
                         </Anchor>
-                        <Button type="submit" className={classes.button}>
+                        <Button type="submit" className={classes.button} variant="outline" color="black">
                           <p className={classes.p}>Login</p>
                         </Button>
                       </Group>

@@ -6,6 +6,8 @@ import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Footer.module.css';
 import { useWindowScroll } from '@mantine/hooks';
 import clsx from 'clsx';
+import { notifications } from '@mantine/notifications';
+import '@mantine/notifications/styles.css';
 
 
 const data = [
@@ -80,7 +82,17 @@ export function Footer() {
                             rightSection={icon}
                             label="Email"
                             placeholder="Your email" />
-                        <Button mt='md' variant='outline' color='#66ff00' className={classes.Btn}>Suscribe</Button>
+                        <Button
+                            onClick={() =>
+                                notifications.show({
+                                    color: '#262525',
+                                    title: 'Subscribed! 🎉',
+                                    message: 'You have successfully subscribed to our website!',
+                                    classNames: classes,
+                                })
+                            }
+                            mt='md' variant='outline' color='#66ff00'>Suscribe</Button>
+
                     </div>
                 </div>
                 <div className={classes.groups}>{groups}</div>
@@ -90,9 +102,9 @@ export function Footer() {
                     © 2024 VoiceTour Navigator. All rights reserved.
                 </Text>
 
-               
-                <Group justify="space-between" wrap="nowrap"   gap="xl">
-                    <div className={clsx(classes.card,classes.social)} >
+
+                <Group justify="space-between" wrap="nowrap" gap="xl">
+                    <div className={clsx(classes.card, classes.social)} >
                         <a className={classes.socialLink1}>
                             <svg
                                 viewBox="0 0 16 16"

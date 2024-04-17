@@ -83,7 +83,8 @@
     flex-direction: column;
   }
 }
-.scroll{
+
+.scroll {
   @media (max-width: $mantine-breakpoint-sm) {
     margin-top: var(--mantine-spacing-xs);
   }
@@ -177,5 +178,26 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+.root {
+  background-color: var(--notification-color, var(--mantine-primary-color-filled));
+
+  &::before {
+    background-color: #66ff00;
+  }
+}
+
+.description,
+.title {
+  color: var(--mantine-color-white);
+}
+
+.closeButton {
+  color: var(--mantine-color-white);
+
+  @mixin hover {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
