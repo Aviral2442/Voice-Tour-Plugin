@@ -7,7 +7,7 @@
   
   .title {
     margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
-    color: #66FF00;
+    color: white;
     &::after {
       content: ' ';
   
