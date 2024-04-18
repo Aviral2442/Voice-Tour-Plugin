@@ -20,6 +20,7 @@ import VisionMission from './visionMission'
 import Waitingforwhat from './waitingforwhat'
 import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
+import TourFAQ from './tourFAQ'
 
 const page = () => {
   return (
@@ -93,6 +94,7 @@ const page = () => {
         <Waitingforwhat />
         <br />
 
+        <TourFAQ />
 
         <Footer />
       </>

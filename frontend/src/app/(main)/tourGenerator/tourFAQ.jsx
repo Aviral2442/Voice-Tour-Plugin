@@ -1,34 +1,35 @@
 'use client'
 import React, { useEffect } from 'react'
 import { Title, Text, Button, Container } from "@mantine/core"
-import classes from "./voiceFAQ.module.css"
+import classes from "./tourFAQ.module.css"
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Link from 'next/link'
 
+const TourFAQ = () => {
 
-
-const VoiceFAQ = () => {
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
+
     return (
         <Container className={classes.wrapper} size={1400}>
 
             <div className={classes.inner}>
                 <Title className={classes.title} data-aos="fade-up" >
-                    Instant Answers to Your {" "}
+                    Swift {" "}
                     <Text component="span" className={classes.highlight} inherit>
-                        Burning
+                        Solutions
                     </Text>{" "}
-                    Questions
+                    to Your Queries
                 </Title>
 
                 <Container p={20} size={900}>
                     <Text size="lg" c="dimmed" className={classes.description} data-aos="fade-up">
-                        Address common queries and concerns related to the Voice Assistant functionality.Provide detailed answers to questions
-                        regarding voice command usage, compatibility with various browsers and devices, and customization options for different
-                        user needs.
+                        Tackle prevalent inquiries and issues pertaining to the Tour Generator's capabilities.
+                        Offer thorough responses to questions concerning how to create tours, compatibility with different types
+                         of content and websites, and options for personalizing tours to user preferences.
+
                     </Text>
                 </Container>
 
@@ -42,7 +43,7 @@ const VoiceFAQ = () => {
                         variant="default"
                         color="#5BFF04"
                     >
-                        Voice Assistant FAQ's
+                        Tour Generator FAQ's
                         &nbsp;
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5BFF04" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -58,4 +59,4 @@ const VoiceFAQ = () => {
     )
 }
 
-export default VoiceFAQ
+export default TourFAQ
