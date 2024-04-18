@@ -53,7 +53,7 @@ export function Feature({ title, description,Number }) {
                 <Text mt="sm" fz={24} mb={7} c={"#66ff00"} className={font.className}>
                     {title}
                 </Text>
-                <Text size="sm" c="dimmed" lh={1.6} className={classes.Descript} ta={"center"}>
+                <Text size="sm"  lh={1.6} className={classes.Descript} ta={"center"}>
                     {description}
                 </Text>
                 <Title className={classes.titleOverlay} role="presentation">
