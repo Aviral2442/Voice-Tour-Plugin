@@ -17,7 +17,6 @@ import { IconCheck } from "@tabler/icons-react"
 // import image from "./image.svg"
 import classes from "./tourGenerator.module.css"
 import VisionMission from './visionMission'
-import Faq from './faq'
 import Waitingforwhat from './waitingforwhat'
 import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
@@ -90,7 +89,6 @@ const page = () => {
 
         <HeroBulletLeft />
 
-        <Faq />
 
         <Waitingforwhat />
         <br />

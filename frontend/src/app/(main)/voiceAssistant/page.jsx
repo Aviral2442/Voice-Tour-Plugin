@@ -17,7 +17,6 @@ import { IconCheck } from "@tabler/icons-react"
 // import image from "./image.svg"
 import classes from "./voiceAssistant.module.css"
 import VisionMission from './visionMission'
-import Faq from './faq'
 import Waitingforwhat from './waitingforwhat'
 import HeroBulletLeft from './HeroBulletLeft'
 import HeroBulletRight from './HeroBulletRight'
@@ -94,11 +93,10 @@ const page = () => {
         <HeroBulletRight />
         <VoiceitWorks />
 
-        <Faq />
 
         <Waitingforwhat />
         <br />
-        
+
         <Footer />
       </>
     </div>
