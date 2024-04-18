@@ -94,6 +94,8 @@ const page = () => {
 
         <Waitingforwhat />
         <br />
+
+
         <Footer />
       </>
     </div>
