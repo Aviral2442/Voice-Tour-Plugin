@@ -21,6 +21,7 @@ import Waitingforwhat from './waitingforwhat'
 import HeroBulletLeft from './HeroBulletLeft'
 import HeroBulletRight from './HeroBulletRight'
 import VoiceitWorks from './voiceitWorks'
+import VoiceFAQ from './voiceFAQ'
 
 const page = () => {
   return (
@@ -96,6 +97,8 @@ const page = () => {
 
         <Waitingforwhat />
         <br />
+
+        <VoiceFAQ />
 
         <Footer />
       </>
