@@ -13,6 +13,11 @@ import {
 } from "@mantine/core"
 import { IconGauge, IconUser, IconCookie } from "@tabler/icons-react"
 import classes from './whychoose.module.css'
+import { Josefin_Sans } from 'next/font/google'
+import clsx from 'clsx'
+
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+
 
 const mockdata = [
     {
@@ -44,13 +49,15 @@ const Whychoose = () => {
             radius="md"
             className={classes.card}
             padding="xl"
+            ta={"center"}
         >
             <feature.icon
                 style={{ width: rem(50), height: rem(50) }}
                 stroke={2}
-                color={theme.colors.blue[6]}
+                color={"#66ff00"}
+            
             />
-            <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
+            <Text fz="lg" fw={500} className={clsx(classes.cardTitle,font.className)} mt="md">
                 {feature.title}
             </Text>
             <Text fz="sm" c="dimmed" mt="sm">
