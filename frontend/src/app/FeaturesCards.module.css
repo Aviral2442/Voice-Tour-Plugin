@@ -33,10 +33,9 @@
   color: black;
   font-weight: bold;
   background-color: #28282B;
-  border: rem(2px) solid #66FF00;
-
+  
   box-sizing: border-box;
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  box-shadow: 12px 17px 51px rgba(119, 107, 107, 0.22);
   backdrop-filter: blur(6px);
   border-radius: 17px;
   text-align: center;
@@ -47,12 +46,13 @@
   justify-content: center;
   user-select: none;
   font-weight: bolder;
-
+  
 }
 
 .card:hover {
+  border: rem(2px) solid #66FF00;
   /* transform: translateY(-10px); */
-  border: 1px solid black;
+  /* border: 1px solid black; */
   transform: scale(1.09);
 }
 

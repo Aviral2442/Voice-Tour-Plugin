@@ -13,6 +13,7 @@ const Testimonial = () => {
     return (
 
         <Carousel
+        pt={80} pb={10}
             withIndicators
             classNames={classes}
 

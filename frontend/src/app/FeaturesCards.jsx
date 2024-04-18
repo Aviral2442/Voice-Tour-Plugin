@@ -78,23 +78,23 @@ export default function FeaturesCards() {
 
     return (
     
-        <Container size="lg" py="xl" data-aos="fade-up">
+        <Container size="lg" py="xl" data-aos="fade-up" pt={80} pb={180} >
             <Group justify="center">
                 <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
                     Best Navigator Plugin ever
                 </Badge>
             </Group>
 
-            <Title order={2} className={classes.title} ta="center" mt="sm" c='#66FF00'>
-            Explore Our <span style={{color:'white'}}>Innovative</span>  Key Features
+            <Title order={2} className={classes.title} ta="center" mt="lg" c='white'>
+            Explore Our <span style={{color:'#66FF00'}}>Innovative</span>  Key Features
             </Title>
 
-            <Text  className={classes.description} ta="center" mt="md">
+            <Text  className={classes.description} ta="center" mt="lg">
             Discover our standout features: voice-based navigation, personalized tours, 
             and customizable plugins, all designed to enhance your browsing
             </Text>
 
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={40}>
+            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={60}>
                 {features}
             </SimpleGrid>
         </Container>

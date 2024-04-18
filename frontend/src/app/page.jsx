@@ -133,10 +133,11 @@ const page = () => {
 
       <HeroBulletLeft />
 
-      <Faqsection />
 
       <Testimonial />
 
+      <Faqsection />
+      
       <Footer />
 
     </>

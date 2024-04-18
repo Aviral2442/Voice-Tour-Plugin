@@ -6,7 +6,7 @@ import classes from './HeroBulletRight.module.css';
 
 export function HeroBulletRight() {
     return (
-        <Container fluid className={classes.Container}>
+        <Container fluid className={classes.Container} pt={80} pb={180} >
             <div className={classes.inner}>
                 <Group className={classes.Right}>
                     <Text c='#66FF00'>Use Cases</Text><br />

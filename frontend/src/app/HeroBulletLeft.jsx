@@ -6,7 +6,7 @@ import classes from './HeroBulletLeft.module.css';
 
 const HeroBulletLeft = () => {
     return (
-        <Container fluid className={classes.Container}>
+        <Container fluid className={classes.Container} pt={80} pb={180} >
             <div className={classes.inner}>
                 <Group className={classes.Right}>
                     <Paper shadow="xs" radius="xs" p="xl" className={classes.Paper}>
