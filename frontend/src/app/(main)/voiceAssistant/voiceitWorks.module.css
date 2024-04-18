@@ -1,6 +1,6 @@
 .wrapper {
-    padding-top: calc(var(--mantine-spacing-xl) * 4);
-    padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+    padding-top: calc(var(--mantine-spacing-xl) * 1);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 1);
   }
   
   .title {
@@ -17,10 +17,56 @@
     }
   }
   
-  .description {
-    text-align: center;
+ 
+  .Card{
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom:6px solid #66ff00 ;
+    border-radius: 1rem;
+    background-color: #28282B;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    transition: all 0.3s ease;
+  }
+  .Card:hover{
+transform:scale3d(1.05,1.05,1.05);    
+  }
+  .questionmark{
+    color: #66ff00;
+    font-size: 3rem;
+   
+  }
+  .Title{
+    color: #66ff00;
+    font-size: 4rem;
+   
+  }
+  .Descript{
+    color: #D6D6E2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
   
-    @media (max-width: $mantine-breakpoint-sm) {
-      text-align: left;
+.titleOverlay {
+    z-index: 0;
+    position: absolute;
+    color: #66ff00;
+    font-weight: 900;
+    opacity: 0.1;
+    font-size: rem(120px);
+    line-height: 1;
+    top: rem(50px);
+    left: rem(165px);
+    pointer-events: none;
+    font-family:
+      Greycliff CF,
+      var(--mantine-font-family);
+  
+    @media (max-width: em(1080px)) {
+      display: none;
     }
   }
