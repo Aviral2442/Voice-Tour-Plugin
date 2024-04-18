@@ -1,6 +1,7 @@
 .wrapper {
     padding-top: calc(var(--mantine-spacing-xl) * 1);
     padding-bottom: calc(var(--mantine-spacing-xl) * 1);
+    padding-left: 300px;
   }
   
   .title {
@@ -51,22 +52,3 @@ transform:scale3d(1.05,1.05,1.05);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
-.titleOverlay {
-    z-index: 0;
-    position: absolute;
-    color: #66ff00;
-    font-weight: 900;
-    opacity: 0.1;
-    font-size: rem(120px);
-    line-height: 1;
-    top: rem(50px);
-    left: rem(165px);
-    pointer-events: none;
-    font-family:
-      Greycliff CF,
-      var(--mantine-font-family);
-  
-    @media (max-width: em(1080px)) {
-      display: none;
-    }
-  }

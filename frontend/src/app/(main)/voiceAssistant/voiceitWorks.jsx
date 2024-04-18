@@ -13,19 +13,16 @@ export const MOCKDATA = [
         title: 'Activate the Voice Assistant',
         description:
             'Click the Activate Assistant button or use the voice command to start interacting with our intelligent assistant.',
-            Number:'1',
     },
     {
         title: 'Navigate Websites',
         description:
             ' Speak your desired commands to navigate through website pages, access links, or perform actions such as searching or filling out forms.',
-            Number:'2',
     },
     {
         title: 'Explore Features',
         description:
             'Discover additional features of the Voice Assistant, such as voice-controlled scrolling, zooming, and page navigation.',
-            Number:'3',
     },
 
     {
@@ -33,7 +30,7 @@ export const MOCKDATA = [
         title: 'Customize Settings',
         description:
             ' Personalize your Voice Assistant experience by adjusting settings such as voice sensitivity, language preferences, and command recognition.',
-            Number:'4',
+
 
     },
     {
@@ -41,24 +38,22 @@ export const MOCKDATA = [
         title: 'Compatibility',
         description:
             ' Our Voice Assistant is compatible with most modern web browsers and websites. While we strive to ensure compatibility across a wide range of platforms, please note that certain website structures or functionalities may impact the performance of the Voice Assistant.',
-            Number:'5',
+
     },
 ];
 
 
-export function Feature({ title, description,Number }) {
+export function Feature({ title, description, Number }) {
     return (
         <div>
             <Card h={200} className={classes.Card}>
                 <Text mt="sm" fz={24} mb={7} c={"#66ff00"} className={font.className}>
                     {title}
                 </Text>
-                <Text size="sm"  lh={1.6} className={classes.Descript} ta={"center"}>
+                <Text size="sm" lh={1.6} className={classes.Descript} ta={"center"}>
                     {description}
                 </Text>
-                <Title className={classes.titleOverlay} role="presentation">
-                           {Number}
-                        </Title>
+
             </Card>
         </div>
     );
@@ -68,7 +63,7 @@ export function VoiceitWorks() {
     const features = MOCKDATA.map((feature, index) => <Feature {...feature} key={index} />);
 
     return (
-        <Container className={classes.wrapper} fluid >
+        <Container className={classes.wrapper} fluid bg={"red"} >
 
             <SimpleGrid
                 mt={60}
@@ -76,13 +71,13 @@ export function VoiceitWorks() {
                 spacing={{ base: 'xl', md: 50 }}
                 verticalSpacing={{ base: 'xl', md: 50 }}
             >
-                <Group>
+                <Group >
                     <Card padding="md" bg={'black'} size="lg">
                         <Title className={clsx(classes.Title, font.className)}>
                             How It Works<span className={classes.questionmark}>?</span>
-                        </Title>                        
+                        </Title>
                         <Text mt={10} fz={15} className={classes.Descript}>Activate the Voice Assistant with a single click or voice command to navigate your website hands-free, streamlining your browsing experience with intuitive voice control.</Text>
-                        
+
                     </Card>
                 </Group>
                 {features}
