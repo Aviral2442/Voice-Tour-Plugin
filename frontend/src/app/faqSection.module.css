@@ -23,8 +23,12 @@
   
   .item {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-radius: var(--mantine-radius-md);
+    border-radius: var(--mantine-radius-lg);
     margin-bottom: var(--mantine-spacing-lg);
-    border: rem(1px) solid #66FF00;
+    border: rem(5px) solid #413c3c;
   }
   
+  .item:hover {
+    
+    border: rem(2px) solid #66FF00;
+  }

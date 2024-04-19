@@ -63,7 +63,7 @@ export function VoiceitWorks() {
     const features = MOCKDATA.map((feature, index) => <Feature {...feature} key={index} />);
 
     return (
-        <Container className={classes.wrapper} fluid bg={"red"} >
+        <Container className={classes.wrapper} fluid bg={"red"}  pt={180} pb={180}  >
 
             <SimpleGrid
                 mt={60}

@@ -13,7 +13,7 @@ const VoiceFAQ = () => {
         Aos.init({ duration: 2000 });
     }, []);
     return (
-        <Container className={classes.wrapper} size={1400}>
+        <Container className={classes.wrapper} size={1400} pt={180} pb={180} >
 
             <div className={classes.inner}>
                 <Title className={classes.title} data-aos="fade-up" >

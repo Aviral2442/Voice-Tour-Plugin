@@ -54,7 +54,7 @@ const VisionMission = () => {
   ))
 
   return (
-    <Container size="lg" py="xl">
+    <Container size="lg" py="xl" pt={180} pb={180} >
 
       <Title order={2} className={classes.title} ta="center" mt="sm">
       Embracing Voice Technology
