@@ -1,15 +1,33 @@
-.card {
+.Carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 45px;
+  margin: 0 30px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin: 0;
+    padding: 0;
+  
+  }
+}
+.cardsquare {
   position: relative;
   overflow: visible;
   padding: 10px;
   padding-top: 30px;
   padding-right: 50px;
-background-color: #28282B;
-color: white;
+  background-color: #28282B;
+  color: white;
   height: 250px;
   width: 380px;
-  border: 2px solid #66FF00;
- 
+  border: rem(2px) solid #413c3c;
+
+}
+
+.cardsquare:hover {
+  border: rem(2px) solid #66FF00;
 }
 
 .icon {
@@ -22,20 +40,23 @@ color: white;
 
 .name {
   color: #66FF00;
-font-size: 25px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.1;
 }
-.review{
+
+.review {
   padding-top: 10px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 13px;
 
 }
-.icon1{
+
+.icon1 {
   background-color: #39FF14;
   left: calc(70% - rem(30px));
 }
+
 .indicator {
   width: rem(12px);
   height: rem(4px);

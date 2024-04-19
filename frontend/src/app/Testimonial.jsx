@@ -13,7 +13,7 @@ const Testimonial = () => {
     return (
 
         <Carousel
-        pt={80} pb={10}
+        className={classes.Carousel}
             withIndicators
             classNames={classes}
 
@@ -29,9 +29,9 @@ const Testimonial = () => {
         >
             <Carousel.Slide>
                 <Container className={classes.Container}>
-                    <Paper radius="md" withBorder className={classes.card} >
+                    <Paper radius="md" withBorder className={classes.cardsquare} >
 
-                        <Grid grow gutter="xl">
+                        <Grid grow gutter="xl" >
                             <Grid.Col span={3} >
                                 <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
                                     <Avatar src='ava.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
@@ -63,7 +63,7 @@ const Testimonial = () => {
             </Carousel.Slide>
             <Carousel.Slide>
                 <Container className={classes.Container} >
-                    <Paper radius="md" withBorder className={classes.card} >
+                    <Paper radius="md" withBorder className={classes.cardsquare} >
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
@@ -98,7 +98,7 @@ const Testimonial = () => {
 
             <Carousel.Slide>
                 <Container className={classes.Container}>
-                    <Paper radius="md" withBorder className={classes.card} >
+                    <Paper radius="md" withBorder className={classes.cardsquare} >
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
@@ -134,7 +134,7 @@ const Testimonial = () => {
 
             <Carousel.Slide>
                 <Container className={classes.Container}>
-                    <Paper radius="md" withBorder className={classes.card} >
+                    <Paper radius="md" withBorder className={classes.cardsquare} >
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
@@ -169,7 +169,7 @@ const Testimonial = () => {
 
             <Carousel.Slide>
                 <Container className={classes.Container}>
-                    <Paper radius="md" withBorder className={classes.card} >
+                    <Paper radius="md" withBorder className={classes.cardsquare} >
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
@@ -204,7 +204,7 @@ const Testimonial = () => {
 
             <Carousel.Slide>
                 <Container className={classes.Container}>
-                    <Paper radius="md" withBorder className={classes.card} >
+                    <Paper radius="md" withBorder className={classes.cardsquare} >
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
