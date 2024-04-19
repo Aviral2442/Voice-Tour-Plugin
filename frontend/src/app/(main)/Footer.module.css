@@ -106,14 +106,15 @@
 
 .card {
   display: flex;
-  height: 40px;
-  width: 170px;
+  height: 50px;
+  width: 200px;
+  margin-top: 20px;
 }
 
 .card svg {
   position: absolute;
   display: flex;
-  width: 60%;
+  width:65%;
   height: 100%;
   font-size: 24px;
   font-weight: 700;
@@ -126,9 +127,10 @@
 .card .socialLink1,
 .card .socialLink2,
 .card .socialLink4 {
+  margin-left: 20px;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   width: 25%;
   color: whitesmoke;
@@ -152,14 +154,14 @@
 }
 
 .card .socialLink2:hover {
-  background-color: #00ccff;
+  background-color: #262828;
   animation: bounce_613 0.4s linear;
 }
 
 
 
 .card .socialLink4:hover {
-  background-color: #12a50b;
+  background-color: #3b5998;
   animation: bounce_613 0.4s linear;
 }
 

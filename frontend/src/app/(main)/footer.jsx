@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Text, Container, ActionIcon, Group, rem, Title, Image, TextInput, Button } from '@mantine/core';
+import { Text, Container, ActionIcon, Group, rem, Title, Image, TextInput, Button, Anchor } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconAt, IconSquareRoundedArrowUp } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Footer.module.css';
@@ -8,6 +8,7 @@ import { useWindowScroll } from '@mantine/hooks';
 import clsx from 'clsx';
 import { Notifications, notifications } from '@mantine/notifications';
 import '@mantine/notifications/styles.css';
+import Link from 'next/link';
 
 
 const data = [
@@ -95,17 +96,15 @@ export function Footer() {
 
                     </div>
                 </div>
-                <div className={classes.groups}>{groups}</div>
-            </Container>
-            <Container className={classes.afterFooter}>
-                <Text c="dimmed" size="sm">
-                    © 2024 VoiceTour Navigator. All rights reserved.
-                </Text>
 
+                <div className={classes.groups}>{groups}</div>
+
+            </Container>
+            <Container >
 
                 <Group justify="space-between" wrap="nowrap" gap="xl">
                     <div className={clsx(classes.card, classes.social)} >
-                        <a className={classes.socialLink1}>
+                        <a className={classes.socialLink1} component={Link} href='https://www.instagram.com/' >
                             <svg
                                 viewBox="0 0 16 16"
                                 className="bi bi-instagram"
@@ -122,9 +121,9 @@ export function Footer() {
                                 />{" "}
                             </svg>
                         </a>
-                        <a className={classes.socialLink2}>
+                        <a className={classes.socialLink2} component={Link} href='https://twitter.com/'>
                             <svg
-                                viewBox="0 0 16 16"
+                                viewBox="0 0 512 512"
                                 className="bi bi-twitter"
                                 fill="currentColor"
                                 height={16}
@@ -133,37 +132,60 @@ export function Footer() {
                                 style={{ color: "white" }}
                             >
                                 {" "}
-                                <path
-                                    fill="white"
-                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-                                />{" "}
+                                <g clipPath="url(#a)">
+                                    <rect height="512" width="512" fill="none" rx="60" />
+                                    <path
+                                        d="M355.904 100h52.928L293.2 232.16 429.232 412H322.72l-83.424-109.072L143.84 412H90.88l123.68-141.36L84.065 100H193.28l75.408 99.696L355.904 100zm-18.576 280.32h29.328L177.344 130.016h-31.472L337.328 380.32z"
+                                        fill="#fff"
+                                    />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path d="M0 0h512v512H0z" fill="#fff" />
+                                    </clipPath>
+                                </defs>
+
+                                {" "}
                             </svg>{" "}
                         </a>
 
-                        <a className={classes.socialLink4}>
+                        <a className={classes.socialLink4} component={Link} href='https://www.facebook.com/'>
                             <svg
-                                viewBox="0 0 16 16"
-                                className="bi bi-whatsapp"
+                                viewBox="0 0 32 32"
+                                className="bi bi-facebook"
                                 fill="currentColor"
-                                height={16}
-                                width={16}
+                                height={26}
+                                width={26}
                                 xmlns="http://www.w3.org/2000/svg"
                                 style={{ color: "white" }}
                             >
                                 {" "}
-                                <path
-                                    fill="white"
-                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
-                                />{" "}
+
+                                <path d="M17.892 1.058c-3.366 0-4.932 2.055-4.932 4.932v6.948h-2.38c-.88 0-1.588.708-1.588 1.588v3.343c0 .88.708 1.588 1.587 1.588h2.381v11.78c0 .88.708 1.587 1.588 1.587h3.344c.88 0 1.587-.708 1.587-1.587v-11.78h3.056c.88 0 1.4-.728 1.587-1.588l.728-3.343c.187-.86-.708-1.588-1.588-1.588H19.48v-2.156c0-2.377.535-3.205 2.85-3.205h.677c.88 0 1.588-.708 1.588-1.587V2.646c0-.88-.708-1.588-1.588-1.588h-5.114z" />
+
+                                {" "}
                             </svg>
                         </a>
                     </div>
 
                     <div>
-                        <ActionIcon onClick={() => scrollTo({ y: 0 })} variant="filled" aria-label="Settings" size="lg" radius="md" bg={'black'}>
+                        <ActionIcon mt={20} onClick={() => scrollTo({ y: 0 })} variant="filled" aria-label="Settings" size="lg" radius="md" bg={'black'}>
                             <IconSquareRoundedArrowUp style={{ width: rem(58), height: rem(58), color: '#66ff00' }} stroke={1.5} />
                         </ActionIcon>
                     </div>
+                </Group>
+            </Container>
+
+            <Container className={classes.afterFooter}>
+                <Text c="#c3cbdc" size="sm">
+                    © 2024 VoiceTour Navigator. All rights reserved.
+                </Text>
+
+
+                <Group justify="space-between" wrap="nowrap" gap="xl">
+                    <Text c="dimmed" size="sm">
+                        <Anchor c="#c3cbdc" component={Link} href="/privacy">Privacy policy</Anchor>   |  <Anchor c="#c3cbdc" component={Link} href="/terms"> Terms and Conditions</Anchor> |  <Anchor c="#c3cbdc" component={Link} href="/disclaimer">Disclaimer</Anchor>
+                    </Text>
                 </Group>
             </Container>
         </footer>

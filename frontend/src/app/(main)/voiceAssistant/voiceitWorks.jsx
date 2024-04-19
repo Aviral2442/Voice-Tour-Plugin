@@ -72,7 +72,7 @@ export function VoiceitWorks() {
                 verticalSpacing={{ base: 'xl', md: 50 }}
             >
                 <Group >
-                    <Card padding="md" bg={'black'} size="lg">
+                    <Card bg={'black'} size="lg" p={0}>
                         <Title className={clsx(classes.Title, font.className)}>
                             How It Works<span className={classes.questionmark}>?</span>
                         </Title>
