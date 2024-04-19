@@ -63,8 +63,8 @@ export function VoiceitWorks() {
     const features = MOCKDATA.map((feature, index) => <Feature {...feature} key={index} />);
 
     return (
-        <Container className={classes.wrapper} fluid bg={"red"} >
-
+        <Container className={classes.wrapper} fluid  >
+            
             <SimpleGrid
                 mt={60}
                 cols={{ base: 1, sm: 2, md: 3 }}
@@ -72,7 +72,7 @@ export function VoiceitWorks() {
                 verticalSpacing={{ base: 'xl', md: 50 }}
             >
                 <Group >
-                    <Card padding="md" bg={'black'} size="lg">
+                    <Card bg={'black'} size="lg" p={0}>
                         <Title className={clsx(classes.Title, font.className)}>
                             How It Works<span className={classes.questionmark}>?</span>
                         </Title>
