@@ -25,7 +25,7 @@ import VoiceFAQ from './voiceFAQ'
 
 const page = () => {
   return (
-    <div>
+    <div style={{overflowX:'hidden'}}>
       <>
         <Navbar />
 
