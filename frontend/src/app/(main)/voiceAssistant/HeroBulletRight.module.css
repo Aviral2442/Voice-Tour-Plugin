@@ -1,82 +1,112 @@
+.Container {
+  margin: 0 70px;
+padding-top: 30px;
+padding-bottom: 30px;
+  @media (max-width: $mantine-breakpoint-md) {
+    margin: 0;
+    padding: 0 10px;
+
+  }
+}
+
 .Paper {
-    background-color: black;
+  background-color: #262828;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin: 0;
+    padding: 0 ;
+    
+
   }
-  
-  .inner {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    border-radius: 20px;
-  
-    @media (max-width: $mantine-breakpoint-md) {
-      flex-direction: column;
-      padding: 5px;
-    }
-    @media (max-width: $mantine-breakpoint-xs) {
-      flex-direction: column;
-  
-    }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+padding-bottom: 30px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    padding: 5px;
   }
-  
-  .Right {
-    padding: 10px;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+
   }
-  
-  
-  .Title {
-    margin-top: -40px;
-    font-size: 60px;
-    position: relative;
-    font-weight: 100;
-    line-height: 0.9;
-    text-wrap: wrap;
-  
-    @media (max-width: $mantine-breakpoint-sm) {
-      font-size: rem(39px);
-      margin-top: -13px;
-  
-    }
+}
+
+.Right {
+  padding: 10px;
+}
+
+
+.Title {
+  font-size: 70px;
+  position: relative;
+  font-weight: 100;
+  line-height: 1;
+  text-wrap: wrap;
+  margin-top: -40px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(39px);
+    margin-top: -13px;
+
   }
-  
-  .paper {
-    background-color: black;
-    width: 100%;
-    text-wrap: balance;
+}
+
+
+
+.P {
+  position: relative;
+font-size: 17px;
+  max-width: rem(600px);
+  margin-top: -50px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: rgb(173, 179, 200);
+  background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
+  -webkit-background-clip: text;
+  text-wrap: wrap;
+
+  &::after {
+    display: block;
+    background-color: var(--mantine-color-blue-filled);
+    width: rem(45px);
+    height: rem(2px);
+    margin-top: var(--mantine-spacing-sm);
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  .P {
-    max-width: rem(700px);
-    margin-top: -35px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: rgb(173, 179, 200);
-    background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
-    -webkit-background-clip: text;
-    text-wrap: wrap;
-  
-    &::after {
-      display: block;
-      background-color: var(--mantine-color-blue-filled);
-      width: rem(45px);
-      height: rem(2px);
-      margin-top: var(--mantine-spacing-sm);
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    @media (max-width: $mantine-breakpoint-md) {
-      margin-top: -8px;
-    }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: -6px;
   }
-  
-  .Card {
-    width: 700px;
-    height: 500px;
-    @media (max-width: $mantine-breakpoint-md) {
-      flex-direction: row;
-      align-items: center;
-      margin-right: 0;
-      margin-bottom: var(--mantine-spacing-xl);
-      height: auto;
-      width: auto;
-    }
+}
+
+.Card {
+  width: 600px;
+  height: 400px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: auto;
   }
+}
+.Button  {
+  color: #66ff00;
+  background: transparent;
+}
+.Button:hover {
+  color: #66ff00;
+  border: 1px solid #66ff00;
+  border-radius: 10px;
+  background: transparent;
+  
+}
+
+
+

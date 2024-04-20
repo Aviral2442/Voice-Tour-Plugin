@@ -1,26 +1,36 @@
 .Container {
-  margin: 0  70px;
-  
+  margin: 0 70px;
+padding-top: 30px;
+padding-bottom: 30px;
   @media (max-width: $mantine-breakpoint-md) {
-    margin: 0  ;
+    margin: 0;
     padding: 0 10px;
-  
+
   }
 }
+
 .Paper {
   background-color: #262828;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin: 0;
+    padding: 0 ;
+    
+
+  }
 }
 
 .inner {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
-  border-radius: 20px;
+  padding-top: 30px;
+padding-bottom: 30px;
 
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: column;
     padding: 5px;
   }
+
   @media (max-width: $mantine-breakpoint-xs) {
     flex-direction: column;
 
@@ -28,7 +38,7 @@
 }
 
 .Right {
-  padding: 50px;
+  padding: 10px;
 }
 
 
@@ -36,8 +46,9 @@
   font-size: 70px;
   position: relative;
   font-weight: 100;
-  line-height: 0.9;
+  line-height: 1;
   text-wrap: wrap;
+  margin-top: -40px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(39px);
@@ -49,8 +60,10 @@
 
 
 .P {
-  max-width: rem(700px);
- 
+  position: relative;
+font-size: 17px;
+  max-width: rem(600px);
+  margin-top: -50px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: rgb(173, 179, 200);
   background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
@@ -68,19 +81,32 @@
   }
 
   @media (max-width: $mantine-breakpoint-md) {
-    margin-top: -8px;
+    margin-top: -6px;
   }
 }
 
 .Card {
   width: 600px;
   height: 400px;
+
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: row;
     align-items: center;
-    margin-right: 0;
-    margin-bottom: var(--mantine-spacing-xl);
     height: auto;
     width: auto;
   }
 }
+.Button  {
+  color: #66ff00;
+  background: transparent;
+}
+.Button:hover {
+  color: #66ff00;
+  border: 1px solid #66ff00;
+  border-radius: 10px;
+  background: transparent;
+  
+}
+
+
+
