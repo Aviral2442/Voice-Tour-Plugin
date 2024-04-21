@@ -70,7 +70,7 @@ export function Footer() {
     return (
 
         <footer className={classes.footer}>
-            <Container className={classes.inner}>
+            <Container className={classes.inner} fluid>
                 <div className={classes.logo}>
                     <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
                     <Text size="xs" c="dimmed" className={classes.description}>
@@ -100,7 +100,7 @@ export function Footer() {
                 <div className={classes.groups}>{groups}</div>
 
             </Container>
-            <Container >
+            <Container className={classes.secondInner} fluid >
 
                 <Group justify="space-between" wrap="nowrap" gap="xl">
                     <div className={clsx(classes.card, classes.social)} >
@@ -168,7 +168,7 @@ export function Footer() {
                         </a>
                     </div>
 
-                    <div>
+                    <div className={classes.Scroll}>
                         <ActionIcon mt={20} onClick={() => scrollTo({ y: 0 })} variant="filled" aria-label="Settings" size="lg" radius="md" bg={'black'}>
                             <IconSquareRoundedArrowUp style={{ width: rem(58), height: rem(58), color: '#66ff00' }} stroke={1.5} />
                         </ActionIcon>
