@@ -48,7 +48,7 @@ const page = () => {
                   size="md"
                   className={classes.control}
                   component={Link}
-                  href="http://127.0.0.1:5500/tourPreview/index.html"
+                  href="/user/generate-tour"
                 >
                   Generate Tour
                   &nbsp;
