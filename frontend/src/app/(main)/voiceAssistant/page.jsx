@@ -93,9 +93,9 @@ const page = () => {
 
         <VisionMission />
 
+        <HeroBulletRight />
         <HeroBulletLeft />
         
-        <HeroBulletRight />
         <VoiceitWorks />
 
 

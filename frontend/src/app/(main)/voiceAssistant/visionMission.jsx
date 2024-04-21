@@ -18,7 +18,7 @@ import {
     {
       title: "Our Vision",
       description:
-        "Experience the next frontier of website interaction with [Your Category Name]'s revolutionary Voice Assistants. Our technology redefines user engagement and accessibility, empowering individuals and businesses to navigate the digital landscape effortlessly.",
+        "Experience the next frontier of website interaction with Voice revolutionary Voice Assistants. Our technology redefines user engagement and accessibility, empowering individuals and businesses to navigate the digital landscape effortlessly.",
       icon: IconGauge
     },
     {
@@ -56,8 +56,10 @@ const VisionMission = () => {
   return (
     <Container size="lg" py="xl" pt={180} pb={180} >
 
-      <Title order={2} className={classes.title} ta="center" mt="sm">
-      Embracing Voice Technology
+      <Title order={1} className={classes.title} ta="center" mt="sm">
+      Embracing  
+      <span style={{color:'#66FF00'}}> Voice </span> 
+      Technology
       </Title>
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md">

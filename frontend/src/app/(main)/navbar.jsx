@@ -148,9 +148,9 @@ function Navbar() {
               <a href="/tourGenerator" className={clsx(classes.link, font.className)}>
                 TOUR GENERATOR
               </a>
-              <a href="#" className={clsx(classes.link, font.className)}>
+              {/* <a href="#" className={clsx(classes.link, font.className)}>
                 DOCUMENTATION
-              </a>
+              </a> */}
               {/* <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
                 <HoverCard.Target>
                   <a href="#" className={classes.link}>
@@ -203,7 +203,8 @@ function Navbar() {
               </a>
             </Group>
 
-            <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{ from: '#66ff00', to: '#39FF14', deg: 0 }}>
+            <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{ from: '#66ff00',
+             to: '#39FF14', deg: 0 }}>
               <IconSearch style={{ width: '70%', height: '70%', color: '#282828' }} stroke={2} />
             </ActionIcon>
 
