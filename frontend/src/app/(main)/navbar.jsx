@@ -222,9 +222,9 @@ function Navbar() {
               </Spotlight.ActionsList>
             </Spotlight.Root>
 
-            <Button component={Link} href='/signup' variant='outline' color='white' className={clsx(classes.button, font.className)}>
+            <Button component={Link} href='/login' variant='outline' color='white' className={clsx(classes.button, font.className)}>
               <Lottie animationData={avatar} className={classes.avi} />
-              Sign up</Button>
+              Login</Button>
 
           </Group>
 

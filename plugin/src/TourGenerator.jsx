@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 
 const TourGenerator = ({ id, children }) => {
 
-    console.log(children);
+    // console.log(children);
 
     //   const id = '662260eea373067b3190ca92';
 
@@ -67,11 +67,10 @@ const TourGenerator = ({ id, children }) => {
         }
     ])
 
-    return tour !== null && (
-        <Joyride steps={tour} continuous={true} >
-            {children}
-        </Joyride>
-    )
+    return <>
+        {tour !== null && <Joyride scrollToFirstStep steps={tour} continuous={true} /> }
+        {children}
+    </>
 }
 
 export default TourGenerator;
