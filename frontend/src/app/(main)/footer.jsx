@@ -178,7 +178,7 @@ export function Footer() {
 
             <Container className={classes.afterFooter}>
                 <Text c="#c3cbdc" size="sm">
-                    © 2024 VoiceTour Navigator. All rights reserved.
+                    © CopyRight 2024 | VoiceTour Navigator | All rights reserved.
                 </Text>
 
 
