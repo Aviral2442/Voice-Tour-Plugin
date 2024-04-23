@@ -5,6 +5,8 @@
     align-items: center;
     margin: 2px 80px;
     padding: 30px;
+    background-color: black;
+    border-top: 2px solid white;
 
     @media (max-width: 768px){
         flex-direction: column;
@@ -32,6 +34,32 @@
         padding: 10px;
     }
 }
+.colms2{
+    padding-top: 38px;
+    margin: 10px;
+    width: 25%;
+    @media (min-width: 375px)
+    and (max-width: 667px){
+        width: 100%;
+        padding: 10px;
+    }
+}
 
 
+.afterFooter {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    border-top: rem(1px) solid white;
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 0;
+    }
+  }
 

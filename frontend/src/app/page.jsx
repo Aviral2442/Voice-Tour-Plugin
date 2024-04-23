@@ -141,7 +141,6 @@ const page = () => {
 
       <Footer2 />
       
-      <Footer />
 
     </>
   )
