@@ -78,7 +78,7 @@ export default function FeaturesCards() {
 
     return (
     
-        <Container size="lg" py="xl" data-aos="fade-up" pt={80} pb={180} >
+        <Container size="lg" py="xl" data-aos="fade-up" pt={80} pb={130} >
             <Group justify="center">
                 <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
                     Best Navigator Plugin ever

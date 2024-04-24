@@ -21,8 +21,8 @@ function ContactIcon({ icon: Icon, title, description, ...others }) {
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'Voicetour@gmail.com', icon: IconAt },
-  { title: 'Phone', description: '6394******', icon: IconPhone },
+  { title: 'Email', description: 'vtps@gmail.com', icon: IconAt },
+  { title: 'Phone', description: '9260973330', icon: IconPhone },
   { title: 'Address', description: 'Lucknow', icon: IconMapPin },
   { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
 ];

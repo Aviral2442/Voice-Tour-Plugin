@@ -7,7 +7,7 @@ import clsx from 'clsx';
 
 export function HeroBulletRight() {
     return (
-        <Container fluid className={classes.Container}  >
+        <Container fluid className={classes.Container}  pb={100}>
             <div className={classes.inner}>
                 <Group className={classes.Right}>
 
