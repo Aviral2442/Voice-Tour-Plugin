@@ -1,4 +1,4 @@
-.footerContainer{
+.footerContainer {
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -8,7 +8,7 @@
     background-color: black;
     border-top: 2px solid white;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
@@ -16,33 +16,68 @@
     }
 }
 
-.colms1{
+
+.colms1 {
     margin: 10px;
     padding: 10px;
-    width: 30%;
-    @media (max-width: 768px){
+    width: 40%;
+
+    @media (max-width: 768px) {
         width: 100%;
     }
 }
 
-.colms{
-    margin: 10px;
+.colms0 {
     width: 25%;
-    @media (min-width: 375px)
-    and (max-width: 667px){
+    padding: 10px;
+    padding-left: 80px;
+
+    @media (min-width: 375px) and (max-width: 667px) {
         width: 100%;
         padding: 10px;
+        border-top: 1px solid white;
+
     }
 }
-.colms2{
-    padding-top: 38px;
-    margin: 10px;
+
+.colms {
     width: 25%;
-    @media (min-width: 375px)
-    and (max-width: 667px){
+    padding: 10px;
+    padding-left: 30px;
+
+
+    @media (min-width: 375px) and (max-width: 667px) {
         width: 100%;
         padding: 10px;
+        border-top: 1px solid white;
+
     }
+}
+
+.colms2 {
+    margin: 10px;
+    width: 25%;
+    padding: 10px;
+    margin-top: 50px;
+
+    @media (min-width: 375px) and (max-width: 667px) {
+        width: 100%;
+        padding: 10px;
+        border-top: 1px solid white;
+    }
+}
+
+.colmscontact {
+    margin: 10px;
+    width: 25%;
+    padding: 10px;
+
+    @media (min-width: 375px) and (max-width: 667px) {
+        width: 100%;
+        padding: 10px;
+        border-top: 1px solid white;
+    }
+
 }
 
 
@@ -50,16 +85,29 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom:10px;
+    padding-bottom: 10px;
     border-top: rem(1px) solid white;
-  
+
     @media (max-width: $mantine-breakpoint-sm) {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      padding: 0;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        padding-top: -10px;
+
     }
-  }
+}
+
+.afterFootertitle {
+    @media (max-width: $mantine-breakpoint-sm) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
+        font-size: 13px;
+        margin: 0;
+
+    }
+}
 

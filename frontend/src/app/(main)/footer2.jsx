@@ -9,6 +9,7 @@ import {
 import { Button, TextInput, NumberInput } from "@mantine/core"
 import Link from 'next/link'
 import { Cormorant_Garamond, Josefin_Sans } from 'next/font/google'
+import clsx from 'clsx'
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 const fonts = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
@@ -50,7 +51,7 @@ const Footer2 = () => {
                     </div>
                     <div>
                         <Group>
-                            <a href="https://www.facebook.com/" >
+                            <a  href="https://www.facebook.com/" >
                                 <svg className={classes.socialIcon} style={{ color: "white" }} className="w-[28px] h-[28px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd" />
                                 </svg>
@@ -83,7 +84,7 @@ const Footer2 = () => {
                         </Group>
                     </div>
                 </Group>
-                <Group className={classes.colms} >
+                <Group className={classes.colms0} >
                     <div>
                         <Title order={3} className={fonts.className}> Quick Links</Title>
                         <p><Anchor c="#c3cbdc" component={Link} href="/faq" className={font.className}>Faq's</Anchor> </p>
@@ -106,7 +107,7 @@ const Footer2 = () => {
                     </div>
                 </Group>
 
-                <Group className={classes.colms} >
+                <Group className={classes.colmscontact} >
                     <div>
                         <Title order={3} className={fonts.className}>Contact</Title>
                         <div>
@@ -125,7 +126,7 @@ const Footer2 = () => {
                         </div>
                         <form onSubmit={form.onSubmit(() => { })}>
                             <TextInput
-                           
+
                                 label="Your email"
                                 placeholder="Your email"
                                 withAsterisk
@@ -146,7 +147,7 @@ const Footer2 = () => {
 
             </Paper>
             <Container className={classes.afterFooter}>
-                <Title order={3} fw={300} align="center" mt={20} className={font.className}>© CopyRight 2024 | VoiceTour Navigator | All rights reserved.</Title>
+                <Title order={3} fw={300} align="center" mt={20} className={clsx(classes.afterFootertitle, font.className)}>© CopyRight 2024 | VoiceTour Navigator | All rights reserved.</Title>
             </Container>
         </div>
     )
