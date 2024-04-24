@@ -29,6 +29,7 @@
   letter-spacing: rem(-1px);
   color: white;
   margin-bottom: 25px;
+
   text-align: center;
   font-family:
     Greycliff CF,
@@ -40,12 +41,13 @@
   }
 }
 
-/* .wrapper {
+.wrapper {
+  background-color: black;
   position: relative;
-  padding-top: rem(180px);
-  padding-bottom: rem(130px);
-  /* background-image: url(https://media.istockphoto.com/id/1419766496/photo/abstract-concepts-of-cybersecurity-technology-and-digital-data-protection-protect-internet.jpg?s=612x612&w=0&k=20&c=3GM-GKO4wrU1wj03fE21cQXSVhvGBF8AO-9lOLpiaq8=); */
-/* background-position: center;
+  padding-top: rem(80px);
+  padding-bottom: rem(100px);
+   /* background-image: url(https://media.istockphoto.com/id/1419766496/photo/abstract-concepts-of-cybersecurity-technology-and-digital-data-protection-protect-internet.jpg?s=612x612&w=0&k=20&c=3GM-GKO4wrU1wj03fE21cQXSVhvGBF8AO-9lOLpiaq8=);  */
+ background-position: center;
   background-size: Cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -56,15 +58,20 @@
   @media (max-width: $mantine-breakpoint-xs) {
     padding-top: rem(80px);
     padding-bottom: rem(50px);
-  } */
+  } 
+}
 
 
-/* .inner {
+.inner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
   position: relative;
   z-index: 1;
-} */
+}
 
-/* .title {
+.title {
   font-weight: 800;
   font-size: rem(50px);
   letter-spacing: rem(-1px);
@@ -79,14 +86,14 @@
     font-size: rem(28px);
     text-align: left;
   }
-} */
+}
 
 /* 
 .highlight {
   color: var(--mantine-color-primary-4);
 } */
 
-/* .description {
+.description {
   color: var(--mantine-color-gray-0);
   text-align: center;
   justify-content: center;
@@ -98,12 +105,13 @@
     font-size: var(--mantine-font-size-md);
     text-align: left;
   }
-} */
+}
 
 .controls {
   display: flex;
-  margin-top: -100px;
-
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--mantine-spacing-xl);
 
   @media (max-width: $mantine-breakpoint-xs) {
     flex-direction: column;
@@ -134,115 +142,11 @@
   }
 }
 
-/* .secondaryControl {
+.secondaryControl {
   color: var(--mantine-color-white);
   background-color: rgba(255, 255, 255, 0.4);
 
   @mixin hover {
     background-color: rgba(255, 255, 255, 0.45);
   }
-} */
-
-.Container {
-  margin: 0 70px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    margin: 0;
-    padding: 0 10px;
-
-  }
 }
-
-.Paper {
-  background-color: #262828;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    margin: 0;
-    padding: 0;
-
-
-  }
-}
-
-.Inner {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    flex-direction: column;
-    padding: 5px;
-  }
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    flex-direction: column;
-
-  }
-}
-
-.Right {
-  padding: 10px;
-}
-
-
-.Title {
-  margin-left: -20px;
-  max-width: 800px;
-  font-size: 60px;
-  position: relative;
-  font-weight: 400;
-  line-height: 1;
-  text-wrap: wrap;
-  margin-top: -40px;
-
-  @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(39px);
-    margin-top: -13px;
-    text-align: left;
-
-  }
-}
-
-
-
-.Description {
-
-  position: relative;
-  font-size: 16px;
-  max-width: rem(700px);
-  margin-top: -60px;
-  background: rgb(173, 179, 200);
-  background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
-  -webkit-background-clip: text;
-  text-wrap: wrap;
-
-  &::after {
-    display: block;
-    background-color: var(--mantine-color-blue-filled);
-    width: rem(45px);
-    height: rem(2px);
-    margin-top: var(--mantine-spacing-sm);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: $mantine-breakpoint-md) {
-    margin-top: -6px;
-  }
-}
-
-.Card {
-  width: 500px;
-  height: 400px;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-    width: auto;
-  }
-}
-

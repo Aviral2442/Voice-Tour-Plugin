@@ -45,7 +45,7 @@ export function StatsRing() {
         const Icon = icons[stat.icon]
         return (
 
-            <Container m={100} withBorder radius="md" p="xs" key={stat.label}>
+            <Container m={100} withBorder radius="md" p="xs" key={stat.label} >
                 <Group>
                     <RingProgress
                         size={80}

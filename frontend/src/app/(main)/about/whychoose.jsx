@@ -13,10 +13,12 @@ import {
 } from "@mantine/core"
 import { IconGauge, IconUser, IconCookie } from "@tabler/icons-react"
 import classes from './whychoose.module.css'
-import { Josefin_Sans } from 'next/font/google'
+import { Cormorant_Garamond, Josefin_Sans } from 'next/font/google'
 import clsx from 'clsx'
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+const fonts = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
+
 
 
 const mockdata = [
@@ -67,9 +69,9 @@ const Whychoose = () => {
     ))
     return (
         <Container size="lg" py="xl">
-            <Group justify="center">
-                <Badge variant="filled" size="lg">
-                    Why Choose us
+            <Group justify="center">               
+                <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
+                Why Choose us
                 </Badge>
             </Group>
 
@@ -77,7 +79,7 @@ const Whychoose = () => {
             Elevating Your Online Experience with Cutting-Edge Technology 
             </Title>
 
-            <Text c="dimmed" className={classes.description} ta="center" mt="lg">
+            <Text c="dimmed" className={clsx(classes.description,fonts.className)} ta="center" mt="lg">
             Discover why our platform is the preferred choice for transforming website interactions. With our innovative Voice Assistant
              and intuitive Tour Generator, we ensure that every user enjoys a seamless, accessible, and engaging online experience.
               Choose us to navigate and explore digital spaces with unparalleled ease and efficiency.
