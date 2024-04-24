@@ -1,4 +1,5 @@
 .inner {
+  background-color: black;
     display: flex;
     justify-content: space-between;
     padding-top: calc(var(--mantine-spacing-xl) * 3);
@@ -24,6 +25,14 @@
   
     @media (max-width: $mantine-breakpoint-xs) {
       font-size: rem(28px);
+    }
+  }
+  .text{
+    margin-top: 10px;
+   
+  
+    @media (max-width: $mantine-breakpoint-xs) {
+      font-size: rem(16px);
     }
   }
   
