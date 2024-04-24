@@ -100,6 +100,8 @@
 }
 
 .afterFootertitle {
+  margin-top: 10px;
+  font-size: 12px;
   @media (max-width: $mantine-breakpoint-sm) {
       flex-direction: column;
       text-align: center;

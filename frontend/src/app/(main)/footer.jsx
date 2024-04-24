@@ -1,7 +1,7 @@
 'use client'
 import { Anchor, Container, Group, Image, Paper, Text, Title } from '@mantine/core'
 import React from 'react'
-import classes from './footer.module.css'
+import classes from './Footer.module.css'
 import {
     useForm,
     isEmail,
@@ -10,6 +10,7 @@ import { Button, TextInput, NumberInput } from "@mantine/core"
 import Link from 'next/link'
 import { Cormorant_Garamond, Josefin_Sans } from 'next/font/google'
 import clsx from 'clsx'
+import { Icon360View, IconMail } from '@tabler/icons-react'
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 const fonts = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
@@ -48,7 +49,7 @@ export function Footer() {
                         />
                     </div>
                     <div>
-                        <Text className={font.className}>
+                        <Text className={font.className} mt={"-20"}>
                             Users can navigate websites effortlessly using natural language voice commands, eliminating the need for traditional mouse clicks and keyboard inputs.</Text>
                     </div>
                     <div>
@@ -110,8 +111,25 @@ export function Footer() {
                 </Group>
 
                 <Group className={classes.colmscontact} >
+                    <form onSubmit={form.onSubmit(() => { })}>
+                        <TextInput
+
+
+                            placeholder="Your email"
+
+                            mt="md"
+                            {...form.getInputProps("email")}
+                        />
+
+                        <Button mt={8} variant='outline' color='#66ff00' fullWidth type="submit" className={font.className}>Subscribe <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z" clip-rule="evenodd" />
+                        </svg>
+                        </Button>
+
+                    </form>
                     <div>
-                        <Title order={3} className={fonts.className}>Contact</Title>
+                        {/* <Title order={3} className={fonts.className} mt={"md"}>Contact</Title> */}
                         <div>
                             <Group>
                                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -119,37 +137,18 @@ export function Footer() {
                                 </svg>
                                 <p className={font.className}>+91 9260973330</p>
                             </Group>
-                            <Group>
-                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z" />
-                                </svg>
+                            <Group mt={'-20'}>
+                                <IconMail />
                                 <p className={font.className}>vtps@gmail.com</p>
                             </Group>
                         </div>
-                        <form onSubmit={form.onSubmit(() => { })}>
-                            <TextInput
-
-                                label="Your email"
-                                placeholder="Your email"
-                                withAsterisk
-                                mt="md"
-                                {...form.getInputProps("email")}
-                            />
-
-                            <Button mt={8} variant='outline' color='#66ff00' fullWidth type="submit" className={font.className}>Subscribe <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z" clip-rule="evenodd" />
-                                <path fill-rule="evenodd" d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z" clip-rule="evenodd" />
-                            </svg>
-                            </Button>
-
-                        </form>
 
                     </div>
                 </Group>
 
             </Paper>
             <Container className={classes.afterFooter}>
-                <Title order={3} fw={300} align="center" mt={20} className={clsx(classes.afterFootertitle, font.className)}>© CopyRight 2024 | VoiceTour Navigator | All rights reserved.</Title>
+                <Title fw={300} align="center" className={clsx(classes.afterFootertitle, font.className)}>© CopyRight 2024 | VoiceTour Navigator | All rights reserved.</Title>
             </Container>
         </footer>
 

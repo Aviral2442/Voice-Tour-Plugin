@@ -34,7 +34,7 @@ router.get('/getall', (req, res) => {
 
 router.get('/getbyuser', verifyToken, (req, res) => {
     // console.log(req.body);
-    Model.find({user: req.params.id})
+    Model.find({user: req.params._id})
         .then((result) => {
             res.status(200).json(result);
 
