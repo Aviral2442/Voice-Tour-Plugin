@@ -30,7 +30,6 @@ import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
 import { Poppins, Rammetto_One, Whisper } from 'next/font/google'
 import clsx from 'clsx'
-import Footer2 from './(main)/footer2'
 
 const whisper = Poppins({ subsets: ['latin'], weight: ['100','400'] });
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
@@ -139,7 +138,8 @@ const page = () => {
 
       <Faqsection />
 
-      <Footer2 />
+    
+      <Footer />
       
 
     </>
