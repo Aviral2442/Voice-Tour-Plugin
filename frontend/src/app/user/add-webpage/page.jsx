@@ -17,8 +17,15 @@ import classes from './webPage.module.css'
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
+import { useDisclosure } from "@mantine/hooks"
+import { Modal } from "@mantine/core"
+import WebpageTable from './webpageTable';
 
 const WebPage = () => {
+
+  // model start
+  const [opened, { open, close }] = useDisclosure(false)
+  // model end
 
   const webpageValidationSchema = Yup.object().shape({
     name: Yup.string().required('Name is Required').min(3, 'Name is Too Short'),
@@ -30,7 +37,7 @@ const WebPage = () => {
 
   const webpageForm = useFormik({
     initialValues: {
-      user: currentUser._id,
+      user: 'currentUser._id',
       name: '',
       address: '',
       description: '',
@@ -70,7 +77,10 @@ const WebPage = () => {
 
 
   return (
-    <Container size={420} my={40} mt={120}>
+    <>
+    <center>
+    <Modal opened={opened} onClose={close} ta="center"  >
+    <Container size={420} my={40} mt={20}>
 
 
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
@@ -113,13 +123,21 @@ const WebPage = () => {
             error={webpageForm.touched.description && webpageForm.errors.description}
           />
 
-
           <Button type='submit' fullWidth mt="xl">
             Add WebPage
           </Button>
         </form>
       </Paper>
     </Container >
+    </Modal>
+    <Button onClick={open}>Submit Web Page</Button>
+
+    <br /><br /><br />
+
+    <WebpageTable />
+
+    </center>
+    </>
   )
 }
 
