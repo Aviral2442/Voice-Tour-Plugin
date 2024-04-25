@@ -28,6 +28,7 @@ import logimg from './logimg.json';
 import Lottie from 'lottie-react';
 import { Rammetto_One } from 'next/font/google';
 import clsx from 'clsx';
+import useAppContext from '@/context/AppContext';
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
@@ -47,6 +48,8 @@ const theme = createTheme({
 export function Login() {
 
   const router = useRouter();
+
+  const { setLoggedIn, setCurrentUser } = useAppContext();
 
   const form = useForm({
     initialValues: {
@@ -75,6 +78,8 @@ export function Login() {
           toast.success('loggedin successfully');
           response.json().then(data => {
             sessionStorage.setItem('user', JSON.stringify(data));
+            setCurrentUser(data);
+            setLoggedIn(true);
             router.push('/');
           })
         } else {

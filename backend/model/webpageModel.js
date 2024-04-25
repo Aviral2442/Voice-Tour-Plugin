@@ -6,8 +6,7 @@ const mySchema = new Schema({
     name: String,
     address: String,
     description: String,
-    createdAt: Date
-
+    createdAt: {type : Date, default : Date.now}
 });
 
 module.exports = model('webpage', mySchema);

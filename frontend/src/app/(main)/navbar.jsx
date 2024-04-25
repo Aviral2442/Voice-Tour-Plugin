@@ -22,6 +22,8 @@ import {
   TextInput,
   Code,
   Image,
+  Menu,
+  Avatar,
 } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
@@ -34,6 +36,7 @@ import {
   IconCoin,
   IconChevronDown,
   IconSearch,
+  IconLogout,
 } from '@tabler/icons-react';
 import classes from './HeaderMegaMenu.module.css';
 import Link from 'next/link';
@@ -46,6 +49,8 @@ import { Cormorant_Garamond, Londrina_Solid } from 'next/font/google'
 import { useState } from "react"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import '@mantine/spotlight/styles.css';
+import useAppContext from '@/context/AppContext';
+import { IconSettings } from '@tabler/icons-react';
 
 const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
@@ -97,6 +102,8 @@ function Navbar() {
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
 
+  const { logout, loggedIn, currentUser } = useAppContext();
+
   const { setColorScheme } = useMantineColorScheme()
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
@@ -123,10 +130,54 @@ function Navbar() {
 
   const [query, setQuery] = useState("");
 
+  const [userMenuOpened, setUserMenuOpened] = useState(false);
+
   const items = data
     .filter(item => item.toLowerCase().includes(query.toLowerCase().trim()))
     .map(item => <Spotlight.Action key={item} label={item} />)
 
+
+  const displayLoginOptions = () => {
+    if (loggedIn) {
+      return <Menu
+        width={260}
+        position="bottom-end"
+        transitionProps={{ transition: 'pop-top-right' }}
+        onClose={() => setUserMenuOpened(false)}
+        onOpen={() => setUserMenuOpened(true)}
+        withinPortal
+      >
+        <Menu.Target>
+          <UnstyledButton
+            className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
+          >
+            <Group gap={7}>
+              <Avatar src={'http://localhost:5000/'+currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
+              <Text fw={500} size="sm" lh={1} mr={3}>
+                {currentUser.name}
+              </Text>
+              <IconChevronDown style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
+            </Group>
+          </UnstyledButton>
+        </Menu.Target>
+        <Menu.Dropdown>
+
+          <Menu.Item
+            onClick={logout}
+            color='red'
+            leftSection={
+              <IconLogout style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            }>
+            Logout
+          </Menu.Item>
+        </Menu.Dropdown>
+      </Menu>
+    } else {
+      return <Button component={Link} href='/login' variant='outline' color='white' className={clsx(classes.button, font.className)}>
+        <Lottie animationData={avatar} className={classes.avi} /> Login
+      </Button>
+    }
+  }
 
   return (
     <Box >
@@ -203,8 +254,10 @@ function Navbar() {
               </a>
             </Group>
 
-            <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{ from: '#66ff00',
-             to: '#39FF14', deg: 0 }}>
+            <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
+              from: '#66ff00',
+              to: '#39FF14', deg: 0
+            }}>
               <IconSearch style={{ width: '70%', height: '70%', color: '#282828' }} stroke={2} />
             </ActionIcon>
 
@@ -222,9 +275,7 @@ function Navbar() {
               </Spotlight.ActionsList>
             </Spotlight.Root>
 
-            <Button component={Link} href='/login' variant='outline' color='white' className={clsx(classes.button, font.className)}>
-              <Lottie animationData={avatar} className={classes.avi} />
-              Login</Button>
+            {displayLoginOptions()}
 
           </Group>
 

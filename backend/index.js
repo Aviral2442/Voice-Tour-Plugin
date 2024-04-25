@@ -17,6 +17,8 @@ app.use('/user', userRouter);
 app.use('/webpage', webRouter);
 app.use('/tour', tourRouter);
 
+app.use(express.static('./static/uploads'));
+
 const port = 5000;
 
 app.post('/add', (req, res) => {

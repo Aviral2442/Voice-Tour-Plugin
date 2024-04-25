@@ -7,8 +7,8 @@ const mySchema = new Schema({
     password: String,
     avatar: String,
     createdAt: Date,
-    role: { type: String, default: 'user' }
-
+    role: { type: String, default: 'user' },
+    avatar: { type: String, default: 'avatar_placeholder.png'}
 });
 
 module.exports = model('users', mySchema);

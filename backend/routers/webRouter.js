@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const Model = require('../model/webpageModel');
+const verifyToken = require('./verifyToken');
 
 
-router.post('/add', (req, res) => {
-    console.log(req.body);
+router.post('/add', verifyToken, (req, res) => {
+    req.body.user = req.user._id;
     new Model(req.body).save()
 
         .then((result) => {
@@ -28,9 +29,9 @@ router.get('/getall', (req, res) => {
         });
 });
 
-router.get('/getbyuser/:userid', (req, res) => {
+router.get('/getbyuser', verifyToken, (req, res) => {
     // console.log(req.body);
-    Model.find({user: req.params.userid})
+    Model.find({user: req.user._id})
         .then((result) => {
             res.status(200).json(result);
 

@@ -20,6 +20,7 @@ import toast from 'react-hot-toast';
 import { useDisclosure } from "@mantine/hooks"
 import { Modal } from "@mantine/core"
 import WebpageTable from './webpageTable';
+import useAppContext from '@/context/AppContext';
 
 const WebPage = () => {
 
@@ -33,16 +34,13 @@ const WebPage = () => {
     description: Yup.string().required('Description is Required').min(8, 'Description is Too Short')
   });
 
-  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+  const {currentUser, setCurrentUser} = useAppContext();
 
   const webpageForm = useFormik({
     initialValues: {
-      user: 'currentUser._id',
       name: '',
       address: '',
-      description: '',
-      createdAt: new Date()
-
+      description: ''
     },
     onSubmit: (values) => {
 
@@ -52,7 +50,8 @@ const WebPage = () => {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'x-auth-token': currentUser.token
         }
       })
         .then((response) => {
