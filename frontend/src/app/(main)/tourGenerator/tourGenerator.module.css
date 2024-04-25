@@ -1,6 +1,5 @@
 .mainContainer{
-  max-width: rem(1100px);    
-  
+
   @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
     margin-right: 0;
@@ -8,16 +7,20 @@
 }
 
 .inner {
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
-  padding-top: calc(var(--mantine-spacing-xl) * 4);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+  padding-top: 30px;
+  padding-bottom: 30px;
+ 
 }
 
 
 .content {
-  max-width: rem(450px);
-  margin-right: calc(var(--mantine-spacing-xl) * 3);
+  padding-top: 100px;
+  max-width: rem(600px);
+  margin-left: 150px;
   
     @media (max-width: $mantine-breakpoint-md) {
       max-width: 100%;
@@ -40,14 +43,22 @@
   }
   
   .control {
+    color: black;
+    background-color: #66ff00;
+    @media (max-width: $mantine-breakpoint-xs) {
+      flex: 1;
+    }
+  }
+  .control1 {
     @media (max-width: $mantine-breakpoint-xs) {
       flex: 1;
     }
   }
   
-  .image {
-    width: rem(450px);
-    height: rem(356px);
+  .image {   
+    margin-right: 100px;
+    width: 600px;
+    height:600px ;
     
     @media (max-width: $mantine-breakpoint-md) {
       display: none;
