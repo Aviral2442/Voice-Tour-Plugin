@@ -11,12 +11,14 @@ import {
   Container,
   Group,
   Button,
-  Textarea
+  Textarea,
+  Modal
 } from "@mantine/core"
 import classes from './webPage.module.css'
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
+import { useDisclosure } from '@mantine/hooks';
 
 const WebPage = () => {
 
@@ -68,58 +70,60 @@ const WebPage = () => {
     validationSchema: webpageValidationSchema
   });
 
+  const [opened, { open, close }] = useDisclosure(false)
 
   return (
-    <Container size={420} my={40} mt={120}>
+    <>
+      <Modal opened={opened} onClose={close} size="md" centered >
+        <Container  >
+          <Paper shadow="md" radius="md">
+            <Title ta="center" className={classes.title}>
+              Webpage
+            </Title>
+            <form onSubmit={webpageForm.handleSubmit}>
+              <TextInput
+                label="Name"
+                placeholder="Enter your name "
+                mt="md"
+                id="name"
+                onChange={webpageForm.handleChange}
+                value={webpageForm.values.name}
+                className="form-control"
+                error={webpageForm.touched.name && webpageForm.errors.name}
+              />
 
 
-      <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-        <Title ta="center" className={classes.title}>
-          Webpage
-        </Title>
-        <form onSubmit={webpageForm.handleSubmit}>
-          <TextInput
-            label="Name"
-            placeholder="Enter your name "
-            mt="md"
-            id="name"
-            onChange={webpageForm.handleChange}
-            value={webpageForm.values.name}
-            className="form-control"
-            error={webpageForm.touched.name && webpageForm.errors.name}
-          />
+              <TextInput label="Address"
+                placeholder="Enter your address"
+                mt="md"
+                id="address"
+                onChange={webpageForm.handleChange}
+                value={webpageForm.values.address}
+                className="form-control"
+                error={webpageForm.touched.address && webpageForm.errors.address}
+              />
 
 
-          <TextInput label="Address"
-            placeholder="Enter your address"
-            mt="md"
-            id="address"
-            onChange={webpageForm.handleChange}
-            value={webpageForm.values.address}
-            className="form-control"
-            error={webpageForm.touched.address && webpageForm.errors.address}
-          />
+              <Textarea label="Description"
+                placeholder="Enter your description"
+                mt="md"
+                id="description"
+                onChange={webpageForm.handleChange}
+                value={webpageForm.values.description}
+                className="form-control"
+                error={webpageForm.touched.description && webpageForm.errors.description}
+              />
 
 
-          <Textarea label="Description"
-          
-          
-            placeholder="Enter your description"
-            mt="md"
-            id="description"
-            onChange={webpageForm.handleChange}
-            value={webpageForm.values.description}
-            className="form-control"
-            error={webpageForm.touched.description && webpageForm.errors.description}
-          />
-
-
-          <Button type='submit' fullWidth mt="xl">
-            Add WebPage
-          </Button>
-        </form>
-      </Paper>
-    </Container >
+              <Button type='submit' fullWidth mt="xl" variant='outline' color='#66ff00'>
+                Add WebPage
+              </Button>
+            </form>
+          </Paper>
+        </Container >
+      </Modal>
+      <Button onClick={open} className={classes.Button} variant='outline' color='#66ff00' >Create Webpage</Button>
+    </>
   )
 }
 
