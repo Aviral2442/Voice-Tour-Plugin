@@ -22,21 +22,27 @@ import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
 import TourFAQ from './tourFAQ'
 import Link from 'next/link'
+import { Josefin_Sans, Rammetto_One } from 'next/font/google'
+import clsx from 'clsx'
+
+const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
+const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+
 
 const page = () => {
   return (
-    <div>
+    <div style={{overflowX:'hidden'}}>
       <>
         <Navbar />
 
-        <Container className={classes.mainContainer}>
+        <Container className={classes.mainContainer} fluid>
           <div className={classes.inner}>
             <div className={classes.content}>
-              <Title className={classes.title}>
-                Tour <span className={classes.highlight}>Generator</span> Plugin <br />{" "}
+              <Title className={clsx(classes.title,font.className)}>
+                Tour <span className={classes.highlight}>Generator</span> <span style={{color:'#66ff00'}}>Plugin</span> <br />{" "}
                 {/* Welcome to the */}
               </Title>
-              <Text c="dimmed" mt="md">
+              <Text fz='lg'  mt="md" className={fonts.className}>
                 Where you'll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature 
                 revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to 
                 cumbersome mouse clicks and keyboard typing – with our Voice Assistant, browsing becomes intuitive and effortless.
@@ -44,15 +50,18 @@ const page = () => {
 
               <Group mt={30}>
                 <Button
-                  radius="xl"
+                  radius="md"
                   size="md"
                   className={classes.control}
                   component={Link}
                   href="/user/generate-tour"
+                  variant='outline'
+                  color='#66ff00'
+
                 >
                   Generate Tour
                   &nbsp;
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#65FF00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#65FF00" fill="black" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
                     <path d="M11 13l9 -9" />
@@ -60,10 +69,11 @@ const page = () => {
                   </svg>
                 </Button>
                 <Button
-                  variant="default"
-                  radius="xl"
+                  variant='outline'
+                  color='#66ff00'
+                  radius="md"
                   size="md"
-                  className={classes.control}
+                  className={classes.control1}
                   component={Link}
                   href="http://127.0.0.1:5500/tourPreview/index.html"
                 >

@@ -4,3 +4,8 @@
       var(--mantine-font-family);
     font-weight: 900;
   }
+  .Button{
+    color: black;
+    background-color: #66ff00;
+  }
+ 
