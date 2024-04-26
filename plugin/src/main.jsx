@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import TourGenerator from './TourGenerator.jsx';
-import SearchPlugin from './SearchPlugin.jsx';  
+import SearchPlugin from './SearchPlugin.jsx';
+import { MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css';
+import { VoiceProvider } from './VoiceContext.jsx';
+
+
 
 // Tour Generator
 const tourEle = document.getElementsByTagName('tour');
@@ -31,9 +36,13 @@ if (searchPlug.length > 0) {
 
   console.log(ownerId);
   ReactDOM.createRoot(searchPlug[0]).render(
-    <SearchPlugin ownerId={ownerId}>
-      <div dangerouslySetInnerHTML={{ __html: searchPlug[0].innerHTML }} />
-    </SearchPlugin>
+    <MantineProvider>
+      <VoiceProvider>
+        <SearchPlugin ownerId={ownerId}>
+          <div dangerouslySetInnerHTML={{ __html: searchPlug[0].innerHTML }} />
+        </SearchPlugin>
+      </VoiceProvider>
+    </MantineProvider>
   )
 }
 
