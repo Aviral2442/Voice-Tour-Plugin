@@ -52,7 +52,7 @@ const WebpageTable = () => {
         )
     }
 
-    const fetchWebpagesData = () => {
+const fetchWebpagesData = () => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/webpage/getbyuser`, {
             headers: {
                 'x-auth-token': currentUser.token,
