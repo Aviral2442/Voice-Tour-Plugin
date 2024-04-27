@@ -40,7 +40,7 @@ const Contact = () => {
         .then((response) => {
           console.log(response.status);
           if (response.status === 200) {
-            toast.sucess('Message sent successfully');
+            toast.success('Message sent successfully');
             formik.resetForm();
           } else {
             toast.error('Message not sent');
@@ -72,7 +72,7 @@ const Contact = () => {
               <ContactIconsList />
             </div>
 
-            <form className={classes.form} onSubmit={(formik.handleChange)}>
+            <form className={classes.form} onSubmit={(formik.handleSubmit)}>
               <Text fz="lg" fw={700} className={classes.title}>
                 Get in touch
               </Text>
