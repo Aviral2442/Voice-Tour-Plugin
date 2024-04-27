@@ -34,8 +34,6 @@ import { Container } from '@mantine/core';
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
-
-
 function PasswordRequirement({ meets, label }) {
   return (
     <Text

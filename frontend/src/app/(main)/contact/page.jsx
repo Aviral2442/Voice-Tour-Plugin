@@ -8,7 +8,7 @@ import { Footer } from '../footer';
 import { Input } from 'postcss';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
-
+import * as Yup from "yup";
 
 const Contact = () => {
 
@@ -30,15 +30,13 @@ const Contact = () => {
     onSubmit: (values) => {
       console.log(values);
 
-      fetch('http://localhost:5000/contactForm/contact', {
+      fetch('http://localhost:5000/contactForm/contact/', {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {
           'Content-Type': 'application/json',
-
         }
-      }
-      )
+      })
         .then((response) => {
           console.log(response.status);
           if (response.status === 200) {
@@ -95,49 +93,49 @@ const Contact = () => {
                     ) : null}
                   </div>
                   <div>
-                  <TextInput 
-                  label="Your email" 
-                  placeholder="hellovoicetour.com" 
-                  required 
-                  id='email'
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  />
-                  {formik.touched.email && formik.errors.email ? (
+                    <TextInput
+                      label="Your email"
+                      placeholder="hellovoicetour.com"
+                      required
+                      id='email'
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                    />
+                    {formik.touched.email && formik.errors.email ? (
                       <div className="text-red-500 text-xs">{formik.errors.email}</div>
                     ) : null}
                   </div>
                 </SimpleGrid>
 
                 <div>
-                <TextInput 
-                mt="md" 
-                label="Subject" 
-                placeholder="Subject" 
-                required 
-                id='subject'
-                value={formik.values.subject}
-                onChange={formik.handleChange}
-                />
-                {formik.touched.subject && formik.errors.subject ? (
-                      <div className="text-red-500 text-xs">{formik.errors.subject}</div>
-                    ) : null}
+                  <TextInput
+                    mt="md"
+                    label="Subject"
+                    placeholder="Subject"
+                    required
+                    id='subject'
+                    value={formik.values.subject}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.touched.subject && formik.errors.subject ? (
+                    <div className="text-red-500 text-xs">{formik.errors.subject}</div>
+                  ) : null}
                 </div>
 
                 <div>
-                <Textarea
-                  mt="md"
-                  label="Your message"
-                  placeholder="Please include all relevant information"
-                  minRows={3}
-                  required
-                  id='message'
-                  value={formik.values.message}
-                  onChange={formik.handleChange}
-                />
-                {formik.touched.message && formik.errors.message ? (
-                      <div className="text-red-500 text-xs">{formik.errors.message}</div>
-                    ) : null}
+                  <Textarea
+                    mt="md"
+                    label="Your message"
+                    placeholder="Please include all relevant information"
+                    minRows={3}
+                    required
+                    id='message'
+                    value={formik.values.message}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.touched.message && formik.errors.message ? (
+                    <div className="text-red-500 text-xs">{formik.errors.message}</div>
+                  ) : null}
                 </div>
 
                 <Group justify="flex-end" mt="md">

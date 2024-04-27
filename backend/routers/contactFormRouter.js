@@ -17,4 +17,4 @@ router.post('/contact', (req, res) => {
     });
 });
 
-model.exports = router;
+module.exports = router;
