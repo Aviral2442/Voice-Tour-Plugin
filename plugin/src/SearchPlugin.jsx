@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { rem, Button } from "@mantine/core"
+import { rem, Button, ActionIcon, createTheme, MantineProvider } from "@mantine/core"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import {
   IconHome,
@@ -11,7 +11,15 @@ import {
   IconInnerShadowTopRightFilled
 } from "@tabler/icons-react"
 import '@mantine/spotlight/styles.css';
+import classes from './searchPlugin.module.css';
 
+const theme = createTheme({
+  components: {
+    ActionIcon: ActionIcon.extend({
+      classNames: classes,
+    }),
+  },
+});
 
 
 const SearchPlugin = () => {
@@ -54,7 +62,9 @@ const SearchPlugin = () => {
 
   return (
     <div>
-      <Button onClick={spotlight.open}>Open spotlight</Button>
+      <MantineProvider theme={theme}>
+      <Button onClick={spotlight.open}>Open spotlight </Button>
+      
       <Spotlight
         shortcut={['mod + K', 'mod + P', '/']}
         actions={webPagesData}
@@ -68,16 +78,19 @@ const SearchPlugin = () => {
             />
           ),
           rightSection: (
-            <IconMicrophone
-              onClick={handleMicClick}
+            <ActionIcon 
+            onClick={handleMicClick}
+            size="xl" variant="primary" aria-label="Primary variant">
+            <IconMicrophone             
               style={{ width: rem(20), height: rem(20), cursor: "pointer" }}
               stroke={2.5}
             />
+            </ActionIcon>
           ),
           placeholder: "Search..."
         }}
       />
-
+</MantineProvider>
     </div>
   )
 }
