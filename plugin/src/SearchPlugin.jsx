@@ -11,15 +11,7 @@ import {
   IconInnerShadowTopRightFilled
 } from "@tabler/icons-react"
 import '@mantine/spotlight/styles.css';
-import classes from './searchPlugin.module.css';
 
-const theme = createTheme({
-  components: {
-    ActionIcon: ActionIcon.extend({
-      classNames: classes,
-    }),
-  },
-});
 
 
 const SearchPlugin = () => {
@@ -62,7 +54,7 @@ const SearchPlugin = () => {
 
   return (
     <div>
-      <MantineProvider theme={theme}>
+      
         <Button onClick={spotlight.open}>Open spotlight </Button>
 
         <Spotlight
@@ -78,16 +70,14 @@ const SearchPlugin = () => {
               />
             ),
             rightSection: (
-              <ActionIcon
-                onClick={handleMicClick}
-                size="xl" variant="primary" aria-label="Primary variant">
+              
                 <Text size="xs" >Ctrl + K</Text>
-              </ActionIcon>
+             
             ),
             placeholder: "Search..."
           }}
         />
-      </MantineProvider>
+     
     </div>
   )
 }

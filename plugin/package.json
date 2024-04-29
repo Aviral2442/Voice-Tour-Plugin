@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@mantine/core": "^7.8.1",
     "@mantine/hooks": "^7.8.1",
     "@mantine/spotlight": "^7.8.1",
