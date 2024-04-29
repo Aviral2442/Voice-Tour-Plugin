@@ -54,30 +54,28 @@ const SearchPlugin = () => {
 
   return (
     <div>
-      
-        <Button onClick={spotlight.open}>Open spotlight </Button>
 
-        <Spotlight
-          shortcut={['mod + K', 'mod + P', '/']}
-          actions={webPagesData}
-          nothingFound="Nothing found..."
-          highlightQuery
-          searchProps={{
-            leftSection: (
-              <IconSearch
-                style={{ width: rem(20), height: rem(20) }}
-                stroke={1.5}
-              />
-            ),
-            rightSection: (
-              
-                <Text size="xs" >Ctrl + K</Text>
-             
-            ),
-            placeholder: "Search..."
-          }}
-        />
-     
+      <Button onClick={spotlight.open}>Open spotlight </Button>
+
+      <Spotlight
+        shortcut={['mod + K', 'mod + P', '/']}
+        actions={webPagesData}
+        nothingFound="Nothing found..."
+        highlightQuery
+        searchProps={{
+          leftSection: (
+            <IconSearch
+              style={{ width: rem(20), height: rem(20) }}
+              stroke={1.5}
+            />
+          ),
+          rightSection: (
+            <Text size="xs" >Ctrl + K</Text>
+          ),
+          placeholder: "Search..."
+        }}
+      />
+
     </div>
   )
 }
