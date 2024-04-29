@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { rem, Button, ActionIcon, createTheme, MantineProvider } from "@mantine/core"
+import { rem, Button, ActionIcon, createTheme, MantineProvider, Text } from "@mantine/core"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import {
   IconHome,
@@ -63,34 +63,31 @@ const SearchPlugin = () => {
   return (
     <div>
       <MantineProvider theme={theme}>
-      <Button onClick={spotlight.open}>Open spotlight </Button>
-      
-      <Spotlight
-        shortcut={['mod + K', 'mod + P', '/']}
-        actions={webPagesData}
-        nothingFound="Nothing found..."
-        highlightQuery
-        searchProps={{
-          leftSection: (
-            <IconSearch
-              style={{ width: rem(20), height: rem(20) }}
-              stroke={1.5}
-            />
-          ),
-          rightSection: (
-            <ActionIcon 
-            onClick={handleMicClick}
-            size="xl" variant="primary" aria-label="Primary variant">
-            <IconMicrophone             
-              style={{ width: rem(20), height: rem(20), cursor: "pointer" }}
-              stroke={2.5}
-            />
-            </ActionIcon>
-          ),
-          placeholder: "Search..."
-        }}
-      />
-</MantineProvider>
+        <Button onClick={spotlight.open}>Open spotlight </Button>
+
+        <Spotlight
+          shortcut={['mod + K', 'mod + P', '/']}
+          actions={webPagesData}
+          nothingFound="Nothing found..."
+          highlightQuery
+          searchProps={{
+            leftSection: (
+              <IconSearch
+                style={{ width: rem(20), height: rem(20) }}
+                stroke={1.5}
+              />
+            ),
+            rightSection: (
+              <ActionIcon
+                onClick={handleMicClick}
+                size="xl" variant="primary" aria-label="Primary variant">
+                <Text size="xs" >Ctrl + K</Text>
+              </ActionIcon>
+            ),
+            placeholder: "Search..."
+          }}
+        />
+      </MantineProvider>
     </div>
   )
 }

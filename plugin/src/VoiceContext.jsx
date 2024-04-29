@@ -525,8 +525,8 @@ export const VoiceProvider = ({ children }) => {
 
     useEffect(() => {
         document.addEventListener('keydown', (e) => {
-            // console.log(e.code);
-            if (e.code === 'Space') {
+            console.log(e.code);
+            if (e.code === 'Space' && e.ctrlKey) {
                 SpeechRecognition.startListening();
             }
         });
