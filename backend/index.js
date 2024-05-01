@@ -18,6 +18,7 @@ app.use('/tour', tourRouter);
 app.use('/contactForm', contactFormRouter);
 
 app.use(express.static('./static/uploads'));
+app.use(express.static('./static/resources'));
 
 const port = 5000;
 

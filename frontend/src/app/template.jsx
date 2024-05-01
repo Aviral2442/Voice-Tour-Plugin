@@ -8,11 +8,10 @@ const Template = ({ children }) => {
     return (
         <div>
             <Toaster position='top-center' />
-            <VoiceProvider>
+           
                 <AppProvider>
                     {children}
                 </AppProvider>
-            </VoiceProvider>
         </div>
     )
 }

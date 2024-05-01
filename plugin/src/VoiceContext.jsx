@@ -4,7 +4,7 @@ import regeneratorRuntime from "regenerator-runtime";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { IconMicrophone, IconPlayerRecordFilled } from '@tabler/icons-react';
 // import { useRouter } from 'next/navigation';
-import { Button } from '@mantine/core';
+import { Button, rem } from '@mantine/core';
 
 
 const pageDetails = [
@@ -130,6 +130,7 @@ export const VoiceProvider = ({ children }) => {
 
     const hasRun = useRef(false);
     // const router = useRouter();
+    const btnRef = useRef();
 
     const commands = [
         {
@@ -500,6 +501,11 @@ export const VoiceProvider = ({ children }) => {
         window.speechSynthesis.speak(speech);
     }
 
+
+    const drag = (e) => {
+        btn.style.transform = `translate(${e.pageX - 20}px, ${e.pageY - 20}px)`;
+    }
+
     // const interpretVoiceCommand = () => {
     //   // const last = event.results.length - 1;
     //   // const command = event.results[last][0].transcript;
@@ -536,20 +542,32 @@ export const VoiceProvider = ({ children }) => {
     return (
         <VoiceContext.Provider value={{}}>
             <div className="text-center h-7">
-                <Button className='floating-mic' onClick={() => {
-                    if (listening) {
-                        SpeechRecognition.stopListening();
-                    } else {
-                        SpeechRecognition.startListening();
+                <Button onMouseDown={
+                    document.addEventListener("mousemove", drag)
+                }
+                    onMouseUp={
+                        document.removeEventListener("mousemove", drag)
                     }
-                }}>{listening ?
-                    (
-                        <span className='text-white'>
-                            <IconPlayerRecordFilled style={{ display: 'inline' }} color='#f00' /> listening...
-                        </span>
-                    ) : (
-                        <span> <IconMicrophone className='text-2xl text-white' /></span>
-                    )
+
+                    style={{
+                        position: 'fixed',
+                        bottom: rem(20),
+                        right: rem(20),
+                        zIndex: 1000
+                    }} className='floating-mic' onClick={() => {
+                        if (listening) {
+                            SpeechRecognition.stopListening();
+                        } else {
+                            SpeechRecognition.startListening();
+                        }
+                    }}>{listening ?
+                        (
+                            <span className='text-white'>
+                                <IconPlayerRecordFilled style={{ display: 'inline' }} color='#f00' /> listening...
+                            </span>
+                        ) : (
+                            <span> <IconMicrophone className='text-2xl text-white' /></span>
+                        )
                     }   </Button>
                 <span className='text-white'>{transcript}</span>
                 {children}

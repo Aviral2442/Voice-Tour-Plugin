@@ -55,7 +55,7 @@ const SearchPlugin = () => {
   return (
     <div>
 
-      <Button onClick={spotlight.open}>Open spotlight </Button>
+      <Button  onClick={spotlight.open}>Open spotlight </Button>
 
       <Spotlight
         shortcut={['mod + K', 'mod + P', '/']}
@@ -75,6 +75,19 @@ const SearchPlugin = () => {
           placeholder: "Search..."
         }}
       />
+
+      <div style={{ height: '100vh' }}>
+        Section 1
+      </div>
+      <div style={{ height: '100vh' }}>
+        Section 2
+      </div>
+      <div style={{ height: '100vh' }}>
+        Section 3
+      </div>
+      <div style={{ height: '100vh' }}>
+        Section 4
+      </div>
 
     </div>
   )
