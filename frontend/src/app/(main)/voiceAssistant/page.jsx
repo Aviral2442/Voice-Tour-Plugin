@@ -17,17 +17,17 @@ import { IconCheck } from "@tabler/icons-react"
 // import image from "./image.svg"
 import classes from "./voiceAssistant.module.css"
 import VisionMission from './visionMission'
-import Waitingforwhat from './waitingforwhat'
 import HeroBulletLeft from './HeroBulletLeft'
 import HeroBulletRight from './HeroBulletRight'
 import VoiceitWorks from './voiceitWorks'
 import VoiceFAQ from './voiceFAQ'
-import { Josefin_Sans, Rammetto_One } from 'next/font/google'
+import { Josefin_Sans, Jost, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'
 import Link from 'next/link'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 
 const page = () => {
@@ -77,7 +77,7 @@ const page = () => {
               <Button
                   radius="md"
                   size="md"
-                  className={classes.control}
+                  className={clsx(classes.control,fontbutton.className)}
                   component={Link}
                   href="/user/generate-tour"
                   variant='outline'
@@ -98,7 +98,7 @@ const page = () => {
                   color='#66ff00'
                   radius="md"
                   size="md"
-                  className={classes.control1}
+                  className={clsx(classes.control1,fontbutton.className)}
                   component={Link}
                   href=" /voiceAssistant/preview"
                 >
@@ -126,7 +126,7 @@ const page = () => {
         <VoiceitWorks />
 
 
-        <Waitingforwhat />
+       
         <br />
 
         <VoiceFAQ />

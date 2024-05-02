@@ -1,36 +1,41 @@
 'use client'
 import React from 'react'
 import {
-    Badge,
-    Group,
-    Title,
-    Text,
-    Card,
-    SimpleGrid,
-    Container,
-    rem,
-    useMantineTheme
-  } from "@mantine/core"
-  import { IconGauge, IconUser, IconCookie } from "@tabler/icons-react"
-  import classes from "./visionMission.module.css"
+  Badge,
+  Group,
+  Title,
+  Text,
+  Card,
+  SimpleGrid,
+  Container,
+  rem,
+  useMantineTheme
+} from "@mantine/core"
+import { IconDeviceVisionPro, IconTarget } from "@tabler/icons-react"
+import classes from "./visionMission.module.css"
+import clsx from 'clsx'
+import { Josefin_Sans } from 'next/font/google'
 
-  const mockdata = [
-    {
-      title: "Our Vision",
-      description:
-        "Experience the next frontier of website interaction with Voice revolutionary Voice Assistants. Our technology redefines user engagement and accessibility, empowering individuals and businesses to navigate the digital landscape effortlessly.",
-      icon: IconGauge
-    },
-    {
-      title: "Our Mission",
-      description:
-        "With VoiceTour Navigator, we envision a future where voice technology stands at the forefront of digital innovation. Our vision is to lead the way in creating accessible, immersive, and personalized online experiences, transforming the way users interact with websites worldwide.",
-      icon: IconUser
-    }
-  ]
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
+
+
+const mockdata = [
+  {
+    title: "Our Vision",
+    description:
+      "Experience the next frontier of website interaction with Voice revolutionary Voice Assistants. Our technology redefines user engagement and accessibility, empowering individuals and businesses to navigate the digital landscape effortlessly.",
+    icon: IconDeviceVisionPro
+  },
+  {
+    title: "Our Mission",
+    description:
+      "With VoiceTour Navigator, we envision a future where voice technology stands at the forefront of digital innovation. Our vision is to lead the way in creating accessible, immersive, and personalized online experiences, transforming the way users interact with websites worldwide.",
+    icon: IconTarget
+  }
+]
 
 const VisionMission = () => {
-    const theme = useMantineTheme()
+  const theme = useMantineTheme()
   const features = mockdata.map(feature => (
     <Card
       key={feature.title}
@@ -42,12 +47,12 @@ const VisionMission = () => {
       <feature.icon
         style={{ width: rem(50), height: rem(50) }}
         stroke={2}
-        color={theme.colors.blue[6]}
+        color="#66ff00"
       />
-      <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
+      <Text fz="lg" fw={500} className={clsx(classes.cardTitle, font.className)} mt="md">
         {feature.title}
       </Text>
-      <Text fz="sm" c="dimmed" mt="sm">
+      <Text fz="sm" c="dimmed" mt="sm" className={classes.cardDescription}>
         {feature.description}
       </Text>
     </Card>
@@ -56,13 +61,12 @@ const VisionMission = () => {
   return (
     <Container size="lg" py="xl" pt={180} pb={180} >
 
-      <Title order={1} className={classes.title} ta="center" mt="sm">
-      Embracing  
-      <span style={{color:'#66FF00'}}> Voice </span> 
-      Technology
+
+      <Title order={2} className={classes.title} ta="center" mt="lg" c='white'>
+        Embracing  <span style={{ color: '#66FF00' }}>Voice</span>  Technology
       </Title>
 
-      <Text c="dimmed" className={classes.description} ta="center" mt="md">
+      <Text className={classes.description} ta="center" mt="lg">
         Explore the transformative power of voice technology in website interaction, redefining engagement and accessibility.
       </Text>
 
