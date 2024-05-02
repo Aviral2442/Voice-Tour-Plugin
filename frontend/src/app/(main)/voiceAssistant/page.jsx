@@ -22,6 +22,13 @@ import HeroBulletLeft from './HeroBulletLeft'
 import HeroBulletRight from './HeroBulletRight'
 import VoiceitWorks from './voiceitWorks'
 import VoiceFAQ from './voiceFAQ'
+import { Josefin_Sans, Rammetto_One } from 'next/font/google'
+import clsx from 'clsx'
+import Link from 'next/link'
+
+const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
+const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+
 
 const page = () => {
   return (
@@ -29,13 +36,14 @@ const page = () => {
       <>
         <Navbar />
 
-        <Container>
+        <Container fluid>
           <div className={classes.inner}>
             <div className={classes.content}>
-              <Title className={classes.title}>
-                Voice Assistant Plugin System
+            <Title className={clsx(classes.title,font.className)}>
+                Voice Assitant <br /> <span style={{color:'#66ff00'}}>Plugin</span> 
+               
               </Title>
-              <Text c="#FFFFFF" mt="md">
+              <Text fz='lg'  mt="md" className={fonts.className}>
                 Where you'll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to cumbersome mouse clicks and keyboard typing – with our Voice Assistant, browsing becomes intuitive and effortless.</Text>
 
               {/* <List
@@ -66,14 +74,33 @@ const page = () => {
           </List> */}
 
               <Group mt={30}>
-                <Button radius="xl" size="md" className={classes.control}>
-                  Enable Voice Assistant
-                </Button>
-                <Button
-                  variant="default"
-                  radius="xl"
+              <Button
+                  radius="md"
                   size="md"
                   className={classes.control}
+                  component={Link}
+                  href="/user/generate-tour"
+                  variant='outline'
+                  color='#66ff00'
+
+                >
+                  Enable Voice Assistant
+                  &nbsp;
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#65FF00" fill="black" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                    <path d="M11 13l9 -9" />
+                    <path d="M15 4h5v5" />
+                  </svg>
+                </Button>
+                <Button
+                  variant='outline'
+                  color='#66ff00'
+                  radius="md"
+                  size="md"
+                  className={classes.control1}
+                  component={Link}
+                  href=" /voiceAssistant/preview"
                 >
                   Preview
                   &nbsp;
@@ -86,7 +113,7 @@ const page = () => {
               </Group>
             </div>
             {/* <Image src={image.src} className={classes.image} /> */}
-            <Image src="voicecommand.png" className={classes.image} />
+            <Image src="voicesearchabout.png" className={classes.image} />
           </div>
         </Container>
 
