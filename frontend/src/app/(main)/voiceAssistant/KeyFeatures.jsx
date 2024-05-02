@@ -55,7 +55,7 @@ const KeyFeatures = () => {
             </ThemeIcon>
 
             <div>
-                <Text fw={700} fz="lg" className={clsx(classes.itemTitle,font.className)} c={"#66ff00"} >
+                <Text fw={700} fz="lg" className={clsx(classes.itemTitle,font.className)} c={"white"} >
                     {item.title}
                 </Text>
                 <Text
@@ -65,9 +65,9 @@ const KeyFeatures = () => {
         </div>
     ))
     return (
-        <Container fluid className={classes.wrapper}>
+        <Container size={"lg"} className={classes.wrapper}>
 
-            <Title className={classes.title} >
+            <Title className={classes.title} mb={60} ta={"center"}>
                 Key <span className={classes.highlight}>Features</span> 
              
             </Title>

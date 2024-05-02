@@ -46,6 +46,7 @@ const GenerateTour = () => {
       stepTitle: 'Step Title',
       stepDescription: 'Step Description'
     }]);
+    
 
   }
 
@@ -59,6 +60,7 @@ const GenerateTour = () => {
     setSteps(newSteps);
   }
 
+  
   const addTour = () => {
     console.log(steps);
 
@@ -170,7 +172,7 @@ const GenerateTour = () => {
           }
         </Stepper>
         <Group justify='center'>
-          <Button mt={30} size='sm' variant='outline' color='#66ff00' >Back</Button>
+          <Button mt={30} size='sm'  variant='outline' color='#66ff00' >Back</Button>
 
           <Button mt={30} size='sm' onClick={addNewStep} variant='outline' color='#66ff00'>Add New Step</Button>
         </Group>

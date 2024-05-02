@@ -542,7 +542,10 @@ export const VoiceProvider = ({ children }) => {
     return (
         <VoiceContext.Provider value={{}}>
             <div className="text-center h-7">
-                <Button onMouseDown={
+                <Button
+                variant="filled" color="#66ff00" radius="xl" autoContrast
+
+                 onMouseDown={
                     document.addEventListener("mousemove", drag)
                 }
                     onMouseUp={
@@ -554,7 +557,8 @@ export const VoiceProvider = ({ children }) => {
                         bottom: rem(20),
                         right: rem(20),
                         zIndex: 1000
-                    }} className='floating-mic' onClick={() => {
+                    }} 
+                    className='floating-mic' onClick={() => {
                         if (listening) {
                             SpeechRecognition.stopListening();
                         } else {
