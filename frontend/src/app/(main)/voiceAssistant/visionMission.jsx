@@ -61,8 +61,7 @@ const VisionMission = () => {
   return (
     <Container size="lg" py="xl" pt={180} pb={180} >
 
-
-      <Title order={2} className={classes.title} ta="center" mt="lg" c='white'>
+      <Title className={classes.title} ta="center" mt="lg" c='white'>
         Embracing  <span style={{ color: '#66FF00' }}>Voice</span>  Technology
       </Title>
 

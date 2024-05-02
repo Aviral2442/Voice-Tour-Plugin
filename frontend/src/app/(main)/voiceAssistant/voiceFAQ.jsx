@@ -13,10 +13,10 @@ const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 const VoiceFAQ = () => {
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 1500 });
     }, []);
     return (
-        <Container className={classes.wrapper} size={1400} pt={180} pb={180} >
+        <Container className={classes.wrapper} size={1400} pt={50} pb={120} >
 
             <div className={classes.inner}>
                 <Title className={classes.title} data-aos="fade-up" >

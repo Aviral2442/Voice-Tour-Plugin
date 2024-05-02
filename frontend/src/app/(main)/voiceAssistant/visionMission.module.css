@@ -1,6 +1,6 @@
 .title {
   color: white;
-    font-size: rem(49px);
+    font-size: rem(43px);
     font-weight: 900;
   
     @media (max-width: $mantine-breakpoint-sm) {
@@ -8,21 +8,7 @@
     }
   }
   
-  /* .description {
-    max-width: rem(600px);
-    margin: auto;
   
-    &::after {
-      content: '';
-      display: block;
-      background-color: var(--mantine-color-blue-filled);
-      width: rem(45px);
-      height: rem(2px);
-      margin-top: var(--mantine-spacing-sm);
-      margin-left: auto;
-      margin-right: auto;
-    }
-  } */
   .description {
     max-width: rem(600px);
     margin: auto;

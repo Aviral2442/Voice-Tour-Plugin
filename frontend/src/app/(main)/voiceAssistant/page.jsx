@@ -24,6 +24,8 @@ import VoiceFAQ from './voiceFAQ'
 import { Josefin_Sans, Jost, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'
 import Link from 'next/link'
+import KeyFeatures from './KeyFeatures'
+import Benefits from './Benefits'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -32,18 +34,18 @@ const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 const page = () => {
   return (
-    <div style={{overflowX:'hidden'}}>
+    <div style={{ overflowX: 'hidden' }}>
       <>
         <Navbar />
 
         <Container fluid>
           <div className={classes.inner}>
             <div className={classes.content}>
-            <Title className={clsx(classes.title,font.className)}>
-                Voice Assitant <br /> <span style={{color:'#66ff00'}}>Plugin</span> 
-               
+              <Title className={clsx(classes.title, font.className)}>
+                Voice Assitant <br /> <span style={{ color: '#66ff00' }}>Plugin</span>
+
               </Title>
-              <Text fz='lg'  mt="md" className={fonts.className}>
+              <Text fz='lg' mt="md" className={fonts.className}>
                 Where you'll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to cumbersome mouse clicks and keyboard typing – with our Voice Assistant, browsing becomes intuitive and effortless.</Text>
 
               {/* <List
@@ -74,10 +76,10 @@ const page = () => {
           </List> */}
 
               <Group mt={30}>
-              <Button
+                <Button
                   radius="md"
                   size="md"
-                  className={clsx(classes.control,fontbutton.className)}
+                  className={clsx(classes.control, fontbutton.className)}
                   component={Link}
                   href="/user/generate-tour"
                   variant='outline'
@@ -98,7 +100,7 @@ const page = () => {
                   color='#66ff00'
                   radius="md"
                   size="md"
-                  className={clsx(classes.control1,fontbutton.className)}
+                  className={clsx(classes.control1, fontbutton.className)}
                   component={Link}
                   href=" /voiceAssistant/preview"
                 >
@@ -122,11 +124,11 @@ const page = () => {
 
         <HeroBulletRight />
         <HeroBulletLeft />
-        
+        <KeyFeatures />
         <VoiceitWorks />
+        <Benefits />
 
 
-       
         <br />
 
         <VoiceFAQ />
