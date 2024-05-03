@@ -26,6 +26,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import KeyFeatures from './KeyFeatures'
 import Benefits from './Benefits'
+import Banner from './Banner'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -127,7 +128,7 @@ const page = () => {
         <KeyFeatures />
         <VoiceitWorks />
         <Benefits />
-
+        <Banner />
 
         <br />
 
