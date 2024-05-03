@@ -64,7 +64,7 @@ const GenerateTour = () => {
   }
 
   const [active, setActive] = useState(0);
-  const nextStep = () => setActive((current) => (current < 10 ? current + 1 : current));
+  const nextStep = () => setActive((current) => (current < steps.length-1 ? current + 1 : current));
   const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
 
   const updateStep = (index, key, value) => {
@@ -136,7 +136,7 @@ const GenerateTour = () => {
         })}
       /> */}
       <Container fluid className={classes.Container}>
-        <Button onClick={addTour} variant='filled' color='black' mb={20} 
+        <Button onClick={addTour} variant='white' color='black' mb={20} 
          className={clsx(classes.control, font.className)}>
           Create Tour</Button>
         <Card withBorder radius="md" p="md" className={classes.Card}>
@@ -144,7 +144,7 @@ const GenerateTour = () => {
             {
               steps.map((step, index) => {
                 return (
-                  <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index} >
+                  <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index} pt={"20"}>
                     <Container size={'md'}  className={clsx(classes.a, fonts.className)}>
 
                       {/* <form onSubmit={form.onSubmit(Tourgen)}> */}
@@ -189,18 +189,19 @@ const GenerateTour = () => {
           </Stepper>
           <Group justify="space-between" >
             <Group >
-              <Button mt={30} size='sm' onClick={deleteStep} variant='outline' color='white'
-                className={clsx(classes.control, font.className)}>
-                Delete Step</Button>
-            </Group>
-            <Group justify="space-between">
-              <Button mt={30} size='sm' onClick={prevStep} variant='outline' color='white' className={clsx(classes.control, font.className)} >Prev</Button>
-              <Button mt={30} size='sm' onClick={nextStep} variant='outline' color='white' className={clsx(classes.control, font.className)}>Next</Button>
-            </Group>
-            <Group >
-              <Button mt={30} size='sm' onClick={addNewStep} variant='outline' color='white'
+            <Button mt={30} size='sm' onClick={addNewStep} variant='white' color='black'
                 className={clsx(classes.control, font.className)}>
                 Add New Step</Button>
+              
+            </Group>
+            <Group justify="space-between">
+              <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control, font.className)} >Prev</Button>
+              <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control, font.className)}>Next</Button>
+            </Group>
+            <Group >
+            <Button mt={30} size='sm' onClick={deleteStep} variant='white' color='black'
+                className={clsx(classes.control, font.className)}>
+                Delete Step</Button>
             </Group>
           </Group>
         </Card>

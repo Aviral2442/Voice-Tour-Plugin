@@ -99,7 +99,7 @@ export function UserNavbar() {
                     <UnstyledButton
                         className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
                     >
-                        <Group gap={7} className={classes.designbutton}>
+                        <Group gap={7} >
                             <Avatar src={'http://localhost:5000/' + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
                             <Text fw={500} size="sm" lh={1} mr={3}>
                                 {currentUser.name}
@@ -131,7 +131,7 @@ export function UserNavbar() {
             <header className={classes.header}>
                 <Group justify='space-between' h="100%">
                     <Anchor href="http://localhost:3000/" underline="never">
-                        <Image src="/vt.png" alt="VoiceTour Navigator" className={classes.Image} />
+                        <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
                     </Anchor>
 
 
@@ -158,8 +158,8 @@ export function UserNavbar() {
                             </a>
                         </Group>
 
-                        <ActionIcon onClick={spotlight.open} variant="white" size="lg" >
-                            <IconSearch style={{ width: '70%', height: '70%', color: 'black' }} stroke={2} />
+                        <ActionIcon onClick={spotlight.open} variant="filled" color='black' size="lg" >
+                            <IconSearch style={{ width: '70%', height: '70%', color: 'white' }} stroke={2} />
                         </ActionIcon>
 
                         <Spotlight.Root query={query} onQueryChange={setQuery}>

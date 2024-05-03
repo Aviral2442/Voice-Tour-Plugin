@@ -4,10 +4,9 @@
     padding: var(--mantine-spacing-md);
     display: flex;
     flex-direction: column;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-
-    background-image: linear-gradient(to right, #868f96 0%, #868f96 100%);
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+background-color: black;
   }
   
   .navbarMain {
@@ -22,11 +21,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
   
     &:hover {
-      color: white;
-      background-color: black ;
+      color: black;
+      background-color: white ;
     }
   
     &[data-active] {

@@ -129,7 +129,7 @@ const WebPage = () => {
 
                 <Button type='submit' fullWidth mt="xl" variant='filled' color='black'
                   className={clsx(classes.control, font.className)}>
-                  Add WebPage
+                  Create WebPage
                 </Button>
               </form>
             </Paper>

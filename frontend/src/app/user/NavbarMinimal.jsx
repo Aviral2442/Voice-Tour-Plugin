@@ -19,6 +19,8 @@ import {
 import { MantineLogo } from "@mantinex/mantine-logo"
 import classes from "./NavbarMinimal.module.css"
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import useAppContext from '@/context/AppContext'
 
 function NavbarLink({ icon: Icon, label, active, onClick }) {
     return (
@@ -35,25 +37,29 @@ function NavbarLink({ icon: Icon, label, active, onClick }) {
 }
 
 const mockdata = [
-    { icon: IconSmartHome, label: "Home" },
-    { icon: IconGauge, label: "Dashboard" },
-    { icon: IconDeviceDesktopAnalytics, label: "Generate Tour" },
-    { icon: IconSettings2, label: "Manage Webpage" },
-    { icon: IconUserCircle, label: "Account" },
+    { icon: IconSmartHome, label: "Home", link: "/" },
+    { icon: IconGauge, label: "Dashboard", link: "/" },
+    { icon: IconDeviceDesktopAnalytics, label: "Generate Tour", link: "http://localhost:3000/user/generate-tour" },
+    { icon: IconSettings2, label: "Manage Webpage", link: "/" },
+    { icon: IconUserCircle, label: "Account", link: "/" },
     // { icon: IconFingerprint, label: "Security" },
-    { icon: IconSettings, label: "Settings" }
+    { icon: IconSettings, label: "Settings", link: "/" }
 ]
 
 export function NavbarMinimal() {
     const [active, setActive] = useState(2)
 
+    const path = usePathname();
+    const router = useRouter();
+
+    const { logout } = useAppContext();
+
     const links = mockdata.map((link, index) => (
         <NavbarLink
             {...link}
-
             key={link.label}
-            active={index === active}
-            onClick={() => setActive(index)}
+            active={path === link.link}
+            onClick={() => router.push(link.link)}
         />
     ))
     return (
@@ -67,8 +73,8 @@ export function NavbarMinimal() {
             </div>
 
             <Stack justify="center" gap={0}>
-                <NavbarLink icon={IconSwitchHorizontal} label="Change account" />
-                <NavbarLink icon={IconLogout} label="Logout" />
+                {/* <NavbarLink icon={IconSwitchHorizontal} label="Change account" /> */}
+                <NavbarLink icon={IconLogout} label="Logout" onClick={logout} />
             </Stack>
         </nav>
     )
