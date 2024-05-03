@@ -15,9 +15,8 @@
   padding-right: var(--mantine-spacing-md);
   text-decoration: none;
   color: black;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-weight: 900;
+  font-size: 15px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: rem(42px);
@@ -27,7 +26,7 @@
   @mixin hover {
     padding-bottom: 8px;
     border-bottom: 2px solid black;
-   
+    color: black;
   }
 
 
@@ -91,7 +90,8 @@
   height: 80px;
   width: 100px;
 }
-.designbutton{
+
+.designbutton {
   border: 2px solid white;
   padding: 8px;
   border-radius: 12px;

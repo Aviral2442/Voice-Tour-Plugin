@@ -136,7 +136,7 @@ export function UserNavbar() {
 
 
                     <Group visibleFrom="sm"  >
-                        <Group h="100%" gap={0} visibleFrom="xs" mr={"120"}>
+                        <Group h="100%" gap={0} visibleFrom="xs" mr={"140"}>
                             <a href="http://localhost:3000/" className={clsx(classes.link, font.className)}>
                                 HOME
                             </a>
