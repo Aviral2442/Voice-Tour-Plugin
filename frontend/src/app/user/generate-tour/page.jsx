@@ -45,9 +45,16 @@ const GenerateTour = () => {
       selectorValue: 'Some-id',
       stepTitle: 'Step Title',
       stepDescription: 'Step Description'
-    }]);
-    
-
+    }]);  
+  }
+  const backStep = () => {
+    setSteps([...steps.slice(0, steps.length - 1)],
+      {
+        selectorType: 'id',
+        selectorValue: 'Some-id',
+        stepTitle: 'Step Title',
+        stepDescription: 'Step Description'
+      });  
   }
 
   const [active, setActive] = useState(1);
@@ -172,7 +179,7 @@ const GenerateTour = () => {
           }
         </Stepper>
         <Group justify='center'>
-          <Button mt={30} size='sm'  variant='outline' color='#66ff00' >Back</Button>
+          <Button mt={30} size='sm' onClick={backStep} variant='outline' color='#66ff00' >Back</Button>
 
           <Button mt={30} size='sm' onClick={addNewStep} variant='outline' color='#66ff00'>Add New Step</Button>
         </Group>
