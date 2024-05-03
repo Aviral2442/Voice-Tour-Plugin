@@ -10,10 +10,15 @@ import {
     IconUser,
     IconSettings,
     IconLogout,
-    IconSwitchHorizontal
+    IconSwitchHorizontal,
+    IconSettingsCog,
+    IconSmartHome,
+    IconSettings2,
+    IconUserCircle
 } from "@tabler/icons-react"
 import { MantineLogo } from "@mantinex/mantine-logo"
 import classes from "./NavbarMinimal.module.css"
+import Link from 'next/link'
 
 function NavbarLink({ icon: Icon, label, active, onClick }) {
     return (
@@ -30,12 +35,12 @@ function NavbarLink({ icon: Icon, label, active, onClick }) {
 }
 
 const mockdata = [
-    { icon: IconHome2, label: "Home" },
+    { icon: IconSmartHome, label: "Home" },
     { icon: IconGauge, label: "Dashboard" },
-    { icon: IconDeviceDesktopAnalytics, label: "Analytics" },
-    { icon: IconCalendarStats, label: "Releases" },
-    { icon: IconUser, label: "Account" },
-    { icon: IconFingerprint, label: "Security" },
+    { icon: IconDeviceDesktopAnalytics, label: "Generate Tour" },
+    { icon: IconSettings2, label: "Manage Webpage" },
+    { icon: IconUserCircle, label: "Account" },
+    // { icon: IconFingerprint, label: "Security" },
     { icon: IconSettings, label: "Settings" }
 ]
 
@@ -45,6 +50,7 @@ export function NavbarMinimal() {
     const links = mockdata.map((link, index) => (
         <NavbarLink
             {...link}
+
             key={link.label}
             active={index === active}
             onClick={() => setActive(index)}
@@ -52,7 +58,7 @@ export function NavbarMinimal() {
     ))
     return (
         <nav className={classes.navbar}>
-            
+
 
             <div className={classes.navbarMain}>
                 <Stack justify="center" gap={0}>
