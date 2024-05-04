@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   Badge,
   Group,
@@ -15,6 +15,7 @@ import { IconDeviceVisionPro, IconTarget } from "@tabler/icons-react"
 import classes from "./visionMission.module.css"
 import clsx from 'clsx'
 import { Josefin_Sans } from 'next/font/google'
+import Aos from 'aos'
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
@@ -58,18 +59,22 @@ const VisionMission = () => {
     </Card>
   ))
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <Container size="lg" py="xl" pt={180} pb={180} >
 
-      <Title className={classes.title} ta="center" mt="lg" c='white'>
+      <Title className={classes.title} ta="center" mt="lg" c='white' data-aos="fade-up">
         Embracing  <span style={{ color: '#66FF00' }}>Voice</span>  Technology
       </Title>
 
-      <Text className={classes.description} ta="center" mt="lg">
+      <Text className={classes.description} ta="center" mt="lg" data-aos="fade-up">
         Explore the transformative power of voice technology in website interaction, redefining engagement and accessibility.
       </Text>
 
-      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mt={50}>
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mt={50} data-aos="zoom-in">
         {features}
       </SimpleGrid>
     </Container>

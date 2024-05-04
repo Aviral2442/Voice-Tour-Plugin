@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     Image,
     Text,
@@ -10,6 +10,7 @@ import {
 import classes from "./benefits.module.css"
 import { Josefin_Sans } from 'next/font/google'
 import clsx from 'clsx';
+import Aos from 'aos';
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 
 
@@ -43,9 +44,14 @@ const data = [
 
 
 const KeyFeatures = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     const items = data.map(item => (
         <div className={classes.item} key={item.image}>
-            <ThemeIcon                
+            <ThemeIcon
                 className={classes.itemIcon}
                 size={60}
                 color='white'
@@ -55,26 +61,27 @@ const KeyFeatures = () => {
             </ThemeIcon>
 
             <div>
-                <Text fw={700} fz="lg" className={clsx(classes.itemTitle,font.className)} c={"white"} >
+                <Text fw={700} fz="lg" className={clsx(classes.itemTitle, font.className)} c={"white"} >
                     {item.title}
                 </Text>
                 <Text
-                className={classes.itemDescription}
-                c="dimmed">{item.description}</Text>
+                    className={classes.itemDescription}
+                    c="dimmed">{item.description}</Text>
             </div>
         </div>
     ))
     return (
         <Container size={"lg"} className={classes.wrapper}>
 
-            <Title className={classes.title} ta={"center"} >
-                Bene<span className={classes.highlight}>fits</span> 
-             
+            <Title className={classes.title} ta={"center"} data-aos="fade-up">
+                Bene<span className={classes.highlight}>fits</span>
+
             </Title>
 
-            
 
-            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={30}>
+
+            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={30} data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom">
                 {items}
             </SimpleGrid>
         </Container>

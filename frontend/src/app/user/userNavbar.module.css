@@ -3,7 +3,7 @@
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   background-color: black;
-  background-image: linear-gradient(147deg, black 79%, white 0%);
+  /* background-image: linear-gradient(147deg, black 79%, white 0%); */
   border-bottom: 2px solid white;
 }
 
@@ -89,4 +89,3 @@
   height: 80px;
   width: 100px;
 }
-

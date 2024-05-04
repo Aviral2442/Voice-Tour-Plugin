@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../navbar'
 import { Footer } from '../footer'
 import {
@@ -27,6 +27,8 @@ import Link from 'next/link'
 import KeyFeatures from './KeyFeatures'
 import Benefits from './Benefits'
 import Banner from './Banner'
+import VoiceTestimonial from './VoiceTestimonial'
+import Aos from 'aos'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -34,13 +36,18 @@ const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 
 const page = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div style={{ overflowX: 'hidden' }}>
       <>
         <Navbar />
 
         <Container fluid>
-          <div className={classes.inner}>
+          <div className={classes.inner} data-aos="fade-up">
             <div className={classes.content}>
               <Title className={clsx(classes.title, font.className)}>
                 Voice Assitant <br /> <span style={{ color: '#66ff00' }}>Plugin</span>
@@ -121,19 +128,19 @@ const page = () => {
         </Container>
 
 
-        <VisionMission />
+        <VisionMission  />
 
-        <HeroBulletRight />
-        <HeroBulletLeft />
+        {/* <HeroBulletRight />
+        <HeroBulletLeft /> */}
+        <Banner />
+        <Benefits />
         <KeyFeatures />
         <VoiceitWorks />
-        <Benefits />
-        <Banner />
 
         <br />
 
+        <VoiceTestimonial />
         <VoiceFAQ />
-
         <Footer />
       </>
     </div>

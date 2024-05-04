@@ -101,7 +101,7 @@ export function UserNavbar() {
                     >
                         <Group gap={7} >
                             <Avatar src={'http://localhost:5000/' + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
-                            <Text fw={500} size="lg" lh={1} mr={3} c={"black"} className={font.className}>
+                            <Text fw={500} size="lg" lh={1} mr={3} c={"white"} className={font.className}>
                                 {currentUser.name}
                             </Text>
                             <IconChevronDown style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
