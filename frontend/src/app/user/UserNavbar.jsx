@@ -101,14 +101,14 @@ export function UserNavbar() {
                     >
                         <Group gap={7} >
                             <Avatar src={'http://localhost:5000/' + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
-                            <Text fw={500} size="sm" lh={1} mr={3}>
+                            <Text fw={500} size="lg" lh={1} mr={3} c={"black"} className={font.className}>
                                 {currentUser.name}
                             </Text>
                             <IconChevronDown style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
                         </Group>
                     </UnstyledButton>
                 </Menu.Target>
-                <Menu.Dropdown>
+                {/* <Menu.Dropdown>
 
                     <Menu.Item
                         onClick={logout}
@@ -118,7 +118,7 @@ export function UserNavbar() {
                         }>
                         Logout
                     </Menu.Item>
-                </Menu.Dropdown>
+                </Menu.Dropdown> */}
             </Menu>
         } else {
             return <Button component={Link} href='/login' variant='outline' color='white' className={clsx(classes.button, font.className)}>

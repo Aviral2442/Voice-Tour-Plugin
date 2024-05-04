@@ -38,10 +38,10 @@ function NavbarLink({ icon: Icon, label, active, onClick }) {
 
 const mockdata = [
     { icon: IconSmartHome, label: "Home", link: "/" },
-    { icon: IconGauge, label: "Dashboard", link: "/" },
-    { icon: IconDeviceDesktopAnalytics, label: "Generate Tour", link: "http://localhost:3000/user/generate-tour" },
-    { icon: IconSettings2, label: "Manage Webpage", link: "/" },
-    { icon: IconUserCircle, label: "Account", link: "/" },
+    { icon: IconGauge, label: "Dashboard", link: "/user/dashboard" },
+    { icon: IconDeviceDesktopAnalytics, label: "Generate Tour", link: "/user/generate-tour" },
+    { icon: IconSettings2, label: "Manage Webpage", link: "/user/manage-webpage" },
+    { icon: IconUserCircle, label: "Account", link: "/user/profile" },
     // { icon: IconFingerprint, label: "Security" },
     { icon: IconSettings, label: "Settings", link: "/" }
 ]

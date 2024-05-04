@@ -87,7 +87,7 @@ const WebPage = () => {
         <Modal opened={opened} onClose={close}   >
           <Container size={420} my={40} mt={20} >
 
-            <Paper withBorder shadow="md" p={30} mt={30} radius="md" bg={"#868f96"} className={classes.paper}>
+            <Paper withBorder shadow="md" p={30} mt={30} radius="md" bg={"white"} className={classes.paper}>
               <Title ta="center" className={classes.title}>
                 Webpage
               </Title>
@@ -129,21 +129,22 @@ const WebPage = () => {
 
                 <Button type='submit' fullWidth mt="xl" variant='filled' color='black'
                   className={clsx(classes.control, font.className)}>
-                  Create WebPage
+                  Submit WebPage
                 </Button>
               </form>
             </Paper>
           </Container >
         </Modal>
-        <Button onClick={open} variant='filled' color='black' mb={20}
+        <center>
+        <Button onClick={open} variant='white' color='black' mb={20}  mt={20}
           className={clsx(classes.control, font.className)}>
-          Submit Web Page
+          Create Web Page
         </Button>
 
         <br />
-
+  
         <WebpageTable />
-
+        </center>
 
       </Container>
     </>

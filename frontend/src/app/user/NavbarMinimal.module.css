@@ -17,6 +17,7 @@ background-color: black;
   .link {
     width: rem(50px);
     height: rem(50px);
+    margin-bottom: var(--mantine-spacing-md);
     border-radius: var(--mantine-radius-md);
     display: flex;
     align-items: center;
@@ -31,8 +32,8 @@ background-color: black;
     &[data-active] {
       &,
       &:hover {
-        background-color: black;
-        color:white;
+        background-color: white;
+        color:black;
       }
     }
   }

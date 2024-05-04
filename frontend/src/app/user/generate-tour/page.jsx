@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import { Box, Button, Card, Checkbox, Container, Flex, Group, Input, Radio, Select, TextInput, Textarea, Title } from '@mantine/core';
+import {  Button, Card, Container, Group, Radio, TextInput, Textarea } from '@mantine/core';
 import { Stepper } from '@mantine/core';
 import classes from './generateTour.module.css';
-import { IconCircleCheck, IconUserCheck } from '@tabler/icons-react';
+import { IconCaretLeft, IconCaretRight,  } from '@tabler/icons-react';
 import { Form, useForm } from '@mantine/form';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
@@ -135,8 +135,9 @@ const GenerateTour = () => {
           return { value: webpage._id, label: webpage.name }
         })}
       /> */}
-      <Container fluid className={classes.Container}>
-        <Button onClick={addTour} variant='white' color='black' mb={20} 
+      <Container fluid className={classes.Container}   >
+     
+        <Button onClick={addTour} variant='white' color='black' mb={20} mt={20}
          className={clsx(classes.control, font.className)}>
           Create Tour</Button>
         <Card withBorder radius="md" p="md" className={classes.Card}>
@@ -195,8 +196,8 @@ const GenerateTour = () => {
               
             </Group>
             <Group justify="space-between">
-              <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control, font.className)} >Prev</Button>
-              <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control, font.className)}>Next</Button>
+              <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control, font.className)} ><IconCaretLeft/>Prev</Button>
+              <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control, font.className)}>Next<IconCaretRight/></Button>
             </Group>
             <Group >
             <Button mt={30} size='sm' onClick={deleteStep} variant='white' color='black'
@@ -205,7 +206,7 @@ const GenerateTour = () => {
             </Group>
           </Group>
         </Card>
-
+       
       </Container>
     </div>
   )
