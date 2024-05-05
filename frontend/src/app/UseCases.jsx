@@ -13,6 +13,7 @@ import classes from "./usecases.module.css"
 import { Josefin_Sans } from 'next/font/google'
 import clsx from 'clsx';
 import Aos from 'aos';
+
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 
 
@@ -80,12 +81,12 @@ const UseCases = () => {
                     Use Cases
                 </Badge>
             </Group>
-            <Title className={classes.title} ta={"center"} data-aos="fade-up">
+            <Title mt={"20"} className={classes.title} ta={"center"} data-aos="fade-up">
                 Unlock <span className={classes.highlight}>Endless</span> Possibilities
 
             </Title>
             <Container size={660} p={0} data-aos="fade-up">
-                <Text c="dimmed" className={classes.description}>
+                <Text  className={classes.description}>
                     Discover how our platform can be applied to various scenarios and industries, empowering users to navigate websites, conduct research, and streamline workflows with ease.
                 </Text>
             </Container>

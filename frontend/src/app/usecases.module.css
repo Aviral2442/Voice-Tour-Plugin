@@ -40,14 +40,18 @@
         font-size: rem(24px);
     }
 }
+
 .description {
     text-align: center;
     margin-top: var(--mantine-spacing-xs);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #D6D6E2;
+    background: rgb(173, 179, 200);
+    background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
+    -webkit-background-clip: text;
 
-  }
-  
+
+}
+
 
 
 .highlight {
