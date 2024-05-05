@@ -54,13 +54,12 @@ const GenerateTour = () => {
     }]);
   }
   const deleteStep = () => {
-    setSteps([...steps.slice(0, steps.length - 1)],
-      {
-        selectorType: 'id',
-        selectorValue: 'Some-id',
-        stepTitle: 'Step Title',
-        stepDescription: 'Step Description'
-      });
+    let temp = steps;
+    temp.splice(active, 1);
+    setSteps([...temp]);
+    if(active > steps.length-1){
+      setActive(steps.length-1);
+    }
   }
 
   const [active, setActive] = useState(0);

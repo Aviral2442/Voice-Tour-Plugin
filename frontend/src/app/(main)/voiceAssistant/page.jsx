@@ -122,8 +122,9 @@ const page = () => {
                 </Button>
               </Group>
             </div>
-            {/* <Image src={image.src} className={classes.image} /> */}
+            <div className={classes.bg}>
             <Image src="voicesearchabout.png" className={classes.image} />
+            </div>
           </div>
         </Container>
 

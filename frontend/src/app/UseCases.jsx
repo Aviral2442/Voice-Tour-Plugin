@@ -76,11 +76,11 @@ const UseCases = () => {
     ))
     return (
         <Container size={"lg"} className={classes.wrapper}>
-            <Group justify="center" data-aos="fade-up">
+            {/* <Group justify="center" data-aos="fade-up">
                 <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
                     Use Cases
                 </Badge>
-            </Group>
+            </Group> */}
             <Title mt={"20"} mb={"15"} className={classes.title} ta={"center"} data-aos="fade-up">
                 Unlock <span className={classes.highlight}>Endless</span> Possibilities
 

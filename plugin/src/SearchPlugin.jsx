@@ -76,7 +76,7 @@ const SearchPlugin = () => {
           }}
         />
 
-        <div style={{ height: '100vh' }}>
+        {/* <div style={{ height: '100vh' }}>
           Section 1
         </div>
         <div style={{ height: '100vh' }}>
@@ -87,7 +87,7 @@ const SearchPlugin = () => {
         </div>
         <div style={{ height: '100vh' }}>
           Section 4
-        </div>
+        </div> */}
       </Container>
     </div>
   )

@@ -42,8 +42,6 @@ const TourGenerator = ({ id, children }) => {
     }, []);
 
 
-
-
     const [steps, setSteps] = useState([
         {
             target: '.section-1-heading',
