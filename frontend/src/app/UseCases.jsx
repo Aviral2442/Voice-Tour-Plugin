@@ -81,7 +81,7 @@ const UseCases = () => {
                     Use Cases
                 </Badge>
             </Group>
-            <Title mt={"20"} className={classes.title} ta={"center"} data-aos="fade-up">
+            <Title mt={"20"} mb={"15"} className={classes.title} ta={"center"} data-aos="fade-up">
                 Unlock <span className={classes.highlight}>Endless</span> Possibilities
 
             </Title>
@@ -92,7 +92,7 @@ const UseCases = () => {
             </Container>
 
 
-            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={30} data-aos="fade-up"
+            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={50} data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom">
                 {items}
             </SimpleGrid>

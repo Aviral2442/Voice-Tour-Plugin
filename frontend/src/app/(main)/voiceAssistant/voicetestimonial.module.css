@@ -35,13 +35,9 @@
     color: white;
     height: 290px;
     width: 300px;
-    border: rem(2px) solid white;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(11.5px);
     -webkit-backdrop-filter: blur(11.5px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
 
     @media (max-width: $mantine-breakpoint-md) {
         margin: 0;
@@ -81,21 +77,21 @@
 
 
 .icon3 {
-    top: 80PX;
-    left: 40%;
+    top: 30PX;
+    left: 10%;
     justify-content: center;
     align-items: center;
 
 }
 
 .bg {
-    /* background-color: #66FF00; */
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74VtjO-gaZKBwI5WZoaZWYWWTQOy4oXgwcgzmhM0iHQ&s");
+    background-color: #66FF00;
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74VtjO-gaZKBwI5WZoaZWYWWTQOy4oXgwcgzmhM0iHQ&s"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
-    height: 110px;
+    height: 60px;
 }
 
 .midcontent {

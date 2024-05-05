@@ -30,20 +30,20 @@ const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 
 const page = () => {
   return (
-    <div style={{overflowX:'hidden'}}>
+    <div style={{ overflowX: 'hidden' }}>
       <>
         <Navbar />
 
         <Container className={classes.mainContainer} fluid>
           <div className={classes.inner}>
             <div className={classes.content}>
-              <Title className={clsx(classes.title,font.className)}>
-                Tour <span className={classes.highlight}>Generator</span> <span style={{color:'#66ff00'}}>Plugin</span> <br />{" "}
+              <Title className={clsx(classes.title, font.className)}>
+                Tour <span className={classes.highlight}>Generator</span> <span style={{ color: '#66ff00' }}>Plugin</span> <br />{" "}
                 {/* Welcome to the */}
               </Title>
-              <Text fz='lg'  mt="md" className={fonts.className}>
-                Where you'll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature 
-                revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to 
+              <Text fz='lg' mt="md" className={fonts.className}>
+                Where you'll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature
+                revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to
                 cumbersome mouse clicks and keyboard typing – with our Voice Assistant, browsing becomes intuitive and effortless.
               </Text>
 
@@ -56,7 +56,7 @@ const page = () => {
                   href="/user/generate-tour"
                   variant='outline'
                   color='#66ff00'
-
+                  href ="/user/generate-tour"
                 >
                   Generate Tour
                   &nbsp;
@@ -74,7 +74,7 @@ const page = () => {
                   size="md"
                   className={classes.control1}
                   component={Link}
-                  href="http://127.0.0.1:5500/tourPreview/index.html"
+                  href="http://localhost:5173/"
                 >
                   Preview
                   &nbsp;
@@ -86,7 +86,7 @@ const page = () => {
                 </Button>
               </Group>
             </div>
-            <Image src='tourSec1.png' className={classes.image}/>
+            <Image src='tourSec1.png' className={classes.image} />
           </div>
         </Container>
 
@@ -98,7 +98,7 @@ const page = () => {
         <HeroBulletLeft />
 
 
-       
+
         <br />
 
         <TourFAQ />

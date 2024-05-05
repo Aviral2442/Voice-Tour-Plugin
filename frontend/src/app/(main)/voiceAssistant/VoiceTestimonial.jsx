@@ -14,7 +14,7 @@ const Testimonial = () => {
 
         <Carousel
             className={classes.Carousel}
-            withIndicators
+            // withIndicators
             classNames={classes}
 
             height={350}

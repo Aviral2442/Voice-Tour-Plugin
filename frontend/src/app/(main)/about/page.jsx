@@ -24,6 +24,7 @@ const About = () => {
 
       {/* Navbar */}
       <Navbar />
+      
       <div className={classes.wrapper1}>
         <Title className={clsx(classes.title1, fontss.className)}>About <span style={{ color: '#66ff00' }}>Us</span></Title>
       </div>

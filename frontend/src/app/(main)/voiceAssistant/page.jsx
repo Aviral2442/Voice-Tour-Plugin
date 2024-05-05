@@ -89,7 +89,7 @@ const page = () => {
                   size="md"
                   className={clsx(classes.control, fontbutton.className)}
                   component={Link}
-                  href="/user/generate-tour"
+                  href="/"
                   variant='outline'
                   color='#66ff00'
 
@@ -110,7 +110,7 @@ const page = () => {
                   size="md"
                   className={clsx(classes.control1, fontbutton.className)}
                   component={Link}
-                  href=" /voiceAssistant/preview"
+                  href=" http://localhost:5173/"
                 >
                   Preview
                   &nbsp;
