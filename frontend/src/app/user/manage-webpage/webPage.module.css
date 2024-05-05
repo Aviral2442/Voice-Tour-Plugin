@@ -3,9 +3,24 @@
       Greycliff CF,
       var(--mantine-font-family);
     font-weight: 900;
+    color: black;
   }
   .Button{
-    color: black;
-    background-color: #66ff00;
+    color: white;
+    background-color: black;
   }
- 
+  .Container{
+
+    width: 100%;
+    height: 90vh;
+    padding: 10px;
+  }
+ .control{
+  margin-top: 10px;
+    letter-spacing: 1px;
+    padding: 10px;
+  }
+ .paper{
+  background-color: white;
+  color: black;
+ }

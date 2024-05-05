@@ -1,0 +1,109 @@
+.Carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 45px;
+    margin: 0 30px;
+    margin-bottom: 60px;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+.cardsquare {
+    margin-top: -30px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    height: 290px;
+    width: 300px;
+    border: rem(2px) solid white;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    @media (max-width: $mantine-breakpoint-md) {
+        margin: 0;
+        padding: 0;
+        margin-top: 0;
+
+    }
+}
+
+.name {
+    color: #66FF00;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.review {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    margin-top: -10px;
+    line-height: 1.6;
+}
+
+
+.indicator {
+    width: rem(12px);
+    height: rem(4px);
+    transition: width 250ms ease;
+    background-color: #66FF00;
+
+    &[data-active] {
+        width: rem(40px);
+    }
+}
+
+
+
+
+.icon3 {
+    top: 80PX;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.bg {
+    /* background-color: #66FF00; */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74VtjO-gaZKBwI5WZoaZWYWWTQOy4oXgwcgzmhM0iHQ&s");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 110px;
+}
+
+.midcontent {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    @media (max-width: $mantine-breakpoint-md) {
+        padding: 5px;
+
+    }
+}

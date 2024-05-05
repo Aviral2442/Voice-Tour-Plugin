@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ThemeIcon, Text, Title, Container, SimpleGrid, rem, Group, Card, Center } from '@mantine/core';
 import classes from './voiceitWorks.module.css';
 import { Josefin_Sans, Lora, Playfair_Display } from 'next/font/google';
 import clsx from 'clsx';
+import Aos from 'aos';
 
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -62,17 +63,23 @@ export function Feature({ title, description, Number }) {
 export function VoiceitWorks() {
     const features = MOCKDATA.map((feature, index) => <Feature {...feature} key={index} />);
 
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, []);
+
     return (
-        <Container className={classes.wrapper} fluid  pt={180} pb={180}  >
+
+        <Container className={classes.wrapper} fluid    >
 
             <SimpleGrid
                 mt={60}
                 cols={{ base: 1, sm: 2, md: 3 }}
                 spacing={{ base: 'xl', md: 50 }}
                 verticalSpacing={{ base: 'xl', md: 50 }}
+                data-aos="fade-up"
             >
                 <Group >
-                    <Card bg={'black'} size="lg" p={0}>
+                    <Card bg={'black'} size="lg" p={0} >
                         <Title className={clsx(classes.Title, font.className)}>
                             How It Works<span className={classes.questionmark}>?</span>
                         </Title>

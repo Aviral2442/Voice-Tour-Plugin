@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { rem, Button, ActionIcon, createTheme, MantineProvider, Text } from "@mantine/core"
+import { rem, Button, ActionIcon, createTheme, MantineProvider, Text, Container } from "@mantine/core"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import {
   IconHome,
@@ -54,41 +54,41 @@ const SearchPlugin = () => {
 
   return (
     <div>
+      <Container fluid p={"10"} >
+        <Button variant='filled'  color='#66ff00'  onClick={spotlight.open}>Open spotlight </Button>
 
-      <Button  onClick={spotlight.open}>Open spotlight </Button>
+        <Spotlight
+          shortcut={['mod + K', 'mod + P', '/']}
+          actions={webPagesData}
+          nothingFound="Nothing found..."
+          highlightQuery
+          searchProps={{
+            leftSection: (
+              <IconSearch
+                style={{ width: rem(20), height: rem(20) }}
+                stroke={1.5}
+              />
+            ),
+            rightSection: (
+              <Text  size="xs" p={"4"} mr={"10"}>Ctrl+K</Text>
+            ),
+            placeholder: "Search..."
+          }}
+        />
 
-      <Spotlight
-        shortcut={['mod + K', 'mod + P', '/']}
-        actions={webPagesData}
-        nothingFound="Nothing found..."
-        highlightQuery
-        searchProps={{
-          leftSection: (
-            <IconSearch
-              style={{ width: rem(20), height: rem(20) }}
-              stroke={1.5}
-            />
-          ),
-          rightSection: (
-            <Text size="xs" >Ctrl + K</Text>
-          ),
-          placeholder: "Search..."
-        }}
-      />
-
-      <div style={{ height: '100vh' }}>
-        Section 1
-      </div>
-      <div style={{ height: '100vh' }}>
-        Section 2
-      </div>
-      <div style={{ height: '100vh' }}>
-        Section 3
-      </div>
-      <div style={{ height: '100vh' }}>
-        Section 4
-      </div>
-
+        <div style={{ height: '100vh' }}>
+          Section 1
+        </div>
+        <div style={{ height: '100vh' }}>
+          Section 2
+        </div>
+        <div style={{ height: '100vh' }}>
+          Section 3
+        </div>
+        <div style={{ height: '100vh' }}>
+          Section 4
+        </div>
+      </Container>
     </div>
   )
 }

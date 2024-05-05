@@ -1,12 +1,18 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Checkbox, Container, Flex, Group, Input, Radio, Select, TextInput, Textarea, Title } from '@mantine/core';
+import {  Button, Card, Container, Group, Radio, TextInput, Textarea } from '@mantine/core';
 import { Stepper } from '@mantine/core';
 import classes from './generateTour.module.css';
-import { IconCircleCheck, IconUserCheck } from '@tabler/icons-react';
+import { IconCaretLeft, IconCaretRight,  } from '@tabler/icons-react';
 import { Form, useForm } from '@mantine/form';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
+import { Josefin_Sans, Jost } from 'next/font/google';
+import clsx from 'clsx';
+
+const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+
 
 const GenerateTour = () => {
 
@@ -46,11 +52,19 @@ const GenerateTour = () => {
       stepTitle: 'Step Title',
       stepDescription: 'Step Description'
     }]);
-
+  }
+  const deleteStep = () => {
+    setSteps([...steps.slice(0, steps.length - 1)],
+      {
+        selectorType: 'id',
+        selectorValue: 'Some-id',
+        stepTitle: 'Step Title',
+        stepDescription: 'Step Description'
+      });
   }
 
-  const [active, setActive] = useState(1);
-  const nextStep = () => setActive((current) => (current < 3 ? current + 1 : current));
+  const [active, setActive] = useState(0);
+  const nextStep = () => setActive((current) => (current < steps.length-1 ? current + 1 : current));
   const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
 
   const updateStep = (index, key, value) => {
@@ -58,6 +72,7 @@ const GenerateTour = () => {
     newSteps[index][key] = value;
     setSteps(newSteps);
   }
+
 
   const addTour = () => {
     console.log(steps);
@@ -69,7 +84,7 @@ const GenerateTour = () => {
       }),
       headers: {
         'Content-Type': 'application/json',
-        'x-auth-token' : currentUser.token
+        'x-auth-token': currentUser.token
       }
     })
       .then((response) => {
@@ -111,7 +126,7 @@ const GenerateTour = () => {
   })
 
   return (
-    <div>
+    <div >
 
       {/* <Select
         label="Your favorite library"
@@ -120,63 +135,79 @@ const GenerateTour = () => {
           return { value: webpage._id, label: webpage.name }
         })}
       /> */}
-      <Button onClick={addTour} variant='filled' mb={20}>Create Tour</Button>
-      <Card withBorder radius="md" p="md" bg={'#000'} className={classes.Card}>
-        <Stepper active={active} onStepClick={setActive} orientation="horizontal" color="#66ff00" radius="md" size="sm">
-          {
-            steps.map((step, index) => {
-              return (
-                <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index}>
-                  <Container size={'md'}>
+      <Container fluid className={classes.Container}   >
+     
+        <Button onClick={addTour} variant='white' color='black' mb={20} mt={20}
+         className={clsx(classes.control, font.className)}>
+          Create Tour</Button>
+        <Card withBorder radius="md" p="md" className={classes.Card}>
+          <Stepper active={active} onStepClick={setActive} orientation="vertical" color="black" radius="md" size="sm">
+            {
+              steps.map((step, index) => {
+                return (
+                  <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index} pt={"20"}>
+                    <Container size={'md'}  className={clsx(classes.a, fonts.className)}>
 
-                    {/* <form onSubmit={form.onSubmit(Tourgen)}> */}
-                    <Radio.Group onChange={v => updateStep(index, 'selectorType', v)} mb={20}>
-                      <Group mt="xs" >
-                        <Radio value="id" label="id" />
-                        <Radio value="class" label="class" />
-                      </Group>
-                    </Radio.Group>
-
-
-                    <TextInput mb={20}
-
-                      onChange={e => updateStep(index, 'selectorValue', e.target.value)}
-                      value={step.selectorValue}
-                      label="Selector Value"
-                      placeholder="Enter selector value"
-                    />
-
-                    <TextInput mb={20}
-                      onChange={e => updateStep(index, 'stepTitle', e.target.value)}
-                      value={step.stepTitle}
-                      label="Selector Value"
-                      placeholder="Enter selector value"
-                    />
-
-                    <Textarea
-                      mb={20}
-                      onChange={e => updateStep(index, 'stepDescription', e.target.value)}
-                      value={step.stepDescription}
-                      label="Description"
-                      placeholder="Enter Description"
-                    />
-
-                    {/* </form> */}
-                  </Container>
-
-                </Stepper.Step>
-              )
-            })
-          }
-        </Stepper>
-        <Group justify='center'>
-          <Button mt={30} size='sm' variant='outline' color='#66ff00' >Back</Button>
-
-          <Button mt={30} size='sm' onClick={addNewStep} variant='outline' color='#66ff00'>Add New Step</Button>
-        </Group>
-      </Card>
+                      {/* <form onSubmit={form.onSubmit(Tourgen)}> */}
+                      <Radio.Group onChange={v => updateStep(index, 'selectorType', v)} mb={20} >
+                        <Group mt="xs" >
+                          <Radio value="id" label="id" color="gray"/>
+                          <Radio value="class" label="class" color="gray"/>
+                        </Group>
+                      </Radio.Group>
 
 
+                      <TextInput mb={20}
+
+                        onChange={e => updateStep(index, 'selectorValue', e.target.value)}
+                        value={step.selectorValue}
+                        label="Selector Value"
+                        placeholder="Enter selector value"
+                      />
+
+                      <TextInput mb={20}
+                        onChange={e => updateStep(index, 'stepTitle', e.target.value)}
+                        value={step.stepTitle}
+                        label="Selector Value"
+                        placeholder="Enter selector value"
+                      />
+
+                      <Textarea
+                        mb={20}
+                        onChange={e => updateStep(index, 'stepDescription', e.target.value)}
+                        value={step.stepDescription}
+                        label="Description"
+                        placeholder="Enter Description"
+                      />
+
+                      {/* </form> */}
+                    </Container>
+
+                  </Stepper.Step>
+                )
+              })
+            }
+          </Stepper>
+          <Group justify="space-between" >
+            <Group >
+            <Button mt={30} size='sm' onClick={addNewStep} variant='white' color='black'
+                className={clsx(classes.control, font.className)}>
+                Add New Step</Button>
+              
+            </Group>
+            <Group justify="space-between">
+              <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control, font.className)} ><IconCaretLeft/>Prev</Button>
+              <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control, font.className)}>Next<IconCaretRight/></Button>
+            </Group>
+            <Group >
+            <Button mt={30} size='sm' onClick={deleteStep} variant='white' color='black'
+                className={clsx(classes.control, font.className)}>
+                Delete Step</Button>
+            </Group>
+          </Group>
+        </Card>
+       
+      </Container>
     </div>
   )
 }

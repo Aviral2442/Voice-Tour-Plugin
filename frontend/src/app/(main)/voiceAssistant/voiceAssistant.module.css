@@ -1,35 +1,37 @@
 .inner {
+
   display: flex;
   justify-content: space-between;
   padding-top: calc(var(--mantine-spacing-xl) * 4);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
-}
-
-.content {
-  max-width: rem(580px);
-  margin-right: calc(var(--mantine-spacing-xl) * 3);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
 
   @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
-    margin-right: 0;
+    justify-content: center;
+    align-items: center;    
+  padding-top: 20px;
+  padding-bottom:10px;
+  }
+}
+
+.content {
+  padding-top: 10px;
+  max-width: rem(600px);
+  margin-left: 150px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: 5px;
+    margin-left: 0px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--mantine-font-size-md);
   }
 }
 
 .title {
-  /* color: light-dark(var(--mantine-color-black), var(--mantine-color-white)); */
 
-  background: #47FF0E;
-  background: linear-gradient(to left, #47FF0E 0%, #FFFFFF 50%, #47FF0E 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* background: linear-gradient(2deg, #47FF0E 0%, #FFFFFF 54%, #47FF0E 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent; */
-
-/* background: linear-gradient(85deg, #FFFFFF 0%, #47FF0E 50%, #FFFFFF 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent; */
+  color: white;
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
@@ -43,27 +45,30 @@
 }
 
 .control {
-  color: white;
-  background-color: black;
-  border: 2px solid #45FF0F;
-  border-radius: 8px;
-}
-
-.control:hover {
   color: black;
-  background-color: #45FF0F;
-  border: 2px solid whitesmoke;
+  background-color: #66ff00;
+  letter-spacing: 1px;
+  flex-wrap: wrap;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: 100%;
+
+  }
 }
 
-.control {
+.control1 {
+  letter-spacing: 1px;
+
   @media (max-width: $mantine-breakpoint-xs) {
-    flex: 1;
+   width: 100%;
   }
 }
 
 .image {
-  width: rem(350px);
-  height: rem(356px);
+  margin-top: 40px;
+  width: rem(550px);
+  height: rem(300px);
+  margin-right: 100px;
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;

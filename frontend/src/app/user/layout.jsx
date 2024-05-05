@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
                 breakpoint: 'sm',
                 collapsed: { mobile: !opened },
             }}
-            padding="md"
+           
         >
             <AppShell.Header>
                 <UserNavbar />

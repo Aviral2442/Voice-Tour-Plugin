@@ -55,7 +55,7 @@ const TourGenerator = ({ id, children }) => {
         },
         {
             target: '.section-3-heading',
-            content: 'Section 3 Des cription'
+            content: 'Section 3 Description'
         },
         {
             target: '.section-4-headings',

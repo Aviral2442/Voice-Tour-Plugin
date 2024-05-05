@@ -5,15 +5,18 @@ import classes from "./voiceFAQ.module.css"
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Link from 'next/link'
+import { Jost } from 'next/font/google'
+import clsx from 'clsx'
 
 
+const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 const VoiceFAQ = () => {
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 1500 });
     }, []);
     return (
-        <Container className={classes.wrapper} size={1400} pt={180} pb={180} >
+        <Container className={classes.wrapper} size={1400} pt={50} pb={120} >
 
             <div className={classes.inner}>
                 <Title className={classes.title} data-aos="fade-up" >
@@ -25,7 +28,7 @@ const VoiceFAQ = () => {
                 </Title>
 
                 <Container p={20} size={900}>
-                    <Text size="lg" c="dimmed" className={classes.description} data-aos="fade-up">
+                    <Text size="lg" c="white" className={classes.description} data-aos="fade-up">
                         Address common queries and concerns related to the Voice Assistant functionality.Provide detailed answers to questions
                         regarding voice command usage, compatibility with various browsers and devices, and customization options for different
                         user needs.
@@ -37,10 +40,10 @@ const VoiceFAQ = () => {
                     <Button
                         component={Link}
                         href='/faq'
-                        className={classes.control}
+                        className={clsx(classes.control,font.className)}
                         size="lg"
                         variant="default"
-                        color="#5BFF04"
+                       
                     >
                         Voice Assistant FAQ's
                         &nbsp;
@@ -51,6 +54,9 @@ const VoiceFAQ = () => {
                             <path d="M15 4h5v5" />
                         </svg>
                     </Button>
+
+                    
+
                 </div>
                 {/* </a> */}
             </div>
