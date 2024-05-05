@@ -30,8 +30,9 @@ import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
 import { Poppins, Rammetto_One, Whisper } from 'next/font/google'
 import clsx from 'clsx'
+import UseCases from './UseCases'
 
-const whisper = Poppins({ subsets: ['latin'], weight: ['100','400'] });
+const whisper = Poppins({ subsets: ['latin'], weight: ['100', '400'] });
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 const page = () => {
@@ -47,11 +48,11 @@ const page = () => {
       <section  >
         <Box mx="auto" className={classes.Box} >
 
-          <Container  size='lg'>
+          <Container size='lg'>
             <div className={classes.inner}>
               <div className={classes.content} data-aos="fade-up">
                 <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br />
-                  <span className={clsx(classes.subtitle,font.className)}>VoiceTourNavigator </span><br />
+                  <span className={clsx(classes.subtitle, font.className)}>VoiceTourNavigator </span><br />
                   Plugin System</Title>
                 <Text mt="md" className={classes.description}>
                   Revolutionizing Website Navigation with Voice Technology
@@ -93,8 +94,8 @@ const page = () => {
 
                 <Group className={classes.controls}>
                   <Button
-                  component="a"
-                  href="/"
+                    component="a"
+                    href="/"
                     size="sm"
                     className={classes.controlfirst}
                     variant="filled"
@@ -129,6 +130,7 @@ const page = () => {
 
       <FeaturesCards />
 
+      <UseCases />
       <HeroBulletRight />
 
       <HeroBulletLeft />
@@ -138,9 +140,9 @@ const page = () => {
 
       <Faqsection />
 
-    
+
       <Footer />
-      
+
 
     </>
   )

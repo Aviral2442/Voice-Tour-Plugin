@@ -7,12 +7,14 @@ import clsx from 'clsx';
 
 export function HeroBulletRight() {
     return (
-        <Container fluid className={classes.Container}  pb={100}>
+        <Container fluid className={classes.Container} pb={100}>
             <div className={classes.inner}>
                 <Group className={classes.Right}>
 
-                    <Title className={classes.Title}> Enhance Your Projects with Voice Assistant</Title>
-                    <p className={classes.P}> Discover seamless website navigation like never before with our Voice Assistant feature. Say goodbye to traditional browsing methods and embrace the future of hands-free interaction. Experience convenience, efficiency, and accessibility at your fingertips.</p>
+                    <Title className={classes.Title}>Enhance Your Projects with Tour Generator</Title>
+                    <p className={classes.P}>
+                        Take control of your website exploration with our Tour Generator feature. Customize your browsing experience by creating personalized tours that guide you through the most relevant sections of any website. Explore with ease and efficiency, tailored to your interests and preferences.
+                    </p>
 
                     <Flex
                         mih={40}
