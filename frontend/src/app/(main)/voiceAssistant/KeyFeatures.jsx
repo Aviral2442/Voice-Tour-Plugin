@@ -16,7 +16,7 @@ const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 
 const data = [
     {
-        image: "voiceicon1.png",
+        image: "voiceicon1.svg",
         title: "Voice-Activated Navigation",
         description:
             "Say goodbye to traditional mouse clicks and keyboard inputs. With our Voice Assistant, simply speak your commands to navigate through website content effortlessly."
@@ -54,7 +54,7 @@ const KeyFeatures = () => {
             <ThemeIcon
                 className={classes.itemIcon}
                 size={60}
-                color='white'
+                color='black'
                 radius="md"
             >
                 <Image src={item.image} />

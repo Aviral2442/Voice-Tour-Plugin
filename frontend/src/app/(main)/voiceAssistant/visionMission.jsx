@@ -64,9 +64,9 @@ const VisionMission = () => {
   }, []);
 
   return (
-    <Container size="lg" py="xl" pt={180} pb={180} >
+    <Container size="lg" py="xl" pt={180} pb={180} className={classes.Container}>
 
-      <Title className={classes.title} ta="center" mt="lg" c='white' data-aos="fade-up">
+      <Title className={classes.title} ta="center"  c='white' data-aos="fade-up">
         Embracing  <span style={{ color: '#66FF00' }}>Voice</span>  Technology
       </Title>
 

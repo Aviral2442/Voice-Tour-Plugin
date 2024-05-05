@@ -26,7 +26,7 @@
   
     @media (max-width: $mantine-breakpoint-xs) {
       font-size: rem(28px);
-      text-align: left;
+      text-align: center;
     }
   }
   
@@ -45,7 +45,7 @@
     -webkit-background-clip: text;
   
     @media (max-width: $mantine-breakpoint-xs) {
-      text-align: left;
+      text-align: center;
       font-size: var(--mantine-font-size-md);
     }
   }

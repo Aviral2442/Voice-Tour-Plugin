@@ -6,6 +6,8 @@
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column-reverse;
     padding: var(--mantine-spacing-xl);
+    margin: 0;
+    margin-top: -130px;
   }
 }
 
@@ -16,6 +18,7 @@
 
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;
+    margin-right: 0;
   }
 }
 
@@ -25,8 +28,9 @@
   margin: 80px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding-right: 0;
-    margin-top: var(--mantine-spacing-xl);
+    margin: 0;
+    text-align: center;
+
   }
 }
 
@@ -38,8 +42,12 @@
     var(--mantine-font-family);
   line-height: 1;
   font-size: 45px;
-
   margin-bottom: 30px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
 .controls {

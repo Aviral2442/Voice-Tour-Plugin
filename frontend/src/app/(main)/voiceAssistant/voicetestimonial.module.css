@@ -9,8 +9,9 @@
 
     @media (max-width: $mantine-breakpoint-md) {
         margin: 0;
-        padding: 0;
-
+        margin-top: 70px;
+        margin-bottom: 70px;
+        padding-top: 20px;
     }
 }
 
@@ -84,7 +85,7 @@
     left: 40%;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .bg {
@@ -102,6 +103,7 @@
     justify-content: center;
     text-align: center;
     margin-top: 30px;
+
     @media (max-width: $mantine-breakpoint-md) {
         padding: 5px;
 

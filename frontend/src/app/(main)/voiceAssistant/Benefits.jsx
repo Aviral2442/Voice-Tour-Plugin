@@ -54,7 +54,7 @@ const KeyFeatures = () => {
             <ThemeIcon
                 className={classes.itemIcon}
                 size={60}
-                color='white'
+                color='black'
                 radius="md"
             >
                 <Image src={item.image} />
