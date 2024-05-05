@@ -1,0 +1,21 @@
+.mainContainer{
+    margin-left: 25px;
+    margin-right: 25px;
+
+    @media Screen and (max-width: 768px){
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.title{
+    font-size: 26px;
+    padding: 12px 2px;
+    color: #fff;
+}
+
+.para{
+    font-size: 15px;
+    color: #c9c9c9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
