@@ -30,7 +30,7 @@ router.get('/getall', (req, res) => {
 });
 
 router.get('/getbyid/:id', (req, res) => {
-    model.findById(req.params.id)
+    Model.findById(req.params.id)
         .then((result) => {
             res.json(result);
 
@@ -41,7 +41,7 @@ router.get('/getbyid/:id', (req, res) => {
 });
 
 router.put('/update/:id', (req, res) => {
-    model.findByIdAndUpdate(req.params._id, req.body, { new: true })
+    Model.findByIdAndUpdate(req.params._id, req.body, { new: true })
         .then((result) => {
             res.json(result);
 
@@ -53,7 +53,7 @@ router.put('/update/:id', (req, res) => {
 
 router.delete('/delete/:id', (req, res) => {
 
-    model.findByIdAndDelete(req.params.id)
+    Model.findByIdAndDelete(req.params.id)
         .then((result) => {
             res.json(result);
 
@@ -97,6 +97,17 @@ router.post('/authenticate', (req, res) => {
         }).catch((err) => {
             console.log(err);
             res.status(500).json(err);
+        });
+});
+//for OTP verification
+router.get('/getbyemail/:email', (req, res) => {
+    Model.findOne({ email: req.params.email })
+        .then((result) => {
+            if (result) res.json(result);
+            else res.status(404).json({ message: 'not found' });
+        }).catch((err) => {
+            console.log(err)
+            res.json(err)
         });
 });
 

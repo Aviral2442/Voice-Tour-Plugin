@@ -1,12 +1,12 @@
-'use client';
-import { enqueueSnackbar } from 'notistack';
+'use client'
 import React, { useRef, useState } from 'react';
 import classes from './resetpassword.module.css';
 import {  Button, Container, Image, Paper, PasswordInput, TextInput, Title, rem } from '@mantine/core';
 import { IconAt, IconLock } from '@tabler/icons-react';
-import { useNavigate } from 'react-router-dom';
 import { useForm } from '@mantine/form';
 import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
+
 
 const ResetPassword = () => {
 
@@ -20,7 +20,7 @@ const ResetPassword = () => {
   const router = useRouter();
 
   const checkMailExists = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/user/getbymail/${emailRef.current.value}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/getbyemail/${emailRef.current.value}`);
     // console.log(res.status);
     const data = await res.json();
     // console.log(data);
@@ -30,10 +30,10 @@ const ResetPassword = () => {
 
   const sendOTP = async () => {
     if (!await checkMailExists()) {
-      enqueueSnackbar('Email not registered', { variant: 'error' });
+      toast.error('Email not registered', { variant: 'error' });
       return;
     }
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/util/sendotp`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/util/sendotp`, {
       method: 'POST',
       body: JSON.stringify({ email: emailRef.current.value }),
       headers: {
@@ -42,24 +42,24 @@ const ResetPassword = () => {
     });
     console.log(res.status);
     if (res.status === 201) {
-      enqueueSnackbar('OTP sent successfully', { variant: 'success' });
+      toast.success('OTP sent successfully', { variant: 'success' });
     } else {
-      enqueueSnackbar('Something went wrong', { variant: 'error' });
+      toast.error('Something went wrong', { variant: 'error' });
     }
   }
 
   const verifyOTP = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/util/verifyotp/${emailRef.current.value}/${otpRef.current.value}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/util/verifyotp/${emailRef.current.value}/${otpRef.current.value}`);
     // console.log(res.status);
     if (res.status === 200) {
       setShowForm(true);
     } else {
-      enqueueSnackbar('Invalid OTP', { variant: 'error' });
+      toast.error('Invalid OTP', { variant: 'error' });
     }
   }
 
   const updatePassword = async (values) => {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/user/update/${verifiedUser._id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/update/${verifiedUser._id}`, {
       method: 'PUT',
       body: JSON.stringify(values),
       headers: {
@@ -68,10 +68,10 @@ const ResetPassword = () => {
     });
     // console.log(res.status);
     if (res.status === 200) {
-      enqueueSnackbar('Password updated successfully', { variant: 'success' });
+      toast.success('Password updated successfully', { variant: 'success' });
       router.push('/login');
     } else {
-      enqueueSnackbar('Something went wrong', { variant: 'error' });
+      toast.error('Something went wrong', { variant: 'error' });
     }
   }
 
