@@ -122,14 +122,14 @@ const page = () => {
                 </Button>
               </Group>
             </div>
-            <div className={classes.bg}>
-            <Image src="voicesearchabout.png" className={classes.image} />
-            </div>
+           
+              <Image src="voicesearchabout.png" className={classes.image} />
+           
           </div>
         </Container>
 
 
-        <VisionMission  />
+        <VisionMission />
 
         {/* <HeroBulletRight />
         <HeroBulletLeft /> */}

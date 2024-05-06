@@ -145,7 +145,7 @@ const GenerateTour = () => {
               steps.map((step, index) => {
                 return (
                   <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index} pt={"20"}>
-                    <Container size={'md'}  className={clsx(classes.a, fonts.className)}>
+                    <Container size={'md'}  className={clsx(classes.innerContainer, fonts.className)}>
 
                       {/* <form onSubmit={form.onSubmit(Tourgen)}> */}
                       <Radio.Group onChange={v => updateStep(index, 'selectorType', v)} mb={20} >

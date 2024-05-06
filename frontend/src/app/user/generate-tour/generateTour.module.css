@@ -14,9 +14,7 @@
     padding: 10px;
 }
 
-.a {
-    /* background-color: black; */
-    background-image: url('https://i.pinimg.com/originals/55/74/54/557454f9d762c6b6c9efdaec66b4dbb9.jpg');
+.innerContainer {
     background: rgba(255, 255, 255, 0.35);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(12.5px);
@@ -24,8 +22,6 @@
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: white;
-    border: 2px solid #868f96;
-    border-radius: 10px;
     margin-top: -70px;
 }
 
