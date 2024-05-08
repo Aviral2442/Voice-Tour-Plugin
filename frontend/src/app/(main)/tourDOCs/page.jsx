@@ -6,12 +6,12 @@ import classes from './getstarted.module.css'
 const TourDoc = () => {
   return (
     <div className={classes.mainContainer} >
-      <Title order={1} c="#ffffff" >Getting started</Title>
+      {/* <Title order={1} c="#ffffff" >Getting started</Title> */}
 
-      <Title order={2} c="#ffffff">Welcome to the TourGenerator</Title>
+      <Title pt={'20'} order={1} c="#ffffff">Welcome to the TourGenerator</Title>
 
       <Title order={3} className={classes.title} mt={10}>Introduction</Title>
-      <Text className={classes.para} >Welcome to <span style={{color:'#4dabf7'}} >Tour Generator</span>, where we prioritize seamless navigation and exceptional user
+      <Text className={classes.para} >Welcome to <span style={{color:'#4dabf7'}} ><a href='/tourGenerator' >Tour Generator</a></span>, where we prioritize seamless navigation and exceptional user
        experiences. As the digital landscape evolves, providing users with intuitive ways to explore and interact with your website 
        has become increasingly important. That's why we're thrilled to introduce our innovative Tour Plugin—a powerful tool designed 
        to transform the way users navigate and engage with your website.</Text>

@@ -4,6 +4,7 @@ import { AppShell, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Sidebar from './sidebar';
 import Navbar from './navbar';
+// import TableOfContent from './tableOfContent';
 
 const Layout = ({children}) => {
     const [opened, { toggle }] = useDisclosure();
@@ -15,12 +16,11 @@ const Layout = ({children}) => {
                 breakpoint: 'sm',
                 collapsed: { mobile: !opened },
             }}
-            aside={{
-                width: 250,
-                breakpoint: 'sm',
-                collapsed: { mobile: !opened },
-            }}
-            padding="md"
+            // aside={{
+            //     width: 250,
+            //     breakpoint: 'sm',
+            //     collapsed: { mobile: !opened },
+            // }}
         >
             <AppShell.Header>
                 <Burger
@@ -32,11 +32,13 @@ const Layout = ({children}) => {
                 <Navbar />
             </AppShell.Header>
 
-            <AppShell.Navbar p="md">
+            <AppShell.Navbar >
                 <Sidebar />
             </AppShell.Navbar>
 
-            <AppShell.Aside  >Right side bar</AppShell.Aside>
+            {/* <AppShell.Aside  >
+                <TableOfContent />
+            </AppShell.Aside> */}
 
             <AppShell.Main>{children}</AppShell.Main>
         </AppShell>
