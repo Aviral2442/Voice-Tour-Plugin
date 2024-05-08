@@ -199,13 +199,13 @@ function Navbar() {
 
           <Group visibleFrom="sm">
             <Group h="100%" gap={0} visibleFrom="sm" >
-              <a href="http://localhost:3000/" className={clsx(classes.link, font.className)}>
+              <a href="http://localhost:3000/" className={clsx(classes.link, font.className, path === '/'  && classes.links)}>
                 HOME
               </a>
-              <a href="/voiceAssistant" className={clsx(classes.link, font.className, path === '/voiceAssistant'  && )}>
+              <a href="/voiceAssistant" className={clsx(classes.link, font.className, path === '/voiceAssistant'  && classes.links )}>
                 VOICE ASSISTANT
               </a>
-              <a href="/tourGenerator" className={clsx(classes.link, font.className)}>
+              <a href="/tourGenerator" className={clsx(classes.link, font.className, path === '/tourGenerator'  && classes.links)}>
                 TOUR GENERATOR
               </a>
               {/* <a href="#" className={clsx(classes.link, font.className)}>
@@ -255,10 +255,10 @@ function Navbar() {
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard> */}
-              <a href="/about" className={clsx(classes.link, font.className)}>
+              <a href="/about" className={clsx(classes.link, font.className, path === '/about'  && classes.links)}>
                 ABOUT US
               </a>
-              <a href="/contact" className={clsx(classes.link, font.className)}>
+              <a href="/contact" className={clsx(classes.link, font.className, path === '/contact'  && classes.links)}>
                 CONTACT US
               </a>
             </Group>

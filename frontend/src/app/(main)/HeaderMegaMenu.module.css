@@ -23,14 +23,20 @@
   }
 
   @mixin hover {
-    padding-bottom: 6px;
+    padding-bottom: 7px;
     color: #66FF00;
     border-bottom: 2px solid #66FF00;
+
   }
-
-
 }
 
+.links {
+  padding-bottom:7px;
+  background-color: black;
+  color: #66FF00;
+  border-bottom: 2px solid #66FF00;
+
+}
 
 
 .subLink {
