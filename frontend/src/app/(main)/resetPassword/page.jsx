@@ -1,11 +1,16 @@
 'use client'
 import React, { useRef, useState } from 'react';
 import classes from './resetpassword.module.css';
-import {  Button, Container, Image, Paper, PasswordInput, TextInput, Title, rem } from '@mantine/core';
+import { Button, Container, Image, Paper, PasswordInput, TextInput, Title, rem } from '@mantine/core';
 import { IconAt, IconLock } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
+import { Rammetto_One } from 'next/font/google';
+import clsx from 'clsx';
+
+
+const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 
 const ResetPassword = () => {
@@ -92,7 +97,7 @@ const ResetPassword = () => {
       <Paper className={classes.bg} >
         <Container w={'100%'} size={490} mt={200} className={classes.Container}>
 
-          <Title order={1} mb={30} style={{ textAlign: 'center' }}>
+          <Title order={1} mb={30} style={{ textAlign: 'center' }} className={clsx(classes.title, font.className)}>
             Reset Your Password
           </Title>
 
@@ -104,7 +109,7 @@ const ResetPassword = () => {
             radius="md"
             ref={emailRef}
           />
-          <Button onClick={sendOTP} type="submit" mt={10} radius="md">
+          <Button onClick={sendOTP} className={classes.Button} type="submit" mt={10} radius="md">
             Send OTP
           </Button>
           <TextInput
@@ -116,7 +121,7 @@ const ResetPassword = () => {
             radius="md"
             ref={otpRef}
           />
-          <Button onClick={verifyOTP} type="submit" mt={10} mb={30} radius="md">
+          <Button onClick={verifyOTP} className={classes.Button} type="submit" mt={10} mb={30} radius="md">
             Verify OTP
           </Button>
 
@@ -124,12 +129,14 @@ const ResetPassword = () => {
             showForm && (
 
               <form onSubmit={resetForm.onSubmit(updatePassword)}>
-                <Title order={3} mb={20} style={{ textAlign: 'center' }}>
+                <Title order={3} mb={20} mt={20} style={{ textAlign: 'center' }} className={clsx(classes.title, font.className)}>
                   Enter New Password
                 </Title>
                 <PasswordInput mb="xl" withAsterisk label="Password" placeholder="Your password" size="md" {...resetForm.getInputProps('password')} />
                 <PasswordInput mb="xl" withAsterisk label="Confirm Password" placeholder="Confirm password" size="md" {...resetForm.getInputProps('confirmPassword')} />
-                <Button fullWidth mt="xl" size="md" type='submit'>
+                <Button fullWidth mt="xl" size="md" type='submit' variant="filled"
+                    color='white'
+                   className={classes.controlfirst} >
                   Reset Password
                 </Button>
               </form>
