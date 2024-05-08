@@ -66,7 +66,24 @@ const TourGenerator = ({ id, children }) => {
     ])
 
     return <>
-        {tour !== null && <Joyride scrollToFirstStep steps={tour} continuous={true} /> }
+        {tour !== null && <Joyride
+            steps={tour}
+            continuous
+            scrollToFirstStep
+            showProgress
+            showSkipButton
+            styles={{
+                options: {
+                    arrowColor: 'white',
+                    backgroundColor: 'white',
+                    overlayColor: 'rgba(79, 26, 0, 0.4)',
+                    primaryColor: 'black',
+                    textColor: 'black',
+                    width: 300,
+                    zIndex: 1000,
+                },
+            }}
+        />}
         {children}
     </>
 }
