@@ -49,7 +49,7 @@ import { useState } from "react"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import '@mantine/spotlight/styles.css';
 import useAppContext from '@/context/AppContext';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
@@ -133,13 +133,14 @@ function Navbar() {
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
   const router = useRouter();
+  const path = usePathname();
 
   const items = data
-    // .filter(item => item.toLowerCase().includes(query.toLowerCase().trim()))
-    .map(item => <Spotlight.Action
-      {...item}
-      key={item.label}
-      onClick={() => router.push(item.link)}
+    .filter(({ label, link }) => label.toLowerCase().includes(query.toLowerCase().trim()))
+    .map(({ label, link }) => <Spotlight.Action
+      label={label}
+      key={label}
+      onClick={() => router.push(link)}
     />)
 
 
@@ -197,11 +198,11 @@ function Navbar() {
 
 
           <Group visibleFrom="sm">
-            <Group h="100%" gap={0} visibleFrom="sm" mr={"240"}>
+            <Group h="100%" gap={0} visibleFrom="sm" >
               <a href="http://localhost:3000/" className={clsx(classes.link, font.className)}>
                 HOME
               </a>
-              <a href="/voiceAssistant" className={clsx(classes.link, font.className)}>
+              <a href="/voiceAssistant" className={clsx(classes.link, font.className, path === '/voiceAssistant'  && )}>
                 VOICE ASSISTANT
               </a>
               <a href="/tourGenerator" className={clsx(classes.link, font.className)}>

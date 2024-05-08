@@ -21,13 +21,13 @@ const mockdata = [
       { label: 'Introduction', link: '/' },
       { label: 'Platform Support', link: '/' },
       { label: 'Support', link: '/' },
-      { label: 'FAQ & Troubleshooting', link: '/faq' },
+      { label: 'FAQ & Troubleshooting', link: '/tourDOCs/faq' },
     ],
   },
   { label: 'Community', icon: IconPresentationAnalytics },
   {
     label: 'Community & Support',
-    link: 'tourDOCs/community',
+    link: '/tourDOCs/helpCenter',
     icon: IconNotes,
     // initiallyOpened: true,
     // links: [
