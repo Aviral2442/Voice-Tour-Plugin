@@ -8,10 +8,10 @@ import {IconBrandDiscordFilled, IconBrandGithubFilled } from '@tabler/icons-reac
 
 
 const links = [
-  { link: "/", label: "Home" },
+  { link: "/tourDOCs", label: "Home" },
   { link: "/tourGenerator", label: "Tour Generator" },
   { link: "/user/generate-tour", label: "Generate Tour" },
-  { link: "/community", label: "Help" }
+  { link: "/tourDOCs/helpCenter", label: "Help" }
 ]
 
 const Navbar = () => {

@@ -27,7 +27,7 @@ const mockdata = [
   { label: 'Community', icon: IconPresentationAnalytics },
   {
     label: 'Community & Support',
-    link: '/community',
+    link: 'tourDOCs/community',
     icon: IconNotes,
     // initiallyOpened: true,
     // links: [

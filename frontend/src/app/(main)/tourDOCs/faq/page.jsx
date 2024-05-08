@@ -12,50 +12,50 @@ const Faq = () => {
                 <Title pt={'20'} order={1} c="#ffffff">FAQ's & Troubleshooting</Title>
 
                 <div className="faq-page">
-                    <h1>Frequently Asked Questions</h1>
+                    <h1 className={classes.title}>Frequently Asked Questions</h1>
                     <section className="faq-section">
-                        <h2>Question 1: What is the Tour Generator?</h2>
-                        <p>The Tour Generator is a dynamic tool integrated into our website that empowers users to create interactive guided tours.</p>
+                        <h2 className={classes.head}>Question 1: What is the Tour Generator?</h2>
+                        <p className={classes.para}> The Tour Generator is a dynamic tool integrated into our website that empowers users to create interactive guided tours.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 2: How do I create a new tour?</h2>
-                        <p>To create a new tour, navigate to the Generate Tour page and follow the step-by-step instructions provided.</p>
+                        <h2 className={classes.head}>Question 2: How do I create a new tour?</h2>
+                        <p className={classes.para}>To create a new tour, navigate to the Generate Tour page and follow the step-by-step instructions provided.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 3: Can I customize the appearance of my tours?</h2>
-                        <p>Yes, you can customize the appearance of your tours to match your website's branding and design aesthetic.</p>
+                        <h2 className={classes.head}>Question 3: Can I customize the appearance of my tours?</h2>
+                        <p className={classes.para}>Yes, you can customize the appearance of your tours to match your website's branding and design aesthetic.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 4: Can I create tours for specific user segments?</h2>
-                        <p>Yes, you can create tours tailored to different user segments or personas to provide personalized experiences.</p>
+                        <h2 className={classes.head}>Question 4: Can I create tours for specific user segments?</h2>
+                        <p className={classes.para}>Yes, you can create tours tailored to different user segments or personas to provide personalized experiences.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 5: Are there limitations on the number of tours I can create?</h2>
-                        <p>No, there are no limitations on the number of tours you can create. Feel free to create as many tours as you need to enhance your website's user experience.</p>
+                        <h2 className={classes.head}>Question 5: Are there limitations on the number of tours I can create?</h2>
+                        <p className={classes.para}>No, there are no limitations on the number of tours you can create. Feel free to create as many tours as you need to enhance your website's user experience.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 6: Can I embed tours on external websites?</h2>
-                        <p>Yes, you can embed tours on external websites by using the provided shortcode or embedding code.</p>
+                        <h2 className={classes.head}>Question 6: Can I embed tours on external websites?</h2>
+                        <p className={classes.para}>Yes, you can embed tours on external websites by using the provided shortcode or embedding code.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 7: Can I add multimedia elements to my tours?</h2>
-                        <p>Yes, you can enhance your tours with multimedia elements such as images, videos, and audio clips to provide a rich and engaging experience.</p>
+                        <h2 className={classes.head}>Question 7: Can I add multimedia elements to my tours?</h2>
+                        <p className={classes.para}>Yes, you can enhance your tours with multimedia elements such as images, videos, and audio clips to provide a rich and engaging experience.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 8: Is the Tour Generator compatible with all web browsers?</h2>
-                        <p>The Tour Generator is designed to be compatible with modern web browsers, including Chrome, Firefox, Safari, and Edge. Ensure that you are using an up-to-date browser version for optimal performance.</p>
+                        <h2 className={classes.head}>Question 8: Is the Tour Generator compatible with all web browsers?</h2>
+                        <p className={classes.para}>The Tour Generator is designed to be compatible with modern web browsers, including Chrome, Firefox, Safari, and Edge. Ensure that you are using an up-to-date browser version for optimal performance.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 9: Can I translate tours into different languages?</h2>
-                        <p>Yes, you can translate tours into different languages to cater to multilingual audiences. Explore the translation options available within the Tour Generator for seamless localization.</p>
+                        <h2 className={classes.head}>Question 9: Can I translate tours into different languages?</h2>
+                        <p className={classes.para}>Yes, you can translate tours into different languages to cater to multilingual audiences. Explore the translation options available within the Tour Generator for seamless localization.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 10: How can I track the performance of my tours?</h2>
-                        <p>You can track the performance of your tours using built-in analytics tools or third-party tracking solutions. Monitor metrics such as tour views, engagement rates, and conversion metrics to measure effectiveness.</p>
+                        <h2 className={classes.head}>Question 10: How can I track the performance of my tours?</h2>
+                        <p className={classes.para}>You can track the performance of your tours using built-in analytics tools or third-party tracking solutions. Monitor metrics such as tour views, engagement rates, and conversion metrics to measure effectiveness.</p>
                     </section>
                     <section className="faq-section">
-                        <h2>Question 11: Can I customize the behavior of tour elements?</h2>
-                        <p>Yes, you can customize the behavior of tour elements, including tooltips, hotspots, and navigation buttons, to create interactive and dynamic tour experiences.</p>
+                        <h2 className={classes.head}>Question 11: Can I customize the behavior of tour elements?</h2>
+                        <p className={classes.para}>Yes, you can customize the behavior of tour elements, including tooltips, hotspots, and navigation buttons, to create interactive and dynamic tour experiences.</p>
                     </section>
 
 
@@ -63,50 +63,50 @@ const Faq = () => {
                 </div>
 
                 <div className="troubleshooting-page">
-                    <h1>Troubleshooting</h1>
+                    <h1 className={classes.title}>Troubleshooting</h1>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Unable to Create a New Tour</h2>
-                        <p>If you're experiencing issues creating a new tour, ensure that you have entered the correct selector ID, title, and description for each element.</p>
+                        <h2 className={classes.head}>Issue: Unable to Create a New Tour</h2>
+                        <p className={classes.para}>If you're experiencing issues creating a new tour, ensure that you have entered the correct selector ID, title, and description for each element.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tours Not Displaying Correctly on Mobile Devices</h2>
-                        <p>If your tours are not displaying correctly on mobile devices, check the responsiveness of your website's design and make adjustments as needed.</p>
+                        <h2 className={classes.head}>Issue: Tours Not Displaying Correctly on Mobile Devices</h2>
+                        <p className={classes.para}>If your tours are not displaying correctly on mobile devices, check the responsiveness of your website's design and make adjustments as needed.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tours Loading Slowly</h2>
-                        <p>If your tours are loading slowly, optimize the performance of your website by minimizing resource-heavy elements and scripts.</p>
+                        <h2 className={classes.head}>Issue: Tours Loading Slowly</h2>
+                        <p className={classes.para}>If your tours are loading slowly, optimize the performance of your website by minimizing resource-heavy elements and scripts.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tours Not Loading After Website Update</h2>
-                        <p>If your tours are not loading after a website update, check for any conflicts with other plugins or scripts added during the update process.</p>
+                        <h2 className={classes.head}>Issue: Tours Not Loading After Website Update</h2>
+                        <p className={classes.para}>If your tours are not loading after a website update, check for any conflicts with other plugins or scripts added during the update process.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tour Editor Not Saving Changes</h2>
-                        <p>If the tour editor is not saving changes, ensure that you have a stable internet connection and try clearing your browser cache or using a different browser.</p>
+                        <h2 className={classes.head}>Issue: Tour Editor Not Saving Changes</h2>
+                        <p className={classes.para}>If the tour editor is not saving changes, ensure that you have a stable internet connection and try clearing your browser cache or using a different browser.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Error Messages When Generating Tours</h2>
-                        <p>If you encounter error messages when generating tours, double-check your input data and make sure it meets the required format and specifications.</p>
+                        <h2 className={classes.head}>Issue: Error Messages When Generating Tours</h2>
+                        <p className={classes.para}>If you encounter error messages when generating tours, double-check your input data and make sure it meets the required format and specifications.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tours Not Displaying in Specific Page Templates</h2>
-                        <p>If tours are not displaying in specific page templates, check for conflicts with page builder plugins or custom page templates. Ensure that the tour embedding code is added correctly to the template.</p>
+                        <h2 className={classes.head}>Issue: Tours Not Displaying in Specific Page Templates</h2>
+                        <p className={classes.para}>If tours are not displaying in specific page templates, check for conflicts with page builder plugins or custom page templates. Ensure that the tour embedding code is added correctly to the template.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tour Elements Overlapping with Website Content</h2>
-                        <p>If tour elements are overlapping with website content, adjust the positioning and styling of tour elements using CSS to prevent visual conflicts.</p>
+                        <h2 className={classes.head}>Issue: Tour Elements Overlapping with Website Content</h2>
+                        <p className={classes.para}>If tour elements are overlapping with website content, adjust the positioning and styling of tour elements using CSS to prevent visual conflicts.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tour Steps Skipping or Missing</h2>
-                        <p>If tour steps are skipping or missing, review the tour sequence and ensure that each step is correctly configured. Check for any conditional logic or triggers that may be affecting the tour flow.</p>
+                        <h2 className={classes.head}>Issue: Tour Steps Skipping or Missing</h2>
+                        <p className={classes.para}>If tour steps are skipping or missing, review the tour sequence and ensure that each step is correctly configured. Check for any conditional logic or triggers that may be affecting the tour flow.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tours Not Working on Mobile Devices</h2>
-                        <p>If tours are not working on mobile devices, verify that the tour scripts and assets are optimized for mobile compatibility. Test tours on different mobile devices and browsers to identify any compatibility issues.</p>
+                        <h2 className={classes.head}>Issue: Tours Not Working on Mobile Devices</h2>
+                        <p className={classes.para}>If tours are not working on mobile devices, verify that the tour scripts and assets are optimized for mobile compatibility. Test tours on different mobile devices and browsers to identify any compatibility issues.</p>
                     </section>
                     <section className="troubleshooting-section">
-                        <h2>Issue: Tour Editor Crashing or Freezing</h2>
-                        <p>If the tour editor is crashing or freezing, check for browser extensions or plugins that may be causing conflicts. Try disabling extensions or using an incognito/private browsing window to isolate the issue.</p>
+                        <h2 className={classes.head}>Issue: Tour Editor Crashing or Freezing</h2>
+                        <p className={classes.para}>If the tour editor is crashing or freezing, check for browser extensions or plugins that may be causing conflicts. Try disabling extensions or using an incognito/private browsing window to isolate the issue.</p>
                     </section>
 
                 </div>
@@ -154,7 +154,7 @@ const Faq = () => {
                     <li><span style={{ color: '#4dabf7' }} >Embeddable Shortcodes -</span> Easily embed tours into any page or post on your website using generated shortcodes, allowing for seamless integration with existing content.</li>
                 </ul>*/}
 
-            </div> 
+            </div>
 
             {/* <h1>Frequently Asked Questions</h1>
         <h2>What is the purpose of this website?</h2>

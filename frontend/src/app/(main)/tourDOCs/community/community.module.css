@@ -1,0 +1,20 @@
+.Container{
+    height: 90vh;
+    background-color: #2E2E2E;
+}
+.title {
+    font-size: 26px;
+    padding: 12px 2px;
+    color: #fff;
+}
+
+.para {
+    font-size: 15px;
+    color: #c9c9c9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.head{
+    font-size: 22px;
+    color: #fff;
+}
