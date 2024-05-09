@@ -111,6 +111,18 @@ router.get('/getbyemail/:email', (req, res) => {
         });
 });
 
+
+router.get('/authorize', (req, res) => {
+    Model.findOne({ email: req.params.email })
+        .then((result) => {
+            if (result) res.json(result);
+            else res.status(404).json({ message: 'not found' });
+        }).catch((err) => {
+            console.log(err)
+            res.json(err)
+        });
+});
+
 module.exports = router;
 
 //getall

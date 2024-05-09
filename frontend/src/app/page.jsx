@@ -12,9 +12,12 @@ import {
   rem,
   Overlay,
   Box,
-  BackgroundImage
+  BackgroundImage,
+  Menu,
+  Center,
+  Flex
 } from "@mantine/core"
-import { IconCheck, IconProgressCheck } from "@tabler/icons-react"
+import { IconCheck, IconMicrophone, IconProgressCheck, IconTournament } from "@tabler/icons-react"
 
 import classes from "./page.module.css"
 import FeaturesCards from './FeaturesCards'
@@ -94,17 +97,41 @@ const page = () => {
 
 
                 <Group className={classes.controls}>
-                  <Button
-                    component="a"
-                    href="/"
-                    size="sm"
-                    className={classes.controlfirst}
-                    variant="filled"
-                    color='white'
-                    radius="md"
-                  >
-                    Get started
-                  </Button>
+                  <Menu position="right" offset={1} withArrow arrowPosition="center" >
+                    <Menu.Target>
+                      <Button
+                        size="sm"
+                        className={classes.controlfirst}
+                        variant="filled"
+                        color='white'
+                        radius="md"
+                      >
+                        Get started
+                      </Button>
+                    </Menu.Target>
+                    <Menu.Dropdown bg={"black"} w={190} ta={"center"}>
+                      {/* <Menu.Label>DOCs</Menu.Label> */}
+
+                      <Menu.Item
+                        component="a"
+                        href="/voiceDOCs"
+                        ta={"center"}
+                        c={"#66ff00"}
+                      >
+                        Get Started Voice
+                      </Menu.Item>
+                      <Menu.Item
+                        component="a"
+                        href="/tourDOCs"
+                        ta={"center"}
+                        c={"#66ff00"}
+                      >
+                        Get Started Tour
+                      </Menu.Item>
+
+                    </Menu.Dropdown>
+                  </Menu>
+
 
                   <Button
                     component="a"
@@ -134,7 +161,7 @@ const page = () => {
       <UseCases />
 
       <Keyfeatures />
-      
+
       <HeroBulletRight />
 
       <HeroBulletLeft />
