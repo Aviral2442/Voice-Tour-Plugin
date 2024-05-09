@@ -9,7 +9,7 @@ const links = [
     { label: "Usage", link: "#usage", order: 1 },
     { label: "Position and placement", link: "#position", order: 1 },
     { label: "With other overlays", link: "#overlays", order: 1 },
-    { label: "Manage focus", link: "#focus", order: 1 },
+    { label: "Submit tour", link: "#submit", order: 1 },
     { label: "Examples", link: "#1", order: 1 },
     { label: "Show on focus", link: "#2", order: 2 },
     { label: "Show on hover", link: "#3", order: 2 },
@@ -23,7 +23,7 @@ const TableOfContent = () => {
         <Box
           component="a"
           href={item.link}
-          onClick={event => event.preventDefault()}
+          // onClick={event => event.preventDefault()}
           key={item.label}
           className={cx(classes.link, {
             [classes.linkActive]: active === item.link
@@ -34,8 +34,8 @@ const TableOfContent = () => {
         </Box>
       ))
   return (
-    <div>
-      <Group mb="md">
+    <div  >
+      <Group mb="md" p={20}>
         <IconListSearch
           style={{ width: rem(18), height: rem(18) }}
           stroke={1.5}

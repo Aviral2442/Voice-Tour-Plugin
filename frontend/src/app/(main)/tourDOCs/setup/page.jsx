@@ -37,7 +37,7 @@ const Setup = () => {
                         <li><span style={{ color: '#4dabf7' }} >Preview and Navigate -</span> Use the preview and navigation buttons to review and navigate through your tour steps seamlessly.</li>
                         </ul>
                     </li><br />
-                    <li><span>Step 7 </span><span style={{ color: '#4dabf7' }} >Submit Tour -</span> Once you are satisfied with your tour, click on the "Create Tour" button to submit your tour for processing. Your tour will then be available for use on your website.</li>
+                    <li id='submit' ><span>Step 7 </span><span style={{ color: '#4dabf7' }} >Submit Tour -</span> Once you are satisfied with your tour, click on the "Create Tour" button to submit your tour for processing. Your tour will then be available for use on your website.</li>
                     {/* <li><span style={{ color: '#4dabf7' }} >Seamless Integration -</span> Effortlessly integrate the Tour Generator into your website for a personalized
                         browsing experience.</li>
                     <li><span style={{ color: '#4dabf7' }} >Responsive Design -</span> Tours are optimized for various devices and screen sizes, ensuring a seamless experience across desktops, tablets, and mobile devices.</li>
