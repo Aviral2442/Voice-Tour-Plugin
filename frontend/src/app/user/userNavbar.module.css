@@ -1,5 +1,5 @@
 .header {
-  height: rem(78x);
+  height: rem(80px);
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   background-color: black;
@@ -89,3 +89,13 @@
   height: 80px;
   width: 100px;
 }
+
+.spotlightList {
+  color: white;
+  background-color: black;
+}
+
+.spotlightSearch {
+  background-color: black;
+}
+
