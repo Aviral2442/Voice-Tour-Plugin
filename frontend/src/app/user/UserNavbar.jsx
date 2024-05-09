@@ -45,24 +45,25 @@ import { ActionIcon, useMantineColorScheme, useComputedColorScheme } from '@mant
 import Lottie from 'lottie-react';
 import avatar from './avatar.json'
 import clsx from 'clsx'
-import { Cormorant_Garamond, Londrina_Solid } from 'next/font/google'
+import { Cormorant_Garamond, Jost, Londrina_Solid } from 'next/font/google'
 import { useState } from "react"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import '@mantine/spotlight/styles.css';
 import useAppContext from '@/context/AppContext';
+import { usePathname, useRouter } from 'next/navigation';
 
 const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
+const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 
 
 
 const data = [
-    "Home",
-    "About us",
-    "Contacts",
-    "Blog",
-    "Careers",
-    "Terms of service"
+    { label: "Home", link: "/" },
+    { label: "Voice Assistant", link: "/voiceAssistant" },
+    { label: "Tour Generator", link: "/tourGenerator" },
+    { label: "About Us", link: "/about" },
+    { label: "Contact Us", link: "/contact" },
 ]
 
 export function UserNavbar() {
@@ -78,10 +79,17 @@ export function UserNavbar() {
 
 
     const [query, setQuery] = useState("");
+    const router = useRouter();
+    const path = usePathname();
 
     const items = data
-        .filter(item => item.toLowerCase().includes(query.toLowerCase().trim()))
-        .map(item => <Spotlight.Action key={item} label={item} />)
+        .filter(({ label, link }) => label.toLowerCase().includes(query.toLowerCase().trim()))
+        .map(({ label, link }) => <Spotlight.Action
+            label={label}
+            key={label}
+            onClick={() => router.push(link)}
+        />)
+
 
     const [userMenuOpened, setUserMenuOpened] = useState(false);
 
@@ -136,7 +144,7 @@ export function UserNavbar() {
 
 
                     <Group visibleFrom="sm"  >
-                        <Group h="100%" gap={0} visibleFrom="xs" mr={"140"}>
+                        <Group h="100%" gap={0} visibleFrom="sm" mr={"140"}>
                             <a href="http://localhost:3000/" className={clsx(classes.link, font.className)}>
                                 HOME
                             </a>
@@ -158,16 +166,22 @@ export function UserNavbar() {
                             </a>
                         </Group>
 
-                        <ActionIcon onClick={spotlight.open} variant="filled" color='black' size="lg" >
-                            <IconSearch style={{ width: '70%', height: '70%', color: 'white' }} stroke={2} />
+
+                        <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
+                            from: 'white',
+                            to: 'white', deg: 0
+                        }}>
+                            <IconSearch style={{ width: '70%', height: '70%', color: 'black' }} stroke={2} />
                         </ActionIcon>
 
-                        <Spotlight.Root query={query} onQueryChange={setQuery}>
+                        <Spotlight.Root query={query} onQueryChange={setQuery} >
                             <Spotlight.Search
+                                className={clsx(classes.spotlightSearch, fonts.className)}
                                 placeholder="Search..."
                                 leftSection={<IconSearch stroke={1.5} />}
+
                             />
-                            <Spotlight.ActionsList>
+                            <Spotlight.ActionsList className={clsx(classes.spotlightList, fonts.className)}>
                                 {items.length > 0 ? (
                                     items
                                 ) : (

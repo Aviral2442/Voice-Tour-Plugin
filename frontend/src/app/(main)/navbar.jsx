@@ -44,7 +44,7 @@ import { ActionIcon, useMantineColorScheme, useComputedColorScheme } from '@mant
 import Lottie from 'lottie-react';
 import avatar from './avatar.json'
 import clsx from 'clsx'
-import { Cormorant_Garamond, Londrina_Solid } from 'next/font/google'
+import { Cormorant_Garamond, Jost, Londrina_Solid } from 'next/font/google'
 import { useState } from "react"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import '@mantine/spotlight/styles.css';
@@ -52,6 +52,7 @@ import useAppContext from '@/context/AppContext';
 import { usePathname, useRouter } from 'next/navigation';
 
 const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
+const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 
 // const mockdata = [
@@ -274,7 +275,7 @@ function Navbar() {
                 placeholder="Search..."
                 leftSection={<IconSearch stroke={1.5} />}
               />
-              <Spotlight.ActionsList>
+              <Spotlight.ActionsList className={clsx(classes.spotlightList,fonts.className)}>
                 {items.length > 0 ? (
                   items
                 ) : (

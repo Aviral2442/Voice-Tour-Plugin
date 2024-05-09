@@ -80,6 +80,8 @@ export function Login() {
             sessionStorage.setItem('user', JSON.stringify(data));
             setCurrentUser(data);
             setLoggedIn(true);
+            // set token to cookie
+            document.cookie = `token=${data.token}`;
             router.push('/');
           })
         } else {
