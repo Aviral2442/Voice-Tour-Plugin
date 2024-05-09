@@ -9,6 +9,7 @@ import {
   IconFileAnalytics,
   IconAdjustments,
   IconLock,
+  IconApi,
 } from '@tabler/icons-react';
 import classes from './sidebar.module.css';
 import NavbarLinksGroup from './NavbarLinksGroup/NavbarLinksGroup';
@@ -46,6 +47,7 @@ const mockdata = [
       { label: 'Releases schedule', link: '/' },
     ],
   },
+  { label: 'API reference ', icon: IconApi, link: '/docs/api-reference' },
   { label: 'Analytics', icon: IconPresentationAnalytics },
   { label: 'Feedback', icon: IconFileAnalytics },
   // { label: 'Settings', icon: IconAdjustments },

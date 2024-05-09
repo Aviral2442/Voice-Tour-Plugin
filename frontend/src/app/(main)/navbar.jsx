@@ -196,7 +196,6 @@ function Navbar() {
             <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
           </Anchor>
 
-
           <Group visibleFrom="sm">
             <Group h="100%" gap={0} visibleFrom="sm" >
               <a href="http://localhost:3000/" className={clsx(classes.link, font.className, path === '/'  && classes.links)}>
