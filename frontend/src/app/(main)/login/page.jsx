@@ -29,6 +29,8 @@ import Lottie from 'lottie-react';
 import { Rammetto_One } from 'next/font/google';
 import clsx from 'clsx';
 import useAppContext from '@/context/AppContext';
+import { useGoogleLogin } from '@react-oauth/google';
+
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
@@ -77,7 +79,7 @@ export function Login() {
         if (response.status === 200) {
           toast.success('loggedin successfully');
           response.json().then(data => {
-            sessionStorage.setItem('user', JSON.stringify(data));
+            localStorage.setItem('user', JSON.stringify(data));
             setCurrentUser(data);
             setLoggedIn(true);
             // set token to cookie
@@ -93,6 +95,10 @@ export function Login() {
       });
   }
 
+
+const login = useGoogleLogin({
+  onSuccess: tokenResponse => console.log(tokenResponse),
+});
 
   return (
     <div className={classes.wrapper}>
@@ -111,7 +117,7 @@ export function Login() {
                     {/* <Text className={classes.text}>Login with</Text> */}
 
                     <Group grow mb="md" mt="lg" >
-                      <GoogleButton radius="xl" className={classes.Button}>Google</GoogleButton>
+                      <GoogleButton onClick={() => login()} radius="xl" className={classes.Button}>Google</GoogleButton>
                       <TwitterButton radius="xl" className={classes.Button}>Facebook</TwitterButton>
                     </Group>
 

@@ -8,14 +8,14 @@ export const AppProvider = ({ children }) => {
     const router = useRouter();
 
     const [currentUser, setCurrentUser] = useState(
-        JSON.parse(sessionStorage.getItem('user'))
+        JSON.parse(localStorage.getItem('user'))
     );
 
     const [loggedIn, setLoggedIn] = useState(currentUser !== null)
 
     const logout = () => {
         setLoggedIn(false);
-        sessionStorage.removeItem('user');
+        localStorage.removeItem('user');
         setCurrentUser(null);
         router.push('/login');
     }
