@@ -70,7 +70,6 @@
   padding-left: rem(38px);
   padding-right: rem(38px);
   color: #262525;
-  border-color: #39FF14;
   background-color: #39FF14;
 
   @media (max-width: $mantine-breakpoint-sm) {

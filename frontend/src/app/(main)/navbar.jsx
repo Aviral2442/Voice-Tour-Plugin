@@ -183,7 +183,7 @@ function Navbar() {
         </Menu.Dropdown>
       </Menu>
     } else {
-      return <Button component={Link} href='/login' variant='outline' color='white' className={clsx(classes.button, font.className)}>
+      return <Button component={Link} href='/login' variant='outline' color='#66ff00' className={clsx(classes.button, font.className)}>
         <Lottie animationData={avatar} className={classes.avi} /> Login
       </Button>
     }
