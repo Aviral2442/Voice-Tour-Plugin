@@ -3,6 +3,7 @@ const router = express.Router();
 const Model = require('../model/userModel');
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
+const verifyToken = require('./verifyToken');
 
 router.post('/add', (req, res) => {
     console.log(req.body);
@@ -112,11 +113,11 @@ router.get('/getbyemail/:email', (req, res) => {
 });
 
 
-router.get('/authorize', (req, res) => {
+router.get('/authorise', verifyToken, (req, res) => {
+    console.log(req.headers);
     Model.findOne({ email: req.params.email })
         .then((result) => {
-            if (result) res.json(result);
-            else res.status(404).json({ message: 'not found' });
+            res.status(200).json(result);
         }).catch((err) => {
             console.log(err)
             res.json(err)
