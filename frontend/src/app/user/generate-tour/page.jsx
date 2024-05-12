@@ -18,7 +18,7 @@ const GenerateTour = () => {
 
   const [webpageList, setWebpageList] = useState([]);
 
-  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
 
   const [steps, setSteps] = useState([
     {
