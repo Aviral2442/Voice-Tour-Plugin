@@ -1,9 +1,14 @@
 'use client'
-import { Container, Paper, Text, Title } from '@mantine/core'
+import { Anchor, Container, Paper, Text, Title } from '@mantine/core'
 import React from 'react'
 import classes from './setup.module.css'
+import { CopyBlock, dracula } from 'react-code-blocks'
+
 
 const Setup = () => {
+    const id = 'jhgh'
+
+
     return (
         <Container fluid p={0} >
             <Paper className={classes.mainContainer}>
@@ -17,31 +22,62 @@ const Setup = () => {
                 <Text className={classes.para} >Should you encounter any difficulties or have questions along the way, our support team is here to assist you. Feel free to reach out at any time, and we'll be happy to provide guidance and assistance to ensure your tour setup process is smooth and successful.</Text>
                 <br />
 
+                <Title ta='center' pt={'20'} pb={'15'} order={4} c="#ffffff">Follow these steps to effortlessly create captivating tours for your website.</Title>
+
+
                 <ul className={classes.list}>
-                    <li><span>Step 1 </span><span style={{ color: '#4dabf7' }} >Sign In -</span> Log in to your account on our website to access the Tour Generator feature.</li><br />
-                    <li><span>Step 2 </span><span style={{ color: '#4dabf7' }} >Visit Tour Generator Page -</span> Navigate to the Tour Generator page where you can create and manage your tours. Take your time to explore the details and features available.</li><br />
-                    <li><span>Step 3 </span><span style={{ color: '#4dabf7' }} >Generate Tour -</span> Click on the "Generate Tour" button to start creating your tour. This will open up the tour creation interface where you can define the tour steps.</li><br />
+                    <li><span>Step 1 </span><span style={{ color: '#4dabf7' }} ><Anchor href='/login'>Sign In</Anchor> -</span> Log in to your account on our website to access the Tour Generator feature.</li><br />
+                    <li><span>Step 2 </span><span style={{ color: '#4dabf7' }} ><Anchor href='/tourGenerator'>Visit Tour Generator Page</Anchor> -</span> Navigate to the Tour Generator page where you can create and manage your tours. Take your time to explore the details and features available.</li><br />
+                    <li><span>Step 3 </span><span style={{ color: '#4dabf7' }} ><Anchor href='/user/generate-tour/'>Generate Tour</Anchor> -</span> Click on the "Generate Tour" button to start creating your tour. This will open up the tour creation interface where you can define the tour steps.</li><br />
                     <li><span>Step 4 </span><span style={{ color: '#4dabf7' }} >Select Tag Selector -</span> Choose the appropriate selector type (ID-selector or class-selector) to identify the elements on your website that you want to include in the tour.</li><br />
                     <li><span>Step 5 </span><span style={{ color: '#4dabf7' }} >Define Tour Steps -</span> Create tour steps by providing the following details for each step:<br />
                         <ul>
-                        <li><span style={{ color: '#4dabf7' }} >Element ID or Class -</span> Identify the specific element on your website.</li>
-                        <li><span style={{ color: '#4dabf7' }} >Step Title -</span> Give a descriptive title to the step.</li>
-                        <li><span style={{ color: '#4dabf7' }} >Step Description -</span> Provide instructions or information relevant to the step.</li><br />
+                            <li><span style={{ color: '#4dabf7' }} >Element ID or Class -</span> Identify the specific element on your website.</li>
+                            <li><span style={{ color: '#4dabf7' }} >Step Title -</span> Give a descriptive title to the step.</li>
+                            <li><span style={{ color: '#4dabf7' }} >Step Description -</span> Provide instructions or information relevant to the step.</li><br />
                         </ul>
                     </li>
                     <li><span>Step 6 </span><span style={{ color: '#4dabf7' }} >Manage Tour Steps -</span> Utilize the options available to manage your tour steps:<br />
-                    <ul>
-                        <li><span style={{ color: '#4dabf7' }} >Add New Step -</span> Use the "Add Step" button to include additional steps to your tour.</li>
-                        <li><span style={{ color: '#4dabf7' }} >Delete Steps -</span> Remove any unwanted steps by selecting the delete option.
-</li>
-                        <li><span style={{ color: '#4dabf7' }} >Preview and Navigate -</span> Use the preview and navigation buttons to review and navigate through your tour steps seamlessly.</li>
+                        <ul>
+                            <li><span style={{ color: '#4dabf7' }} >Add New Step -</span> Use the "Add Step" button to include additional steps to your tour.</li>
+                            <li><span style={{ color: '#4dabf7' }} >Delete Steps -</span> Remove any unwanted steps by selecting the delete option.
+                            </li>
+                            <li><span style={{ color: '#4dabf7' }} >Preview and Navigate -</span> Use the preview and navigation buttons to review and navigate through your tour steps seamlessly.</li>
                         </ul>
                     </li><br />
                     <li id='submit' ><span>Step 7 </span><span style={{ color: '#4dabf7' }} >Submit Tour -</span> Once you are satisfied with your tour, click on the "Create Tour" button to submit your tour for processing. Your tour will then be available for use on your website.</li>
-                    {/* <li><span style={{ color: '#4dabf7' }} >Seamless Integration -</span> Effortlessly integrate the Tour Generator into your website for a personalized
-                        browsing experience.</li>
-                    <li><span style={{ color: '#4dabf7' }} >Responsive Design -</span> Tours are optimized for various devices and screen sizes, ensuring a seamless experience across desktops, tablets, and mobile devices.</li>
-                    <li><span style={{ color: '#4dabf7' }} >Embeddable Shortcodes -</span> Easily embed tours into any page or post on your website using generated shortcodes, allowing for seamless integration with existing content.</li> */}
+                    
+                </ul>
+
+                <Title ta='center' pt={'20'} pb={'15'} order={4} c="#ffffff">Effortlessly set up tours on your website with these simple steps.</Title>
+
+                <ul className={classes.list}>
+                    <li><span style={{ color: '#4dabf7' }} >Pick Owner and Tour IDs -</span> Pick the owner-id and tour-id for your tour."</li><br />
+                    <li><span style={{ color: '#4dabf7' }} >Create Tour Tag -</span> Create a tag using both owner-id and tour-id, enclosing your website's body content.<br />
+                    <CopyBlock
+                            text={`<tour owner-id="abcd" tour-id="${id}">`}
+                            language='html'
+                            theme={dracula}
+                            wrapLines
+                        />
+                    </li><br />
+                    <li><span style={{ color: '#4dabf7' }} >Insert Script Tag -</span> After the tour tag, insert the script tag<br />
+                    <CopyBlock
+                            text={"<script src='http://localhost:5000/main.js'></script>"}
+                            language='html'
+                            theme={dracula}
+                            wrapLines
+                        />
+                    </li><br />
+                    <li><span style={{ color: '#4dabf7' }} >Insert Link Tag -</span> In the head tag of your website, insert the link tag
+                        <CopyBlock
+                            text={"<link rel='stylesheet' href='http://localhost:5000/main.css'></link>"}
+                            language='jsx'
+                            theme={dracula}
+                            wrapLines
+                        />
+                    </li>
+                    <br />
                 </ul>
 
             </Paper>
