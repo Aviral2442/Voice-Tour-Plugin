@@ -4,10 +4,11 @@ import React from 'react'
 import classes from './setup.module.css'
 import { CopyBlock, dracula } from 'react-code-blocks'
 
-// const shortcodes = {"<tour owner-id="" tour-id="">"};
 
 const Setup = () => {
     const id = 'jhgh'
+
+
     return (
         <Container fluid p={0} >
             <Paper className={classes.mainContainer}>
@@ -45,10 +46,7 @@ const Setup = () => {
                         </ul>
                     </li><br />
                     <li id='submit' ><span>Step 7 </span><span style={{ color: '#4dabf7' }} >Submit Tour -</span> Once you are satisfied with your tour, click on the "Create Tour" button to submit your tour for processing. Your tour will then be available for use on your website.</li>
-                    {/* <li><span style={{ color: '#4dabf7' }} >Seamless Integration -</span> Effortlessly integrate the Tour Generator into your website for a personalized
-                        browsing experience.</li>
-                    <li><span style={{ color: '#4dabf7' }} >Responsive Design -</span> Tours are optimized for various devices and screen sizes, ensuring a seamless experience across desktops, tablets, and mobile devices.</li>
-                    <li><span style={{ color: '#4dabf7' }} >Embeddable Shortcodes -</span> Easily embed tours into any page or post on your website using generated shortcodes, allowing for seamless integration with existing content.</li> */}
+                    
                 </ul>
 
                 <Title ta='center' pt={'20'} pb={'15'} order={4} c="#ffffff">Effortlessly set up tours on your website with these simple steps.</Title>
