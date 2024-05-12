@@ -98,10 +98,14 @@
 .button {
   font-size: 15PX;
   letter-spacing: 1px;
-
+  border: 1px solid #66FF00;
+font-weight: bold;
   color: #66FF00;
-  border-color: #66FF00;
-
+font-size: 19px;
+}
+.button:hover {
+  background-color: #66FF00;
+  color: black;
 }
 
 

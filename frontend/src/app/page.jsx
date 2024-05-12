@@ -31,13 +31,14 @@ import 'aos/dist/aos.css'
 import Testimonial from './Testimonial'
 import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
-import { Poppins, Rammetto_One, Whisper } from 'next/font/google'
+import { Jost, Poppins, Rammetto_One, Whisper } from 'next/font/google'
 import clsx from 'clsx'
 import UseCases from './UseCases'
 import Keyfeatures from './Keyfeatures'
 
-const whisper = Poppins({ subsets: ['latin'], weight: ['100', '400'] });
+const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
+const whisper = Poppins({ subsets: ['latin'], weight: ['100', '400'] });
 
 const page = () => {
 
@@ -102,14 +103,14 @@ const page = () => {
                       <Button
                         size="sm"
                         className={classes.controlfirst}
-                        variant="filled"
-                        color='white'
+                        variant="outline"
+                        color='#66ff00'
                         radius="md"
                       >
                         Get started
                       </Button>
                     </Menu.Target>
-                    <Menu.Dropdown bg={"black"} w={190} ta={"center"}>
+                    <Menu.Dropdown bg={"#262525"} w={190} ta={"center"}>
                       {/* <Menu.Label>DOCs</Menu.Label> */}
 
                       <Menu.Item
@@ -117,16 +118,20 @@ const page = () => {
                         href="/voiceDOCs"
                         ta={"center"}
                         c={"#66ff00"}
+                        fz={18}
+                        className={fontbutton.className}
                       >
-                        Get Started Voice
+                        Voice DOCs
                       </Menu.Item>
                       <Menu.Item
                         component="a"
                         href="/tourDOCs"
                         ta={"center"}
                         c={"#66ff00"}
+                        fz={18}
+                        className={fontbutton.className}
                       >
-                        Get Started Tour
+                        Tour DOCs
                       </Menu.Item>
 
                     </Menu.Dropdown>
@@ -138,7 +143,7 @@ const page = () => {
                     href="https://github.com/Aviral2442/Voice-Tour-Plugin"
                     size="sm"
                     variant="outline"
-                    color='white'
+                    color='#66ff00'
                     radius="md"
                     className={classes.control}
                     leftSection={<GithubIcon size={20} />}

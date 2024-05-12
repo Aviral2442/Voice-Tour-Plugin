@@ -5,6 +5,7 @@ import '@mantine/core/styles.css';
 import Navbar from './(main)/navbar';
 import { Footer } from "./(main)/footer";
 import { Notifications } from "@mantine/notifications";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,10 +31,12 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
         <MantineProvider theme={theme} defaultColorScheme="dark">
+        <GoogleOAuthProvider clientId="516047116356-fp52utk011pciu8evrc5g75ilg805aq7.apps.googleusercontent.com">
         <Notifications />
           <div style={myStyles}>
             {children}
           </div>
+          </GoogleOAuthProvider>
         </MantineProvider>
       </body>
     </html>
