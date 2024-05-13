@@ -1,13 +1,41 @@
 'use client'
-import { Anchor, Container, Paper, Text, Title } from '@mantine/core'
-import React from 'react'
+import { Anchor, Code, Container, Paper, Select, Text, Title } from '@mantine/core'
+import React, { useEffect, useState } from 'react'
 import classes from './setup.module.css'
 import { CopyBlock, dracula } from 'react-code-blocks'
+import useAppContext from '@/context/AppContext'
 
 
 const Setup = () => {
-    const id = 'jhgh'
+    // const id = 'jhgh'
 
+    const { currentUser } = useAppContext();
+    const [tourIdList, settourIdList] = useState([]);
+    const [selTour, setSelTour] = useState('');
+
+    const fetchTourId = () => {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/getbyuser`, {
+            headers: {
+                'x-auth-token': currentUser.token,
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                settourIdList(data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
+    useEffect(() => {
+        fetchTourId();
+    }, [])
+
+    const getTourId = tourIdList.map(row => (
+        <Code> {row._id}</Code>
+    ))
 
     return (
         <Container fluid p={0} >
@@ -46,23 +74,32 @@ const Setup = () => {
                         </ul>
                     </li><br />
                     <li id='submit' ><span>Step 7 </span><span style={{ color: '#4dabf7' }} >Submit Tour -</span> Once you are satisfied with your tour, click on the "Create Tour" button to submit your tour for processing. Your tour will then be available for use on your website.</li>
-                    
+
                 </ul>
+
+                <Select
+                    label="Select Tour"
+                    placeholder="Pick value"
+                    data={tourIdList.map(
+                        tour => tour._id
+                    )}
+                    onChange={v => setSelTour(v)}
+                />
 
                 <Title ta='center' pt={'20'} pb={'15'} order={4} c="#ffffff">Effortlessly set up tours on your website with these simple steps.</Title>
 
                 <ul className={classes.list}>
                     <li><span style={{ color: '#4dabf7' }} >Pick Owner and Tour IDs -</span> Pick the owner-id and tour-id for your tour."</li><br />
                     <li><span style={{ color: '#4dabf7' }} >Create Tour Tag -</span> Create a tag using both owner-id and tour-id, enclosing your website's body content.<br />
-                    <CopyBlock
-                            text={`<tour owner-id="abcd" tour-id="${id}">`}
+                        <CopyBlock
+                            text={`<tour owner-id="abcd" tour-id="${selTour}">`}
                             language='html'
                             theme={dracula}
                             wrapLines
                         />
                     </li><br />
                     <li><span style={{ color: '#4dabf7' }} >Insert Script Tag -</span> After the tour tag, insert the script tag<br />
-                    <CopyBlock
+                        <CopyBlock
                             text={"<script src='http://localhost:5000/main.js'></script>"}
                             language='html'
                             theme={dracula}

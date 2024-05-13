@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 export async function middleware(req, res) {
     const cookieStore = cookies()
     const token = cookieStore.get('token') || '';
+    // console.log(token.value);
     const ApiResponse = await fetch('http://localhost:5000/user/authorise', {
         headers: {
             'x-auth-token': token.value
