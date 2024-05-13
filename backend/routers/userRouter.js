@@ -63,11 +63,12 @@ router.delete('/delete/:id', (req, res) => {
         });
 });
 
+// For the Authentication of the users using JWT
 
 router.post('/authenticate', (req, res) => {
     console.log(req.body);
     Model.findOne(req.body)
-        //match that email and password exists aur match with database
+        //match that email and password exists in the database
         .then((result) => {
             if (result)
             //  res.status(200).json(result)
@@ -99,6 +100,8 @@ router.post('/authenticate', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+
 //for OTP verification
 router.get('/getbyemail/:email', (req, res) => {
     Model.findOne({ email: req.params.email })
