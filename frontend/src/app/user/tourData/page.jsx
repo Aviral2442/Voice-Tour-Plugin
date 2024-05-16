@@ -1,6 +1,6 @@
 'use client';
 import useAppContext from '@/context/AppContext';
-import { Avatar, Badge, Button, Card, Container, Group, Image, Table, Text, ThemeIcon } from '@mantine/core';
+import { Avatar, Badge, Button, Card, Container, Flex, Group, Image, Table, Text, ThemeIcon } from '@mantine/core';
 import React, { useEffect, useState } from 'react'
 import classes from './tourData.module.css'
 import clsx from 'clsx';
@@ -73,13 +73,10 @@ const tourData = () => {
             <ThemeIcon radius="md" size={80} variant='filled' color={"white"}>
               <Avatar src={'http://localhost:5000/' + currentUser.avatar} alt={currentUser.name} radius="xl" size={70} />
             </ThemeIcon>
-
-            <Text align="center" mt={"-40"} c={"white"} size="xl" weight={700} className={font.className} >
-              {currentUser.name}
-            </Text>
-            <Text size="xl" weight={700} className={font.className}>
-              {currentUser.email}
-            </Text>
+            <Flex direction="column" >
+              <Text size="xl" className={font.className}>{currentUser.name}</Text>
+              <Text size="xl" className={font.className}>{currentUser.email}</Text>
+            </Flex>
           </Group>
           <Group >
             <Button variant="filled" mr={"70"} color="blue" onClick={fetchTourId} className={font.className}>
