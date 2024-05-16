@@ -144,9 +144,6 @@ function Navbar() {
       onClick={() => router.push(link)}
     />)
 
-
-
-
   const displayLoginOptions = () => {
     if (loggedIn) {
       return <Menu
@@ -289,7 +286,6 @@ function Navbar() {
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
-
 
         </Group>
       </header>

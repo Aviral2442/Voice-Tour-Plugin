@@ -8,7 +8,7 @@ const TourDoc = () => {
     <div className={classes.mainContainer} >
       {/* <Title order={1} c="#ffffff" >Getting started</Title> */}
 
-      <Title pt={'20'} order={1} c="#ffffff">Welcome to the TourGenerator</Title>
+      <Title pt={'20'} order={1} c="#ffffff">Welcome to the Tour Generator</Title>
 
       <Title order={3} className={classes.title} mt={10}>Introduction</Title>
       <Text className={classes.para} >Welcome to <span style={{ color: '#4dabf7' }} ><a href='/tourGenerator' >Tour Generator</a></span>, where we prioritize seamless navigation and exceptional user
