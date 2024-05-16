@@ -34,7 +34,7 @@ const Setup = () => {
     }, [])
 
     const getTourId = tourIdList.map(row => (
-        <Code> {row._id}</Code>
+        <Code> {row.title}</Code>
     ))
 
     return (
@@ -77,19 +77,32 @@ const Setup = () => {
 
                 </ul>
 
-                <Select
+                {/* <Select
                     label="Select Tour"
                     placeholder="Pick value"
                     data={tourIdList.map(
-                        tour => tour._id
+                        tour => tour.title
                     )}
                     onChange={v => setSelTour(v)}
-                />
+                /> */}
+
+
 
                 <Title ta='center' pt={'20'} pb={'15'} order={4} c="#ffffff">Effortlessly set up tours on your website with these simple steps.</Title>
 
                 <ul className={classes.list}>
                     <li><span style={{ color: '#4dabf7' }} >Pick Owner and Tour IDs -</span> Pick the owner-id and tour-id for your tour."</li><br />
+                    
+                    <select onChange={
+                        e => setSelTour(e.target.value)
+                    }>
+                        <option value=''>Select Tour</option>
+                        {tourIdList.map(
+                            tour => <option value={tour._id}>{tour.title}</option>
+                        )}
+
+                    </select>
+
                     <li><span style={{ color: '#4dabf7' }} >Create Tour Tag -</span> Create a tag using both owner-id and tour-id, enclosing your website's body content.<br />
                         <CopyBlock
                             text={`<tour owner-id="abcd" tour-id="${selTour}">`}

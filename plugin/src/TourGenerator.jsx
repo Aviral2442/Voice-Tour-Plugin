@@ -25,7 +25,7 @@ const TourGenerator = ({ id, children }) => {
                 return response.json();
             })
             .then((data) => {
-                // console.log(data);
+                console.log(data);
                 let joyRideData = data.steps.map(step => (
                     { target: `${getSelector(step.selectorType)}${step.selectorValue}`, content: `${step.stepTitle}` }
                 ))

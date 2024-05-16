@@ -8,7 +8,7 @@ const mySchema = new Schema({
     avatar: String,
     createdAt: Date,
     role: { type: String, default: 'user' },
-    avatar: { type: String, default: 'avatar_placeholder.png'},
+    avatar: { type: String, default: 'Shinchan.jpg'},
     type: { type: String, default: 'normal' }
 });
 

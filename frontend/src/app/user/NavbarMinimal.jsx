@@ -41,7 +41,7 @@ const mockdata = [
     { icon: IconGauge, label: "Dashboard", link: "/user/dashboard" },
     { icon: IconDeviceDesktopAnalytics, label: "Generate Tour", link: "/user/generate-tour" },
     { icon: IconSettings2, label: "Manage Webpage", link: "/user/manage-webpage" },
-    { icon: IconUserCircle, label: "Account", link: "/user/profile" },
+    { icon: IconUserCircle, label: "Account", link: "/user/tourData" },
     // { icon: IconFingerprint, label: "Security" },
     { icon: IconSettings, label: "Settings", link: "/" }
 ]

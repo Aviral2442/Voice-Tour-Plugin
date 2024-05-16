@@ -88,7 +88,7 @@ router.post('/authenticate', (req, res) => {
                             console.log(err);
                             res.status(500).json(err);
                         } else {
-                            res.status(200).json({ token, avatar, name, role });
+                            res.status(200).json({ token, avatar, name,email, role });
                         }
                     }
                 )
@@ -112,7 +112,7 @@ router.get('/getbyemail/:email', (req, res) => {
         });
 });
 
-
+//used in middleware
 router.get('/authorise', verifyToken, (req, res) => {
     console.log(req.headers);
     Model.findOne({ email: req.params.email })

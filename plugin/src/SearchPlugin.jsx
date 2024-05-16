@@ -14,9 +14,9 @@ import '@mantine/spotlight/styles.css';
 
 
 
-const SearchPlugin = () => {
+const SearchPlugin = ({ownerId}) => {
 
-  const userid = '662a469e92c7753506bfef87';
+  // const userid = '662a469e92c7753506bfef87';
 
   const handleMicClick = () => {
     console.log("Mic clicked");
@@ -26,7 +26,7 @@ const SearchPlugin = () => {
 
   const fetchtourData = () => {
 
-    fetch('http://localhost:5000/webpage/getall')
+    fetch('http://localhost:5000/webpage/getbyowner/'+ownerId)
       .then((response) => {
         console.log(response.status);
         return response.json();

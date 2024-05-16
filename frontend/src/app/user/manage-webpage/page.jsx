@@ -56,7 +56,7 @@ const WebPage = () => {
         body: JSON.stringify(values),
         headers: {
           'Content-Type': 'application/json',
-          'x-auth-token': currentUser.token
+          'x-auth-token': currentUser.token,
         }
       })
         .then((response) => {

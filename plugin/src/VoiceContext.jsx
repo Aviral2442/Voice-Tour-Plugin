@@ -4,7 +4,7 @@ import regeneratorRuntime from "regenerator-runtime";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { IconMicrophone, IconPlayerRecordFilled } from '@tabler/icons-react';
 // import { useRouter } from 'next/navigation';
-import { Button, rem } from '@mantine/core';
+import { ActionIcon, Button, rem } from '@mantine/core';
 
 
 const pageDetails = [
@@ -507,8 +507,8 @@ export const VoiceProvider = ({ children }) => {
     }
 
     // const interpretVoiceCommand = () => {
-    //   // const last = event.results.length - 1;
-    //   // const command = event.results[last][0].transcript;
+    //   const last = event.results.length - 1;
+    //   const command = event.results[last][0].transcript;
     //   console.log('Voice Command: ', transcript);
     //   if (transcript.includes('home')) {
     //     voicePageNavigator('home');
@@ -541,13 +541,13 @@ export const VoiceProvider = ({ children }) => {
 
     return (
         <VoiceContext.Provider value={{}}>
-            <div className="text-center h-7">
-                <Button
-                variant="filled" color="#66ff00" radius="xl" autoContrast
+            <div className="text-center h-7 ">
+                <ActionIcon
+                    variant="filled" color="#282828" autoContrast size={60} radius="xl"
 
-                 onMouseDown={
-                    document.addEventListener("mousemove", drag)
-                }
+                    onMouseDown={
+                        document.addEventListener("mousemove", drag)
+                    }
                     onMouseUp={
                         document.removeEventListener("mousemove", drag)
                     }
@@ -557,7 +557,7 @@ export const VoiceProvider = ({ children }) => {
                         bottom: rem(20),
                         right: rem(20),
                         zIndex: 1000
-                    }} 
+                    }}
                     className='floating-mic' onClick={() => {
                         if (listening) {
                             SpeechRecognition.stopListening();
@@ -566,13 +566,14 @@ export const VoiceProvider = ({ children }) => {
                         }
                     }}>{listening ?
                         (
-                            <span className='text-white'>
+                            <ActionIcon 
+                                variant="filled" color="#282828" autoContrast size="xl" radius="xl" className='text-white pointer' style={{cursor:'pointer'}} loading loaderProps={{ type: 'dots' }}>
                                 <IconPlayerRecordFilled style={{ display: 'inline' }} color='#f00' /> listening...
-                            </span>
+                            </ActionIcon>
                         ) : (
                             <span> <IconMicrophone className='text-2xl text-white' /></span>
                         )
-                    }   </Button>
+                    }   </ActionIcon>
                 <span className='text-white'>{transcript}</span>
                 {children}
             </div>
