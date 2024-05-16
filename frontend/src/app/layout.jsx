@@ -16,12 +16,9 @@ export const metadata = {
 
 const theme = createTheme({
   /** Put your mantine theme override here */
-
 });
 
 export default function RootLayout({ children }) {
-
-
   const myStyles = {
     backgroundColor: ' black',
   }

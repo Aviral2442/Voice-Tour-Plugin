@@ -8,8 +8,6 @@ import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import { VoiceProvider } from './VoiceContext.jsx';
 
-
-
 // Tour Generator
 const tourEle = document.getElementsByTagName('tour');
 if (tourEle.length > 0) {

@@ -30,10 +30,7 @@ import clsx from 'clsx';
 import useAppContext from '@/context/AppContext';
 import { useGoogleLogin } from '@react-oauth/google';
 
-
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
-
-
 
 const theme = createTheme({
   components: {
@@ -108,8 +105,6 @@ const login = useGoogleLogin({
           <Box mx="auto" >
             <BackgroundImage src=''
               radius="md">
-
-
               <Center p="md">
                 <Container size="responsive" w={700} >
                   <Paper shadow="md" p={30} mt={10} mb={30} radius="md" className={classes.Paper}>
@@ -168,7 +163,6 @@ const login = useGoogleLogin({
         </MantineProvider>
       </div>
       <Lottie loop={true} animationData={logimg} className={classes.image} />
-
     </div>
   )
 }

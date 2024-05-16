@@ -19,7 +19,6 @@ import {
 import { GoogleButton } from "./GoogleButton"
 import { TwitterButton } from "./TwitterButton"
 import classes from './signup.module.css';
-import cx from 'clsx';
 import Link from 'next/link';
 import { BackgroundImage, Center, Box } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -70,7 +69,6 @@ function getStrength(password) {
 
   return Math.max(100 - (100 / (requirements.length + 1)) * multiplier, 10)
 }
-
 
 export function SignUp(props) {
   const router = useRouter();
@@ -131,11 +129,7 @@ export function SignUp(props) {
         console.log(err);
         toast.error('Some Error Occured');
       });
-
-
-
   }
-
 
   return (
      
@@ -197,9 +191,6 @@ export function SignUp(props) {
                 placeholder="Confirm password"
                 {...form.getInputProps('confirmPassword')}
               />
-
-
-
               <Group justify="space-between" mt="lg">
                 <Checkbox label="I accept the Terms of Use & Privacy Policy"
                   checked={form.values.terms}
@@ -218,8 +209,6 @@ export function SignUp(props) {
             </form>
           </Paper>
         </Container>
-      
-
   )
 }
 

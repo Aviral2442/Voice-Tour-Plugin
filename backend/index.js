@@ -6,6 +6,8 @@ const userRouter = require('./routers/userRouter');
 const webRouter = require('./routers/webRouter');
 const tourRouter = require('./routers/tourRouter');
 const contactFormRouter = require('./routers/contactFormRouter');
+
+// This is for reset password
 const utilRouter = require('./routers/util');
 
 app.use(express.json());
