@@ -25,12 +25,13 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import logimg from './logimg.json';
 import Lottie from 'lottie-react';
-import { Rammetto_One } from 'next/font/google';
+import { Josefin_Sans, Rammetto_One } from 'next/font/google';
 import clsx from 'clsx';
 import useAppContext from '@/context/AppContext';
 import { useGoogleLogin } from '@react-oauth/google';
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
+const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 
 const theme = createTheme({
   components: {
@@ -121,7 +122,7 @@ const login = useGoogleLogin({
                       <p style={{ color: '#4ECA3E' }}>Or continue with email</p>
                     } labelPosition="center" my="lg" color='white' />
 
-                    <form onSubmit={form.onSubmit(loginSubmit)}>
+                    <form onSubmit={form.onSubmit(loginSubmit)} className={fonts.className}>
 
                       <TextInput withAsterisk variant="filled" label="Email" placeholder="your@email.com"
                         {...form.getInputProps('email')} required />

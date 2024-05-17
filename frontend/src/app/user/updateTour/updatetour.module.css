@@ -1,0 +1,31 @@
+.Card {
+    background-color: black;
+    /* background-image: url('https://i.pinimg.com/originals/55/74/54/557454f9d762c6b6c9efdaec66b4dbb9.jpg'); */
+
+    color: white;
+    /* border: 2px solid white; */
+}
+
+.Container {
+    background-color: black;
+    /* background-image: url('https://i.pinimg.com/originals/55/74/54/557454f9d762c6b6c9efdaec66b4dbb9.jpg'); */
+    width: 100%;
+    height: 90vh;
+    padding: 10px;
+}
+
+.innerContainer {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    margin-top: -70px;
+}
+
+.control1 {
+    letter-spacing: 1px;
+    padding: 10px;
+margin-left: 18px;
+}

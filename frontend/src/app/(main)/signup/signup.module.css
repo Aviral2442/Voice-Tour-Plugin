@@ -162,3 +162,7 @@
 	-moz-transition: box-shadow 0.2s ease-in;
 	transition: box-shadow 0.2s ease-in;
 }
+.file{
+	margin-top: 10px;
+	font-size: 15px;
+}

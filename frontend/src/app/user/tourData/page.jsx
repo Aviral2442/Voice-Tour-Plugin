@@ -1,6 +1,6 @@
 'use client';
 import useAppContext from '@/context/AppContext';
-import { Avatar, Badge, Button, Card, Container, Flex, Group, Image, Table, Text, ThemeIcon } from '@mantine/core';
+import { Anchor, Avatar, Badge, Button, Card, Container, Flex, Group, Image, Table, Text, ThemeIcon } from '@mantine/core';
 import React, { useEffect, useState } from 'react'
 import classes from './tourData.module.css'
 import clsx from 'clsx';
@@ -59,7 +59,7 @@ const tourData = () => {
       <Table.Td>{row.user}</Table.Td>
       <Table.Td>{row._id}</Table.Td>
       <Table.Td>{new Date(row.createdAt).toLocaleString()}</Table.Td>
-      <Table.Th><Button href={`/user/generate-tour/${row._id}`} >Edit</Button></Table.Th>
+      <Table.Th><Anchor href={"/user/updateTour/" + row._id} >Edit</Anchor></Table.Th>
       <Table.Th><Button varient='light' color='red' onClick={e => deleteTour(row._id)} >Delete</Button></Table.Th>
 
     </Table.Tr>

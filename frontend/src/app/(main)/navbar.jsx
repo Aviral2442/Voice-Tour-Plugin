@@ -1,38 +1,24 @@
 'use client'
 import React from 'react'
 import {
-  HoverCard,
   Group,
   Button,
   UnstyledButton,
   Text,
-  SimpleGrid,
-  ThemeIcon,
   Anchor,
   Divider,
-  Center,
   Box,
   Burger,
   Drawer,
-  Collapse,
   ScrollArea,
   rem,
   useMantineTheme,
-  Title,
-  TextInput,
-  Code,
   Image,
   Menu,
   Avatar,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import {
-  IconNotification,
-  IconCode,
-  IconBook,
-  IconChartPie3,
-  IconFingerprint,
-  IconCoin,
   IconChevronDown,
   IconSearch,
   IconLogout,
@@ -144,6 +130,7 @@ function Navbar() {
       onClick={() => router.push(link)}
     />)
 
+
   const displayLoginOptions = () => {
     if (loggedIn) {
       return <Menu
@@ -159,7 +146,9 @@ function Navbar() {
             className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
           >
             <Group gap={7}>
-              <Avatar src={'http://localhost:5000/' + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
+
+              <Avatar src={"http://localhost:5000/" + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
+
               <Text fw={500} size="sm" lh={1} mr={3}>
                 {currentUser.name}
               </Text>
@@ -196,13 +185,13 @@ function Navbar() {
 
           <Group visibleFrom="sm">
             <Group h="100%" gap={0} visibleFrom="sm" >
-              <a href="http://localhost:3000/" className={clsx(classes.link, font.className, path === '/'  && classes.links)}>
+              <a href="http://localhost:3000/" className={clsx(classes.link, font.className, path === '/' && classes.links)}>
                 HOME
               </a>
-              <a href="/voiceAssistant" className={clsx(classes.link, font.className, path === '/voiceAssistant'  && classes.links )}>
+              <a href="/voiceAssistant" className={clsx(classes.link, font.className, path === '/voiceAssistant' && classes.links)}>
                 VOICE ASSISTANT
               </a>
-              <a href="/tourGenerator" className={clsx(classes.link, font.className, path === '/tourGenerator'  && classes.links)}>
+              <a href="/tourGenerator" className={clsx(classes.link, font.className, path === '/tourGenerator' && classes.links)}>
                 TOUR GENERATOR
               </a>
               {/* <a href="#" className={clsx(classes.link, font.className)}>
@@ -252,10 +241,10 @@ function Navbar() {
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard> */}
-              <a href="/about" className={clsx(classes.link, font.className, path === '/about'  && classes.links)}>
+              <a href="/about" className={clsx(classes.link, font.className, path === '/about' && classes.links)}>
                 ABOUT US
               </a>
-              <a href="/contact" className={clsx(classes.link, font.className, path === '/contact'  && classes.links)}>
+              <a href="/contact" className={clsx(classes.link, font.className, path === '/contact' && classes.links)}>
                 CONTACT US
               </a>
             </Group>
@@ -272,7 +261,7 @@ function Navbar() {
                 placeholder="Search..."
                 leftSection={<IconSearch stroke={1.5} />}
               />
-              <Spotlight.ActionsList className={clsx(classes.spotlightList,fonts.className)}>
+              <Spotlight.ActionsList className={clsx(classes.spotlightList, fonts.className)}>
                 {items.length > 0 ? (
                   items
                 ) : (
