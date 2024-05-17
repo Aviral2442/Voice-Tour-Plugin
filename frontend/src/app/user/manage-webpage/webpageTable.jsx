@@ -6,6 +6,7 @@ import { Table, ScrollArea, TextInput, Card } from "@mantine/core"
 import classes from "./webpageTable.module.css"
 import { IconSearch } from '@tabler/icons-react'
 import useAppContext from '@/context/AppContext'
+import clsx from 'clsx'
 
 // Search code for search box to search 
 
@@ -103,7 +104,7 @@ const WebpageTable = () => {
                 />
                 <Table miw={500} className={classes.table}>
                     <Table.Thead
-                        className={cx(classes.header, { [classes.scrolled]: scrolled })}
+                        className={clsx(classes.header, { [classes.scrolled]: scrolled })}
                     >
                         <Table.Tr>
                             <Table.Th>Name</Table.Th>

@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import regeneratorRuntime from "regenerator-runtime";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import { IconMicrophone, IconPlayerRecordFilled } from '@tabler/icons-react';
+import { IconMicrophone, IconMicrophoneFilled, IconPlayerRecordFilled } from '@tabler/icons-react';
 // import { useRouter } from 'next/navigation';
 import { ActionIcon, Button, rem } from '@mantine/core';
 
@@ -599,7 +599,7 @@ export const VoiceProvider = ({ children, ownerId }) => {
                                 <IconPlayerRecordFilled style={{ display: 'inline' }} color='#f00' /> listening...
                             </ActionIcon>
                         ) : (
-                            <span> <IconMicrophone className='text-2xl text-white' /></span>
+                            <span> <IconMicrophoneFilled className='text-2xl text-white' /></span>
                         )
                     }   </ActionIcon>
                 <span className='text-white'>{transcript}</span>

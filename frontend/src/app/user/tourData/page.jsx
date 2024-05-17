@@ -14,8 +14,8 @@ const tourData = () => {
 
   const { currentUser } = useAppContext();
 
+  //tour data for tour Navigator
   const [tourIdList, settourIdList] = useState([]);
-
 
   const fetchTourId = () => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/getbyuser`, {
@@ -47,21 +47,68 @@ const tourData = () => {
     if (res.status === 200) {
       toast.success('Tour Deleted Successfully', { variant: 'success' });
       fetchTourId();
-
     }
-
   }
 
 
   const rows = tourIdList.map(row => (
     <Table.Tr key={row._id}>
-      
+
       <Table.Td>{row.title}</Table.Td>
-      <Table.Td>{row.user}</Table.Td>
       <Table.Td>{row._id}</Table.Td>
+      <Table.Td>{row.user}</Table.Td>
       <Table.Td>{new Date(row.createdAt).toLocaleString()}</Table.Td>
       <Table.Th><Anchor href={"/user/updateTour/" + row._id} >Edit</Anchor></Table.Th>
       <Table.Th><Button varient='light' color='red' onClick={e => deleteTour(row._id)} >Delete</Button></Table.Th>
+
+    </Table.Tr>
+  ))
+  //webpage data for voice search
+  const [webpageList, setWebpageList] = useState([]);
+  const fetchWebpagesData = () => {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/webpage/getbyuser`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'x-auth-token': currentUser.token
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setWebpageList(data);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
+
+  useEffect(() => {
+    fetchWebpagesData();
+  }, [])
+
+  const deleteWebpage = async (id) => {
+    console.log(id);
+
+    const res = await fetch("http://localhost:5000/webpage/delete/" + id, {
+      method: "DELETE",
+    });
+    console.log(res.status);
+    if (res.status === 200) {
+      toast.success('Webpage Deleted Successfully', { variant: 'success' });
+      fetchWebpagesData();
+    }
+  }
+
+  const rows2 = webpageList.map(row2 => (
+    <Table.Tr key={row2._id}>
+      <Table.Td>{row2.name}</Table.Td>
+      <Table.Td>{row2.address}</Table.Td>
+      <Table.Td>{row2.user}</Table.Td>
+      {/* <Table.Td>{row2.description}</Table.Td> */}
+      <Table.Td>{new Date(row2.createdAt).toLocaleString()}</Table.Td>
+      <Table.Th><Anchor href={"/user/updateTour/" + row2._id} >Edit</Anchor></Table.Th>
+
+      <Table.Td><Button varient='light' color='red' onClick={e => deleteWebpage(row2._id)} >Delete</Button></Table.Td>
 
     </Table.Tr>
   ))
@@ -86,23 +133,43 @@ const tourData = () => {
           </Group>
         </Group>
       </Card>
-
+      {/* data for Tour Navigator */}
       <Container fluid p={10} className={classes.Container}>
 
-        <Table miw={500} className={clsx(classes.table, font.className)}>
+        <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
           >
             <Table.Tr>
               <Table.Th>Title</Table.Th>
-              <Table.Th>User</Table.Th>
               <Table.Th>Tour Id</Table.Th>
+              <Table.Th>User</Table.Th>
               <Table.Th>CreateAt</Table.Th>
-              <Table.Th>Edit Tour</Table.Th>
-              <Table.Th>Delete Tour</Table.Th>
+              <Table.Th>Edit </Table.Th>
+              <Table.Th>Tour </Table.Th>
             </Table.Tr>
           </Table.Thead>
           <Table.Tbody>{rows}</Table.Tbody>
+        </Table>
+      </Container>
+      {/* data for Voice Search */}
+      <Container fluid p={10} className={classes.Container}>
+        <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
+          <Table.Thead
+            className={clsx(classes.header, classes.scrolled)}
+          >
+            <Table.Tr>
+              <Table.Th>Name</Table.Th>
+              <Table.Th>Address</Table.Th>
+              <Table.Th>User</Table.Th>
+              {/* <Table.Th>Description</Table.Th> */}
+              <Table.Th>CreateAt</Table.Th>
+              <Table.Th>Edit </Table.Th>
+              <Table.Th>Webpage </Table.Th>
+
+            </Table.Tr>
+          </Table.Thead>
+          <Table.Tbody>{rows2}</Table.Tbody>
         </Table>
       </Container>
     </>

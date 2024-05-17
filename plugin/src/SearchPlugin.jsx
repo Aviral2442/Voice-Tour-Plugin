@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { rem, Button, ActionIcon, createTheme, MantineProvider, Text, Container } from "@mantine/core"
+import { rem, Button, ActionIcon, createTheme, MantineProvider, Text, Container, Code } from "@mantine/core"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import {
   IconHome,
@@ -14,7 +14,7 @@ import '@mantine/spotlight/styles.css';
 
 
 
-const SearchPlugin = ({ownerId}) => {
+const SearchPlugin = ({ ownerId }) => {
 
   // const userid = '662a469e92c7753506bfef87';
 
@@ -26,7 +26,7 @@ const SearchPlugin = ({ownerId}) => {
 
   const fetchtourData = () => {
 
-    fetch('http://localhost:5000/webpage/getbyowner/'+ownerId)
+    fetch('http://localhost:5000/webpage/getbyowner/' + ownerId)
       .then((response) => {
         console.log(response.status);
         return response.json();
@@ -55,7 +55,7 @@ const SearchPlugin = ({ownerId}) => {
   return (
     <div>
       <Container fluid p={"10"} >
-        <Button variant='filled'  color='#66ff00'  onClick={spotlight.open}>Open spotlight </Button>
+        <Button variant='filled' color='black' onClick={spotlight.open}>Open spotlight </Button>
 
         <Spotlight
           shortcut={['mod + K', 'mod + P', '/']}
@@ -70,9 +70,9 @@ const SearchPlugin = ({ownerId}) => {
               />
             ),
             rightSection: (
-              <Text  size="xs" p={"4"} mr={"10"}>Ctrl+K</Text>
+              <Text size="xs" p={"4"} mr={"10"} bg={"black"} c={"white"} radius="md">Ctrl+K</Text>
             ),
-            placeholder: "Search..."
+        placeholder: "Search..."
           }}
         />
 

@@ -65,6 +65,16 @@ router.get('/getpages/:id', (req, res) => {
         });
 });
 
+router.delete('/delete/:id', (req, res) => {
 
+    Model.findByIdAndDelete(req.params.id)
+        .then((result) => {
+            res.json(result);
+
+        }).catch((err) => {
+            console.log(err);
+            res.json(err)
+        });
+});
 
 module.exports = router;
