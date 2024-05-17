@@ -55,6 +55,7 @@ const tourData = () => {
 
   const rows = tourIdList.map(row => (
     <Table.Tr key={row._id}>
+      
       <Table.Td>{row.title}</Table.Td>
       <Table.Td>{row.user}</Table.Td>
       <Table.Td>{row._id}</Table.Td>

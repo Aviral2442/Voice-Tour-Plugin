@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useContext, useEffect, useRef } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import regeneratorRuntime from "regenerator-runtime";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { IconMicrophone, IconPlayerRecordFilled } from '@tabler/icons-react';
@@ -126,7 +126,8 @@ const pageDetails = [
 
 const VoiceContext = createContext();
 
-export const VoiceProvider = ({ children }) => {
+export const VoiceProvider = ({ children, ownerId }) => {
+
 
     const hasRun = useRef(false);
     // const router = useRouter();
@@ -479,7 +480,7 @@ export const VoiceProvider = ({ children }) => {
     }
 
     const voicePageNavigator = (pageName) => {
-        const page = pageDetails.find(page => pageName.toLowerCase().includes(page.pageName.toLowerCase()));
+        const page = webPagesData.find(page => pageName.toLowerCase().includes(page.pageName.toLowerCase()));
         if (page) {
             voiceResponse(`Here is your ${pageName} page...`);
             window.location.href = page.pagePath
@@ -487,6 +488,33 @@ export const VoiceProvider = ({ children }) => {
             alert('Page not found!');
         }
     }
+
+    const [webPagesData, setWebPagesData] = useState([]);
+
+    const fetchtourData = () => {
+  
+      fetch('http://localhost:5000/webpage/getbyowner/'+ownerId)
+        .then((response) => {
+          console.log(response.status);
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          setWebPagesData(data.map(webpage => (
+            {
+              pageName: webpage.name,
+              pagePath: webpage.address
+            }
+          )));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  
+    useEffect(() => {
+      fetchtourData();
+    }, []);
 
     useEffect(() => {
         if (!hasRun.current) {
