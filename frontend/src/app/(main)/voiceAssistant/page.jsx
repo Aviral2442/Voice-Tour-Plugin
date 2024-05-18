@@ -89,7 +89,7 @@ const page = () => {
                   size="md"
                   className={clsx(classes.control, fontbutton.className)}
                   component={Link}
-                  href="//user/manage-webpage"
+                  href="/user/manage-webpage"
                   variant='outline'
                   color='#66ff00'
 

@@ -143,10 +143,10 @@ const tourData = () => {
             <Table.Tr>
               <Table.Th>Title</Table.Th>
               <Table.Th>Tour Id</Table.Th>
-              <Table.Th>User</Table.Th>
+              <Table.Th>User Id</Table.Th>
               <Table.Th>CreateAt</Table.Th>
               <Table.Th>Edit </Table.Th>
-              <Table.Th>Tour </Table.Th>
+              <Table.Th>Trash </Table.Th>
             </Table.Tr>
           </Table.Thead>
           <Table.Tbody>{rows}</Table.Tbody>
@@ -161,11 +161,11 @@ const tourData = () => {
             <Table.Tr>
               <Table.Th>Name</Table.Th>
               <Table.Th>Address</Table.Th>
-              <Table.Th>User</Table.Th>
+              <Table.Th>User Id</Table.Th>
               {/* <Table.Th>Description</Table.Th> */}
               <Table.Th>CreateAt</Table.Th>
               <Table.Th>Edit </Table.Th>
-              <Table.Th>Webpage </Table.Th>
+              <Table.Th>Trash </Table.Th>
 
             </Table.Tr>
           </Table.Thead>

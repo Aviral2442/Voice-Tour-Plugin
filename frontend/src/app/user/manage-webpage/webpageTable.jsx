@@ -44,13 +44,13 @@ const WebpageTable = () => {
     const { currentUser } = useAppContext();
 
     const [webpageList, setWebpageList] = useState([]);
+    const [masterList, setMasterList] = useState([]);
 
     const handleSearchChange = event => {
-        const { value } = event.currentTarget
+        const { value } = event.target;
+        // console.log(value);
         setSearch(value)
-        setSortedData(
-            sortData(data, { sortBy, reversed: reverseSortDirection, search: value })
-        )
+        setWebpageList(masterList.filter(item => item.name.toLowerCase().includes(value.toLowerCase())))
     }
 
     const fetchWebpagesData = () => {
@@ -64,6 +64,7 @@ const WebpageTable = () => {
             .then(data => {
                 console.log(data);
                 setWebpageList(data);
+                setMasterList(data);
             })
             .catch(err => {
                 console.log(err);
@@ -102,7 +103,7 @@ const WebpageTable = () => {
                     onChange={handleSearchChange}
                     className={classes.table}
                 />
-                <Table miw={500} className={classes.table}>
+                <Table className={classes.table} horizontalSpacing="xl">
                     <Table.Thead
                         className={clsx(classes.header, { [classes.scrolled]: scrolled })}
                     >

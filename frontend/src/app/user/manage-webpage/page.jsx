@@ -82,10 +82,10 @@ const WebPage = () => {
 
   return (
     <>
-      <Container fluid className={classes.Container}>
+      <Container fluid className={classes.Container} >
 
         <Modal opened={opened} onClose={close}   >
-          <Container size={420} my={40} mt={20} >
+          <Container  my={40} mt={20} fluid  >
 
             <Paper withBorder shadow="md" p={30} mt={30} radius="md" bg={"white"} className={classes.paper}>
               <Title ta="center" className={classes.title}>
