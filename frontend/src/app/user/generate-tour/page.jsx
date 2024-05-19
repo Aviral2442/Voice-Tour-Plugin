@@ -20,6 +20,7 @@ const GenerateTour = () => {
 
   const [webpageList, setWebpageList] = useState([]);
   const titleRef = useRef();
+  const colorRef = useRef();
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
 
@@ -86,6 +87,7 @@ const GenerateTour = () => {
       body: JSON.stringify({
         steps: steps,
         title: titleRef.current.value,
+        color: colorRef.current.value
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -157,8 +159,11 @@ const GenerateTour = () => {
           Create Tour
         </Button>
 
-        <Container fw={'bold'} fluid className={ fonts.className}>
-          <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} {...form.getInputProps('title')} />
+        <Container fw={'bold'}  fluid className={ fonts.className}>
+         
+          <TextInput  ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} {...form.getInputProps('title')} />
+          <TextInput ref={colorRef} label="Color" type='color' placeholder="Enter your Primary Color " mb={20}  />
+
         </Container>
         <Card  radius="md" p="md" className={classes.Card}>
           <Stepper active={active} onStepClick={setActive} orientation="vertical" color="black" radius="md" size="sm">

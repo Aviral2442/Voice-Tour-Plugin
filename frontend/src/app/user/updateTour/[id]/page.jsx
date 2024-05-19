@@ -16,6 +16,8 @@ const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 const page = () => {
   const { id } = useParams();
   const titleRef = useRef();
+  const colorRef = useRef();
+
   const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
   const [steps, setSteps] = useState([
     {
@@ -38,6 +40,7 @@ const page = () => {
     setTourDetails(data);
     setSteps(data.steps);
     titleRef.current.value = data.title;
+    colorRef.current.value = data.color;
   }
 
   useEffect(() => {
@@ -46,14 +49,15 @@ const page = () => {
 
 
 
-  const addTour = async (steps) => {
+  const addTour = () => {
     console.log(steps);
 
-    const res = await fetch('http://localhost:5000/tour/update' + id, {
+    fetch('http://localhost:5000/tour/update/' + id, {
       method: 'PUT',
       body: JSON.stringify({
         steps: steps,
         title: titleRef.current.value,
+        color: colorRef.current.value
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -115,6 +119,8 @@ const page = () => {
 
       <Container fw={'bold'} fluid className={fonts.className}>
         <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} />
+        <TextInput ref={colorRef} label="Color" type='color' placeholder="Enter your Primary Color " mb={20}  />
+
       </Container>
       <Card radius="md" p="md" className={classes.Card}>
         <Stepper active={active} onStepClick={setActive} orientation="vertical" color="black" radius="md" size="sm">

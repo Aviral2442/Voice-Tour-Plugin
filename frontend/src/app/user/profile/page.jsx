@@ -138,7 +138,7 @@ const Profile = () => {
       </Card>
       {/* data for Tour Navigator */}
       <Container fluid p={10} className={classes.Container}>
-        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Tour Navigator</Badge>
+        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Tours </Badge>
         <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
@@ -157,7 +157,7 @@ const Profile = () => {
       </Container>
       {/* data for Voice Search */}
       <Container fluid p={10} mt={20} className={classes.Container}>
-        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Voice Search</Badge>
+        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Webpages </Badge>
         <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}

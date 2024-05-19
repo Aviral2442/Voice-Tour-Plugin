@@ -22,6 +22,7 @@ router.post('/add', verifyToken, (req, res) => {
 
 // updating...
 router.put('/update/:id', (req, res) => {
+    console.log(req.body);
     Model.findByIdAndUpdate(req.params.id, req.body)
         .then((result) => {
             res.status(200).json(result);

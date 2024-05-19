@@ -10,6 +10,7 @@ const TourGenerator = ({ id, children }) => {
     //   const id = '662260eea373067b3190ca92';
 
     const [tour, setTour] = useState([]);
+    const [color, setColor] = useState('#cccccc');
 
     const getSelector = (name) => {
         if (name === 'class') return '.'
@@ -26,6 +27,7 @@ const TourGenerator = ({ id, children }) => {
             })
             .then((data) => {
                 console.log(data);
+                setColor(data.color);
                 let joyRideData = data.steps.map(step => (
                     { target: `${getSelector(step.selectorType)}${step.selectorValue}`, title: `${step.stepTitle}`, content: `${step.stepDescription}` }
                 ))
@@ -77,7 +79,7 @@ const TourGenerator = ({ id, children }) => {
                     arrowColor: 'white',
                     backgroundColor: 'white',
                     overlayColor: 'rgba(79, 26, 0, 0.4)',
-                    primaryColor: 'black',
+                    primaryColor: color,
                     textColor: 'black',
                     width: 300,
                     zIndex: 1000,

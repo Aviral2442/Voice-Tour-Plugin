@@ -54,11 +54,10 @@ const SearchPlugin = ({ ownerId }) => {
 
   return (
     <div>
-      <Container fluid p={"10"} >
-        <Button variant='filled' color='black' onClick={spotlight.open}>Open spotlight </Button>
+        <Button variant='filled' size='xl' color='black' onClick={spotlight.open}> VT Search </Button>
 
         <Spotlight
-          shortcut={['mod + K', 'mod + P', '/']}
+          shortcut={['mod + K']}
           actions={webPagesData}
           nothingFound="Nothing found..."
           highlightQuery
@@ -88,7 +87,6 @@ const SearchPlugin = ({ ownerId }) => {
         <div style={{ height: '100vh' }}>
           Section 4
         </div> */}
-      </Container>
     </div>
   )
 }
