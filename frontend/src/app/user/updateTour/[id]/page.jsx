@@ -118,8 +118,10 @@ const page = () => {
       </Button>
 
       <Container fw={'bold'} fluid className={fonts.className}>
-        <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} />
-        <TextInput ref={colorRef} label="Color" type='color' placeholder="Enter your Primary Color " mb={20}  />
+        <Grid grow>
+          <Grid.Col span={6}> <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} /></Grid.Col>
+          <Grid.Col span={6}><TextInput ref={colorRef} label="Color" type='color' placeholder="Enter your Primary Color " mb={20} /> </Grid.Col>
+        </Grid>
 
       </Container>
       <Card radius="md" p="md" className={classes.Card}>
