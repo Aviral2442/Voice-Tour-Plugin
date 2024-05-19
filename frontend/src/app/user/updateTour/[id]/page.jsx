@@ -37,6 +37,7 @@ const page = () => {
     console.log(data);
     setTourDetails(data);
     setSteps(data.steps);
+    titleRef.current.value = data.title;
   }
 
   useEffect(() => {
