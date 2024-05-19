@@ -60,7 +60,7 @@ const Profile = () => {
       <Table.Td>{row.user}</Table.Td>
       <Table.Td>{new Date(row.createdAt).toLocaleString()}</Table.Td>
       <Table.Th><Anchor href={"/user/updateTour/" + row._id} >Edit</Anchor></Table.Th>
-      <Table.Th><Button varient='light' color='red' onClick={e => deleteTour(row._id)} >Delete</Button></Table.Th>
+      <Table.Th><Button varient='light' color='red' onClick={e => deleteTour(row._id)} >Trash</Button></Table.Th>
 
     </Table.Tr>
   ))
@@ -109,11 +109,11 @@ const Profile = () => {
       <Table.Td>{new Date(row2.createdAt).toLocaleString()}</Table.Td>
       <Table.Th><Anchor href={"/user/updateTour/" + row2._id} >Edit</Anchor></Table.Th>
 
-      <Table.Td><Button varient='light' color='red' onClick={e => deleteWebpage(row2._id)} >Delete</Button></Table.Td>
+      <Table.Td><Button varient='light' color='red' onClick={e => deleteWebpage(row2._id)} >Trash</Button></Table.Td>
 
     </Table.Tr>
   ))
- 
+
 
   return (
     <>
@@ -126,6 +126,7 @@ const Profile = () => {
             <Flex direction="column" >
               <Text size="xl" className={font.className}>{currentUser.name}</Text>
               <Text size="xl" className={font.className}>{currentUser.email}</Text>
+              <Text size="xl" className={font.className}>{ }</Text>
             </Flex>
           </Group>
           <Group >
@@ -137,7 +138,7 @@ const Profile = () => {
       </Card>
       {/* data for Tour Navigator */}
       <Container fluid p={10} className={classes.Container}>
-
+        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Tour Navigator</Badge>
         <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
@@ -148,14 +149,15 @@ const Profile = () => {
               <Table.Th>User Id</Table.Th>
               <Table.Th>CreateAt</Table.Th>
               <Table.Th>Edit </Table.Th>
-              <Table.Th></Table.Th>
+              <Table.Th>Delete</Table.Th>
             </Table.Tr>
           </Table.Thead>
           <Table.Tbody>{rows}</Table.Tbody>
         </Table>
       </Container>
       {/* data for Voice Search */}
-      <Container fluid p={10} className={classes.Container}>
+      <Container fluid p={10} mt={20} className={classes.Container}>
+        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Voice Search</Badge>
         <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
@@ -167,7 +169,7 @@ const Profile = () => {
               {/* <Table.Th>Description</Table.Th> */}
               <Table.Th>CreateAt</Table.Th>
               <Table.Th>Edit </Table.Th>
-              <Table.Th> </Table.Th>
+              <Table.Th>Delete </Table.Th>
 
             </Table.Tr>
           </Table.Thead>
