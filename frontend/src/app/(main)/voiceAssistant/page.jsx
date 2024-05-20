@@ -29,6 +29,7 @@ import Benefits from './Benefits'
 import Banner from './Banner'
 import VoiceTestimonial from './VoiceTestimonial'
 import Aos from 'aos'
+import Steps from './Steps'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -142,6 +143,7 @@ const page = () => {
 
         <VoiceTestimonial />
         <VoiceFAQ />
+        <Steps />
         <Footer />
       </>
     </div>

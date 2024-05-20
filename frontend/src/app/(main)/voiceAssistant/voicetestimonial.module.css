@@ -9,9 +9,8 @@
 
     @media (max-width: $mantine-breakpoint-md) {
         margin: 0;
-        margin-top: 70px;
-        margin-bottom: 70px;
-        padding-top: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
 
@@ -103,5 +102,15 @@
     @media (max-width: $mantine-breakpoint-md) {
         padding: 5px;
 
+    }
+}
+.Title{
+    color: white;
+    font-size: rem(43px);
+    font-weight: 900;
+    margin-bottom: 25px;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        font-size: rem(24px);
     }
 }

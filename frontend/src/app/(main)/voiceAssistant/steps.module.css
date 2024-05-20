@@ -1,0 +1,127 @@
+.Container {
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  color:white; 
+  -webkit-font-smoothing: antialiased!important;
+  -moz-osx-font-smoothing: grayscale!important;
+  -ms-font-smoothing: antialiased!important;
+  margin-bottom: 90px;
+}
+.mdStepperHorizontal {
+	display:table;
+	width:100%;
+	margin:0 auto;
+
+	background-color:black;
+	box-shadow: 0 3px 8px -6px rgba(0,0,0,.50);
+}
+.mdStepperHorizontal .mdStep {
+	display:table-cell;
+	position:relative;
+	padding:24px;
+}
+.mdStepperHorizontal .mdStep:hover,
+.mdStepperHorizontal .mdStep:active {
+	background-color:rgba(0,0,0,0.04);
+}
+.mdStepperHorizontal .mdStep:active {
+	border-radius: 15% / 75%;
+}
+.mdStepperHorizontal .mdStep:first-child:active {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.mdStepperHorizontal .mdStep:last-child:active {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.mdStepperHorizontal .mdStep:hover .mdStepCircle {
+	background-color:#757575;
+}
+.mdStepperHorizontal .mdStep:first-child .mdStepBarLeft,
+.mdStepperHorizontal .mdStep:last-child .mdStepBarRight {
+	display:none;
+}
+.mdStepperHorizontal .mdStep .mdStepCircle {
+	width:40px;
+	height:40px;
+	margin:0 auto;
+	background-color:#999999;
+	border-radius: 50%;
+	text-align: center;
+    padding-top: 5px;
+	line-height:30px;
+	font-size: 16px;
+	font-weight: 600;
+	color:black;
+}
+.mdStepperHorizontal.green .mdStep.active .mdStepCircle {
+	background-color:#00AE4D;
+}
+.mdStepperHorizontal.orange .mdStep.active .mdStepCircle {
+	background-color:white;
+}
+.mdStepperHorizontal .mdStep.active .mdStepCircle {
+	background-color: rgb(33,150,243);
+}
+.mdStepperHorizontal .mdStep.done .mdStepCircle:before {
+	font-family:'FontAwesome';
+	font-weight:100;
+	content: "\f00c";
+}
+.mdStepperHorizontal .mdStep.done .mdStepCircle *,
+.mdStepperHorizontal .mdStep.editable .mdStepCircle * {
+	display:none;
+}
+.mdStepperHorizontal .mdStep.editable .mdStepCircle {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.mdStepperHorizontal .mdStep.editable .mdStepCircle:before {
+	font-family:'FontAwesome';
+	font-weight:100;
+	content: "\f040";
+}
+.mdStepperHorizontal .mdStep .mdStepTitle {
+	margin-top:16px;
+	font-size:16px;
+	font-weight:600;
+}
+.mdStepperHorizontal .mdStep .mdStepTitle,
+.mdStepperHorizontal .mdStep .mdStepOptional {
+	text-align: center;
+	color:white;
+}
+.mdStepperHorizontal .mdStep.active .mdStepTitle {
+	font-weight: 600;
+	color:white;
+}
+.mdStepperHorizontal .mdStep.active.done .mdStepTitle,
+.mdStepperHorizontal .mdStep.active.editable .mdStepTitle {
+	font-weight:600;
+}
+.mdStepperHorizontal .mdStep .mdStepOptional {
+	font-size:12px;
+}
+.mdStepperHorizontal .mdStep.active .mdStepOptional {
+	color:white;
+}
+.mdStepperHorizontal .mdStep .mdStepBarLeft,
+.mdStepperHorizontal .mdStep .mdStepBarRight {
+	position:absolute;
+	top:45px;
+	height:1px;
+	border-top:1px solid #DDDDDD;
+}
+.mdStepperHorizontal .mdStep .mdStepBarRight {
+	right:0;
+	left:50%;
+	margin-left:20px;
+}
+.mdStepperHorizontal .mdStep .mdStepBarLeft {
+	left:0;
+	right:50%;
+	margin-right:20px;
+}
