@@ -30,6 +30,8 @@ import Banner from './Banner'
 import VoiceTestimonial from './VoiceTestimonial'
 import Aos from 'aos'
 import Steps from './Steps'
+import Banner2 from './Banner2'
+import Banner3 from './Banner3'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -135,6 +137,8 @@ const page = () => {
         {/* <HeroBulletRight />
         <HeroBulletLeft /> */}
         <Banner />
+        <Banner2 />
+        <Banner3 />
         <Benefits />
         <KeyFeatures />
         <VoiceitWorks />
