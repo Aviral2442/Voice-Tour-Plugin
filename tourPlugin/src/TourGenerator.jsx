@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Joyride from 'react-joyride';
-// import toast from 'react-hot-toast';  
 
 const TourGenerator = ({ id, children }) => {
 
     // console.log(children);
-
     //   const id = '662260eea373067b3190ca92';
 
     const [tour, setTour] = useState([]);

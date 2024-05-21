@@ -46,4 +46,3 @@ if (searchPlug.length > 0) {
 //     <App />
 //   </React.StrictMode>,
 // )
-
