@@ -10,7 +10,7 @@ const Layout = ({children}) => {
     const [opened, { toggle }] = useDisclosure();
     return (
         <AppShell
-            header={{ height: 70 }}
+            // header={{ height: 70 }}
             navbar={{
                 width: 250,
                 breakpoint: 'sm',

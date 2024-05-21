@@ -14,7 +14,6 @@ import {
   rem
 } from "@mantine/core"
 import { IconCheck } from "@tabler/icons-react"
-// import image from "./image.svg"
 import classes from "./tourGenerator.module.css"
 import VisionMission from './visionMission'
 import HeroBulletRight from './HeroBulletRight'
@@ -56,9 +55,9 @@ const page = () => {
                   href="/user/generate-tour"
                   variant='outline'
                   color='#66ff00'
-                  href ="/user/generate-tour"
+                  href ="/tourDOCs"
                 >
-                  Generate Tour
+                  Get Started
                   &nbsp;
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#65FF00" fill="black" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />

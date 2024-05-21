@@ -54,9 +54,9 @@ const Sidebar = () => {
     <div>
       <nav className={classes.navbar}>
         <div className={classes.navbarMain}>
-          <Group className={classes.header} justify="space-between">
+          <Group className={classes.header} mt={7} justify="space-between">
             <Title order={3} >Voice Assistant Docs</Title>
-            <Code fw={600}>v3.1.2</Code>
+            <Code fw={600}>v1.1.1</Code>
           </Group>
           {links}
         </div>

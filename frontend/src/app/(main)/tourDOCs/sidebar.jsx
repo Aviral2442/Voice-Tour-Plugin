@@ -1,142 +1,88 @@
-// 'use client'
-// import React from 'react'
-// import { Group, Code, ScrollArea, rem } from '@mantine/core';
-// import {
-//   IconNotes,
-//   IconCalendarStats,
-//   IconGauge,
-//   IconPresentationAnalytics,
-//   IconFileAnalytics,
-//   IconAdjustments,
-//   IconLock,
-//   IconApi,
-// } from '@tabler/icons-react';
-// import classes from './sidebar.module.css';
-// import NavbarLinksGroup from './NavbarLinksGroup/NavbarLinksGroup';
-
-// const mockdata = [
-//   {
-//     label: 'Get Started',
-//     icon: IconGauge,
-//     links: [
-//       { label: 'Introduction', link: '/' },
-//       { label: 'Platform Support', link: '/' },
-//       { label: 'Support', link: '/' },
-//       { label: 'FAQ & Troubleshooting', link: '/tourDOCs/faq' },
-//     ],
-//   },
-//   { label: 'Community', icon: IconPresentationAnalytics },
-//   {
-//     label: 'Community & Support',
-//     link: '/tourDOCs/helpCenter',
-//     icon: IconNotes,
-//     // initiallyOpened: true,
-//     // links: [
-//     //   { label: 'Overview', link: '/' },
-//     //   { label: 'Forecasts', link: '/' },
-//     //   { label: 'Outlook', link: '/' },
-//     //   { label: 'Real time', link: '/' },
-//     // ],
-//   },
-//   {
-//     label: 'Setup',
-//     icon: IconCalendarStats,
-//     links: [
-//       { label: 'Key Features', link: '/' },
-//       { label: 'Previous releases', link: '/' },
-//       { label: 'Releases schedule', link: '/' },
-//     ],
-//   },
-//   { label: 'API reference ', icon: IconApi, link: '/docs/api-reference' },
-//   { label: 'Analytics', icon: IconPresentationAnalytics },
-//   { label: 'Feedback', icon: IconFileAnalytics },
-//   // { label: 'Settings', icon: IconAdjustments },
-//   // {
-//   //   label: 'Security',
-//   //   icon: IconLock,
-//   //   links: [
-//   //     { label: 'Enable 2FA', link: '/' },
-//   //     { label: 'Change password', link: '/' },
-//   //     { label: 'Recovery codes', link: '/' },
-//   //   ],
-//   // },
-// ];
-
-// const Sidebar = () => {
-//   const links = mockdata.map((item) => <NavbarLinksGroup {...item} key={item.label} />);
-//   return (
-//     <nav className={classes.navbar}>
-//       <div className={classes.header}>
-//         <Group justify="space-between">
-
-//           <Code fw={700}>v3.1.2</Code>
-//         </Group>
-//       </div>
-
-//       <ScrollArea className={classes.links}>
-//         <div className={classes.linksInner}>{links}</div>
-//       </ScrollArea>
-
-
-//     </nav>)
-// }
-
-// export default Sidebar
-
-
 'use client'
-import { Button, Title } from '@mantine/core'
-import { IconArrowRight, IconPhoto } from '@tabler/icons-react'
-import Link from 'next/link'
 import React from 'react'
-import classes from './sidebar.module.css'
+import { useState } from "react"
+import { Group, Code, Title } from "@mantine/core"
+import {
+  IconBellRinging,
+  IconFingerprint,
+  IconKey,
+  IconSettings,
+  Icon2fa,
+  IconDatabaseImport,
+  IconReceipt2,
+  IconSwitchHorizontal,
+  IconLogout
+} from "@tabler/icons-react"
+import { MantineLogo } from "@mantinex/mantine-logo"
+import classes from "./sidebar.module.css"
+
+const data = [
+  { link: "/voiceDOCs", label: "Introduction", icon: IconBellRinging },
+  { link: "", label: "What is the Voice Assistant ?", icon: IconReceipt2 },
+  { link: "", label: "Features", icon: IconFingerprint },
+  { link: "", label: "Installation", icon: IconKey },
+  { link: "", label: "How It Works", icon: IconDatabaseImport },
+  { link: "", label: "Setting Up Voice Commands", icon: Icon2fa },
+  { link: "", label: "Integration Guides", icon: IconSettings },
+  { link: "", label: "FAQs", icon: IconSettings },
+  { link: "", label: "Troubleshooting", icon: IconSettings },
+  { link: "", label: "Community and Support", icon: IconSettings },
+  { link: "", label: "User Feedback", icon: IconSettings }
+]
 
 const Sidebar = () => {
+
+  const [active, setActive] = useState("Billing")
+
+  const links = data.map(item => (
+    <a
+      className={classes.link}
+      data-active={item.label === active || undefined}
+      href={item.link}
+      key={item.label}
+      onClick={event => {
+        event.preventDefault()
+        setActive(item.label)
+      }}
+    >
+      <item.icon className={classes.linkIcon} stroke={1.5} />
+      <span>{item.label}</span>
+    </a>
+  ))
+
   return (
-        <>
     <div>
-        {/* <Title ta='center' mt={10} >Tour Docs</Title> */}
-
-        <div className={classes.btn} >
-          <Button
-            mt={10}
-            fullWidth
-            component='a'
-            href='/tourDOCs'
-            variant='light'
-            leftSection={<IconPhoto size={14} />}
-          >
-            Introduction
-          </Button>
-          <Button
-            mt={10}
-            fullWidth
-            component='a'
-            href='/tourDOCs'
-            variant='light'
-            leftSection={<IconPhoto size={14} />}
-          >
-            Introduction
-          </Button>
-          <Button
-            mt={10}
-            fullWidth
-            component='a'
-            href='/tourDOCs'
-            variant='light'
-            leftSection={<IconPhoto size={14} />}
-          >
-            Introduction
-          </Button>
+      <nav className={classes.navbar}>
+        <div className={classes.navbarMain}>
+          <Group className={classes.header} mt={7} justify="space-between">
+            <Title order={3}  >Tour Docs</Title>
+            <Code fw={600}>v3.1.2</Code>
+          </Group>
+          {links}
         </div>
 
-        
+        {/* <div className={classes.footer}>
+        <a
+          href="#"
+          className={classes.link}
+          onClick={event => event.preventDefault()}
+        >
+          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
+          <span>Change account</span>
+        </a>
 
-        
-
-        </div>
-      </>
-      )
+        <a
+          href="#"
+          className={classes.link}
+          onClick={event => event.preventDefault()}
+        >
+          <IconLogout className={classes.linkIcon} stroke={1.5} />
+          <span>Logout</span>
+        </a>
+      </div> */}
+      </nav>
+    </div>
+  )
 }
 
-      export default Sidebar
+export default Sidebar

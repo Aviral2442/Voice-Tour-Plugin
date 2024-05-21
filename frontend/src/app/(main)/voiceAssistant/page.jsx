@@ -92,12 +92,12 @@ const page = () => {
                   size="md"
                   className={clsx(classes.control, fontbutton.className)}
                   component={Link}
-                  href="/user/manage-webpage"
+                  href="/voiceDOCs"
                   variant='outline'
                   color='#66ff00'
 
                 >
-                  Enable Voice Assistant
+                  Get started
                   &nbsp;
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#65FF00" fill="black" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
