@@ -1,5 +1,5 @@
 'use client';
-import { Button, Card, Container, Group, Radio, Stepper, TextInput, Textarea } from '@mantine/core';
+import { Button, Card, Container, Grid, Group, Radio, Stepper, TextInput, Textarea } from '@mantine/core';
 import { useParams, useRouter } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast';
@@ -132,7 +132,6 @@ const page = () => {
                 <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index} pt={"20"}>
                   <Container size={'md'} className={clsx(classes.innerContainer, fonts.className)}>
 
-                    {/* <form onSubmit={form.onSubmit(Tourgen)}> */}
                     <Radio.Group value={step.selectorType} onChange={v => updateStep(index, 'selectorType', v)} mb={20} >
                       <Group mt="xs" >
                         <Radio value="id" label="id" color="gray" />

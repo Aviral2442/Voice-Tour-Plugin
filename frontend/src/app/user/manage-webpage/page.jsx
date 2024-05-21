@@ -135,8 +135,8 @@ const WebPage = () => {
             </Paper>
           </Container >
         </Modal>
-        <center>
-        <Button onClick={open} variant='white' color='black' mb={20}  mt={20}
+        
+        <Button onClick={open} variant='white' color='black' mb={20}  mt={20} ml={20}
           className={clsx(classes.control, font.className)}>
           Create Web Page
         </Button>
@@ -144,7 +144,7 @@ const WebPage = () => {
         <br />
   
         <WebpageTable />
-        </center>
+       
 
       </Container>
     </>

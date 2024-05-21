@@ -107,7 +107,7 @@ const Profile = () => {
       <Table.Td>{row2.user}</Table.Td>
       {/* <Table.Td>{row2.description}</Table.Td> */}
       <Table.Td>{new Date(row2.createdAt).toLocaleString()}</Table.Td>
-      <Table.Th><Anchor href={"/user/updateTour/" + row2._id} >Edit</Anchor></Table.Th>
+      <Table.Th><Anchor href={"/user/updateWebpage/" + row2._id} >Edit</Anchor></Table.Th>
 
       <Table.Td><Button varient='light' color='red' onClick={e => deleteWebpage(row2._id)} >Trash</Button></Table.Td>
 
