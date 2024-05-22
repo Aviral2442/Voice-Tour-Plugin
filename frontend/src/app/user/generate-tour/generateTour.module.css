@@ -1,8 +1,7 @@
 .Card {
     background-color: black;
-
     color: white;
-    /* border: 2px solid white; */
+    padding-bottom: 130px;
 }
 
 .Container {
@@ -14,17 +13,39 @@
 }
 
 .innerContainer {
-    background: rgba(255, 255, 255, 0.35);
+    background: black;
     backdrop-filter: blur(12.5px);
     -webkit-backdrop-filter: blur(12.5px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 3px solid #66ff00;
+    border-right: 3px solid #66ff00;
     color: white;
     margin-top: -70px;
+    padding: 10px;
 }
+
+.innerContainer2 {
+    border-left: 3px solid #66ff00;
+    border-right: 3px solid #66ff00;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    color: white;
+    width: 68%;
+    padding: 10px;
+    margin-top: 14px;
+    margin-right: 230px;
+}
+
+
 
 .control1 {
     letter-spacing: 1px;
     padding: 10px;
-margin-left: 18px;
+    margin-left: 18px;
+    background-color: #66ff00;
+    color: black;
+}
+.control1:hover {
+    background-color: #66ff00;
+    color: black;
 }

@@ -9,6 +9,11 @@ const TourGenerator = ({ id, children }) => {
 
     const [tour, setTour] = useState([]);
     const [color, setColor] = useState('#cccccc');
+    const [bgcolor, setBgcolor] = useState('#cccccc');
+    const [textcolor, setTextColor] = useState('#cccccc');
+    const [arrowcolor, setArrowColor] = useState('#cccccc');
+    const [overlaycolor, setOverlayColor] = useState('#cccccc');
+    const [width, setWidth] = useState(300);
 
     const getSelector = (name) => {
         if (name === 'class') return '.'
@@ -26,6 +31,11 @@ const TourGenerator = ({ id, children }) => {
             .then((data) => {
                 console.log(data);
                 setColor(data.color);
+                setBgcolor(data.bgcolor);
+                setTextColor(data.textcolor);
+                setArrowColor(data.arrowcolor);
+                setOverlayColor(data.overlaycolor);
+                setWidth(data.width);
                 let joyRideData = data.steps.map(step => (
                     { target: `${getSelector(step.selectorType)}${step.selectorValue}`, title: `${step.stepTitle}`, content: `${step.stepDescription}` }
                 ))
@@ -74,13 +84,13 @@ const TourGenerator = ({ id, children }) => {
             showSkipButton
             styles={{
                 options: {
-                    arrowColor: 'white',
-                    backgroundColor: 'white',
-                    overlayColor: 'rgba(79, 26, 0, 0.4)',
+                    arrowColor: arrowcolor,
+                    backgroundColor: bgcolor,
+                    overlayColor: overlaycolor,
                     primaryColor: color,
-                    textColor: 'black',
-                    width: 300,
-                    zIndex: 1000,
+                    textColor: textcolor,
+                    width: width,
+                    zIndex: 100000,
                 },
             }}
         />}

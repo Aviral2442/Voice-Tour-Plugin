@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react'
-import { Button, Card, Container, Grid, Group, Input, Radio, TextInput, Textarea } from '@mantine/core';
+import { Button, Card, Center, Container, Divider, Flex, Grid, Group, Input, Radio, TextInput, Textarea, Title } from '@mantine/core';
 import { Stepper } from '@mantine/core';
 import classes from './generateTour.module.css';
 import { IconCaretLeft, IconCaretRight, } from '@tabler/icons-react';
@@ -21,6 +21,11 @@ const GenerateTour = () => {
   const [webpageList, setWebpageList] = useState([]);
   const titleRef = useRef();
   const colorRef = useRef();
+  const bgcolorRef = useRef();
+  const textcolorRef = useRef();
+  const arrowcolorRef = useRef();
+  const overlaycolorRef = useRef();
+  const widthRef = useRef();
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
 
@@ -87,7 +92,12 @@ const GenerateTour = () => {
       body: JSON.stringify({
         steps: steps,
         title: titleRef.current.value,
-        color: colorRef.current.value
+        color: colorRef.current.value,
+        bgcolor: bgcolorRef.current.value,
+        textcolor: textcolorRef.current.value,
+        arrowcolor: arrowcolorRef.current.value,
+        overlaycolor: overlaycolorRef.current.value,
+        width: widthRef.current.value
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -106,7 +116,7 @@ const GenerateTour = () => {
               stepTitle: 'Step 1 Title',
               stepDescription: 'Step 1 Description'
             }
-          ]); 
+          ]);
 
         } else {
           toast.error('Some Error Occured');
@@ -120,52 +130,35 @@ const GenerateTour = () => {
 
   const router = useRouter();
 
-  const form = useForm({
-    initialValues: {
-      title: '',
-      user: '',
-      steps: ''
-    },
 
-    validate: {
-      user: (value) => {
-        if (!value) {
-          return 'This field is required';
-        }
-      },
-      steps: (value) => {
-        if (!value) {
-          return 'This field is required';
-        }
-      }
-    }
-  })
 
   return (
     <div >
 
-      {/* <Select
-        label="Your favorite library"
-        placeholder="Pick value"
-        data={webpageList.map((webpage) => {
-          return { value: webpage._id, label: webpage.name }
-        })}
-      /> */}
       <Container fluid className={classes.Container}   >
 
+        <Flex  justify="Flex-Start"  align="Flex-start "  pt={80} pb={80}>
+          <Button onClick={addTour}  mb={20} mt={20}
+            className={clsx(classes.control1, font.className)}>
+            Create Tour
+          </Button>
 
-        <Button onClick={addTour} variant='white' color='black' mb={20} mt={20}
-          className={clsx(classes.control1, font.className)}>
-          Create Tour
-        </Button>
+          <Container fw={'bold'} fluid className={clsx(classes.innerContainer2, fonts.className)}>
+            <Title order={1} align="start" mb={20} className={clsx(classes.title, fonts.className)}>Design Tour</Title>
+            <Grid grow>
 
-        <Container fw={'bold'}  fluid className={ fonts.className}>
-         <Grid grow>
-         <Grid.Col  span={6}> <TextInput  ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20}  /></Grid.Col>
-         <Grid.Col span={6}><TextInput ref={colorRef} label="Color" type='color' placeholder="Enter your Primary Color " mb={20}  /> </Grid.Col>
-          </Grid>
-        </Container>
-        <Card  radius="md" p="md" className={classes.Card}>
+              <Grid.Col span={6}> <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} /></Grid.Col>
+              <Grid.Col span={6}><TextInput ref={colorRef} label="Primary Color" type='color' placeholder="Enter your Primary Color " mb={20} /> </Grid.Col>
+              <Grid.Col span={6}><TextInput ref={bgcolorRef} label="Background Color" type='color' placeholder="Enter your Background Color " mb={20} /> </Grid.Col>
+              <Grid.Col span={6}><TextInput ref={textcolorRef} label="Text Color" type='color' placeholder="Enter your Text Color " mb={20} /> </Grid.Col>
+              <Grid.Col span={6}><TextInput ref={arrowcolorRef} label="Arrow Color" type='color' placeholder="Enter your Arrow Color " mb={20} /> </Grid.Col>
+              <Grid.Col span={6}><TextInput ref={overlaycolorRef} label="Overlay Color" type='color' placeholder="Enter your Overlay Color " mb={20} /> </Grid.Col>
+              <Grid.Col span={6}><TextInput ref={widthRef} label="Width" type='text' placeholder="Enter your Width  " mb={20} /> </Grid.Col>
+            </Grid>
+          </Container>
+        </Flex>
+
+        <Card radius="md"  className={classes.Card}>
           <Stepper active={active} onStepClick={setActive} orientation="vertical" color="black" radius="md" size="sm">
             {
               steps.map((step, index) => {
@@ -219,17 +212,17 @@ const GenerateTour = () => {
           <Group justify="space-between" >
             <Group >
               <Button mt={30} size='sm' onClick={addNewStep} variant='white' color='black'
-                className={clsx(classes.control, font.className)}>
+                className={clsx(classes.control1, font.className)}>
                 Add New Step</Button>
 
             </Group>
             <Group justify="space-between">
-              <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control, font.className)} ><IconCaretLeft />Prev</Button>
-              <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control, font.className)}>Next<IconCaretRight /></Button>
+              <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control1, font.className)} ><IconCaretLeft />Prev</Button>
+              <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control1, font.className)}>Next<IconCaretRight /></Button>
             </Group>
             <Group >
               <Button mt={30} size='sm' onClick={deleteStep} variant='white' color='black'
-                className={clsx(classes.control, font.className)}>
+                className={clsx(classes.control1, font.className)}>
                 Delete Step</Button>
             </Group>
           </Group>

@@ -17,6 +17,11 @@ const page = () => {
   const { id } = useParams();
   const titleRef = useRef();
   const colorRef = useRef();
+  const bgcolorRef = useRef();
+  const textcolorRef = useRef();
+  const arrowcolorRef = useRef();
+  const overlaycolorRef = useRef();
+  const widthRef = useRef();
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
   const [steps, setSteps] = useState([
@@ -41,6 +46,11 @@ const page = () => {
     setSteps(data.steps);
     titleRef.current.value = data.title;
     colorRef.current.value = data.color;
+    bgcolorRef.current.value = data.bgcolor;
+    textcolorRef.current.value = data.textcolor;
+    arrowcolorRef.current.value = data.arrowcolor;
+    overlaycolorRef.current.value = data.overlaycolor;
+    widthRef.current.value = data.width;
   }
 
   useEffect(() => {
@@ -57,7 +67,12 @@ const page = () => {
       body: JSON.stringify({
         steps: steps,
         title: titleRef.current.value,
-        color: colorRef.current.value
+        color: colorRef.current.value,
+        bgcolor: bgcolorRef.current.value,
+        textcolor: textcolorRef.current.value,
+        arrowcolor: arrowcolorRef.current.value,
+        overlaycolor: overlaycolorRef.current.value,
+        width: widthRef.current.value
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -68,6 +83,7 @@ const page = () => {
         console.log(response.status);
         if (response.status === 200) {
           toast.success('Tour successfully created !');
+          router.push('/user/profile');
 
         } else {
           toast.error('Some Error Occured');
@@ -121,6 +137,12 @@ const page = () => {
         <Grid grow>
           <Grid.Col span={6}> <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} /></Grid.Col>
           <Grid.Col span={6}><TextInput ref={colorRef} label="Color" type='color' placeholder="Enter your Primary Color " mb={20} /> </Grid.Col>
+          <Grid.Col span={6}><TextInput ref={bgcolorRef} label="Background Color" type='color' placeholder="Enter your Background Color " mb={20} /> </Grid.Col>
+          <Grid.Col span={6}><TextInput ref={textcolorRef} label="Text Color" type='color' placeholder="Enter your Text Color " mb={20} /> </Grid.Col>
+          <Grid.Col span={6}><TextInput ref={arrowcolorRef} label="Arrow Color" type='color' placeholder="Enter your Arrow Color " mb={20} /> </Grid.Col>
+          <Grid.Col span={6}><TextInput ref={overlaycolorRef} label="Overlay Color" type='color' placeholder="Enter your Overlay Color " mb={20} /> </Grid.Col>
+          <Grid.Col span={6}><TextInput ref={widthRef} label="Width" type='text' placeholder="Enter your Width  " mb={20} /> </Grid.Col>
+
         </Grid>
 
       </Container>
