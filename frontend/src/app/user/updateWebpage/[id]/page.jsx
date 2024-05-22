@@ -3,7 +3,7 @@ import { Button, Center, Container, Modal, Paper, TextInput, Textarea, Title } f
 import React, { useEffect, useState } from 'react'
 import WebpageTable from '../../manage-webpage/webpageTable'
 import classes from './updatewebpage.module.css'
-import { Jost } from 'next/font/google'
+import { Jost, Rammetto_One } from 'next/font/google'
 import { useParams, useRouter } from 'next/navigation'
 import useAppContext from '@/context/AppContext';
 import { Form, Formik, useFormik } from 'formik';
@@ -13,6 +13,7 @@ import toast from 'react-hot-toast';
 
 
 const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 
 const updateWebpage = () => {
@@ -90,8 +91,8 @@ const updateWebpage = () => {
         <Container my={40} mt={20} fluid  >
 
           <Paper withBorder shadow="md" p={30} mt={30} radius="md" className={classes.paper}>
-            <Title ta="center" className={classes.title}>
-              Webpage
+            <Title ta="center" mb={70} className={clsx(classes.title,fonts.className)}>
+            <span style={{color:'white'}}>Update</span>  Webpage
             </Title>
 
             <form onSubmit={webpageForm.handleSubmit}>
@@ -104,6 +105,7 @@ const updateWebpage = () => {
                 value={webpageForm.values.name}
                 className="form-control"
                 error={webpageForm.touched.name && webpageForm.errors.name}
+                mb={30}
               />
 
 
@@ -115,6 +117,7 @@ const updateWebpage = () => {
                 value={webpageForm.values.address}
                 className="form-control"
                 error={webpageForm.touched.address && webpageForm.errors.address}
+                mb={30}
               />
 
 
@@ -126,11 +129,12 @@ const updateWebpage = () => {
                 value={webpageForm.values.description}
                 className="form-control"
                 error={webpageForm.touched.description && webpageForm.errors.description}
+                mb={70}
               />
 
               <Button type='submit' fullWidth mt="xl" variant='filled' color='black'
                 className={clsx(classes.control, font.className)}>
-                Update WebPage
+                Update 
               </Button>
             </form>
 

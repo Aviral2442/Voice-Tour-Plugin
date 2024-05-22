@@ -1,25 +1,35 @@
 .title {
-    font-family:
-      Greycliff CF,
-      var(--mantine-font-family);
-    font-weight: 900;
-    color: white;
-  }
-  .Button{
-    color: white;
-    background-color: black;
-  }
-  .Container{
+ 
+  font-weight: 900;
+  color: #66ff00;
+}
 
-    height: 90vh;
-    padding: 10px;
-  }
- .control{
+.Button {
+  color: white;
+  background-color: black;
+}
+
+.Container {
+  height: 90vh;
+  padding: 10px;
+}
+
+.control {
   margin-top: 10px;
-    letter-spacing: 1px;
-    padding: 10px;
-  }
- .paper{
+  letter-spacing: 1px;
+  padding: 10px;
+  background-color: #66ff00;
+  color: black;
+}
+
+.control:hover {
+  background-color: #66ff00;
+  color: black;
+}
+
+.paper {
+  height: 80vh;
+  border-left: 3px solid #66ff00;
   background-color: black;
   color: white;
- }
+}

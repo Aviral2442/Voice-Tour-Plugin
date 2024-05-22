@@ -57,8 +57,14 @@ const Profile = () => {
 
       <Table.Td>{row.title}</Table.Td>
       <Table.Td>{row._id}</Table.Td>
-      <Table.Td>{row.user}</Table.Td>
-      <Table.Td>{new Date(row.createdAt).toLocaleString()}</Table.Td>
+      {/* <Table.Td>{row.user}</Table.Td> */}
+      <Table.Td>{row.color}</Table.Td>
+      <Table.Td>{row.bgcolor}</Table.Td>
+      <Table.Td>{row.textcolor}</Table.Td>
+      <Table.Td>{row.arrowcolor}</Table.Td>
+      <Table.Td>{row.overlaycolor}</Table.Td>
+      <Table.Td>{row.width}</Table.Td>
+      {/* <Table.Td>{new Date(row.createdAt).toLocaleString()}</Table.Td> */}
       <Table.Th><Anchor href={"/user/updateTour/" + row._id} >Edit</Anchor></Table.Th>
       <Table.Th><Button varient='light' color='red' onClick={e => deleteTour(row._id)} >Trash</Button></Table.Th>
 
@@ -105,7 +111,7 @@ const Profile = () => {
       <Table.Td>{row2.name}</Table.Td>
       <Table.Td>{row2.address}</Table.Td>
       <Table.Td>{row2.user}</Table.Td>
-      {/* <Table.Td>{row2.description}</Table.Td> */}
+            {/* <Table.Td>{row2.description}</Table.Td> */}
       <Table.Td>{new Date(row2.createdAt).toLocaleString()}</Table.Td>
       <Table.Th><Anchor href={"/user/updateWebpage/" + row2._id} >Edit</Anchor></Table.Th>
 
@@ -139,15 +145,21 @@ const Profile = () => {
       {/* data for Tour Navigator */}
       <Container fluid p={10} className={classes.Container}>
         <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Tours </Badge>
-        <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
+        <Table className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
           >
             <Table.Tr >
               <Table.Th>Title</Table.Th>
               <Table.Th>Tour Id</Table.Th>
-              <Table.Th>User Id</Table.Th>
-              <Table.Th>CreateAt</Table.Th>
+              {/* <Table.Th>User Id</Table.Th> */}
+              <Table.Th>Color</Table.Th>
+              <Table.Th>Background Color</Table.Th>
+              <Table.Th>Text Color</Table.Th>
+              <Table.Th>Arrow Color</Table.Th>
+              <Table.Th>Overlay Color</Table.Th>
+              <Table.Th>Width</Table.Th>
+              {/* <Table.Th>CreateAt</Table.Th> */}
               <Table.Th>Edit </Table.Th>
               <Table.Th>Delete</Table.Th>
             </Table.Tr>
