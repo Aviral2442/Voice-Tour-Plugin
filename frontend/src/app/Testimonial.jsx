@@ -13,7 +13,7 @@ const Testimonial = () => {
     return (
 
         <Carousel
-        className={classes.Carousel}
+            className={classes.Carousel}
             withIndicators
             classNames={classes}
 
@@ -34,17 +34,17 @@ const Testimonial = () => {
                         <Grid grow gutter="xl" >
                             <Grid.Col span={3} >
                                 <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
-                                    <Avatar src='ava.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
+                                    <Avatar src='testimonial1.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
 
                             <Grid.Col span={7}>
                                 <Text fw={700} className={classes.name}>
-                                    Sarah M
+                                    Sophia Wilson
                                 </Text>
                                 <Text c="dimmed" fz="sm" >
-                                    @sarahm
+                                    @sophia_w
                                 </Text>
                                 <Text className={classes.review} >
                                     Using the Voice Assistant on this website has been a game-changer for me. It's so intuitive and easy to use, and it's made navigating complex websites a breeze!
@@ -67,18 +67,18 @@ const Testimonial = () => {
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
-                            <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
-                                    <Avatar src='ava.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
+                                <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <Avatar src='testimonial2.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
 
                             <Grid.Col span={7}>
                                 <Text fw={700} className={classes.name}>
-                                    John D
+                                    Sarah Thompson
                                 </Text>
                                 <Text c="dimmed" fz="sm" >
-                                    @johnd
+                                    @sarah_t
                                 </Text>
                                 <Text className={classes.review} >
                                     I'm amazed by the accuracy and responsiveness of the Voice Assistant. It's like having a personal guide right there to help me find what I need quickly and efficiently.
@@ -87,7 +87,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                <Avatar src='instalogo.jpg' alt="it's me" style={{ width: rem(42), height: rem(42) }} />
+                                    <Avatar src='instalogo.jpg' alt="it's me" style={{ width: rem(42), height: rem(42) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -102,18 +102,18 @@ const Testimonial = () => {
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
-                            <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
-                                    <Avatar src='ava.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
+                                <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <Avatar src='testimonial3.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
 
                             <Grid.Col span={7}>
                                 <Text fw={700} className={classes.name}>
-                                    Emily L
+                                    Aarti Joshi
                                 </Text>
                                 <Text c="dimmed" fz="sm" >
-                                    @emilyl
+                                    @aartijoshi_trust
                                 </Text>
                                 <Text className={classes.review} >
                                     As someone with visual impairment, the Voice Assistant has truly enhanced my online experience. It's incredibly empowering to be able to navigate websites with just my voice.
@@ -122,7 +122,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62),marginTop:'-10px' }} />
+                                    <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62), marginTop: '-10px' }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -138,18 +138,18 @@ const Testimonial = () => {
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
-                            <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
-                                    <Avatar src='ava.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
+                                <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <Avatar src='testimonial14.avif' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
 
                             <Grid.Col span={7}>
                                 <Text fw={700} className={classes.name}>
-                                    Michael P
+                                    Rajesh Kumar
                                 </Text>
                                 <Text c="dimmed" fz="sm" >
-                                    @michaelp
+                                    @rajeshkumar_in
                                 </Text>
                                 <Text className={classes.review} >
                                     The Voice Assistant has made browsing the web so much more convenient for me. I can multitask while navigating websites, which saves me a ton of time and effort.
@@ -158,7 +158,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
+                                    <Avatar src='https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/x/x_sharing_card.png.twimg.768.png' alt="it's me" style={{ width: rem(52), height: rem(52) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -173,18 +173,18 @@ const Testimonial = () => {
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
-                            <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
-                                    <Avatar src='ava.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
+                                <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <Avatar src='testimonial5.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
 
                             <Grid.Col span={7}>
                                 <Text fw={700} className={classes.name}>
-                                    Lisa S
+                                    James Rodriguez
                                 </Text>
                                 <Text c="dimmed" fz="sm" >
-                                    @lisas
+                                    @james_rodriguez
                                 </Text>
                                 <Text className={classes.review} >
                                     I was skeptical at first, but after trying out the Voice Assistant, I'm a believer! It's so natural and intuitive, and I find myself using it all the time now.
@@ -193,7 +193,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black' >
-                                <Avatar src='instalogo.jpg' alt="it's me" style={{ width: rem(42), height: rem(42) }} />
+                                    <Avatar src='instalogo.jpg' alt="it's me" style={{ width: rem(42), height: rem(42) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
@@ -208,18 +208,18 @@ const Testimonial = () => {
 
                         <Grid grow gutter="xl">
                             <Grid.Col span={3} >
-                            <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
-                                    <Avatar src='ava.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
+                                <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <Avatar src='testimonial6.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                 </ActionIcon>
                             </Grid.Col>
 
                             <Grid.Col span={7}>
                                 <Text fw={700} className={classes.name}>
-                                    Alex W
+                                    William Davis
                                 </Text>
                                 <Text c="dimmed" fz="sm" >
-                                    @alexw
+                                    @will_davis
                                 </Text>
                                 <Text className={classes.review} >
                                     I love how customizable the Voice Assistant is. I can tailor it to my preferences and make my browsing experience truly personalized. It's like having my own virtual assistant!
@@ -228,7 +228,7 @@ const Testimonial = () => {
                             <Grid.Col span={2}>
                                 {"  "}
                                 <ActionIcon className={classes.icon} size={60} radius='md' color='black'>
-                                <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62),marginTop:'-10px' }} />
+                                    <Avatar src='https://t3.ftcdn.net/jpg/04/34/58/06/360_F_434580600_xR5BbZNoArCN8LAWsw74x50HeKapncoa.jpg' alt="it's me" style={{ width: rem(72), height: rem(62), marginTop: '-10px' }} />
 
                                 </ActionIcon>
                             </Grid.Col>

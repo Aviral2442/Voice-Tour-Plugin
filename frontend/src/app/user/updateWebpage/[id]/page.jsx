@@ -40,7 +40,7 @@ const updateWebpage = () => {
 
   const webpageValidationSchema = Yup.object().shape({
     name: Yup.string().required('Name is Required').min(3, 'Name is Too Short'),
-    address: Yup.string().required('Address is Required').min(6, 'Address is Too Short'),
+    address: Yup.string().required('Address is Required').min(5, 'Address is Too Short'),
     description: Yup.string().required('Description is Required').min(8, 'Description is Too Short')
   });
 

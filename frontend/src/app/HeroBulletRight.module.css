@@ -10,7 +10,7 @@ padding-bottom: 30px;
 }
 
 .Paper {
-  background-color: #262828;
+  background-color: black;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin: 0;

@@ -54,7 +54,7 @@ const SearchPlugin = ({ ownerId }) => {
 
   return (
     <div>
-        <Button variant='filled' size='xl' color='black' onClick={spotlight.open}> VT Search </Button>
+        <Button variant='filled' size='lg' color='black' onClick={spotlight.open}> VT Search </Button>
 
         <Spotlight
           shortcut={['mod + K']}

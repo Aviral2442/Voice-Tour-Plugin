@@ -26,7 +26,7 @@ const mockdata = [
     {
         title: "Activate the Voice Assistant",
         description:
-            "Simply click the 'Activate Assistant' button or use the voice command to start interacting with our intelligent assistant.",
+            "Simply click the Activate Assistant button or use the voice command to start interacting with our intelligent assistant.",
         icon: IconMicrophone
     },
     {

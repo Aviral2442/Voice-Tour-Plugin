@@ -135,9 +135,10 @@ export const VoiceProvider = ({ children, ownerId }) => {
 
     const commands = [
         {
-            command: 'Open :pageName page',
+            command: 'Open * page',
             callback: (pageName) => {
                 console.log('Opening page: ', pageName);
+                // pageName.command = pageName.command.replace(/\s/g, '');
                 voicePageNavigator(pageName)
             }
         },
@@ -152,7 +153,8 @@ export const VoiceProvider = ({ children, ownerId }) => {
             command: 'signup page open karo',
             callback: (pageName) => {
                 console.log('Opening page: ', pageName);
-                voicePageNavigator('signup')
+
+                voicePageNavigator('sign up')
             }
         },
         {
@@ -481,6 +483,7 @@ export const VoiceProvider = ({ children, ownerId }) => {
 
     const voicePageNavigator = (pageName) => {
         const page = webPagesData.find(page => pageName.toLowerCase().includes(page.pageName.toLowerCase()));
+        console.log(pageName);
         if (page) {
             voiceResponse(`Here is your ${pageName} page...`);
             window.location.href = page.pagePath
@@ -492,28 +495,30 @@ export const VoiceProvider = ({ children, ownerId }) => {
     const [webPagesData, setWebPagesData] = useState([]);
 
     const fetchtourData = () => {
-  
-      fetch('http://localhost:5000/webpage/getbyowner/'+ownerId)
-        .then((response) => {
-          console.log(response.status);
-          return response.json();
-        })
-        .then((data) => {
-          console.log(data);
-          setWebPagesData(data.map(webpage => (
-            {
-              pageName: webpage.name,
-              pagePath: webpage.address
-            }
-          )));
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+
+        fetch('http://localhost:5000/webpage/getbyowner/' + ownerId)
+            .then((response) => {
+                console.log(response.status);
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                const temp = data.map(webpage => (
+                    {
+                        pageName: webpage.name,
+                        pagePath: webpage.address
+                    }
+                ));
+                console.log(temp);
+                setWebPagesData(temp);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
-  
+
     useEffect(() => {
-      fetchtourData();
+        fetchtourData();
     }, []);
 
     useEffect(() => {
@@ -594,8 +599,8 @@ export const VoiceProvider = ({ children, ownerId }) => {
                         }
                     }}>{listening ?
                         (
-                            <ActionIcon 
-                                variant="filled" color="#282828" autoContrast size="xl" radius="xl" className='text-white pointer' style={{cursor:'pointer'}} loading loaderProps={{ type: 'dots' }}>
+                            <ActionIcon
+                                variant="filled" color="#282828" autoContrast size="xl" radius="xl" className='text-white pointer' style={{ cursor: 'pointer' }} loading loaderProps={{ type: 'dots' }}>
                                 <IconPlayerRecordFilled style={{ display: 'inline' }} color='#f00' /> listening...
                             </ActionIcon>
                         ) : (

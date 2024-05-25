@@ -31,7 +31,7 @@ import 'aos/dist/aos.css'
 import Testimonial from './Testimonial'
 import HeroBulletRight from './HeroBulletRight'
 import HeroBulletLeft from './HeroBulletLeft'
-import { Jost, Poppins, Rammetto_One, Whisper } from 'next/font/google'
+import { Allura, Josefin_Sans, Jost, Poppins, Rammetto_One, Whisper } from 'next/font/google'
 import clsx from 'clsx'
 import UseCases from './UseCases'
 import Keyfeatures from './Keyfeatures'
@@ -39,6 +39,8 @@ import Keyfeatures from './Keyfeatures'
 const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const whisper = Poppins({ subsets: ['latin'], weight: ['100', '400'] });
+const fonts = Allura({ subsets: ['latin'], weight: [ '400'] });
+const fontss = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 const page = () => {
 
@@ -59,11 +61,11 @@ const page = () => {
                 <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br />
                   <span className={clsx(classes.subtitle, font.className)}>VoiceTourNavigator </span><br />
                   Plugin System</Title>
-                <Text mt="md" className={classes.description}>
+                <Text mt="md" size='lg' className={clsx(classes.description,fontss.className)}>
                   Revolutionizing Website Navigation with Voice Technology
                 </Text>
 
-                <List className={classes.List} size="md" mt="xl" spacing="sm"
+                <List className={clsx(classes.List,fontss.className)} size="md" mt="xl" spacing="sm"
 
                   icon={
                     <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#66FF00' }} >

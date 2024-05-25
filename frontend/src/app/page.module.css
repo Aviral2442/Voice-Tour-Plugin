@@ -51,6 +51,7 @@
 }
 
 .control {
+
   height: rem(50px);
   padding-left: rem(38px);
   padding-right: rem(38px);
@@ -101,14 +102,12 @@
   background-color: #e7eff9;
   background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
   -webkit-background-clip: text;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .description {
   background-color: #e7eff9;
   background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
   -webkit-background-clip: text;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 .Menu{

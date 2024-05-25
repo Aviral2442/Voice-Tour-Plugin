@@ -144,7 +144,7 @@ export function Footer() {
                                     <Button
                                         color={subscribed ? 'green' : '#66ff00'}
                                         onClick={handleSubscribe}
-                                        disabled={!email || subscribed || invalidEmail}
+                                        // disabled={!email || subscribed || invalidEmail}
                                         mt={8} variant='outline' fullWidth type="submit" className={font.className}>
                                         Subscribe
                                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">

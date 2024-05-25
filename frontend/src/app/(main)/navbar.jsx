@@ -30,7 +30,7 @@ import { ActionIcon, useMantineColorScheme, useComputedColorScheme } from '@mant
 import Lottie from 'lottie-react';
 import avatar from './avatar.json'
 import clsx from 'clsx'
-import { Cormorant_Garamond, Jost, Londrina_Solid } from 'next/font/google'
+import { Cormorant_Garamond, Jost, Libre_Baskerville, Lilita_One, Londrina_Solid } from 'next/font/google'
 import { useState } from "react"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import '@mantine/spotlight/styles.css';
@@ -39,6 +39,8 @@ import { usePathname, useRouter } from 'next/navigation';
 
 const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+const fontss = Lilita_One({ subsets: ['latin'], weight: [ '400'] });
+const fontsss =Libre_Baskerville ({ subsets: ['latin'], weight: [ '400', '700'] });
 
 
 // const mockdata = [
@@ -169,7 +171,7 @@ function Navbar() {
         </Menu.Dropdown>
       </Menu>
     } else {
-      return <Button component={Link} href='/login' variant='outline' color='#66ff00' className={clsx(classes.button, font.className)}>
+      return <Button component={Link} href='/login' variant='outline' color='#66ff00' className={clsx(classes.button, fonts.className)}>
         <Lottie animationData={avatar} className={classes.avi} /> Login
       </Button>
     }
@@ -185,13 +187,13 @@ function Navbar() {
 
           <Group visibleFrom="sm">
             <Group h="100%" gap={0} visibleFrom="sm" >
-              <a href="http://localhost:3000/" className={clsx(classes.link, font.className, path === '/' && classes.links)}>
+              <a href="http://localhost:3000/" className={clsx(classes.link, fonts.className, path === '/' && classes.links)}>
                 HOME
               </a>
-              <a href="/voiceAssistant" className={clsx(classes.link, font.className, path === '/voiceAssistant' && classes.links)}>
+              <a href="/voiceAssistant" className={clsx(classes.link, fonts.className, path === '/voiceAssistant' && classes.links)}>
                 VOICE ASSISTANT
               </a>
-              <a href="/tourGenerator" className={clsx(classes.link, font.className, path === '/tourGenerator' && classes.links)}>
+              <a href="/tourGenerator" className={clsx(classes.link, fonts.className, path === '/tourGenerator' && classes.links)}>
                 TOUR GENERATOR
               </a>
               {/* <a href="#" className={clsx(classes.link, font.className)}>
@@ -241,10 +243,10 @@ function Navbar() {
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard> */}
-              <a href="/about" className={clsx(classes.link, font.className, path === '/about' && classes.links)}>
+              <a href="/about" className={clsx(classes.link, fonts.className, path === '/about' && classes.links)}>
                 ABOUT US
               </a>
-              <a href="/contact" className={clsx(classes.link, font.className, path === '/contact' && classes.links)}>
+              <a href="/contact" className={clsx(classes.link, fonts.className, path === '/contact' && classes.links)}>
                 CONTACT US
               </a>
             </Group>
