@@ -1,7 +1,7 @@
 'use client'
 import { Anchor, Autocomplete, Text, Title } from '@mantine/core'
 import React from 'react'
-import classes from './helpCenter.module.css'
+import classes from './help.module.css'
 import { IconSearch } from '@tabler/icons-react'
 
 
