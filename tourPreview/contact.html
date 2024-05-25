@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="http://localhost:5000/main.css">
+    <link rel="stylesheet" href="http://localhost:5000/tourmain.css">
+    <link rel="stylesheet" href="http://localhost:5000/spotlight.css">
 </head>
-<body>
-    
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+    <search owner-id="664e361512b6f69a12087641" />
+    <script src="http://localhost:5000/main.js"></script>
+    <tour owner-id="abcd" tour-id="664ec19c0856feb8cfa8c10a">
+    <!-- Container -->
+    <div style="max-width: 600px; margin: 50px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <!-- Header -->
+        <h2 style="text-align: center; color: #333;">Contact Us</h2>
+        <p style="text-align: center; color: #666;">We'd love to hear from you! Fill out the form below to get in touch.</p>
+        
+        <!-- Contact Form -->
+        <form>
+            <label for="name" style="display: block; margin: 10px 0 5px; color: #333;">Name:</label>
+            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="email" style="display: block; margin: 10px 0 5px; color: #333;">Email:</label>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="message" style="display: block; margin: 10px 0 5px; color: #333;">Message:</label>
+            <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+            <button type="submit" style="display: block; width: 100%; padding: 10px; margin-top: 20px; background-color: #28a745; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+        </form>
+    </div>
+</tour>
+<script src="http://localhost:5000/tourmain.js"></script>
 </body>
 </html>
