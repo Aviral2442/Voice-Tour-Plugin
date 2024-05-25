@@ -14,14 +14,6 @@ const HelpCenter = () => {
       <Text className={classes.para} >The Tour Generator is a feature-rich component designed to elevate user engagement and enhance the browsing experience.
         Here's what you need to know:</Text>
 
-      {/* <Autocomplete
-            className={classes.search}
-            placeholder="Search"
-            leftSection={<IconSearch />}
-            data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
-            visibleFrom="xs"
-          /> */}
-
       <div className="help-center-page">
         <h1 style={{ color: '#ffffff' }} > Help Center</h1>
         <section className="help-category">
