@@ -119,7 +119,7 @@ export function Footer() {
                     </Group>
                     <Group className={classes.colms} >
                         <div>
-                            <Title order={3} className={fonts.className}>Documentation's</Title>
+                            <Title order={3} className={fonts.className}>Documentation&apos;s</Title>
                             <p><Anchor c="#c3cbdc" component={Link} href="/voiceAssistant" className={font.className}>Voice Assistant</Anchor> </p>
                             <p><Anchor c="#c3cbdc" component={Link} href="/tourGenerator" className={font.className}>Tour generator</Anchor> </p>
                         </div>

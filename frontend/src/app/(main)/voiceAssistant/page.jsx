@@ -38,7 +38,7 @@ const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 
-const page = () => {
+const Page = () => {
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -155,4 +155,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
