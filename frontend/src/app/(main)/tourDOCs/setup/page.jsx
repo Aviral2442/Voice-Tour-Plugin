@@ -34,7 +34,7 @@ const Setup = () => {
     }, [])
 
     const getTourId = tourIdList.map(row => (
-        <Code> {row.title}</Code>
+        <Code key={row._id} > {row.title}</Code>
     ))
 
     return (
