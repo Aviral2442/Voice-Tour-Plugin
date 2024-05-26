@@ -26,7 +26,7 @@ const TourFAQ = () => {
 
                 <Container p={20} size={900}>
                     <Text size="lg" c="dimmed" className={classes.description} data-aos="fade-up">
-                        Tackle prevalent inquiries and issues pertaining to the Tour Generator's capabilities.
+                        Tackle prevalent inquiries and issues pertaining to the Tour Generator&apos;s capabilities.
                         Offer thorough responses to questions concerning how to create tours, compatibility with different types
                          of content and websites, and options for personalizing tours to user preferences.
 
@@ -43,7 +43,7 @@ const TourFAQ = () => {
                         variant="default"
                         color="#5BFF04"
                     >
-                        Tour Generator FAQ's
+                        Tour Generator FAQ'&apos;s
                         &nbsp;
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5BFF04" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />

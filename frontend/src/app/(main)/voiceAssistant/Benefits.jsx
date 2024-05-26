@@ -57,7 +57,7 @@ const KeyFeatures = () => {
                 color='black'
                 radius="md"
             >
-                <Image src={item.image} />
+                <Image src={item.image} alt='icon' />
             </ThemeIcon>
 
             <div>
@@ -75,7 +75,6 @@ const KeyFeatures = () => {
 
             <Title className={classes.title} ta={"center"} data-aos="fade-up">
                 Bene<span className={classes.highlight}>fits</span>
-
             </Title>
 
 

@@ -41,7 +41,7 @@ const page = () => {
                 {/* Welcome to the */}
               </Title>
               <Text fz='lg' mt="md" className={fonts.className}>
-                Where you'll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature
+                Where you&apos;ll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature
                 revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to
                 cumbersome mouse clicks and keyboard typing – with our Voice Assistant, browsing becomes intuitive and effortless.
               </Text>
@@ -52,7 +52,7 @@ const page = () => {
                   size="md"
                   className={classes.control}
                   component={Link}
-                  href="/user/generate-tour"
+                  // href="/user/generate-tour"
                   variant='outline'
                   color='#66ff00'
                   href ="/tourDOCs"
@@ -85,7 +85,7 @@ const page = () => {
                 </Button>
               </Group>
             </div>
-            <Image src='tourSec1.png' className={classes.image} />
+            <Image src='tourSec1.png'  alt='tour' className={classes.image} />
           </div>
         </Container>
 

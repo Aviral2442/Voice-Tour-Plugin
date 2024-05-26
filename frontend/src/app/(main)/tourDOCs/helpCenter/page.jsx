@@ -12,7 +12,7 @@ const HelpCenter = () => {
       <Title order={1} mb={8} c="#ffffff">Voice & Tour Help Center</Title>
 
       <Text className={classes.para} >The Tour Generator is a feature-rich component designed to elevate user engagement and enhance the browsing experience.
-        Here's what you need to know:</Text>
+        Here&apos;s what you need to know:</Text>
 
       <div className="help-center-page">
         <h1 style={{ color: '#ffffff' }} > Help Center</h1>

@@ -42,7 +42,7 @@ const whisper = Poppins({ subsets: ['latin'], weight: ['100', '400'] });
 const fonts = Allura({ subsets: ['latin'], weight: [ '400'] });
 const fontss = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
-const page = () => {
+const Page = () => {
 
 
   useEffect(() => {
@@ -155,7 +155,7 @@ const page = () => {
                 </Group>
 
               </div>
-              <Image src="voicesearchmain.jpg" className={classes.image} data-aos="fade-up" />
+              <Image src="voicesearchmain.jpg" alt='voice search ' className={classes.image} data-aos="fade-up" />
 
             </div>
           </Container>
@@ -186,4 +186,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

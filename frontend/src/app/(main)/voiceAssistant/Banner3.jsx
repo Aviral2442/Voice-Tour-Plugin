@@ -22,7 +22,7 @@ const Banner3 = () => {
                 Every day, more than half of mobile users rely on voice commands to find information, browse social media, and conduct local searches. With twenty percent of all mobile searches now performed by voice, optimizing for this interaction is crucial. Our voice assistant plugin brings cutting-edge voice search capabilities to both mobile apps and mobile websites, delivering an effortless and intuitive user experience.                </Text>
 
             </div>
-            <Image src="banner.png" className={classes.image} />
+            <Image src="banner.png" alt='voice banner' className={classes.image} />
         </div>
     )
 }

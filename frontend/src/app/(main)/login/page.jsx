@@ -146,7 +146,7 @@ const login = useGoogleLogin({
                       </Group>
                       <Group justify="space-between" mt="xl">
                         <Anchor component={Link} underline="hover" c="dimmed" href="/signup" size="xs">
-                          Don't have an account? Register
+                          Don&apos;t have an account? Register
                         </Anchor>
                         <Button type="submit" className={classes.button} variant="outline" color="black">
                           <p className={classes.p}>Login</p>

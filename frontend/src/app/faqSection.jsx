@@ -44,14 +44,14 @@ export default function Faqsection() {
                     <Accordion.Control>
                     Is the Voice Assistant compatible with all websites?
                     </Accordion.Control>
-                    <Accordion.Panel>While our Voice Assistant is designed to work with most websites, there may be some compatibility limitations depending on the website's structure and functionality. However, we continuously strive to improve compatibility and usability across a wide range of websites.</Accordion.Panel>
+                    <Accordion.Panel>While our Voice Assistant is designed to work with most websites, there may be some compatibility limitations depending on the website&apos;s structure and functionality. However, we continuously strive to improve compatibility and usability across a wide range of websites.</Accordion.Panel>
                 </Accordion.Item>
 
                 <Accordion.Item className={classes.item} value="payment" data-aos="fade-up">
                     <Accordion.Control>
                     How can I provide feedback or report issues with the platform?
                     </Accordion.Control>
-                    <Accordion.Panel>We value your feedback and are always here to assist you. Feel free to reach out to our support team through the contact form on our website, and we'll be happy to address any questions, concerns, or feedback you may have.</Accordion.Panel>
+                    <Accordion.Panel>We value your feedback and are always here to assist you. Feel free to reach out to our support team through the contact form on our website, and we&apos;ll be happy to address any questions, concerns, or feedback you may have.</Accordion.Panel>
                     {/* <Accordion.Panel>{placeholder}</Accordion.Panel> */}
                 </Accordion.Item>
             </Accordion>

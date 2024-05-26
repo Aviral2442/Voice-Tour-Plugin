@@ -16,7 +16,7 @@ const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 
-const updateWebpage = () => {
+const UpdateWebpage = () => {
 
   const { id } = useParams();
   const [updateWebpageData, setUpdateWebpage] = useState(null);
@@ -145,4 +145,4 @@ const updateWebpage = () => {
   )
 }
 
-export default updateWebpage
+export default UpdateWebpage

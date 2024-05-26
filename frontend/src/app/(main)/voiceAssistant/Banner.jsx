@@ -19,11 +19,11 @@ const Banner = () => {
       <div className={classes.body} >
         <Title className={classes.title}><span style={{ color: '#66ff00' }}>Experience</span>  Voice Command  <br /><span style={{ color: '#66ff00' }}>And</span> <br />   <span style={{ color: '#66ff00' }}>Free</span> Navigation  </Title>
         <Text fw={500} fz="lg" mb={5} className={font.className}>
-          Unlock the power of voice command and navigation with our Voice Assistant Plugin. Seamlessly integrate voice functionality into your website and offer users a hands-free browsing experience. Try it out for free and see how it can enhance your website's accessibility and user experience.
+          Unlock the power of voice command and navigation with our Voice Assistant Plugin. Seamlessly integrate voice functionality into your website and offer users a hands-free browsing experience. Try it out for free and see how it can enhance your website&apos;s accessibility and user experience.
         </Text>
 
       </div>
-      <Image src="banner.png" className={classes.image} />
+      <Image src="banner.png" alt='voice banner' className={classes.image} />
     </div>
   )
 }

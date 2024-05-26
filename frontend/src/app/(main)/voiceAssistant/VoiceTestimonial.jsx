@@ -42,7 +42,7 @@ const Testimonial = () => {
                             <Group className={classes.midcontent} >
                                 <Text fw={700} className={classes.name}>Rohit Singh</Text>
                                 <Text size="sm" className={classes.review}>
-                                    Using the Voice Assistant on this website has been a game-changer for me. It's so intuitive and easy to use, and it's made navigating complex websites a breeze!
+                                    Using the Voice Assistant on this website has been a game-changer for me. It&apos;s so intuitive and easy to use, and it&apos;s made navigating complex websites a breeze!
                                 </Text>
                             </Group>
                         </Card>
@@ -60,7 +60,7 @@ const Testimonial = () => {
                             <Group className={classes.midcontent} >
                                 <Text fw={700} className={classes.name}>Vijay Nair</Text>
                                 <Text size="sm" className={classes.review}>
-                                    I'm amazed by the accuracy and responsiveness of the Voice Assistant. It's like having a personal guide right there to help me find what I need quickly and efficiently.                            </Text>
+                                    I&apos;m amazed by the accuracy and responsiveness of the Voice Assistant. It&apos;s like having a personal guide right there to help me find what I need quickly and efficiently.                            </Text>
                             </Group>
                         </Card>
                     </Container>
@@ -78,7 +78,7 @@ const Testimonial = () => {
                             <Group className={classes.midcontent} >
                                 <Text fw={700} className={classes.name}>Neha Verma</Text>
                                 <Text size="sm" className={classes.review}>
-                                    As someone with visual impairment, the Voice Assistant has truly enhanced my online experience. It's incredibly empowering to be able to navigate websites with just my voice.                            </Text>
+                                    As someone with visual impairment, the Voice Assistant has truly enhanced my online experience. It&apos;s incredibly empowering to be able to navigate websites with just my voice.                            </Text>
                             </Group>
                         </Card>
                     </Container>
@@ -116,7 +116,7 @@ const Testimonial = () => {
                             <Group className={classes.midcontent} >
                                 <Text fw={700} className={classes.name}>Ramesh Patel</Text>
                                 <Text size="sm" className={classes.review}>
-                                    I love how customizable the Voice Assistant is. I can tailor it to my preferences and make my browsing experience truly personalized. It's like having my own virtual assistant!                            </Text>
+                                    I love how customizable the Voice Assistant is. I can tailor it to my preferences and make my browsing experience truly personalized. It&apos;s like having my own virtual assistant!                            </Text>
                             </Group>
                         </Card>
                     </Container>
@@ -134,7 +134,7 @@ const Testimonial = () => {
                             <Group className={classes.midcontent} >
                                 <Text fw={700} className={classes.name}> Daniel Anderson</Text>
                                 <Text size="sm" className={classes.review}>
-                                    I was skeptical at first, but after trying out the Voice Assistant, I'm a believer! It's so natural and intuitive, and I find myself using it all the time now                            </Text>
+                                    I was skeptical at first, but after trying out the Voice Assistant, I&apos;m a believer! It&apos;s so natural and intuitive, and I find myself using it all the time now                            </Text>
                             </Group>
                         </Card>
                     </Container>

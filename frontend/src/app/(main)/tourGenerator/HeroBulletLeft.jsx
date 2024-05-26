@@ -12,7 +12,7 @@ const HeroBulletLeft = () => {
                     <Paper shadow="xs" radius="xs" p="xl" className={classes.Paper}>
                         <Card shadow="sm" radius="md" withBorder className={classes.Card}>
                             <Card.Section>
-                                <Image src='chatbott.png' className={classes.image} />
+                                <Image src='chatbott.png' alt='chat bot' className={classes.image} />
                             </Card.Section>
                         </Card>
                     </Paper>

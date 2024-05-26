@@ -45,7 +45,7 @@ const VoiceFAQ = () => {
                         variant="default"
                        
                     >
-                        Voice Assistant FAQ's
+                        Voice Assistant FAQ&apos;s
                         &nbsp;
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5BFF04" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />

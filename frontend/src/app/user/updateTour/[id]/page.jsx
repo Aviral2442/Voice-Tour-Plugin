@@ -13,7 +13,7 @@ import { Formik } from 'formik';
 const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 
-const page = () => {
+const Page = () => {
   const { id } = useParams();
   const titleRef = useRef();
   const colorRef = useRef();
@@ -219,4 +219,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

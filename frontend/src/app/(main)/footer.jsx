@@ -74,7 +74,11 @@ export function Footer() {
                         <div>
                             <Group>
                                 <a href="https://www.facebook.com/" >
-                                    <svg className={classes.socialIcon} style={{ color: "white" }} className="w-[28px] h-[28px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg 
+                                    // className={classes.socialIcon}
+                                    
+                                    style={{ color: "white" }} 
+                                    className="w-[28px] h-[28px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                         <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd" />
                                     </svg>
                                 </a>
@@ -109,8 +113,8 @@ export function Footer() {
                     <Group className={classes.colms0} >
                         <div>
                             <Title order={3} className={fonts.className}> Quick Links</Title>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/faq" className={font.className}>Faq's</Anchor> </p>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/blog" className={font.className}>Blog's </Anchor> </p>
+                            <p><Anchor c="#c3cbdc" component={Link} href="/faq" className={font.className}>Faq&apos;s</Anchor> </p>
+                            <p><Anchor c="#c3cbdc" component={Link} href="/blog" className={font.className}>Blog&apos;s </Anchor> </p>
                         </div>
                     </Group>
                     <Group className={classes.colms} >

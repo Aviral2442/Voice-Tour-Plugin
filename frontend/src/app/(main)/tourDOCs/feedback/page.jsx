@@ -40,7 +40,7 @@ const Feedback = () => {
                 </section>
                 <section className="suggestions-section">
                     <h2>Share Your Suggestions</h2>
-                    <p>Have an idea for improvement? We'd love to hear it! Share your suggestions with us.</p>
+                    <p>Have an idea for improvement? We&apos;d love to hear it! Share your suggestions with us.</p>
                     <form onSubmit={handleSubmitSuggestions}>
                         <label htmlFor="suggestions">Suggestions:</label>
                         <textarea 

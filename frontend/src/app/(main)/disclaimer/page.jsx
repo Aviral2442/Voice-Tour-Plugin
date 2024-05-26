@@ -54,7 +54,7 @@ export function Disclaimer() {
           <br />
 
           <Title order={4}  mt="md">Limitation of Liability</Title>
-          <Text className={clsx(classes.text, font.className)}> Limit the website's liability for any damages or losses arising from reliance on the information or content provided on the website.
+          <Text className={clsx(classes.text, font.className)}> Limit the website&apos;s liability for any damages or losses arising from reliance on the information or content provided on the website.
           </Text>
           <br />
 

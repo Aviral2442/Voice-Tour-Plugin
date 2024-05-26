@@ -27,7 +27,7 @@ const VoiceIntro = () => {
                         </Text>
                         <br />
                         <Text  size="xl"  fz="xl"  className={fonts.className} >
-                            We're proud to introduce our innovative Voice Assistant feature, designed to revolutionize website navigation. Say goodbye to traditional mouse clicks and keyboard inputs – with our Voice Assistant, users can seamlessly interact with websites using natural language commands. Whether you're browsing articles, shopping for products, or exploring services, our intelligent assistant is here to guide you every step of the way. Experience a new level of convenience and accessibility with our Voice Assistant, available at your fingertips.
+                            We&apos;re proud to introduce our innovative Voice Assistant feature, designed to revolutionize website navigation. Say goodbye to traditional mouse clicks and keyboard inputs – with our Voice Assistant, users can seamlessly interact with websites using natural language commands. Whether you&apos;re browsing articles, shopping for products, or exploring services, our intelligent assistant is here to guide you every step of the way. Experience a new level of convenience and accessibility with our Voice Assistant, available at your fingertips.
                         </Text>
                         </Container>
                     {/* </div> */}
@@ -37,7 +37,7 @@ const VoiceIntro = () => {
                     <Paper shadow="xs" radius="xs" p="xl" className={classes.Paper}>
                         <Card shadow="sm" padding="lg" radius="md" withBorder c='#1B1919' className={classes.Card}>
                             <Card.Section>
-                                <Image src='voice.png' className={classes.image} />
+                                <Image src='voice.png' alt='voice img' className={classes.image} />
                             </Card.Section>
                         </Card>
                     </Paper>
@@ -51,7 +51,7 @@ const VoiceIntro = () => {
                     <Paper shadow="xs" radius="xs" p="xl" className={classes.Paper}>
                         <Card shadow="sm" padding="lg" radius="md" withBorder c='#1B1919' className={classes.Card}>
                             <Card.Section>
-                                <Image src='voice.png' className={classes.image} />
+                                <Image src='voice.png' alt='voice img' className={classes.image} />
                             </Card.Section>
                         </Card>
                     </Paper>
@@ -65,7 +65,7 @@ const VoiceIntro = () => {
                         </Text>
                         <br />
                         <Text  size="lg" fz="xl" className={fonts.className}>
-                        Discover the power of exploration with our interactive Tour Generator tool. At Voice & Tour PS, we understand that navigating complex websites can be daunting. That's why we've developed the Tour Generator – a user-friendly solution for creating personalized website tours. Simply specify your areas of interest, set your preferences, and let our Tour Generator do the rest. Whether you're a first-time visitor or a seasoned explorer, our tours offer a curated journey through the most relevant and engaging content on any website. Start exploring with confidence and ease using our Tour Generator.
+                        Discover the power of exploration with our interactive Tour Generator tool. At Voice & Tour PS, we understand that navigating complex websites can be daunting. That&apos;s why we&apos;ve developed the Tour Generator – a user-friendly solution for creating personalized website tours. Simply specify your areas of interest, set your preferences, and let our Tour Generator do the rest. Whether you&apos;re a first-time visitor or a seasoned explorer, our tours offer a curated journey through the most relevant and engaging content on any website. Start exploring with confidence and ease using our Tour Generator.
                         </Text>
                         </Container>
                     {/* </div> */}

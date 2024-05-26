@@ -61,7 +61,7 @@ const UseCases = () => {
                 color='black'
                 radius="md"
             >
-                <Image src={item.image} />
+                <Image src={item.image} alt='image ' />
             </ThemeIcon>
 
             <div>

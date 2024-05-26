@@ -49,7 +49,7 @@ export function TermsofService() {
           <br />
 
           <Title order={4} mt="md">Limitation of Liability</Title>
-          <Text className={clsx(classes.text, font.className)}> Limit the website's liability for damages arising from use of the website, including indirect, incidental, or consequential damages.
+          <Text className={clsx(classes.text, font.className)}> Limit the website&apos;s liability for damages arising from use of the website, including indirect, incidental, or consequential damages.
           </Text>
           <br />
 

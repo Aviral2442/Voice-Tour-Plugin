@@ -36,7 +36,7 @@ export function HeroBulletRight() {
                     <Paper shadow="xs" radius="xs" p="xl" className={classes.Paper}>
                         <Card shadow="sm" padding="lg" radius="md" withBorder bg="rgb(22, 18, 18)" className={classes.Card}>
                             <Card.Section>
-                                <Image src='GAMINg.png' className={classes.image} />
+                                <Image src='GAMINg.png' alt='gamming' className={classes.image} />
                             </Card.Section>
                         </Card>
                     </Paper>

@@ -15,12 +15,12 @@ const Banner2 = () => {
 
     return (
         <div className={classes.wrapper} data-aos="fade-up">
-            <Image src="banner.png" className={classes.image} />
+            <Image src="banner.png" alt='voice banner' className={classes.image} />
             <div className={classes.body} >
                 <Title className={classes.title}>Smart<span style={{ color: '#66ff00' }}> Voice</span>   Assistants
                 </Title>
                 <Text fw={500} fz="lg" mb={5} className={font.className}>
-                Enhance your website's interactivity with our advanced voice assistant capabilities. Let your users search by voice and get instant, precise results with our state-of-the-art voice search functionality. Whether you're integrating with Amazon Alexa or Google Assistant, our technology ensures a seamless, hands-free browsing experience.
+                Enhance your website&apos;s interactivity with our advanced voice assistant capabilities. Let your users search by voice and get instant, precise results with our state-of-the-art voice search functionality. Whether you&apos;re integrating with Amazon Alexa or Google Assistant, our technology ensures a seamless, hands-free browsing experience.
                 </Text>
 
             </div>

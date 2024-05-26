@@ -9,7 +9,7 @@ const Faq = () => {
             <div className={classes.mainContainer} >
                 {/* <Title order={1} c="#ffffff" >Getting started</Title> */}
 
-                <Title pt={'20'} order={1} c="#ffffff">FAQ's & Troubleshooting</Title>
+                <Title pt={'20'} order={1} c="#ffffff">FAQ&apos;s & Troubleshooting</Title>
 
                 <div className="faq-page">
                     <h1 className={classes.title}>Frequently Asked Questions</h1>
@@ -23,7 +23,7 @@ const Faq = () => {
                     </section>
                     <section className="faq-section">
                         <h2 className={classes.head}>Question 3: Can I customize the appearance of my tours?</h2>
-                        <p className={classes.para}>Yes, you can customize the appearance of your tours to match your website's branding and design aesthetic.</p>
+                        <p className={classes.para}>Yes, you can customize the appearance of your tours to match your website&apos;s branding and design aesthetic.</p>
                     </section>
                     <section className="faq-section">
                         <h2 className={classes.head}>Question 4: Can I create tours for specific user segments?</h2>
@@ -31,7 +31,7 @@ const Faq = () => {
                     </section>
                     <section className="faq-section">
                         <h2 className={classes.head}>Question 5: Are there limitations on the number of tours I can create?</h2>
-                        <p className={classes.para}>No, there are no limitations on the number of tours you can create. Feel free to create as many tours as you need to enhance your website's user experience.</p>
+                        <p className={classes.para}>No, there are no limitations on the number of tours you can create. Feel free to create as many tours as you need to enhance your website&apos;s user experience.</p>
                     </section>
                     <section className="faq-section">
                         <h2 className={classes.head}>Question 6: Can I embed tours on external websites?</h2>
@@ -66,11 +66,11 @@ const Faq = () => {
                     <h1 className={classes.title}>Troubleshooting</h1>
                     <section className="troubleshooting-section">
                         <h2 className={classes.head}>Issue: Unable to Create a New Tour</h2>
-                        <p className={classes.para}>If you're experiencing issues creating a new tour, ensure that you have entered the correct selector ID, title, and description for each element.</p>
+                        <p className={classes.para}>If you&apos;re experiencing issues creating a new tour, ensure that you have entered the correct selector ID, title, and description for each element.</p>
                     </section>
                     <section className="troubleshooting-section">
                         <h2 className={classes.head}>Issue: Tours Not Displaying Correctly on Mobile Devices</h2>
-                        <p className={classes.para}>If your tours are not displaying correctly on mobile devices, check the responsiveness of your website's design and make adjustments as needed.</p>
+                        <p className={classes.para}>If your tours are not displaying correctly on mobile devices, check the responsiveness of your website&apos;s design and make adjustments as needed.</p>
                     </section>
                     <section className="troubleshooting-section">
                         <h2 className={classes.head}>Issue: Tours Loading Slowly</h2>
