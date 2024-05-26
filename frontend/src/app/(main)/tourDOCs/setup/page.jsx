@@ -1,6 +1,6 @@
 'use client'
 import { Anchor, Code, Container, Paper, Select, Text, Title } from '@mantine/core'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import classes from './setup.module.css'
 import { CopyBlock, dracula } from 'react-code-blocks'
 import useAppContext from '@/context/AppContext'
@@ -13,7 +13,7 @@ const Setup = () => {
     const [tourIdList, settourIdList] = useState([]);
     const [selTour, setSelTour] = useState('');
 
-    const fetchTourId = () => {
+    const fetchTourId = useCallback(() => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/getbyuser`, {
             headers: {
                 'x-auth-token': currentUser.token,
@@ -27,11 +27,11 @@ const Setup = () => {
             .catch(err => {
                 console.log(err);
             })
-    }
+    }, [currentUser.token]);
 
     useEffect(() => {
         fetchTourId();
-    }, [])
+    }, [fetchTourId])
 
     const getTourId = tourIdList.map(row => (
         <Code key={row._id} > {row.title}</Code>
@@ -97,8 +97,8 @@ const Setup = () => {
                         e => setSelTour(e.target.value)
                     }>
                         <option value=''>Select Tour</option>
-                        {tourIdList.map(
-                            tour => <option value={tour._id}>{tour.title}</option>
+                        {tourIdList.map(tour => 
+                            <option key={tour._id} value={tour._id}>{tour.title}</option>
                         )}
 
                     </select>
