@@ -24,6 +24,7 @@ import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'
 import Banner from './Banner'
 import Banner2 from './Banner2'
+import BannerRight from './BannerRight'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -100,7 +101,7 @@ const page = () => {
         
         <Banner />
         <Banner2 />
-
+        <BannerRight />
 
         <br />
 

@@ -18,7 +18,7 @@ const Banner2 = () => {
             <video
                 onMouseOver={event => event.target.pause()}
                 onMouseOut={event => event.target.play()}
-                loop autoPlay muted height={"300"} width={"50%"} className={classes.video}>
+                loop autoPlay muted height={"400"} width={"58%"} className={classes.video}>
                 <source src={'Tournavigatorvideo2.mp4'} type="video/mp4" />
             </video>
 
