@@ -22,6 +22,8 @@ import TourFAQ from './tourFAQ'
 import Link from 'next/link'
 import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'
+import Banner from './Banner'
+import Banner2 from './Banner2'
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -55,7 +57,7 @@ const page = () => {
                   // href="/user/generate-tour"
                   variant='outline'
                   color='#66ff00'
-                  href ="/tourDOCs"
+                  href="/tourDOCs"
                 >
                   Get Started
                   &nbsp;
@@ -85,7 +87,7 @@ const page = () => {
                 </Button>
               </Group>
             </div>
-            <Image src='tourSec1.png'  alt='tour' className={classes.image} />
+            <Image src='tourSec1.png' alt='tour' className={classes.image} />
           </div>
         </Container>
 
@@ -95,7 +97,9 @@ const page = () => {
         <HeroBulletRight />
 
         <HeroBulletLeft />
-
+        
+        <Banner />
+        <Banner2 />
 
 
         <br />

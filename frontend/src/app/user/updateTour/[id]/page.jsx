@@ -136,7 +136,7 @@ const Page = () => {
       <Container fw={'bold'} fluid className={fonts.className}>
         <Grid grow>
           <Grid.Col span={6}> <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} /></Grid.Col>
-          <Grid.Col span={6}><TextInput ref={colorRef} label="Color" type='color' placeholder="Enter your Primary Color " mb={20} /> </Grid.Col>
+          <Grid.Col span={6}><TextInput ref={colorRef} label="Primary Color" type='color' placeholder="Enter your Primary Color " mb={20} /> </Grid.Col>
           <Grid.Col span={6}><TextInput ref={bgcolorRef} label="Background Color" type='color' placeholder="Enter your Background Color " mb={20} /> </Grid.Col>
           <Grid.Col span={6}><TextInput ref={textcolorRef} label="Text Color" type='color' placeholder="Enter your Text Color " mb={20} /> </Grid.Col>
           <Grid.Col span={6}><TextInput ref={arrowcolorRef} label="Arrow Color" type='color' placeholder="Enter your Arrow Color " mb={20} /> </Grid.Col>

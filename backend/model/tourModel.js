@@ -7,7 +7,7 @@ const mySchema = new Schema({
     bgcolor: {type : String, default: '#000000'},
     textcolor: {type : String, default: '#ffffff'},
     arrowcolor: {type : String, default: '#ffffff'},
-    overlaycolor: {type : String, default: '#000000'},
+    overlaycolor: {type : String, default: 'rgba(0, 0, 0, 0.5)'},
     width: {type : Number, default: 300},
     user: {type : Types.ObjectId, ref : 'user'},
     steps: Array,
