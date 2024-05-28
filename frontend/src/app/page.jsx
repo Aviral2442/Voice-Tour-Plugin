@@ -39,7 +39,6 @@ import Keyfeatures from './Keyfeatures'
 const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const whisper = Poppins({ subsets: ['latin'], weight: ['100', '400'] });
-const fonts = Allura({ subsets: ['latin'], weight: [ '400'] });
 const fontss = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 const Page = () => {
@@ -61,11 +60,11 @@ const Page = () => {
                 <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br />
                   <span className={clsx(classes.subtitle, font.className)}>VoiceTourNavigator </span><br />
                   Plugin System</Title>
-                <Text mt="md" size='lg' className={clsx(classes.description,fontss.className)}>
+                <Text mt="md" size='lg' className={clsx(classes.description, fontss.className)}>
                   Revolutionizing Website Navigation with Voice Technology
                 </Text>
 
-                <List className={clsx(classes.List,fontss.className)} size="md" mt="xl" spacing="sm"
+                <List className={clsx(classes.List, fontss.className)} size="md" mt="xl" spacing="sm"
 
                   icon={
                     <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#66FF00' }} >
@@ -99,7 +98,7 @@ const Page = () => {
                 </List>
 
 
-                <Group className={classes.controls}>
+                <Group className={clsx(classes.controls,fontbutton.className)} >
                   <Menu position="right" offset={1} withArrow arrowPosition="center" >
                     <Menu.Target>
                       <Button
@@ -108,6 +107,7 @@ const Page = () => {
                         variant="outline"
                         color='#66ff00'
                         radius="md"
+                        fz={18}                        
                       >
                         Get started
                       </Button>
@@ -147,8 +147,9 @@ const Page = () => {
                     variant="outline"
                     color='#66ff00'
                     radius="md"
+                    fz={18}
                     className={classes.control}
-                    leftSection={<GithubIcon size={20} />}
+                    leftSection={<GithubIcon size={24} />}
                   >
                     GitHub
                   </Button>

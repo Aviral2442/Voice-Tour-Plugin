@@ -10,11 +10,12 @@ import {
     Badge
 } from "@mantine/core"
 import classes from "./usecases.module.css"
-import { Josefin_Sans } from 'next/font/google'
+import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx';
 import Aos from 'aos';
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 
 const data = [
@@ -70,7 +71,7 @@ const UseCases = () => {
                 </Text>
                 <Text
                     className={classes.itemDescription}
-                    c="dimmed">{item.description}</Text>
+                    >{item.description}</Text>
             </div>
         </div>
     ))
@@ -81,7 +82,7 @@ const UseCases = () => {
                     Use Cases
                 </Badge>
             </Group> */}
-            <Title mt={"20"} mb={"15"} className={classes.title} ta={"center"} data-aos="fade-up">
+            <Title mt={"20"} mb={"15"} className={clsx(classes.title,fonts.className)} ta={"center"} data-aos="fade-up">
                 Unlock <span className={classes.highlight}>Endless</span> Possibilities
 
             </Title>

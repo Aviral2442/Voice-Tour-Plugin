@@ -1,7 +1,8 @@
 .Container {
   margin: 0 70px;
-padding-top: 30px;
-padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   @media (max-width: $mantine-breakpoint-md) {
     margin: 0;
     padding: 0 10px;
@@ -14,8 +15,8 @@ padding-bottom: 30px;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin: 0;
-    padding: 0 ;
-    
+    padding: 0;
+
 
   }
 }
@@ -25,7 +26,7 @@ padding-bottom: 30px;
   justify-content: space-between;
   gap: 20px;
   padding-top: 30px;
-padding-bottom: 30px;
+  padding-bottom: 30px;
 
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: column;
@@ -62,7 +63,7 @@ padding-bottom: 30px;
 
 .P {
   position: relative;
-font-size: 17px;
+  font-size: 17px;
   max-width: rem(600px);
   margin-top: -60px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -98,17 +99,16 @@ font-size: 17px;
     width: auto;
   }
 }
-.Button  {
+
+.Button {
   color: #66ff00;
   background: transparent;
 }
+
 .Button:hover {
   color: #66ff00;
   border: 1px solid #66ff00;
   border-radius: 10px;
   background: transparent;
-  
+
 }
-
-
-

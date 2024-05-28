@@ -7,6 +7,12 @@ import { IconArrowBadgeLeft, IconArrowBadgeRight, IconArrowLeft, IconArrowRight,
 import { Avatar } from '@mantine/core';
 import { useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
+import clsx from 'clsx';
+import { Josefin_Sans, Jost } from 'next/font/google';
+
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
+const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+
 
 const Testimonial = () => {
     const autoplay = useRef(Autoplay({ delay: 2000 }));
@@ -40,10 +46,10 @@ const Testimonial = () => {
                             </Grid.Col>
 
                             <Grid.Col span={7}>
-                                <Text fw={700} className={classes.name}>
+                                <Text fw={700} className={clsx(classes.name,font.className)}>
                                     Sophia Wilson
                                 </Text>
-                                <Text c="dimmed" fz="sm" >
+                                <Text c="dimmed" fz="sm" className={fonts.className}>
                                     @sophia_w
                                 </Text>
                                 <Text className={classes.review} >
@@ -74,10 +80,10 @@ const Testimonial = () => {
                             </Grid.Col>
 
                             <Grid.Col span={7}>
-                                <Text fw={700} className={classes.name}>
+                            <Text fw={700} className={clsx(classes.name,font.className)}>
                                     Sarah Thompson
                                 </Text>
-                                <Text c="dimmed" fz="sm" >
+                                <Text c="dimmed" fz="sm" className={fonts.className}>
                                     @sarah_t
                                 </Text>
                                 <Text className={classes.review} >
@@ -109,10 +115,10 @@ const Testimonial = () => {
                             </Grid.Col>
 
                             <Grid.Col span={7}>
-                                <Text fw={700} className={classes.name}>
+                            <Text fw={700} className={clsx(classes.name,font.className)}>
                                     Aarti Joshi
                                 </Text>
-                                <Text c="dimmed" fz="sm" >
+                                <Text c="dimmed" fz="sm" className={fonts.className}>
                                     @aartijoshi_trust
                                 </Text>
                                 <Text className={classes.review} >
@@ -145,10 +151,10 @@ const Testimonial = () => {
                             </Grid.Col>
 
                             <Grid.Col span={7}>
-                                <Text fw={700} className={classes.name}>
+                            <Text fw={700} className={clsx(classes.name,font.className)}>
                                     Rajesh Kumar
                                 </Text>
-                                <Text c="dimmed" fz="sm" >
+                                <Text c="dimmed" fz="sm" className={fonts.className}>
                                     @rajeshkumar_in
                                 </Text>
                                 <Text className={classes.review} >
@@ -180,10 +186,10 @@ const Testimonial = () => {
                             </Grid.Col>
 
                             <Grid.Col span={7}>
-                                <Text fw={700} className={classes.name}>
+                            <Text fw={700} className={clsx(classes.name,font.className)}>
                                     James Rodriguez
                                 </Text>
-                                <Text c="dimmed" fz="sm" >
+                                <Text c="dimmed" fz="sm" className={fonts.className}>
                                     @james_rodriguez
                                 </Text>
                                 <Text className={classes.review} >
@@ -215,10 +221,10 @@ const Testimonial = () => {
                             </Grid.Col>
 
                             <Grid.Col span={7}>
-                                <Text fw={700} className={classes.name}>
+                            <Text fw={700} className={clsx(classes.name,font.className)}>
                                     William Davis
                                 </Text>
-                                <Text c="dimmed" fz="sm" >
+                                <Text c="dimmed" fz="sm" className={fonts.className}>
                                     @will_davis
                                 </Text>
                                 <Text className={classes.review} >

@@ -14,11 +14,12 @@ import {
 } from "@mantine/core"
 import { IconGauge, IconUser, IconCookie, IconMicrophone, IconMapSearch, IconPlugConnected } from "@tabler/icons-react"
 import classes from "./FeaturesCards.module.css"
-import { Josefin_Sans } from 'next/font/google'
+import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'
 import Aos from 'aos'
 
 
+const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['100','400'] });
 
@@ -64,7 +65,7 @@ export default function FeaturesCards() {
             <Text fz="lg" fw={500} className={clsx(classes.cardTitle,font.className)} mt="md">
                 {feature.title}
             </Text>
-            <Text fz="sm" c="dimmed" mt="sm" className={classes.cardDescription}>
+            <Text fz="sm"  mt="sm" className={classes.cardDescription}>
                 {feature.description}
             </Text>
         </Card>
@@ -80,12 +81,12 @@ export default function FeaturesCards() {
     
         <Container size="lg" py="xl" data-aos="fade-up" pt={80} pb={130} >
             <Group justify="center">
-                <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
+                <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525' className={font.className}>
                     Best Navigator Plugin ever
                 </Badge>
             </Group>
 
-            <Title order={2} className={classes.title} ta="center" mt="lg" c='white'>
+            <Title order={2} className={clsx(classes.title,fonts.className)} ta="center" mt="lg" c='white'>
             Explore Our <span style={{color:'#66FF00'}}>Innovative</span>  Key Features
             </Title>
 
