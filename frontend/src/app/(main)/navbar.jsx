@@ -39,8 +39,6 @@ import { usePathname, useRouter } from 'next/navigation';
 
 const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
-const fontss = Lilita_One({ subsets: ['latin'], weight: [ '400'] });
-const fontsss =Libre_Baskerville ({ subsets: ['latin'], weight: [ '400', '700'] });
 
 
 // const mockdata = [
@@ -151,7 +149,7 @@ function Navbar() {
 
               <Avatar src={"http://localhost:5000/" + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
 
-              <Text fw={500} size="sm" lh={1} mr={3}>
+              <Text fw={500} size="md" lh={1} mr={3} className={fonts.className}>
                 {currentUser.name}
               </Text>
               <IconChevronDown style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
