@@ -69,7 +69,7 @@ const UseCases = () => {
                 <Text fw={700} fz="lg" className={clsx(classes.itemTitle, font.className)} c={"white"} >
                     {item.title}
                 </Text>
-                <Text
+                <Text 
                     className={classes.itemDescription}
                     >{item.description}</Text>
             </div>

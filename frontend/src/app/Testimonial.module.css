@@ -9,9 +9,10 @@
   @media (max-width: $mantine-breakpoint-md) {
     margin: 0;
     padding: 0;
-  
+
   }
 }
+
 .cardsquare {
   position: relative;
   overflow: visible;
@@ -74,4 +75,14 @@
   align-items: center;
   padding: 50px;
 
+}
+
+.Title {
+  color: white;
+  font-size: rem(36px);
+  margin-bottom: 25px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(24px);
+  }
 }

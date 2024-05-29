@@ -113,23 +113,23 @@ export function Footer() {
                     <Group className={classes.colms0} >
                         <div>
                             <Title order={3} className={fonts.className}> Quick Links</Title>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/faq" className={font.className}>Faq&apos;s</Anchor> </p>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/blog" className={font.className}>Blog&apos;s </Anchor> </p>
+                            <p><Anchor c="#C0C0C0" component={Link} href="/faq" className={font.className}>Faq&apos;s</Anchor> </p>
+                            <p><Anchor c="#C0C0C0" component={Link} href="/contact" className={font.className}>Contact Us </Anchor> </p>
                         </div>
                     </Group>
                     <Group className={classes.colms} >
                         <div>
                             <Title order={3} className={fonts.className}>Documentation&apos;s</Title>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/voiceAssistant" className={font.className}>Voice Assistant</Anchor> </p>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/tourGenerator" className={font.className}>Tour generator</Anchor> </p>
+                            <p><Anchor c="#C0C0C0" component={Link} href="/voiceAssistant" className={font.className}>Voice Assistant</Anchor> </p>
+                            <p><Anchor c="#C0C0C0" component={Link} href="/tourGenerator" className={font.className}>Tour generator</Anchor> </p>
                         </div>
                     </Group>
                     <Group className={classes.colms2} >
                         <div>
                             <Title order={3} className={fonts.className}>Policies</Title>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/terms" className={font.className}>Terms & Conditions</Anchor> </p>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/privacy" className={font.className}>Privacy policy</Anchor> </p>
-                            <p><Anchor c="#c3cbdc" component={Link} href="/disclaimer" className={font.className}>Disclaimer </Anchor> </p>
+                            <p><Anchor c="#C0C0C0" component={Link} href="/terms" className={font.className}>Terms & Conditions</Anchor> </p>
+                            <p><Anchor c="#C0C0C0" component={Link} href="/privacy" className={font.className}>Privacy policy</Anchor> </p>
+                            <p><Anchor c="#C0C0C0" component={Link} href="/disclaimer" className={font.className}>Disclaimer </Anchor> </p>
                         </div>
                     </Group>
 

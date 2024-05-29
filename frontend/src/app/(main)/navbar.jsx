@@ -26,11 +26,11 @@ import {
 import classes from './HeaderMegaMenu.module.css';
 import Link from 'next/link';
 import cx from 'clsx';
-import { ActionIcon, useMantineColorScheme, useComputedColorScheme } from '@mantine/core';
+import { ActionIcon } from '@mantine/core';
 import Lottie from 'lottie-react';
 import avatar from './avatar.json'
 import clsx from 'clsx'
-import { Cormorant_Garamond, Jost, Libre_Baskerville, Lilita_One, Londrina_Solid } from 'next/font/google'
+import { Cormorant_Garamond, Jost } from 'next/font/google'
 import { useState } from "react"
 import { Spotlight, spotlight } from "@mantine/spotlight"
 import '@mantine/spotlight/styles.css';
@@ -41,38 +41,6 @@ const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '50
 const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 
-// const mockdata = [
-//   {
-//     icon: IconCode,
-//     title: 'Open source',
-//     description: 'This Pokémon’s cry is very loud and distracting',
-//   },
-//   {
-//     icon: IconCoin,
-//     title: 'Free for everyone',
-//     description: 'The fluid of Smeargle’s tail secretions changes',
-//   },
-//   {
-//     icon: IconBook,
-//     title: 'Documentation',
-//     description: 'Yanma is capable of seeing 360 degrees without',
-//   },
-//   {
-//     icon: IconFingerprint,
-//     title: 'Security',
-//     description: 'The shell’s rounded shape and the grooves on its.',
-//   },
-//   {
-//     icon: IconChartPie3,
-//     title: 'Analytics',
-//     description: 'This Pokémon uses its flying ability to quickly chase',
-//   },
-//   {
-//     icon: IconNotification,
-//     title: 'Notifications',
-//     description: 'Combusken battles with the intensely hot flames it spews',
-//   },
-// ];
 
 const data = [
 
@@ -91,29 +59,7 @@ function Navbar() {
 
   const { logout, loggedIn, currentUser } = useAppContext();
 
-  const { setColorScheme } = useMantineColorScheme()
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
-  // const links = mockdata.map((item) => (
-  //   <UnstyledButton className={classes.subLink} key={item.title}>
-  //     <Group wrap="nowrap" align="flex-start">
-  //       <ThemeIcon size={34} variant="default" radius="md">
-  //         <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} />
-  //       </ThemeIcon>
-  //       <div>
-  //         <Text size="sm" fw={500}>
-  //           {item.title}
-  //         </Text>
-  //         <Text size="xs" c="dimmed">
-  //           {item.description}
-  //         </Text>
-  //       </div>
-  //     </Group>
-  //   </UnstyledButton>
-
-
-
-  // ));
 
   const [query, setQuery] = useState("");
 
@@ -178,13 +124,16 @@ function Navbar() {
   return (
     <Box >
       <header className={classes.header}>
-        <Group justify='space-between' h="100%">
+        <Group justify='space-between' h="100%" >
+
           <Anchor href="http://localhost:3000/" underline="never">
             <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
           </Anchor>
 
-          <Group visibleFrom="sm">
-            <Group h="100%" gap={0} visibleFrom="sm" >
+
+          <Group visibleFrom="md">
+
+            <Group h="100%" gap={0} visibleFrom="md" >
               <a href="http://localhost:3000/" className={clsx(classes.link, fonts.className, path === '/' && classes.links)}>
                 HOME
               </a>
@@ -194,53 +143,6 @@ function Navbar() {
               <a href="/tourGenerator" className={clsx(classes.link, fonts.className, path === '/tourGenerator' && classes.links)}>
                 TOUR GENERATOR
               </a>
-              {/* <a href="#" className={clsx(classes.link, font.className)}>
-                DOCUMENTATION
-              </a> */}
-              {/* <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
-                <HoverCard.Target>
-                  <a href="#" className={classes.link}>
-                    <Center inline>
-                      <Box component="span" mr={5}>
-                        Features
-                      </Box>
-                      <IconChevronDown
-                        style={{ width: rem(16), height: rem(16) }}
-                        color={theme.colors.blue[6]}
-                      />
-                    </Center>
-                  </a>
-                </HoverCard.Target>
-
-                <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
-                  <Group justify="space-between" px="md">
-                    <Text fw={500}>Features</Text>
-                    <Anchor href="#" fz="xs">
-                      View all
-                    </Anchor>
-                  </Group>
-
-                  <Divider my="sm" />
-
-                  <SimpleGrid cols={2} spacing={0}>
-                    {links}
-                  </SimpleGrid>
-
-                  <div className={classes.dropdownFooter}>
-                    <Group justify="space-between">
-                      <div>
-                        <Text fw={500} fz="sm">
-                          Get started
-                        </Text>
-                        <Text size="xs" c="dimmed">
-                          Their food sources have decreased, and their numbers
-                        </Text>
-                      </div>
-                      <Button variant="default">Get started</Button>
-                    </Group>
-                  </div>
-                </HoverCard.Dropdown>
-              </HoverCard> */}
               <a href="/about" className={clsx(classes.link, fonts.className, path === '/about' && classes.links)}>
                 ABOUT US
               </a>
@@ -248,6 +150,7 @@ function Navbar() {
                 CONTACT US
               </a>
             </Group>
+
 
             <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
               from: '#66ff00',
@@ -274,7 +177,7 @@ function Navbar() {
 
           </Group>
 
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="md" />
 
         </Group>
       </header>
@@ -285,11 +188,11 @@ function Navbar() {
         size="100%"
         padding="md"
         title="VoiceTour Navigator"
-        hiddenFrom="sm"
+        hiddenFrom="md"
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-          <Divider my="sm" />
+          <Divider my="md" />
 
           <a href="/" className={classes.link}>
             Home
@@ -316,7 +219,7 @@ function Navbar() {
             Contact Us
           </a>
 
-          <Divider my="sm" />
+          <Divider my="md" />
 
           <Group justify="center" grow pb="xl" px="md">
             <Button variant="default" color='black '>

@@ -1,9 +1,8 @@
 .footerContainer {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   align-items: center;
-  margin: 2px 80px;
   padding: 30px;
   background-color: black;
   border-top: 2px solid white;
@@ -101,7 +100,7 @@
 
 .afterFootertitle {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 15px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;

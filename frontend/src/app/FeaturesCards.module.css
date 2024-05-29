@@ -10,9 +10,7 @@
   max-width: rem(800px);
   margin: auto;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background: rgb(173, 179, 200);
-  background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
-  -webkit-background-clip: text;
+  color: #C0C0C0;
 
 
   &::after {
@@ -77,6 +75,6 @@
 
 .cardDescription {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #ADB3C8;
+  color: #C0C0C0;
 
 }
