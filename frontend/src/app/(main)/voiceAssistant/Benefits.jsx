@@ -8,10 +8,12 @@ import {
     SimpleGrid
 } from "@mantine/core"
 import classes from "./benefits.module.css"
-import { Josefin_Sans } from 'next/font/google'
+import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx';
 import Aos from 'aos';
+
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
+const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 
 const data = [
@@ -73,7 +75,7 @@ const KeyFeatures = () => {
     return (
         <Container size={"lg"} className={classes.wrapper}>
 
-            <Title className={classes.title} ta={"center"} data-aos="fade-up">
+            <Title className={clsx(classes.title,fonts.className)} ta={"center"} data-aos="fade-up">
                 Bene<span className={classes.highlight}>fits</span>
             </Title>
 

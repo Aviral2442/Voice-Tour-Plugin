@@ -65,7 +65,7 @@ export function VoiceitWorks() {
 
     useEffect(() => {
         Aos.init({ duration: 2000 });
-      }, []);
+    }, []);
 
     return (
 
@@ -83,7 +83,9 @@ export function VoiceitWorks() {
                         <Title className={clsx(classes.Title, font.className)}>
                             How It Works<span className={classes.questionmark}>?</span>
                         </Title>
-                        <Text mt={10} fz={15} className={classes.Descript}>Activate the Voice Assistant with a single click or voice command to navigate your website hands-free, streamlining your browsing experience with intuitive voice control.</Text>
+                        <Text mt={10} fz={15} className={classes.Descript}>
+                            Activate the Voice Assistant with a single click or voice command to navigate your website hands-free, streamlining your browsing experience with intuitive voice control.
+                        </Text>
 
                     </Card>
                 </Group>

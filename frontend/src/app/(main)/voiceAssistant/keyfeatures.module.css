@@ -33,7 +33,7 @@
 
 .title {
     color: white;
-    font-size: rem(43px);
+    font-size: rem(36px);
     font-weight: 900;
 
     @media (max-width: $mantine-breakpoint-sm) {

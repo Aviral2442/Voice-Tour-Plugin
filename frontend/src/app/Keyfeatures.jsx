@@ -83,11 +83,10 @@ const Keyfeatures = () => {
                 cols={{ base: 1, sm: 2, md: 3 }}
                 spacing={{ base: 'xl', md: 50 }}
                 verticalSpacing={{ base: 'xl', md: 50 }}
-                data-aos="fade-up"   data-aos-anchor-placement="bottom-bottom"
             >
                 {features}
             </SimpleGrid>
-            <div className={classes.secondContainer} data-aos="fade-up"   data-aos-anchor-placement="bottom-bottom">
+            <div className={classes.secondContainer} >
                 <SimpleGrid
                     cols={{ base: 1, md: 2 }} spacing="xl" mt={50}
                 >

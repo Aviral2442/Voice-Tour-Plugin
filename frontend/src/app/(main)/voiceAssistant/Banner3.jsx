@@ -17,8 +17,8 @@ const Banner3 = () => {
     return (
         <div className={classes.wrapper} data-aos="fade-up">
             <div className={classes.body} >
-                <Title className={classes.title}>Voice <span style={{ color: '#66ff00' }}>Search</span>  on  <span style={{ color: '#66ff00' }}>Mobile</span>  </Title>
-                <Text fw={500} fz="lg" mb={5} className={font.className}>
+                <Title className={clsx(classes.title,font.className)}>Voice <span style={{ color: '#66ff00' }}>Search</span>  on  <span style={{ color: '#66ff00' }}>Mobile</span>  </Title>
+                <Text fw={500} fz="lg" mb={5} className={classes.description}>
                 Every day, more than half of mobile users rely on voice commands to find information, browse social media, and conduct local searches. With twenty percent of all mobile searches now performed by voice, optimizing for this interaction is crucial. Our voice assistant plugin brings cutting-edge voice search capabilities to both mobile apps and mobile websites, delivering an effortless and intuitive user experience.                </Text>
 
             </div>

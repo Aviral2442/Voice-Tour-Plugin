@@ -18,7 +18,7 @@
 
 .itemDescription {
     max-width: 400px;
-    color: #D6D6E2;
+    color: #C0C0C0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -33,7 +33,7 @@
 
 .title {
     color: white;
-    font-size: rem(43px);
+    font-size: rem(36px);
     font-weight: 900;
 
     @media (max-width: $mantine-breakpoint-sm) {

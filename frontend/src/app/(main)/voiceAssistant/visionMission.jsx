@@ -14,10 +14,11 @@ import {
 import { IconDeviceVisionPro, IconTarget } from "@tabler/icons-react"
 import classes from "./visionMission.module.css"
 import clsx from 'clsx'
-import { Josefin_Sans } from 'next/font/google'
+import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import Aos from 'aos'
 
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
+const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 
 const mockdata = [
@@ -53,7 +54,7 @@ const VisionMission = () => {
       <Text fz="lg" fw={500} className={clsx(classes.cardTitle, font.className)} mt="md">
         {feature.title}
       </Text>
-      <Text fz="sm" c="dimmed" mt="sm" className={classes.cardDescription}>
+      <Text fz="sm"  mt="sm" className={classes.cardDescription}>
         {feature.description}
       </Text>
     </Card>
@@ -66,11 +67,11 @@ const VisionMission = () => {
   return (
     <Container size="lg" py="xl" pt={180} pb={180} className={classes.Container}>
 
-      <Title className={classes.title} ta="center"  c='white' data-aos="fade-up">
+      <Title className={clsx(classes.title,fonts.className)} ta="center"  c='white' data-aos="fade-up">
         Embracing  <span style={{ color: '#66FF00' }}>Voice</span>  Technology
       </Title>
 
-      <Text className={classes.description} ta="center" mt="lg" data-aos="fade-up">
+      <Text className={classes.description} ta="center" mt="sm" data-aos="fade-up">
         Explore the transformative power of voice technology in website interaction, redefining engagement and accessibility.
       </Text>
 

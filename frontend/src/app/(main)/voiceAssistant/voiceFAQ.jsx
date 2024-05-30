@@ -5,11 +5,12 @@ import classes from "./voiceFAQ.module.css"
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Link from 'next/link'
-import { Jost } from 'next/font/google'
+import { Jost, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'
 
 
 const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+const fonts= Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
 const VoiceFAQ = () => {
     useEffect(() => {
@@ -19,7 +20,7 @@ const VoiceFAQ = () => {
         <Container className={classes.wrapper} size={1400} pt={50} pb={120} >
 
             <div className={classes.inner}>
-                <Title className={classes.title} data-aos="fade-up" >
+                <Title className={clsx(classes.title,fonts.className)} data-aos="fade-up" >
                     Instant Answers to Your {" "}
                     <Text component="span" className={classes.highlight} inherit>
                         Burning
@@ -28,7 +29,7 @@ const VoiceFAQ = () => {
                 </Title>
 
                 <Container p={20} size={900}>
-                    <Text size="lg" c="white" className={classes.description} data-aos="fade-up">
+                    <Text size="lg" className={classes.description} data-aos="fade-up">
                         Address common queries and concerns related to the Voice Assistant functionality.Provide detailed answers to questions
                         regarding voice command usage, compatibility with various browsers and devices, and customization options for different
                         user needs.

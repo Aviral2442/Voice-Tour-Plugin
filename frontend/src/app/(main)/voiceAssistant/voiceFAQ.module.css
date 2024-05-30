@@ -16,7 +16,7 @@
   .title {
     text-align: center;
     font-weight: 800;
-    font-size: rem(40px);
+    font-size: rem(36px);
     letter-spacing: -1px;
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
     margin-bottom: var(--mantine-spacing-xs);
@@ -40,9 +40,8 @@
     margin: auto;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: rgb(173, 179, 200);
-    background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
-    -webkit-background-clip: text;
+
+    color: #C0C0C0;
   
     @media (max-width: $mantine-breakpoint-xs) {
       text-align: center;
