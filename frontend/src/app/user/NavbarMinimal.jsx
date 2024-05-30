@@ -21,10 +21,14 @@ import classes from "./NavbarMinimal.module.css"
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import useAppContext from '@/context/AppContext'
+import { Josefin_Sans } from 'next/font/google'
+
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
+
 
 function NavbarLink({ icon: Icon, label, active, onClick }) {
     return (
-        <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
+        <Tooltip label={label} position="right" bg="#66ff00" c="black" fz="h5" fw="bold" className={font.className} transitionProps={{ duration: 0 }}>
             <UnstyledButton
                 onClick={onClick}
                 className={classes.link}
@@ -38,12 +42,12 @@ function NavbarLink({ icon: Icon, label, active, onClick }) {
 
 const mockdata = [
     { icon: IconSmartHome, label: "Home", link: "/" },
-    { icon: IconGauge, label: "Dashboard", link: "/user/dashboard" },
+    // { icon: IconGauge, label: "Dashboard", link: "/user/dashboard" },
+    { icon: IconUserCircle, label: "Profile", link: "/user/profile" },
     { icon: IconDeviceDesktopAnalytics, label: "Generate Tour", link: "/user/generate-tour" },
-    { icon: IconSettings2, label: "Manage Webpage", link: "/user/manage-webpage" },
-    { icon: IconUserCircle, label: "Account", link: "/user/profile" },
+    { icon: IconSettings2, label: "Create Webpage", link: "/user/manage-webpage" },
     // { icon: IconFingerprint, label: "Security" },
-    { icon: IconSettings, label: "Settings", link: "/" }
+    // { icon: IconSettings, label: "Settings", link: "/" }
 ]
 
 export function NavbarMinimal() {

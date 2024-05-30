@@ -24,6 +24,7 @@ import {
     Image,
     Menu,
     Avatar,
+    Autocomplete,
 } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
@@ -59,20 +60,24 @@ const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
 
 const data = [
+    { label: "Profile", link: "/user/profile" },
+    { label: "Create Webpage", link: "/user/manage-webpage" },
+    { label: "Generate Tour", link: "/user/generate-tour" },
     { label: "Home", link: "/" },
     { label: "Voice Assistant", link: "/voiceAssistant" },
     { label: "Tour Generator", link: "/tourGenerator" },
     { label: "About Us", link: "/about" },
-    { label: "Contact Us", link: "/contact" },
+    { label: "Contact Us", link: "/contact" },   
+
 ]
 
 export function UserNavbar() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
-    const theme = useMantineTheme();
+    // const theme = useMantineTheme();
 
-    const { setColorScheme } = useMantineColorScheme()
-    const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+    // const { setColorScheme } = useMantineColorScheme()
+    // const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
     const { logout, loggedIn, currentUser } = useAppContext();
 
@@ -89,7 +94,9 @@ export function UserNavbar() {
             key={label}
             onClick={() => router.push(link)}
         />)
+    const [opened, { toggle }] = useDisclosure(false)
 
+    
 
     const [userMenuOpened, setUserMenuOpened] = useState(false);
 
@@ -135,41 +142,42 @@ export function UserNavbar() {
         }
     }
     return (
-        <Box >
-            <header className={classes.header}>
+        <>
+
+            {/* <header className={classes.header}>
                 <Group justify='space-between' h="100%">
                     <Anchor href="http://localhost:3000/" underline="never">
                         <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
                     </Anchor>
 
 
-                    <Group visibleFrom="sm"  >
-                        <Group h="100%" gap={0} visibleFrom="sm" mr={"140"}>
-                            <a href="http://localhost:3000/" className={clsx(classes.link, font.className)}>
+                    <Group visibleFrom="md"  >
+                        <Group h="100%" gap={0} visibleFrom="md" >
+                            <a href="http://localhost:3000/" className={clsx(classes.link, fonts.className)}>
                                 HOME
                             </a>
-                            <a href="/voiceAssistant" className={clsx(classes.link, font.className)}>
+                            <a href="/voiceAssistant" className={clsx(classes.link, fonts.className)}>
                                 VOICE ASSISTANT
                             </a>
-                            <a href="/tourGenerator" className={clsx(classes.link, font.className)}>
+                            <a href="/tourGenerator" className={clsx(classes.link, fonts.className)}>
                                 TOUR GENERATOR
                             </a>
-                            <a href="#" className={clsx(classes.link, font.className)}>
+                            <a href="#" className={clsx(classes.link, fonts.className)}>
                                 DOCUMENTATION
                             </a>
 
-                            <a href="/about" className={clsx(classes.link, font.className)}>
+                            <a href="/about" className={clsx(classes.link, fonts.className)}>
                                 ABOUT US
                             </a>
-                            <a href="/contact" className={clsx(classes.link, font.className)}>
+                            <a href="/contact" className={clsx(classes.link, fonts.className)}>
                                 CONTACT US
                             </a>
                         </Group>
 
 
                         <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
-                            from: 'white',
-                            to: 'white', deg: 0
+                            from: '#66ff00',
+                            to: '#66ff00', deg: 0
                         }}>
                             <IconSearch style={{ width: '70%', height: '70%', color: 'black' }} stroke={2} />
                         </ActionIcon>
@@ -194,7 +202,7 @@ export function UserNavbar() {
 
                     </Group>
 
-                    <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+                    <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="md" />
 
 
                 </Group>
@@ -206,7 +214,7 @@ export function UserNavbar() {
                 size="100%"
                 padding="md"
                 title="Navigation"
-                hiddenFrom="sm"
+                hiddenFrom="md"
                 zIndex={1000000}
             >
                 <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
@@ -241,8 +249,41 @@ export function UserNavbar() {
                         <Button>Sign up</Button>
                     </Group>
                 </ScrollArea>
-            </Drawer>
-        </Box>
+            </Drawer> */}
+            <header className={classes.header}>
+                <div className={classes.inner}>
+                    <Group>
+                        <Anchor href="http://localhost:3000/" underline="never">
+                            <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
+                        </Anchor>
+                    </Group>
+
+                    <Group>
+                       
+                        <Button onClick={spotlight.open} bg={"#66ff00"} c={"black"} radius={"md"}>Search</Button>
+
+                        <Spotlight.Root query={query} onQueryChange={setQuery} >
+                            <Spotlight.Search
+                                className={clsx(classes.spotlightSearch, fonts.className)}
+                                placeholder="Search..."
+                                leftSection={<IconSearch stroke={1.5} />}
+
+                            />
+                            <Spotlight.ActionsList className={clsx(classes.spotlightList, fonts.className)}>
+                                {items.length > 0 ? (
+                                    items
+                                ) : (
+                                    <Spotlight.Empty>Nothing found...</Spotlight.Empty>
+                                )}
+                            </Spotlight.ActionsList>
+                        </Spotlight.Root>
+
+                        {displayLoginOptions()}
+
+                    </Group>
+                </div>
+            </header>
+        </>
     )
 }
 

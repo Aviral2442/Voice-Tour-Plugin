@@ -4,98 +4,23 @@
   padding-right: var(--mantine-spacing-md);
   background-color: black;
   /* background-image: linear-gradient(147deg, black 79%, white 0%); */
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #66ff00;
 }
 
-.link {
+
+.inner {
+  height: rem(80px);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
-  text-decoration: none;
-  color: white;
-  font-weight: 900;
-  font-size: 15px;
-
-  @media (max-width: $mantine-breakpoint-sm) {
-    height: rem(42px);
-    width: 100%;
-  }
-
-  @mixin hover {
-    padding-bottom: 8px;
-    border-bottom: 2px solid white;
-  }
-
-
 }
 
-
-
-.subLink {
-  width: 100%;
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
-  border-radius: var(--mantine-radius-md);
-
-  @mixin hover {
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
-  }
-}
-
-.dropdownFooter {
-  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
-  margin: calc(var(--mantine-spacing-md) * -1);
-  margin-top: var(--mantine-spacing-sm);
-  padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);
-  padding-bottom: var(--mantine-spacing-xl);
-  border-top: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
-}
-
-
-/* .searchCode {
-    font-weight: 700;
-    font-size: rem(10px);
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
-    border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-7));
-  } */
-
-
-
-.icon {
-  width: rem(22px);
-  height: rem(22px);
-}
-
-
-
-
-.button {
-  font-size: 15PX;
-  letter-spacing: 1px;
-
-  color: #66FF00;
-  border-color: #66FF00;
-
-}
-
-
-.avi {
-  height: 100px;
-  width: 40px;
-}
 
 .Image {
   height: 80px;
   width: 100px;
 }
-
 .spotlightList {
-  color: white;
+  color: #66ff00;
   background-color: black;
 }
-
-.spotlightSearch {
-  background-color: black;
-}
-

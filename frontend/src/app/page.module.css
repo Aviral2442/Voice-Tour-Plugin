@@ -103,16 +103,12 @@
 }
 
 .List {
-  background-color: #e7eff9;
-  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
-  -webkit-background-clip: text;
+  color: #c0c0c0;
   letter-spacing: 1px;
 }
 
 .description {
-  background-color: #e7eff9;
-  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
-  -webkit-background-clip: text;
+  color: #c0c0c0;
   letter-spacing: 1px;
 }
 

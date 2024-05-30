@@ -4,8 +4,8 @@
   padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
-  border-right: 2px solid white;
-  border-top: 2px solid white;
+  border-right: 2px solid #66ff00;
+  border-top: 2px solid #66ff00;
   background-color: black;
 }
 
@@ -22,18 +22,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #66ff00;
 
   &:hover {
     color: black;
-    background-color: white;
+    background-color: #66ff00;
   }
 
   &[data-active] {
 
     &,
     &:hover {
-      background-color: white;
+      background-color: #66ff00;
       color: black;
     }
   }
