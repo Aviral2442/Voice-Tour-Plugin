@@ -7,6 +7,11 @@ import classes from "./webpageTable.module.css"
 import { IconSearch } from '@tabler/icons-react'
 import useAppContext from '@/context/AppContext'
 import clsx from 'clsx'
+import { Jost, Quicksand } from 'next/font/google'
+
+const font = Quicksand({ subsets: ['latin'], weight: ['300', '400', '500', "600", '700'] });
+const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+
 
 // Search code for search box to search 
 
@@ -90,12 +95,12 @@ const WebpageTable = () => {
         >
             <Card shadow='lg' c='white' p={20} className={classes.card}>
                 <TextInput
-                    placeholder="Search by any field"
-                    mb="md"
+                    placeholder="Search your webpage here..."
+                    mb="xl"
                     c="white"
                     leftSection={
                         <IconSearch
-                            style={{ width: ' rem(16)', height: 'rem(16)' }}
+                            style={{ width: ' rem(14)', height: 'rem(14)' }}
                             stroke={1.5}
                         />
                     }
@@ -103,7 +108,7 @@ const WebpageTable = () => {
                     onChange={handleSearchChange}
                     className={classes.table}
                 />
-                <Table className={classes.table} horizontalSpacing="xl">
+                <Table className={clsx(classes.table,font.className)} horizontalSpacing="xl" withTableBorder>
                     <Table.Thead
                         className={clsx(classes.header, { [classes.scrolled]: scrolled })}
                     >

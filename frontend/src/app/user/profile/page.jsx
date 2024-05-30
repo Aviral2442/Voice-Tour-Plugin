@@ -5,10 +5,11 @@ import React, { useEffect, useState } from 'react'
 import classes from './profile.module.css'
 import clsx from 'clsx';
 import toast from 'react-hot-toast';
-import { Jost, Quicksand } from 'next/font/google';
+import { Josefin_Sans, Jost, Quicksand } from 'next/font/google';
 
 const font = Quicksand({ subsets: ['latin'], weight: ['300', '400', '500', "600", '700'] });
 const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+const fontss = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 const Profile = () => {
 
@@ -111,7 +112,7 @@ const Profile = () => {
       <Table.Td>{row2.name}</Table.Td>
       <Table.Td>{row2.address}</Table.Td>
       <Table.Td>{row2.user}</Table.Td>
-            {/* <Table.Td>{row2.description}</Table.Td> */}
+      <Table.Td>{row2.description}</Table.Td>
       <Table.Td>{new Date(row2.createdAt).toLocaleString()}</Table.Td>
       <Table.Th><Anchor href={"/user/updateWebpage/" + row2._id} >Edit</Anchor></Table.Th>
 
@@ -136,7 +137,7 @@ const Profile = () => {
             </Flex>
           </Group>
           <Group >
-            <Button variant="filled" mr={"70"} color="blue" onClick={fetchTourId} className={font.className}>
+            <Button variant="filled" mr={"70"} c="black" bg="#66ff00" onClick={fetchTourId} className={font.className}>
               Refresh
             </Button>
           </Group>
@@ -144,8 +145,8 @@ const Profile = () => {
       </Card>
       {/* data for Tour Navigator */}
       <Container fluid p={10} className={classes.Container}>
-        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Tours </Badge>
-        <Table className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
+        <Badge radius="sm" size="xl" mb={10} bg={"#66ff00"} c={"black"} className={font.className}>Tours </Badge>
+        <Table className={clsx(classes.table, font.className)} horizontalSpacing="xl" highlightOnHover withColumnBorders withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
           >
@@ -169,8 +170,8 @@ const Profile = () => {
       </Container>
       {/* data for Voice Search */}
       <Container fluid p={10} mt={20} className={classes.Container}>
-        <Badge radius="sm" size="xl" mb={10} bg={"white"} c={"black"} className={font.className}>Webpages </Badge>
-        <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" striped highlightOnHover withTableBorder>
+        <Badge radius="sm" size="xl" mb={10} bg={"#66ff00"} c={"black"} className={font.className}>Webpages </Badge>
+        <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" highlightOnHover withColumnBorders withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
           >
@@ -178,7 +179,7 @@ const Profile = () => {
               <Table.Th>Name</Table.Th>
               <Table.Th>Address</Table.Th>
               <Table.Th>User Id</Table.Th>
-              {/* <Table.Th>Description</Table.Th> */}
+              <Table.Th>Description</Table.Th>
               <Table.Th>CreateAt</Table.Th>
               <Table.Th>Edit </Table.Th>
               <Table.Th>Delete </Table.Th>

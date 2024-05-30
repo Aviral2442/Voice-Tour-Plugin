@@ -21,10 +21,11 @@ import { useDisclosure } from "@mantine/hooks"
 import { Modal } from "@mantine/core"
 import WebpageTable from './webpageTable';
 import useAppContext from '@/context/AppContext';
-import { Jost } from 'next/font/google';
+import { Josefin_Sans, Jost } from 'next/font/google';
 import clsx from 'clsx';
 
 const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
+const fontss = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 
 const WebPage = () => {
@@ -35,7 +36,7 @@ const WebPage = () => {
 
   const webpageValidationSchema = Yup.object().shape({
     name: Yup.string().required('Name is Required').min(3, 'Name is Too Short'),
-    address: Yup.string().required('Address is Required').min(6, 'Address is Too Short'),
+    address: Yup.string().required('Address is Required').min(4, 'Address is Too Short'),
     description: Yup.string().required('Description is Required').min(8, 'Description is Too Short')
   });
 
@@ -87,15 +88,15 @@ const WebPage = () => {
         <Modal opened={opened} onClose={close}   >
           <Container  my={40} mt={20} fluid  >
 
-            <Paper withBorder shadow="md" p={30} mt={30} radius="md" bg={"white"} className={classes.paper}>
+            <Paper withBorder shadow="md" p={30} mt={30} radius="md" bg={"white"} className={clsx(classes.paper,fontss.className)}>
               <Title ta="center" className={classes.title}>
                 Webpage
               </Title>
-              <form onSubmit={webpageForm.handleSubmit}>
+              <form onSubmit={webpageForm.handleSubmit} >
                 <TextInput
                   label="Name"
-                  placeholder="Enter your name "
-                  mt="md"
+                  placeholder="Enter your homepage name "
+                  mt="md"                
                   id="name"
                   onChange={webpageForm.handleChange}
                   value={webpageForm.values.name}
@@ -136,7 +137,7 @@ const WebPage = () => {
           </Container >
         </Modal>
         
-        <Button onClick={open} variant='white' color='black' mb={20}  mt={20} ml={20}
+        <Button onClick={open}  c='black' bg="#66ff00" mb={20}  mt={20} ml={20}
           className={clsx(classes.control, font.className)}>
           Create Web Page
         </Button>
