@@ -74,7 +74,7 @@ export function Login() {
     })
       .then((response) => {
         if (response.status === 200) {
-          toast.success('loggedin successfully');
+          toast.success('LoggedIn Successfully');
           response.json().then(data => {
             localStorage.setItem('user', JSON.stringify(data));
             setCurrentUser(data);
@@ -115,7 +115,7 @@ const login = useGoogleLogin({
 
                     <Group grow mb="md" mt="lg" >
                       <GoogleButton onClick={() => login()} radius="xl" className={classes.Button}>Google</GoogleButton>
-                      <TwitterButton radius="xl" className={classes.Button}>Facebook</TwitterButton>
+                      {/* <TwitterButton radius="xl" className={classes.Button}>Facebook</TwitterButton> */}
                     </Group>
 
                     <Divider label={

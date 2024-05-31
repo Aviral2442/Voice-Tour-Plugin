@@ -11,9 +11,7 @@
 
 .title {
 	color: #66ff00;
-	font-family:
-		Greycliff CF,
-		var(--mantine-font-family);
+	margin-bottom: 10px;
 	font-weight: 600;
 	text-align: center;
 	font-size: 40px;

@@ -30,6 +30,7 @@
 .paper {
   height: 80vh;
   border-left: 3px solid #66ff00;
-  background-color: black;
+  backdrop-filter: blur(100px);
+	-webkit-backdrop-filter: blur(0px);
   color: white;
 }

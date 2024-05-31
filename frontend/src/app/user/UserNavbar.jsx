@@ -109,6 +109,7 @@ export function UserNavbar() {
                 onClose={() => setUserMenuOpened(false)}
                 onOpen={() => setUserMenuOpened(true)}
                 withinPortal
+               
             >
                 <Menu.Target>
                     <UnstyledButton

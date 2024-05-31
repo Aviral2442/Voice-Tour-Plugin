@@ -31,7 +31,7 @@
 }
 
 .links {
-  padding-bottom:7px;
+  padding-bottom: 7px;
   background-color: black;
   color: #66FF00;
   border-bottom: 2px solid #66FF00;
@@ -99,10 +99,13 @@
   font-size: 15PX;
   letter-spacing: 1px;
   border: 1px solid #66FF00;
-font-weight: bold;
+  padding-bottom: 3px;
+  font-weight: bold;
   color: #66FF00;
-font-size: 19px;
+  font-size: 19px;
+  
 }
+
 .button:hover {
   background-color: #66FF00;
   color: black;
@@ -118,6 +121,7 @@ font-size: 19px;
   height: 80px;
   width: 100px;
 }
+
 .spotlightList {
   color: #66ff00;
   background-color: black;

@@ -114,7 +114,7 @@ export function SignUp(props) {
     values.password = value;
     console.log(values);
 
-    fetch('http://localhost:5000/user/add', {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/add`, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {
@@ -124,7 +124,7 @@ export function SignUp(props) {
       .then((response) => {
         console.log(response.status);
         if (response.status === 200) {
-          toast.success('User Registered successfully');
+          toast.success('User Registered Successfully');
           setValue('');
           form.reset();
           router.push('/login')
@@ -164,15 +164,15 @@ export function SignUp(props) {
         <Title className={clsx(classes.title, font.className)} >
           SignUp</Title>
 
-        <Group grow mb="md" mt="lg" >
+        {/* <Group grow mb="md" mt="lg" >
           <GoogleButton radius="xl" className={classes.Button}>Google</GoogleButton>
           <TwitterButton radius="xl" className={classes.Button}>Facebook</TwitterButton>
-        </Group>
+        </Group> */}
 
-        <Divider label={
+        {/* <Divider label={
           <p style={{ color: '#4ECA3E' }}>Or Signup with</p>
         }
-          labelPosition="center" my="lg" />
+          labelPosition="center" my="lg" /> */}
 
         <form onSubmit={form.onSubmit(signupSubmit)} className={fonts.className}>
 

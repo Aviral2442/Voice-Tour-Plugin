@@ -1,5 +1,5 @@
 'use client';
-import { Button, Card, Container, Grid, Group, Radio, Stepper, TextInput, Textarea } from '@mantine/core';
+import { Button, Card, Container, Grid, Group, Radio, Stepper, TextInput, Textarea, Title } from '@mantine/core';
 import { useParams, useRouter } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast';
@@ -128,12 +128,13 @@ const Page = () => {
     <Container fluid className={classes.Container}>
 
 
-      <Button onClick={addTour} variant='white' color='black' mb={20} mt={20}
+      <Button onClick={addTour} variant='white' color='black' mb={20} mt={20} 
         className={clsx(classes.control1, font.className)}>
         Update Tour
       </Button>
 
-      <Container fw={'bold'} fluid className={fonts.className}>
+      <Container fw={'bold'} fluid className={clsx(classes.innerContainer2, fonts.className)}>
+      <Title order={1} align="start" mb={20} className={clsx(classes.title, fonts.className)}>Design Tour</Title>
         <Grid grow>
           <Grid.Col span={6}> <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} /></Grid.Col>
           <Grid.Col span={6}><TextInput ref={colorRef} label="Primary Color" type='color' placeholder="Enter your Primary Color " mb={20} /> </Grid.Col>
@@ -157,7 +158,7 @@ const Page = () => {
                     <Radio.Group value={step.selectorType} onChange={v => updateStep(index, 'selectorType', v)} mb={20} >
                       <Group mt="xs" >
                         <Radio value="id" label="id" color="gray" />
-                        <Radio value="class" label="class" color="green" />
+                        <Radio value="class" label="class" color="#66ff00"  />
                       </Group>
                     </Radio.Group>
 
@@ -199,17 +200,17 @@ const Page = () => {
         <Group justify="space-between" >
           <Group >
             <Button mt={30} size='sm' onClick={addNewStep} variant='white' color='black'
-              className={clsx(classes.control, font.className)}>
+              className={clsx(classes.control1, font.className)}>
               Add New Step</Button>
 
           </Group>
           <Group justify="space-between">
-            <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control, font.className)} ><IconCaretLeft />Prev</Button>
-            <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control, font.className)}>Next<IconCaretRight /></Button>
+            <Button mt={30} size='sm' onClick={prevStep} variant='white' color='black' className={clsx(classes.control1, font.className)} ><IconCaretLeft />Prev</Button>
+            <Button mt={30} size='sm' onClick={nextStep} variant='white' color='black' className={clsx(classes.control1, font.className)}>Next<IconCaretRight /></Button>
           </Group>
           <Group >
             <Button mt={30} size='sm' onClick={deleteStep} variant='white' color='black'
-              className={clsx(classes.control, font.className)}>
+              className={clsx(classes.control1, font.className)}>
               Delete Step</Button>
           </Group>
         </Group>

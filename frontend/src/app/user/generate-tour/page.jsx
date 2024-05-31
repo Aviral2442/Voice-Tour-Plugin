@@ -158,7 +158,7 @@ const GenerateTour = () => {
           </Container>
         </Flex>
 
-        <Card radius="md"  className={classes.Card}>
+        <Card   className={classes.Card}>
           <Stepper active={active} onStepClick={setActive} orientation="vertical" color="black" radius="md" size="sm">
             {
               steps.map((step, index) => {

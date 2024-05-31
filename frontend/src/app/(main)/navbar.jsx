@@ -107,6 +107,7 @@ function Navbar() {
         <Menu.Dropdown>
           <Menu.Item
             color='white'
+            fz={16}
             className={fonts.className}
             leftSection={
               // <IconMail style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
@@ -138,6 +139,7 @@ function Navbar() {
             component="a"
             href="/user/profile"
             color='white'
+            fz={16}
             className={fonts.className}
             leftSection={
               // <IconUser style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
@@ -155,6 +157,7 @@ function Navbar() {
           <Menu.Item
             onClick={logout}
             color='red'
+            fz={16}
             className={fonts.className}
             leftSection={
               // <IconLogout style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
@@ -193,7 +196,8 @@ function Navbar() {
       </Menu>
     } else {
       return <Button component={Link} href='/login' variant='outline' color='#66ff00' className={clsx(classes.button, fonts.className)}>
-        <Lottie animationData={avatar} className={classes.avi} /> Login
+        {/* <Lottie animationData={avatar} className={classes.avi} />  */}
+        Login
       </Button>
     }
   }

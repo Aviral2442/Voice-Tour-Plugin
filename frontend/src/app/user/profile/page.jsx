@@ -6,6 +6,7 @@ import classes from './profile.module.css'
 import clsx from 'clsx';
 import toast from 'react-hot-toast';
 import { Josefin_Sans, Jost, Quicksand } from 'next/font/google';
+import Link from 'next/link';
 
 const font = Quicksand({ subsets: ['latin'], weight: ['300', '400', '500', "600", '700'] });
 const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
@@ -137,7 +138,7 @@ const Profile = () => {
             </Flex>
           </Group>
           <Group >
-            <Button variant="filled" mr={"70"} c="black" bg="#66ff00" onClick={fetchTourId} className={font.className}>
+            <Button variant="filled" mr={"70"} c="black" bg="#66ff00" component="a" href="/user/profile" className={font.className}>
               Refresh
             </Button>
           </Group>
