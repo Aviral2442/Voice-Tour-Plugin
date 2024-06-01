@@ -196,7 +196,7 @@ export function Footer() {
                                 </Group>
                                 <Group mt={'-20'}>
                                     <IconMail />
-                                    <p className={font.className}>vtps@gmail.com</p>
+                                    <p className={font.className}>voicetourps@gmail.com</p>
                                 </Group>
                             </div>
 

@@ -89,10 +89,7 @@ const WebpageTable = () => {
         </Table.Tr>
     ))
     return (
-        <ScrollArea
-            h={300}
-            onScrollPositionChange={({ y }) => setScrolled(y !== 0)}
-        >
+       
             <Card shadow='lg' c='white' p={20} className={classes.card}>
                 <TextInput
                     placeholder="Search your webpage here..."
@@ -122,7 +119,6 @@ const WebpageTable = () => {
                     <Table.Tbody>{rows}</Table.Tbody>
                 </Table>
             </Card>
-        </ScrollArea>
     )
 }
 

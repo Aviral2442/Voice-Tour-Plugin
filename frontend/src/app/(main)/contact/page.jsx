@@ -9,6 +9,10 @@ import { Input } from 'postcss';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
 import * as Yup from "yup";
+import { Josefin_Sans } from 'next/font/google';
+import clsx from 'clsx';
+
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 const Contact = () => {
 
@@ -65,7 +69,7 @@ const Contact = () => {
         <Paper shadow="md" radius="lg" >
           <div className={classes.wrapper}>
             <div className={classes.contacts}>
-              <Text fz="lg" fw={700} className={classes.title} c="black">
+              <Text fz="lg" fw={700} className={clsx(classes.title,font.className)} c="black">
                 Contact Details
               </Text>
 
@@ -73,11 +77,11 @@ const Contact = () => {
             </div>
 
             <form className={classes.form} onSubmit={(formik.handleSubmit)}>
-              <Text fz="lg" fw={700} className={classes.title}>
+              <Text fz="lg" fw={700} className={clsx(classes.title,font.className)}>
                 Get in touch
               </Text>
 
-              <div className={classes.fields}>
+              <div  className={clsx(classes.fields,font.className)}>
                 <SimpleGrid cols={{ base: 1, sm: 2 }}>
                   <div>
                     <TextInput
@@ -95,7 +99,7 @@ const Contact = () => {
                   <div>
                     <TextInput
                       label="Your email"
-                      placeholder="hellovoicetour.com"
+                      placeholder="hello@gmail.com"
                       required
                       id='email'
                       value={formik.values.email}

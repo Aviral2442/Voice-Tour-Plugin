@@ -14,7 +14,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  border-left: 3px solid #66ff00;
+  border-left: 3px solid #28282B;
   background-color: #262828;
 
   @media screen and (max-width) {
@@ -25,7 +25,7 @@
 
 .header {
   background-color: black;
-  color: #66ff00;
+  color: #fff;
   font-weight: bold;
   font-size: 16px;
   position: sticky;

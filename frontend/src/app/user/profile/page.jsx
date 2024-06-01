@@ -138,7 +138,7 @@ const Profile = () => {
             </Flex>
           </Group>
           <Group >
-            <Button variant="filled" mr={"70"} c="black" bg="#66ff00" component="a" href="/user/profile" className={font.className}>
+            <Button variant="filled" mr={"70"} c="black" bg="#fff" component="a" href="/user/profile" className={font.className}>
               Refresh
             </Button>
           </Group>
