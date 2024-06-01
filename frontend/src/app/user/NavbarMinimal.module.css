@@ -38,3 +38,28 @@
     }
   }
 }
+.linklogout {
+  width: rem(50px);
+  height: rem(50px);
+  margin-bottom: var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0000;
+  background-color: #28282B;
+
+  &:hover {
+    color: white;
+    background-color: #ff0000;
+  }
+
+  &[data-active] {
+
+    &,
+    &:hover {
+      background-color: #66ff00;
+      color: black;
+    }
+  }
+}
