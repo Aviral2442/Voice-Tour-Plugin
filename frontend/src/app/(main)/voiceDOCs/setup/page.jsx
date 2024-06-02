@@ -2,6 +2,7 @@
 import React from 'react'
 import { Anchor, Image, Text, Title } from '@mantine/core'
 import classes from './setup.module.css'
+import { IconCornerDownRightDouble } from '@tabler/icons-react'
 
 const Setup = () => {
     return (
@@ -22,12 +23,12 @@ const Setup = () => {
                 do not have an account, please <Anchor href="/signup" underline="hover"> register </Anchor> to create one.</Text>
 
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 2:</span> Navigate to Create Web Pages</Title>
-            <Text className={classes.para} ml={10}  >Go to the "<Anchor href="/user/manage-webpage" underline="hover">Create Web Pages</Anchor>"  section to start the submission process for your web pages.</Text>
+            <Text className={classes.para} ml={10}  >Go to the &quot;<Anchor href="/user/manage-webpage" underline="hover">Create Web Pages</Anchor>&quot;  section to start the submission process for your web pages.</Text>
 
             {/* <Image src="webpage.jpeg" /> */}
 
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 3:</span> Click on Submit Web Pages</Title>
-            <Text className={classes.para} ml={10}  >Click the "Submit Web Pages" button to access the submission form.</Text>
+            <Text className={classes.para} ml={10}  >Click the &quot;Submit Web Pages&quot; button to access the submission form.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Advanced Search Box</Title>
             <Text className={classes.para} ml={32}  >Improve your site&apos;s search functionality with our advanced voice-enabled search box.
