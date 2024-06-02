@@ -1,5 +1,6 @@
 import { useRouter } from 'next/navigation';
 import React, { createContext, useState, useContext } from 'react'
+const ISSERVER = typeof window === "undefined";
 
 const AppContext = createContext();
 
@@ -15,7 +16,8 @@ export const AppProvider = ({ children }) => {
 
     const logout = () => {
         setLoggedIn(false);
-        localStorage.removeItem('user');
+        if (!ISSERVER)
+            localStorage.removeItem('user');
         setCurrentUser(null);
         router.push('/login');
         // clear token
