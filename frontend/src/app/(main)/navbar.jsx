@@ -82,11 +82,14 @@ function Navbar() {
   const displayLoginOptions = () => {
     if (loggedIn) {
       return <Menu
-        width={260}
+      withArrow
+      offset={5}
+        width={190}
         position="bottom-end"
         transitionProps={{ transition: 'pop-top-right' }}
         onClose={() => setUserMenuOpened(false)}
         onOpen={() => setUserMenuOpened(true)}
+        
         withinPortal
       >
         <Menu.Target>
