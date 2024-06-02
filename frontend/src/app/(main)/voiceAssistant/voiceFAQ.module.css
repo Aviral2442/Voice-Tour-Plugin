@@ -33,7 +33,7 @@
   .highlight {
     /* color: light-dark(var(--mantine-color-blue-6), var(--mantine-color-blue-4));
      */
-     color: #5BFF04;
+     color: #24C41C;
   }
   
   .description {
@@ -60,8 +60,8 @@
   }
   
   .control {
-    border: 2px solid #5BFF04;
-    color: #5BFF04;
+    border: 2px solid #24C41C;
+    color: #24C41C;
     letter-spacing: 1px;
     background-color: black;
     &:not(:first-of-type) {
@@ -79,7 +79,7 @@
     }
   }
   .controls :hover {
-    color: #5BFF04;
+    color: #24C41C;
    background-color: #28282B;
   }
 

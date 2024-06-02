@@ -195,7 +195,7 @@ function Navbar() {
         </Menu.Dropdown>
       </Menu>
     } else {
-      return <Button component={Link} href='/login' variant='outline' color='#66ff00' className={clsx(classes.button, fonts.className)}>
+      return <Button component={Link} href='/login' variant='outline' color='#24C41C' className={clsx(classes.button, fonts.className)}>
         {/* <Lottie animationData={avatar} className={classes.avi} />  */}
         Login
       </Button>
@@ -234,7 +234,7 @@ function Navbar() {
 
 
             <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
-              from: '#66ff00',
+              from: '#24C41C',
               to: '#39FF14', deg: 0
             }}>
               <IconSearch style={{ width: '70%', height: '70%', color: '#282828' }} stroke={2} />
@@ -308,7 +308,7 @@ function Navbar() {
                 Log In
               </a>
             </Button>
-            <Button variant='white' color='#66ff00'>
+            <Button variant='white' color='#24C41C'>
               <a href="/signup" >
                 Sign Up
               </a>

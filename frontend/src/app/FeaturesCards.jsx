@@ -59,7 +59,7 @@ export default function FeaturesCards() {
             <feature.icon
                 style={{ width: rem(50), height: rem(50) }}
                 stroke={2}
-                color='#66FF00'
+                color='#24C41C'
                 
             />
             <Text fz="lg" fw={500} className={clsx(classes.cardTitle,font.className)} mt="md">
@@ -81,13 +81,13 @@ export default function FeaturesCards() {
     
         <Container size="lg" py="xl" data-aos="fade-up" pt={80} pb={130} >
             <Group justify="center">
-                <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525' className={font.className}>
+                <Badge variant="filled" size="lg" radius="sm" bg='#24C41C' c='#262525' className={font.className}>
                     Best Navigator Plugin ever
                 </Badge>
             </Group>
 
             <Title order={2} className={clsx(classes.title,fonts.className)} ta="center" mt="lg" c='white'>
-            Explore Our <span style={{color:'#66FF00'}}>Innovative</span>  Key Features
+            Explore Our <span style={{color:'#24C41C'}}>Innovative</span>  Key Features
             </Title>
 
             <Text  className={classes.description} ta="center" mt="lg">

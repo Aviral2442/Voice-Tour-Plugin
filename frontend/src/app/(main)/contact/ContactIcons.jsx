@@ -1,6 +1,10 @@
 import { Text, Box, Stack, rem } from '@mantine/core';
 import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
 import classes from './ContactIcons.module.css';
+import { Josefin_Sans } from 'next/font/google';
+import clsx from 'clsx';
+
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 
 function ContactIcon({ icon: Icon, title, description, ...others }) {
@@ -11,7 +15,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }) {
       </Box>
 
       <div>
-        <Text size="xs" className={classes.title}>
+        <Text size="md" className={clsx(classes.title,font.className)}>
           {title}
         </Text>
         <Text className={classes.description}>{description}</Text>
@@ -21,10 +25,10 @@ function ContactIcon({ icon: Icon, title, description, ...others }) {
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'vtps@gmail.com', icon: IconAt },
+  { title: 'Email', description: 'voicetourps@gmail.com', icon: IconAt },
   { title: 'Phone', description: '9260973330', icon: IconPhone },
   { title: 'Address', description: 'Lucknow', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
+  // { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {

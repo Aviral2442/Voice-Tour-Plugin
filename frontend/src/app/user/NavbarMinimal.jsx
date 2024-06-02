@@ -28,10 +28,23 @@ const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 function NavbarLink({ icon: Icon, label, active, onClick }) {
     return (
-        <Tooltip label={label} position="right" bg="#66ff00" c="black" fz="h5" fw="bold" className={font.className} transitionProps={{ duration: 0 }}>
+        <Tooltip label={label} position="right" withArrow arrowSize={8}  bg="#24C41C" c="black" fz="h5" fw="bold" className={font.className} transitionProps={{ duration: 0 }}>
             <UnstyledButton
                 onClick={onClick}
                 className={classes.link}
+                data-active={active || undefined}
+            >
+                <Icon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
+            </UnstyledButton>
+        </Tooltip>
+    )
+}
+function NavbarLinks({ icon: Icon, label, active, onClick }) {
+    return (
+        <Tooltip label={label} arrowSize={8}  withArrow position="right" bg="#ff0000" c="white" fz="h5" fw="bold" className={font.className} transitionProps={{ duration: 0 }}>
+            <UnstyledButton
+                onClick={onClick}
+                className={classes.linklogout}
                 data-active={active || undefined}
             >
                 <Icon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
@@ -78,7 +91,7 @@ export function NavbarMinimal() {
 
             <Stack justify="center" gap={0}>
                 {/* <NavbarLink icon={IconSwitchHorizontal} label="Change account" /> */}
-                <NavbarLink icon={IconLogout} label="Logout" onClick={logout} />
+                <NavbarLinks icon={IconLogout} label="Logout" onClick={logout} />
             </Stack>
         </nav>
     )

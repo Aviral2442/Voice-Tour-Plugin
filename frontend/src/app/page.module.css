@@ -36,7 +36,7 @@
 
 .subtitle {
 
-  color: #66FF00;
+  color: #24C41C;
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(40px);
@@ -60,8 +60,8 @@
   height: rem(50px);
   padding-left: rem(38px);
   padding-right: rem(38px);
-  color: #39FF14;
-  border-color: #39FF14;
+  color: #24C41C;
+  border-color: #24C41C;
   letter-spacing: 1px;
 
   @media (max-width: $mantine-breakpoint-sm) {
@@ -77,7 +77,7 @@
   padding-left: rem(38px);
   padding-right: rem(38px);
   color: #262525;
-  background-color: #39FF14;
+  background-color: #24C41C;
   letter-spacing: 1px;
 
   @media (max-width: $mantine-breakpoint-sm) {

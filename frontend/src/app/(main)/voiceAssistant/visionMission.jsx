@@ -49,7 +49,7 @@ const VisionMission = () => {
       <feature.icon
         style={{ width: rem(50), height: rem(50) }}
         stroke={2}
-        color="#66ff00"
+        color="#24C41C"
       />
       <Text fz="lg" fw={500} className={clsx(classes.cardTitle, font.className)} mt="md">
         {feature.title}
@@ -68,7 +68,7 @@ const VisionMission = () => {
     <Container size="lg" py="xl" pt={180} pb={180} className={classes.Container}>
 
       <Title className={clsx(classes.title,fonts.className)} ta="center"  c='white' data-aos="fade-up">
-        Embracing  <span style={{ color: '#66FF00' }}>Voice</span>  Technology
+        Embracing  <span style={{ color: '#24C41C' }}>Voice</span>  Technology
       </Title>
 
       <Text className={classes.description} ta="center" mt="sm" data-aos="fade-up">

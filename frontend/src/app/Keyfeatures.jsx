@@ -51,7 +51,7 @@ export function Feature({ icon: Icon, title, description }) {
     return (
         <div >
             <ThemeIcon variant="light" size={40} radius={40}>
-                <Icon style={{ width: rem(25), height: rem(25), color: '#66ff00' }} stroke={1.5} />
+                <Icon style={{ width: rem(25), height: rem(25), color: '#24C41C' }} stroke={1.5} />
             </ThemeIcon>
             <Text mt="sm" mb={7} fw={700} fz="lg" c={"white"} className={font.className}>
                 {title}
@@ -73,7 +73,7 @@ const Keyfeatures = () => {
     return (
         <Container className={classes.wrapper} fluid>
             <Title className={clsx(classes.title,fonts.className)} data-aos="fade-up">
-                Key <span style={{ color: '#66ff00' }}>Features</span>
+                Key <span style={{ color: '#24C41C' }}>Features</span>
             </Title>
 
 

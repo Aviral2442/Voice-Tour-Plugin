@@ -67,7 +67,7 @@ const Page = () => {
                 <List className={clsx(classes.List, fontss.className)} size="md" mt="xl" spacing="sm"
 
                   icon={
-                    <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#66FF00' }} >
+                    <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#24C41C' }} >
                       <IconCheck
                         style={{ width: rem(12), height: rem(12) }}
                         stroke={5}
@@ -105,7 +105,7 @@ const Page = () => {
                         size="sm"
                         className={classes.controlfirst}
                         variant="outline"
-                        color='#66ff00'
+                        color='#24C41C'
                         radius="md"
                         fz={18}                        
                       >
@@ -119,7 +119,7 @@ const Page = () => {
                         component="a"
                         href="/voiceDOCs"
                         ta={"center"}
-                        c={"#66ff00"}
+                        c={"#24C41C"}
                         fz={18}
                         className={fontbutton.className}
                       >
@@ -129,7 +129,7 @@ const Page = () => {
                         component="a"
                         href="/tourDOCs"
                         ta={"center"}
-                        c={"#66ff00"}
+                        c={"#24C41C"}
                         fz={18}
                         className={fontbutton.className}
                       >
@@ -145,7 +145,7 @@ const Page = () => {
                     href="https://github.com/Aviral2442/Voice-Tour-Plugin"
                     size="sm"
                     variant="outline"
-                    color='#66ff00'
+                    color='#24C41C'
                     radius="md"
                     fz={18}
                     className={classes.control}

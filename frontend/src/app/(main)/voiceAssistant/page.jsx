@@ -53,7 +53,7 @@ const Page = () => {
           <div className={classes.inner} data-aos="fade-up">
             <div className={classes.content}>
               <Title className={clsx(classes.title, font.className)}>
-                Voice Assitant <br /> <span style={{ color: '#66ff00' }}>Plugin</span>
+                Voice Assitant <br /> <span style={{ color: '#24C41C' }}>Plugin</span>
 
               </Title>
               <Text fz='lg' mt="md" c={"#C0C0C0"} className={fonts.className}>
@@ -69,7 +69,7 @@ const Page = () => {
                   component={Link}
                   href="/voiceDOCs"
                   variant='outline'
-                  color='#66ff00'
+                  color='#24C41C'
 
                 >
                   Get started
@@ -83,7 +83,7 @@ const Page = () => {
                 </Button>
                 <Button
                   variant='outline'
-                  color='#66ff00'
+                  color='#24C41C'
                   radius="md"
                   size="md"
                   className={clsx(classes.control1, fontbutton.className)}

@@ -47,7 +47,7 @@
 }
 
 .name {
-    color: #66FF00;
+    color: #32B531;
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -65,7 +65,7 @@
     width: rem(12px);
     height: rem(4px);
     transition: width 250ms ease;
-    background-color: #66FF00;
+    background-color: #32B531;
 
     &[data-active] {
         width: rem(40px);
@@ -84,7 +84,7 @@
 }
 
 .bg {
-    background-color: #66FF00;
+    background-color: #32B531;
     /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74VtjO-gaZKBwI5WZoaZWYWWTQOy4oXgwcgzmhM0iHQ&s"); */
     background-size: cover;
     background-repeat: no-repeat;

@@ -43,7 +43,7 @@
   
   .control {
     color: black;
-    background-color: #66ff00;
+    background-color: #24C41C;
     @media (max-width: $mantine-breakpoint-xs) {
       flex: 1;
     }

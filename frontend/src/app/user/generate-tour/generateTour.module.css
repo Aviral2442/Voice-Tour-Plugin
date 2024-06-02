@@ -17,20 +17,20 @@
     backdrop-filter: blur(12.5px);
     -webkit-backdrop-filter: blur(12.5px);
     border-radius: 10px;
-    border-left: 1px solid #66ff00;
-    border-top: 1px solid #66ff00;
-    border-bottom: 5px solid #66ff00;
-    border-right: 5px solid #66ff00;
+    border-left: 1px solid #c0c0c0;
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 5px solid #c0c0c0;
+    border-right: 5px solid #c0c0c0;
     color: white;
     margin-top: -70px;
     padding: 20px;
 }
 
 .innerContainer2 {
-    border-top: 1px solid #66ff00;
-    border-left: 1px solid #66ff00;
-    border-right: 5px solid #66ff00;
-    border-bottom: 5px solid #66ff00;
+    border-top: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    border-right: 5px solid #c0c0c0;
+    border-bottom: 5px solid #c0c0c0;
 
     background: #100c08;
     border-radius: 10px;
@@ -47,11 +47,11 @@
     letter-spacing: 1px;
     padding: 10px;
     margin-left: 18px;
-    background-color: #66ff00;
+    background-color: #24C41C;
     color: black;
 }
 
 .control1:hover {
-    background-color: #66ff00;
+    background-color: #24C41C;
     color: black;
 }

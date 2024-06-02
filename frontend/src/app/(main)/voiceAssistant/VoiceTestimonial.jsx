@@ -18,7 +18,7 @@ const Testimonial = () => {
     return (
         <>
             <Title order={1} align="center" className={clsx(classes.Title, fonts.className)}>
-                Read trusted <span style={{ color: '#66ff00' }}>reviews</span> from our <span style={{ color: '#66ff00' }}>customers</span>
+                Read trusted <span style={{ color: '#24C41C' }}>reviews</span> from our <span style={{ color: '#32B531' }}>customers</span>
             </Title>
             <Carousel
                 className={classes.Carousel}
