@@ -5,6 +5,7 @@ import { useDisclosure } from "@mantine/hooks"
 import { IconSearch } from "@tabler/icons-react"
 import { MantineLogo } from "@mantinex/mantine-logo"
 import classes from "./navbar.module.css"
+import Link from 'next/link'
 
 const links = [
     { link: "/about", label: "Features" },
@@ -17,14 +18,13 @@ const Navbar = () => {
     const [opened, { toggle }] = useDisclosure(false)
 
     const items = links.map(link => (
-      <a
+      <Link
         key={link.label}
         href={link.link}
         className={classes.link}
-        onClick={event => event.link()}
       >
         {link.label}
-      </a>
+      </Link>
     ));
   return (
     <header className={classes.header} >

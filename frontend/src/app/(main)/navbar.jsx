@@ -221,9 +221,9 @@ function Navbar() {
               <a href="http://localhost:3000/" className={clsx(classes.link, fonts.className, path === '/' && classes.links)}>
                 HOME
               </a>
-              <a href="/voiceAssistant" className={clsx(classes.link, fonts.className, path === '/voiceAssistant' && classes.links)}>
+              <Link href="/voiceAssistant" className={clsx(classes.link, fonts.className, path === '/voiceAssistant' && classes.links)}>
                 VOICE ASSISTANT
-              </a>
+              </Link>
               <a href="/tourGenerator" className={clsx(classes.link, fonts.className, path === '/tourGenerator' && classes.links)}>
                 TOUR GENERATOR
               </a>

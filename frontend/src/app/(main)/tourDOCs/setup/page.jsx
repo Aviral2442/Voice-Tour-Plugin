@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import classes from './setup.module.css'
 import { CopyBlock, dracula } from 'react-code-blocks'
 import useAppContext from '@/context/AppContext'
+const ISSERVER = typeof window === "undefined";
 
 
 const Setup = () => {
@@ -14,6 +15,7 @@ const Setup = () => {
     const [selTour, setSelTour] = useState('');
 
     const fetchTourId = useCallback(() => {
+        if(!ISSERVER)
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/getbyuser`, {
             headers: {
                 'x-auth-token': currentUser.token,
