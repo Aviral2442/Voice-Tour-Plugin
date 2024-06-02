@@ -1,7 +1,7 @@
 .mainContainer {
     /* padding-left: 50px;
     padding-right: 25px; */
-    padding: 50px 80px;
+    padding: 20px 80px;
     background-color: #2E2E2E;
 
     @media Screen and (max-width: 768px) {

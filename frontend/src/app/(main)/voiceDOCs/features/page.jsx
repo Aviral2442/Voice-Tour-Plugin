@@ -2,16 +2,17 @@
 import React from 'react'
 import { Text, Title } from '@mantine/core'
 import { IconCornerDownRightDouble } from '@tabler/icons-react'
-import classes from './setup.module.css'
+import classes from './features.module.css'
 
-const Setup = () => {
+const Features = () => {
     return (
         <div className={classes.mainContainer} >
 
-            <Title pt={'20'} order={1} c="#ffffff">
-                To Submit Your Web Page, Follow These Steps Carefully: </Title>
+            <Title pt={'20'} order={1} c="#ffffff">Feature's </Title>
 
-            <Text className={classes.para} mt={15} >Welcome to the Voice</Text>
+            <Text className={classes.para} mt={15} >Welcome to the Voice Assistant Features page. Our Voice Assistant plugin offers a suite of
+                powerful tools designed to make website navigation and interaction seamless and intuitive. Explore the features that set our
+                Voice Assistant apart and learn how it can enhance your website.</Text>
             <br />
 
             <Title order={3} className={classes.title} mt={8}> <IconCornerDownRightDouble /> Hands-Free Navigation</Title>
@@ -70,4 +71,4 @@ const Setup = () => {
     )
 }
 
-export default Setup
+export default Features
