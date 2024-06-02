@@ -44,7 +44,7 @@ const VoiceDocs = () => {
                 </Title>
                 <Text className={classes.para} ml={32}  >Experience the power of advanced search capabilities with our Voice Assistant Plugin. Our
                     intelligent search box utilizes cutting-edge algorithms to deliver accurate and relevant search results, ensuring users
-                    find exactly what they're looking for with ease.</Text>
+                    find exactly what they&apos;re looking for with ease.</Text>
 
                 <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Simple Setup/Installation</Title>
                 <Text className={classes.para} ml={32}  >Gone are the days of complex setup processes and lengthy installations. Our Voice Assistant
@@ -53,7 +53,7 @@ const VoiceDocs = () => {
                     no time.</Text>
                 <br />
                 <Text className={classes.para} ml={32} >With these features and more, our Voice Assistant Plugin sets the standard for intuitive
-                    website interaction. Whether you're a seasoned user or new to voice technology, our plugin makes navigating the web a
+                    website interaction. Whether you&apos;re a seasoned user or new to voice technology, our plugin makes navigating the web a
                     breeze, offering unparalleled convenience and efficiency at your fingertips.</Text>
 
                 <Title order={1} className={classes.title} mt={10}> Our Mission </Title>
