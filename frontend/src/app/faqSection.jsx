@@ -21,7 +21,7 @@ export default function Faqsection() {
 
         <Container size="md" className={classes.wrapper} pt={100} pb={180}  >
             <Title ta="center" className={clsx(classes.title, fonts.className)} data-aos="fade-up">
-                Frequently <span style={{ color: '#66FF00' }}>Asked</span> Questions
+                Frequently <span style={{ color: '#24C41C' }}>Asked</span> Questions
             </Title>
 
             <Accordion variant="separated" >

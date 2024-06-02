@@ -16,7 +16,7 @@
   &::after {
     content: '';
     display: block;
-    background-color: #4ECA3E;
+    background-color: #24C41C;
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
@@ -47,7 +47,7 @@
 }
 
 .card:hover {
-  border: rem(2px) solid #66FF00;
+  border: rem(2px) solid #24C41C;
   /* transform: translateY(-10px); */
   /* border: 1px solid black; */
   transform: scale(1.09);
@@ -64,7 +64,7 @@
     content: ' ';
 
     display: block;
-    background-color: #4ECA3E;
+    background-color: #24C41C;
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);

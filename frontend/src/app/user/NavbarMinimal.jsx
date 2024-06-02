@@ -28,7 +28,7 @@ const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 function NavbarLink({ icon: Icon, label, active, onClick }) {
     return (
-        <Tooltip label={label} position="right" withArrow arrowSize={8}  bg="#66ff00" c="black" fz="h5" fw="bold" className={font.className} transitionProps={{ duration: 0 }}>
+        <Tooltip label={label} position="right" withArrow arrowSize={8}  bg="#24C41C" c="black" fz="h5" fw="bold" className={font.className} transitionProps={{ duration: 0 }}>
             <UnstyledButton
                 onClick={onClick}
                 className={classes.link}

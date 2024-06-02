@@ -39,7 +39,7 @@
   
   .highlight {
     position: relative;
-    background-color: #66ff00;
+    background-color: #24C41C;
     color: black;
     border-radius: var(--mantine-radius-sm);
     padding: rem(4px) rem(12px);

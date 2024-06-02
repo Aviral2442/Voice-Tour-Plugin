@@ -20,7 +20,7 @@ const Testimonial = () => {
     return (
         <>
             <Title order={1} align="center" className={clsx(classes.Title,fontss.className)}>
-                Read trusted <span style={{ color: '#66ff00' }}>reviews</span> from our <span style={{ color: '#66ff00' }}>customers</span>
+                Read trusted <span style={{ color: '#24C41C' }}>reviews</span> from our <span style={{ color: '#24C41C' }}>customers</span>
             </Title>
             <Carousel
                 className={classes.Carousel}
@@ -43,7 +43,7 @@ const Testimonial = () => {
 
                             <Grid grow gutter="xl" >
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
                                         <Avatar src='testimonial1.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -77,7 +77,7 @@ const Testimonial = () => {
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
                                         <Avatar src='testimonial2.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -112,7 +112,7 @@ const Testimonial = () => {
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
                                         <Avatar src='testimonial3.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -148,7 +148,7 @@ const Testimonial = () => {
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
                                         <Avatar src='testimonial14.avif' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -183,7 +183,7 @@ const Testimonial = () => {
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
                                         <Avatar src='testimonial5.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -218,7 +218,7 @@ const Testimonial = () => {
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#66FF00'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
                                         <Avatar src='testimonial6.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>

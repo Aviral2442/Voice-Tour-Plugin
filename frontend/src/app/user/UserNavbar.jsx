@@ -177,8 +177,8 @@ export function UserNavbar() {
 
 
                         <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
-                            from: '#66ff00',
-                            to: '#66ff00', deg: 0
+                            from: '#24C41C',
+                            to: '#24C41C', deg: 0
                         }}>
                             <IconSearch style={{ width: '70%', height: '70%', color: 'black' }} stroke={2} />
                         </ActionIcon>
@@ -261,7 +261,7 @@ export function UserNavbar() {
 
                     <Group>
                        
-                        <Button onClick={spotlight.open} bg={"#66ff00"} c={"black"} radius={"md"}>Search</Button>
+                        <Button onClick={spotlight.open} bg={"#24C41C"} c={"black"} radius={"md"}>Search</Button>
 
                         <Spotlight.Root query={query} onQueryChange={setQuery} >
                             <Spotlight.Search

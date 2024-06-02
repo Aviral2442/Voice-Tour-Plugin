@@ -40,7 +40,7 @@ const page = () => {
           <div className={classes.inner}>
             <div className={classes.content}>
               <Title className={clsx(classes.title, font.className)}>
-                Tour <span className={classes.highlight}>Generator</span> <span style={{ color: '#66ff00' }}>Plugin</span> <br />{" "}
+                Tour <span className={classes.highlight}>Generator</span> <span style={{ color: '#24C41C' }}>Plugin</span> <br />{" "}
                 {/* Welcome to the */}
               </Title>
               <Text fz='lg' mt="md" className={fonts.className}>
@@ -57,7 +57,7 @@ const page = () => {
                   component={Link}
                   // href="/user/generate-tour"
                   variant='outline'
-                  color='#66ff00'
+                  color='#24C41C'
                   href="/tourDOCs"
                 >
                   Get Started
@@ -71,7 +71,7 @@ const page = () => {
                 </Button>
                 <Button
                   variant='outline'
-                  color='#66ff00'
+                  color='#24C41C'
                   radius="md"
                   size="md"
                   className={classes.control1}

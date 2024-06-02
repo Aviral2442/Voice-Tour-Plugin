@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border-bottom: 6px solid #66ff00;
+  border-bottom: 6px solid #24C41C;
   border-radius: 1rem;
   background-color: #28282B;
   width: 100%;
@@ -31,13 +31,13 @@
 }
 
 .questionmark {
-  color: #66ff00;
+  color: #24C41C;
   font-size: 3rem;
 
 }
 
 .Title {
-  color: #66ff00;
+  color: #24C41C;
   font-size: 4rem;
 
   @media (max-width: $mantine-breakpoint-sm) {

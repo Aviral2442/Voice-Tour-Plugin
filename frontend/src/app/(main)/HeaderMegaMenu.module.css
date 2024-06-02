@@ -24,8 +24,8 @@
 
   @mixin hover {
     padding-bottom: 7px;
-    color: #66FF00;
-    border-bottom: 2px solid #66FF00;
+    color: #24C41C;
+    border-bottom: 2px solid #24C41C;
 
   }
 }
@@ -33,8 +33,8 @@
 .links {
   padding-bottom: 7px;
   background-color: black;
-  color: #66FF00;
-  border-bottom: 2px solid #66FF00;
+  color: #24C41C;
+  border-bottom: 2px solid #24C41C;
 
 }
 
@@ -98,16 +98,16 @@
 .button {
   font-size: 15PX;
   letter-spacing: 1px;
-  border: 1px solid #66FF00;
+  border: 1px solid #24C41C;
   padding-bottom: 3px;
   font-weight: bold;
-  color: #66FF00;
+  color: #24C41C;
   font-size: 19px;
   
 }
 
 .button:hover {
-  background-color: #66FF00;
+  background-color: #24C41C;
   color: black;
 }
 
@@ -123,6 +123,6 @@
 }
 
 .spotlightList {
-  color: #66ff00;
+  color: #24C41C;
   background-color: black;
 }

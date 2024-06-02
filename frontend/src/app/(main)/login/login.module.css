@@ -39,7 +39,7 @@
 	backdrop-filter: blur(100px);
 	-webkit-backdrop-filter: blur(0px);
 	border-radius: 10px;
-	border-left: 5px solid #66ff00;
+	border-left: 5px solid #24C41C;
 	color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 
 
@@ -69,7 +69,7 @@
 	width: 50%;
 	padding: 10px 20px;
 	border-radius: 7px;
-	border: 1px solid #66ff00;
+	border: 1px solid #24C41C;
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -84,7 +84,7 @@
 }
 
 .Button:hover {
-	background: #66ff00;
+	background: #24C41C;
 	color: black;
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
@@ -157,8 +157,8 @@
 	align-items: center;
 	padding: 10px 15px;
 	gap: 15px;
-	background-color: #66ff00;
-	outline: 3px #66ff00 solid;
+	background-color: #24C41C;
+	outline: 3px #24C41C solid;
 	outline-offset: -3px;
 	border-radius: 5px;
 	border: none;
@@ -179,7 +179,7 @@
 
 .button:hover {
 	background-color: transparent;
-	color: #66ff00;
+	color: #24C41C;
 }
 
 .button:hover .text {
@@ -192,6 +192,6 @@
 
 .subtitle {
 	font-size: 35px;
-	color: #66ff00;
+	color: #24C41C;
 
 }

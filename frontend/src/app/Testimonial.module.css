@@ -28,7 +28,7 @@
 }
 
 .cardsquare:hover {
-  border: rem(2px) solid #66FF00;
+  border: rem(2px) solid #24C41C;
 }
 
 .icon {
@@ -36,11 +36,11 @@
   top: rem(-20px);
   left: calc(95% - rem(30px));
   background-color: black;
-  border: 1px solid #66FF00;
+  border: 1px solid #24C41C;
 }
 
 .name {
-  color: #66FF00;
+  color: #24C41C;
   font-size: 25px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.1;
@@ -54,7 +54,7 @@
 }
 
 .icon1 {
-  background-color: #39FF14;
+  background-color: #24C41C;
   left: calc(70% - rem(30px));
 }
 
@@ -62,7 +62,7 @@
   width: rem(12px);
   height: rem(4px);
   transition: width 250ms ease;
-  background-color: #66FF00;
+  background-color: #24C41C;
 
   &[data-active] {
     width: rem(40px);

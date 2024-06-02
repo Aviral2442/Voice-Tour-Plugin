@@ -13,7 +13,7 @@
       content: ' ';
   
       display: block;
-      background-color: #66FF00;
+      background-color: #24C41C;
       width: rem(45px);
       height: rem(2px);
       margin-top: var(--mantine-spacing-sm);
@@ -31,5 +31,5 @@
   
   .item:hover {
     
-    border: rem(3px) solid #66FF00;
+    border: rem(3px) solid #24C41C;
   }

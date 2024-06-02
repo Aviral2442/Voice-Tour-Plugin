@@ -48,7 +48,7 @@ export function Feature({ title, description, Number }) {
     return (
         <div>
             <Card h={200} className={classes.Card}>
-                <Text mt="sm" fz={24} mb={7} c={"#66ff00"} className={font.className}>
+                <Text mt="sm" fz={24} mb={7} c={"#24C41C"} className={font.className}>
                     {title}
                 </Text>
                 <Text size="sm" lh={1.6} className={classes.Descript} ta={"center"}>
