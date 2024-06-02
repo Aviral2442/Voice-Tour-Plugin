@@ -17,10 +17,10 @@ import {
 
 const data = [
     { link: "/voiceDOCs", label: "Introduction", icon: IconBellRinging },
-    { link: "", label: "What is the Voice Search ?", icon: IconReceipt2 },
-    { link: "", label: "Features", icon: IconKey },
-    { link: "/voiceDOCs/setup", label: "Installation", icon: IconFingerprint },
-    { link: "", label: "How It Works", icon: IconDatabaseImport },
+    // { link: "", label: "What is Voice Navigation ?", icon: IconReceipt2 },
+    { link: "/voiceDocs/features", label: "Features", icon: IconKey },
+    { link: "/voiceDOCs/setup", label: "Setup", icon: IconFingerprint },
+    // { link: "", label: "How It Works", icon: IconDatabaseImport },
     { link: "", label: "Customization", icon: Icon2fa },
     { link: "", label: "Integration Guides", icon: IconSettings },
     { link: "", label: "FAQs", icon: IconSettings },
