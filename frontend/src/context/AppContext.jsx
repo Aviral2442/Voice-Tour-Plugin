@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
     const router = useRouter();
 
     const [currentUser, setCurrentUser] = useState(
-        JSON.parse(localStorage.getItem('user'))
+        JSON.parse(!ISSERVER ? localStorage.getItem('user') : null)
     );
 
     const [loggedIn, setLoggedIn] = useState(currentUser !== null)
