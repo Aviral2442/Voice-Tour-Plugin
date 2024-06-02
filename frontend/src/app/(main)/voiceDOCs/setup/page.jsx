@@ -1,70 +1,47 @@
 'use client'
 import React from 'react'
-import { Text, Title } from '@mantine/core'
-import { IconCornerDownRightDouble } from '@tabler/icons-react'
+import { Anchor, Image, Text, Title } from '@mantine/core'
 import classes from './setup.module.css'
 
 const Setup = () => {
     return (
         <div className={classes.mainContainer} >
 
-            <Title pt={'20'} order={1} c="#ffffff">
+            <Title pt={'20'} order={2} c="#ffffff">
                 To Submit Your Web Page, Follow These Steps Carefully: </Title>
 
-            <Text className={classes.para} mt={15} >Welcome to the Voice</Text>
+            <Text className={classes.para} mt={15} >Submitting your web pages is a straightforward process designed to
+                ensure that all necessary information is accurately captured. By following the detailed steps outlined below,
+                you can efficiently add your web pages to our system. This guide will help you navigate each step of the
+                submission process, from logging in to viewing your results. Whether you are submitting one page or multiple
+                pages, these instructions will ensure a smooth and successful submission experience.</Text>
             <br />
 
-            <Title order={3} className={classes.title} mt={8}> <IconCornerDownRightDouble /> Hands-Free Navigation</Title>
-            <Text className={classes.para} ml={32}  >Users can effortlessly navigate your website using simple voice commands. Our advanced
-                voice recognition technology accurately understands and processes natural language inputs, allowing users to move between
-                pages, access content, and interact with elements without lifting a finger.</Text>
+            <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 1:</span> Log In to Our Site</Title>
+            <Text className={classes.para} ml={10}  >Ensure that you are logged into your account on our website. If you
+                do not have an account, please <Anchor href="/signup" underline="hover"> register </Anchor> to create one.</Text>
 
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Natural Language Processing</Title>
-            <Text className={classes.para} ml={32}  >Our Voice Assistant is equipped with sophisticated natural language processing
-                capabilities. It understands and interprets natural language inputs, providing accurate responses and actions based on user
-                commands, making interactions smooth and intuitive.</Text>
+            <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 2:</span> Navigate to Create Web Pages</Title>
+            <Text className={classes.para} ml={10}  >Go to the "<Anchor href="/user/manage-webpage" underline="hover">Create Web Pages</Anchor>"  section to start the submission process for your web pages.</Text>
 
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Enable Plugins with Shortcuts</Title>
-            <Text className={classes.para} ml={32}  >Activate the Voice Assistant instantly with convenient keyboard shortcuts. Use Ctrl
-                + Space to open the voice assistant and Ctrl + K to launch the advanced search box. These shortcuts streamline the user
-                experience, making it easier to interact with your site.</Text>
+            {/* <Image src="webpage.jpeg" /> */}
 
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Webpage Management Panel</Title>
-            <Text className={classes.para} ml={32}  >Manage your Voice Assistant settings through a user-friendly webpage management panel.
-                Customize voice commands, set preferences, and optimize the user experience directly from the panel, giving you full control
-                over how the assistant operates on your site.</Text>
+            <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 3:</span> Click on Submit Web Pages</Title>
+            <Text className={classes.para} ml={10}  >Click the "Submit Web Pages" button to access the submission form.</Text>
 
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Advanced Search Box</Title>
-            <Text className={classes.para} ml={32}  >Improve your site's search functionality with our advanced voice-enabled search box.
-                Users can perform searches using voice commands, making it faster and more convenient to find the information they need.</Text>
+            <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 4:</span> Fill in the Required Fields</Title>
+            <Text className={classes.para} ml={10}  >Complete all necessary fields in the submission form:</Text>
 
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Customizable Commands</Title>
-            <Text className={classes.para} ml={32}  >Configure the Voice Assistant to suit your website's specific needs. Customize
-                commands and responses to provide a personalized experience that resonates with your audience, enhancing overall satisfaction
-                and engagement.</Text>
+            <Title order={4} mt={8} ml={90}> <span className={classes.subSteps} >Web Page Name:</span> <span className={classes.subPara} ml={10}  >Enter a name for your web page.</span></Title>
+            <Title order={4} mt={0} ml={90}> <span className={classes.subSteps} >Address of the Page: </span> <span className={classes.subPara} ml={10}  >Provide the URL of your web page.</span></Title>
+            <Title order={4} mt={0} ml={90}> <span className={classes.subSteps} >Page Description:</span> <span className={classes.subPara} ml={10}  >Write a brief description of the web page.</span></Title>
+            <Text mt={8} ml={9}> <span className={classes.para} ml={10}  >Once all fields are completed, click on the "Submit Web Pages" button to submit your web page.</span></Text>
 
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Seamless Integration</Title>
-            <Text className={classes.para} ml={32}  >Our Voice Assistant is designed for easy integration with various platforms and
-                content management systems (CMS). Follow straightforward installation steps to add the voice assistant to your website,
-                ensuring a hassle-free setup process.</Text>
+            <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 5:</span> Repeat for Additional Pages</Title>
+            <Text className={classes.para} ml={10}  >Repeat the above steps to submit any additional web pages you have.            </Text>
 
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Personalized User Experience</Title>
-            <Text className={classes.para} ml={32}  >Tailor the Voice Assistant to meet the specific needs of your users. Customize
-                commands and responses to provide a personalized experience that resonates with your audience, improving overall satisfaction
-                and engagement.</Text>
-
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Accessibility Enhancement</Title>
-            <Text className={classes.para} ml={32}  >Our Voice Assistant plugin is built with security in mind. We use advanced encryption
-                and secure protocols to ensure that all voice interactions are safe and protected, giving you and your users peace of mind.</Text>
-
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Robust Security</Title>
-            <Text className={classes.para} ml={32}  >Improve your site's search functionality with our advanced voice-enabled search box.
-                Users can perform searches using voice commands, making it faster and more convenient to find the information they need.</Text>
-
-            <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Continuous Updates and Support</Title>
-            <Text className={classes.para} ml={32}  >Stay ahead with regular updates and dedicated support. We continuously improve our
-                Voice Assistant plugin, adding new features and enhancements based on user feedback and technological advancements. Our support
-                team is always ready to assist you with any questions or issues.</Text>
+            <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 6:</span> Refresh to View Results</Title>
+            <Text className={classes.para} ml={10}  >Refresh the page to see a list of your submitted web pages.</Text>
 
         </div>
     )
