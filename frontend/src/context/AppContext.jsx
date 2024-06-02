@@ -1,3 +1,4 @@
+'use client';
 import { useRouter } from 'next/navigation';
 import React, { createContext, useState, useContext } from 'react'
 const ISSERVER = typeof window === "undefined";
