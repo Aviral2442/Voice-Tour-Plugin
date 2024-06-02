@@ -35,11 +35,11 @@ const Setup = () => {
                 over how the assistant operates on your site.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Advanced Search Box</Title>
-            <Text className={classes.para} ml={32}  >Improve your site's search functionality with our advanced voice-enabled search box.
+            <Text className={classes.para} ml={32}  >Improve your site&apos;s search functionality with our advanced voice-enabled search box.
                 Users can perform searches using voice commands, making it faster and more convenient to find the information they need.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Customizable Commands</Title>
-            <Text className={classes.para} ml={32}  >Configure the Voice Assistant to suit your website's specific needs. Customize
+            <Text className={classes.para} ml={32}  >Configure the Voice Assistant to suit your website&apos;s specific needs. Customize
                 commands and responses to provide a personalized experience that resonates with your audience, enhancing overall satisfaction
                 and engagement.</Text>
 
@@ -58,7 +58,7 @@ const Setup = () => {
                 and secure protocols to ensure that all voice interactions are safe and protected, giving you and your users peace of mind.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Robust Security</Title>
-            <Text className={classes.para} ml={32}  >Improve your site's search functionality with our advanced voice-enabled search box.
+            <Text className={classes.para} ml={32}  >Improve your site&apos;s search functionality with our advanced voice-enabled search box.
                 Users can perform searches using voice commands, making it faster and more convenient to find the information they need.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Continuous Updates and Support</Title>
