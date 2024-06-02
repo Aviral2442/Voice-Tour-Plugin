@@ -18,7 +18,7 @@ const Setup = () => {
         if(!ISSERVER)
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/getbyuser`, {
             headers: {
-                'x-auth-token': currentUser.token,
+                'x-auth-token': currentUser!==null ? currentUser.token : '',
             }
         })
             .then(response => response.json())
@@ -29,7 +29,7 @@ const Setup = () => {
             .catch(err => {
                 console.log(err);
             })
-    }, [currentUser.token]);
+    }, []);
 
     useEffect(() => {
         fetchTourId();

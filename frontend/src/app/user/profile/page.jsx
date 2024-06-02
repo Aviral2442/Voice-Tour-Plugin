@@ -23,7 +23,7 @@ const Profile = () => {
   const fetchTourId = () => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/getbyuser`, {
       headers: {
-        'x-auth-token': currentUser.token,
+        'x-auth-token': currentUser !== null ? currentUser.token : '',
       }
     })
       .then(response => response.json())
@@ -78,7 +78,7 @@ const Profile = () => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/webpage/getbyuser`, {
       headers: {
         'Content-Type': 'application/json',
-        'x-auth-token': currentUser.token
+        'x-auth-token': currentUser !==null ? currentUser.token : ''
       }
     })
       .then(response => response.json())
@@ -125,25 +125,31 @@ const Profile = () => {
 
   return (
     <>
-      <Card shadow="sm" padding="lg" radius="md" bg={"black"}>
-        <Group mt="md" mb="xs" justify="space-between">
-          <Group mt="md" mb="xs">
-            <ThemeIcon radius="md" size={80} variant='filled' color={"white"}>
-              <Avatar src={'http://localhost:5000/' + currentUser.avatar} alt={currentUser.name} radius="xl" size={70} />
-            </ThemeIcon>
-            <Flex direction="column" >
-              <Text size="xl" className={font.className}>{currentUser.name}</Text>
-              <Text size="xl" className={font.className}>{currentUser.email}</Text>
-              <Text size="xl" className={font.className}>{ }</Text>
-            </Flex>
-          </Group>
-          <Group >
-            <Button variant="filled" mr={"70"} c="black" bg="#fff" component="a" href="/user/profile" className={font.className}>
-              Refresh
-            </Button>
-          </Group>
-        </Group>
-      </Card>
+      {
+        currentUser !== null && (
+          <Card shadow="sm" padding="lg" radius="md" bg={"black"}>
+            <Group mt="md" mb="xs" justify="space-between">
+              <Group mt="md" mb="xs">
+                <ThemeIcon radius="md" size={80} variant='filled' color={"white"}>
+                  {
+                    <Avatar src={'http://localhost:5000/' + currentUser.avatar} alt={currentUser.name} radius="xl" size={70} />
+                  }
+                </ThemeIcon>
+                <Flex direction="column" >
+                  <Text size="xl" className={font.className}>{currentUser.name}</Text>
+                  <Text size="xl" className={font.className}>{currentUser.email}</Text>
+                  <Text size="xl" className={font.className}>{ }</Text>
+                </Flex>
+              </Group>
+              <Group >
+                <Button variant="filled" mr={"70"} c="black" bg="#fff" component="a" href="/user/profile" className={font.className}>
+                  Refresh
+                </Button>
+              </Group>
+            </Group>
+          </Card>
+        )
+      }
       {/* data for Tour Navigator */}
       <Container fluid p={10} className={classes.Container}>
         <Badge radius="sm" size="xl" mb={10} bg={"#24C41C"} c={"black"} className={font.className}>Tours </Badge>
