@@ -8,7 +8,7 @@ const Features = () => {
     return (
         <div className={classes.mainContainer} >
 
-            <Title pt={'20'} order={1} c="#ffffff">Feature's </Title>
+            <Title pt={'20'} order={1} c="#ffffff">Feature&apos;s </Title>
 
             <Text className={classes.para} mt={15} >Welcome to the Voice Assistant Features page. Our Voice Assistant plugin offers a suite of
                 powerful tools designed to make website navigation and interaction seamless and intuitive. Explore the features that set our
@@ -36,11 +36,11 @@ const Features = () => {
                 over how the assistant operates on your site.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Advanced Search Box</Title>
-            <Text className={classes.para} ml={32}  >Improve your site's search functionality with our advanced voice-enabled search box.
+            <Text className={classes.para} ml={32}  >Improve your site&apos;s search functionality with our advanced voice-enabled search box.
                 Users can perform searches using voice commands, making it faster and more convenient to find the information they need.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Customizable Commands</Title>
-            <Text className={classes.para} ml={32}  >Configure the Voice Assistant to suit your website's specific needs. Customize
+            <Text className={classes.para} ml={32}  >Configure the Voice Assistant to suit your website&apos;s specific needs. Customize
                 commands and responses to provide a personalized experience that resonates with your audience, enhancing overall satisfaction
                 and engagement.</Text>
 
@@ -59,7 +59,7 @@ const Features = () => {
                 and secure protocols to ensure that all voice interactions are safe and protected, giving you and your users peace of mind.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Robust Security</Title>
-            <Text className={classes.para} ml={32}  >Improve your site's search functionality with our advanced voice-enabled search box.
+            <Text className={classes.para} ml={32}  >Improve your site&apos;s search functionality with our advanced voice-enabled search box.
                 Users can perform searches using voice commands, making it faster and more convenient to find the information they need.</Text>
 
             <Title order={3} className={classes.title} mt={10}> <IconCornerDownRightDouble /> Continuous Updates and Support</Title>
