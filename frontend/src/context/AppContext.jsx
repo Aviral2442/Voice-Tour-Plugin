@@ -1,5 +1,7 @@
+'use client';
 import { useRouter } from 'next/navigation';
 import React, { createContext, useState, useContext } from 'react'
+const ISSERVER = typeof window === "undefined";
 
 const AppContext = createContext();
 
@@ -8,14 +10,15 @@ export const AppProvider = ({ children }) => {
     const router = useRouter();
 
     const [currentUser, setCurrentUser] = useState(
-        JSON.parse(localStorage.getItem('user'))
+        JSON.parse(!ISSERVER ? localStorage.getItem('user') : null)
     );
 
     const [loggedIn, setLoggedIn] = useState(currentUser !== null)
 
     const logout = () => {
         setLoggedIn(false);
-        localStorage.removeItem('user');
+        if (!ISSERVER)
+            localStorage.removeItem('user');
         setCurrentUser(null);
         router.push('/login');
         // clear token

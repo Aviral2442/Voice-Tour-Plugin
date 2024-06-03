@@ -29,6 +29,7 @@ import { Josefin_Sans, Rammetto_One } from 'next/font/google';
 import clsx from 'clsx';
 import useAppContext from '@/context/AppContext';
 import { useGoogleLogin } from '@react-oauth/google';
+const ISSERVER = typeof window === "undefined";
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -65,7 +66,7 @@ export function Login() {
 
   const loginSubmit = (values) => {
     console.log(values);
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`,{
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {
@@ -76,7 +77,9 @@ export function Login() {
         if (response.status === 200) {
           toast.success('LoggedIn Successfully');
           response.json().then(data => {
-            localStorage.setItem('user', JSON.stringify(data));
+            if (!ISSERVER) {
+              localStorage.setItem('user', JSON.stringify(data));
+            }
             setCurrentUser(data);
             setLoggedIn(true);
             // set token to cookie
@@ -93,11 +96,11 @@ export function Login() {
   }
 
 
-const login = useGoogleLogin({
-  onSuccess: tokenResponse => {
-    
-  },
-});
+  const login = useGoogleLogin({
+    onSuccess: tokenResponse => {
+
+    },
+  });
 
   return (
     <div className={classes.wrapper}>
@@ -110,7 +113,7 @@ const login = useGoogleLogin({
                 <Container size="responsive" w={700} >
                   <Paper shadow="md" p={30} mt={10} mb={30} radius="md" className={classes.Paper}>
                     <Title className={classes.title} >
-                       <span className={clsx(classes.subtitle,font.className)}>Login</span> </Title>
+                      <span className={clsx(classes.subtitle, font.className)}>Login</span> </Title>
                     {/* <Text className={classes.text}>Login with</Text> */}
 
                     <Group grow mb="md" mt="lg" >

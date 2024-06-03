@@ -82,11 +82,14 @@ function Navbar() {
   const displayLoginOptions = () => {
     if (loggedIn) {
       return <Menu
-        width={260}
+      withArrow
+      offset={5}
+        width={190}
         position="bottom-end"
         transitionProps={{ transition: 'pop-top-right' }}
         onClose={() => setUserMenuOpened(false)}
         onOpen={() => setUserMenuOpened(true)}
+        
         withinPortal
       >
         <Menu.Target>
@@ -218,9 +221,9 @@ function Navbar() {
               <a href="http://localhost:3000/" className={clsx(classes.link, fonts.className, path === '/' && classes.links)}>
                 HOME
               </a>
-              <a href="/voiceAssistant" className={clsx(classes.link, fonts.className, path === '/voiceAssistant' && classes.links)}>
+              <Link href="/voiceAssistant" className={clsx(classes.link, fonts.className, path === '/voiceAssistant' && classes.links)}>
                 VOICE ASSISTANT
-              </a>
+              </Link>
               <a href="/tourGenerator" className={clsx(classes.link, fonts.className, path === '/tourGenerator' && classes.links)}>
                 TOUR GENERATOR
               </a>
