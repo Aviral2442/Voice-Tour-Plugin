@@ -1,12 +1,13 @@
 'use client'
 import React from 'react'
-import { Anchor, Image, Text, Title } from '@mantine/core'
+import { Anchor, Container, Grid, Image, Text, Title } from '@mantine/core'
 import classes from './setup.module.css'
 import { CopyBlock, dracula } from 'react-code-blocks'
 
 const Setup = () => {
     return (
-        <div className={classes.mainContainer} >
+        <>
+        <Container fluid className={classes.mainContainer} >
 
             <Title pt={'20'} order={2} c="#ffffff">
                 To Submit Your Web Page, Follow These Steps Carefully: </Title>
@@ -28,10 +29,18 @@ const Setup = () => {
             <Text className={classes.para} ml={10}  >Go to the "<Anchor href="/user/manage-webpage" underline="hover">Create Web
                 Pages</Anchor>"  section to start the submission process for your web pages.</Text>
 
+                <Image src="/webpage.jpeg" h={420} mt={20} radius="md" alt="setup" className={classes.image} />
+
+
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 3:</span> Click on
                 Submit Web Pages</Title>
             <Text className={classes.para} ml={10}  >Click the "Submit Web Pages" button to access the submission form.</Text>
 
+            <Image src="/webpageform.png" h={420} mt={20} radius="md" alt="setup" className={classes.image} />
+
+            
+            <Grid  justify="center" align="center" mt={60} >
+            <Grid.Col span={8}>
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 4:</span> Fill in
                 the Required Fields</Title>
             <Text className={classes.para} ml={10}  >Complete all necessary fields in the submission form:</Text>
@@ -47,6 +56,11 @@ const Setup = () => {
             </Title>
             <Text className={classes.para} ml={10}  >Once all fields are completed, click on the "Submit Web Pages" button to
                 submit your web page.</Text>
+                </Grid.Col>
+                <Grid.Col span={4}>
+                <Image src="/wpform.png" h={300} mt={20} radius="md" alt="setup" className={classes.image} />
+                </Grid.Col>
+                </Grid>
 
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 5:</span> Repeat for
                 Additional Pages</Title>
@@ -132,7 +146,8 @@ const Setup = () => {
                 successfully integrate the Voice Navigation Plugin into your site. If you encounter any issues during the
                 process, please feel free to contact our support team for assistance.</Text>
 
-        </div>
+        </Container>
+        </>
     )
 }
 

@@ -34,3 +34,7 @@
     font-weight: 500;
     color: white;
 }
+
+.image{
+    border: 2px solid gray;
+}

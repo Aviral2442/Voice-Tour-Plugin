@@ -95,7 +95,7 @@ const WebPage = () => {
               <form onSubmit={webpageForm.handleSubmit} >
                 <TextInput
                   label="Name"
-                  placeholder="Enter your homepage name "
+                  placeholder="Enter your webpage name "
                   mt="md"                
                   id="name"
                   onChange={webpageForm.handleChange}
