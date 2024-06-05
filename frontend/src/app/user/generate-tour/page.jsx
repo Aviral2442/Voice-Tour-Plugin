@@ -28,7 +28,8 @@ const GenerateTour = () => {
   const overlaycolorRef = useRef();
   const widthRef = useRef();
 
-  const [currentUser, setCurrentUser] = useState(JSON.parseif (!ISSERVER)(localStorage.getItem('user')));
+  // const [currentUser, setCurrentUser] = useState(JSON.parseif (!ISSERVER)(localStorage.getItem('user')));
+  const [currentUser, setCurrentUser] = useState(() => !ISSERVER && JSON.parse(localStorage.getItem('user')));
 
   const [steps, setSteps] = useState([
     {
