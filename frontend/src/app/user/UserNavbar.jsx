@@ -254,7 +254,7 @@ export function UserNavbar() {
             <header className={classes.header}>
                 <div className={classes.inner}>
                     <Group>
-                        <Anchor href="http://localhost:3000/" underline="never">
+                        <Anchor component={Link} href="http://localhost:3000/" underline="never">
                             <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
                         </Anchor>
                     </Group>

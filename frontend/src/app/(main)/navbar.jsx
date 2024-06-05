@@ -139,7 +139,7 @@ function Navbar() {
             {currentUser.email}
           </Menu.Item>
           <Menu.Item
-            component="a"
+            component={Link}
             href="/user/profile"
             color='white'
             fz={16}
@@ -218,21 +218,21 @@ function Navbar() {
           <Group visibleFrom="md">
 
             <Group h="100%" gap={0} visibleFrom="md" >
-              <a href="http://localhost:3000/" className={clsx(classes.link, fonts.className, path === '/' && classes.links)}>
+              <Link href="http://localhost:3000/" className={clsx(classes.link, fonts.className, path === '/' && classes.links)}>
                 HOME
-              </a>
+              </Link>
               <Link href="/voiceAssistant" className={clsx(classes.link, fonts.className, path === '/voiceAssistant' && classes.links)}>
                 VOICE NAVIGATOR
               </Link>
-              <a href="/tourGenerator" className={clsx(classes.link, fonts.className, path === '/tourGenerator' && classes.links)}>
+              <Link href="/tourGenerator" className={clsx(classes.link, fonts.className, path === '/tourGenerator' && classes.links)}>
                 TOUR GENERATOR
-              </a>
-              <a href="/about" className={clsx(classes.link, fonts.className, path === '/about' && classes.links)}>
+              </Link>
+              <Link href="/about" className={clsx(classes.link, fonts.className, path === '/about' && classes.links)}>
                 ABOUT US
-              </a>
-              <a href="/contact" className={clsx(classes.link, fonts.className, path === '/contact' && classes.links)}>
+              </Link>
+              <Link href="/contact" className={clsx(classes.link, fonts.className, path === '/contact' && classes.links)}>
                 CONTACT US
-              </a>
+              </Link>
             </Group>
 
 

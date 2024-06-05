@@ -36,7 +36,11 @@ const Feedback = () => {
           We highly value your feedback and suggestions as they help us improve our Voice Navigation Plugin. Please take a moment to fill out this form with your thoughts and ideas.
         </Text>
 
-        <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
+        <Divider my="md" mt={30} />
+        <Text mt={30} mb={10} fw={900}>
+          Contact Information
+        </Text>
+        <SimpleGrid cols={{ base: 1, sm: 2 }} >
           <TextInput
             label="Name"
             placeholder="Your name"
@@ -132,6 +136,9 @@ const Feedback = () => {
             Submit
           </Button>
         </Group>
+        
+        <Divider my="md" mt={30} />
+
         <Text mt={30}>
           Thank you for taking the time to share your feedback. We appreciate your input and will review your submission to continue improving our services and products.
         </Text>
