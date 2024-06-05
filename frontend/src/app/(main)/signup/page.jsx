@@ -246,7 +246,7 @@ export function SignUp(props) {
             />
           </Group>
           <Group justify="space-between" mt="xl">
-            <Anchor component={Link} underline="hover" type="button" c="dimmed" href="/login" size="xs">
+            <Anchor component={Link} underline="hover" type="button" c="dimmed" href="/login" size="sm">
               Already have an account? Login here
             </Anchor>
             <Button type="submit" variant="outline" color="black" className={classes.button}
