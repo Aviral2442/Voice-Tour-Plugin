@@ -53,7 +53,7 @@ const Page = () => {
           <div className={classes.inner} data-aos="fade-up">
             <div className={classes.content}>
               <Title className={clsx(classes.title, font.className)}>
-                Voice Assitant <br /> <span style={{ color: '#24C41C' }}>Plugin</span>
+                Voice Navigator <br /> <span style={{ color: '#24C41C' }}>Plugin</span>
 
               </Title>
               <Text fz='lg' mt="md" c={"#C0C0C0"} className={fonts.className}>

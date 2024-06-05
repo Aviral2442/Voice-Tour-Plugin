@@ -25,7 +25,7 @@ const font = Josefin_Sans({ subsets: ['latin'], weight: ['100','400'] });
 
 const mockdata = [
     {
-        title: "Activate the Voice Assistant",
+        title: "Activate the Voice Navigator",
         description:
             "Simply click the Activate Assistant button or use the voice command to start interacting with our intelligent assistant.",
         icon: IconMicrophone

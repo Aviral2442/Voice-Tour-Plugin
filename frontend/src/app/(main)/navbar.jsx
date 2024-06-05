@@ -47,7 +47,7 @@ const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const data = [
 
   { label: "Home", link: "/" },
-  { label: "Voice Assistant", link: "/voiceAssistant" },
+  { label: "Voice Navigator", link: "/voiceAssistant" },
   { label: "Tour Generator", link: "/tourGenerator" },
   { label: "About Us", link: "/about" },
   { label: "Contact Us", link: "/contact" },
@@ -222,7 +222,7 @@ function Navbar() {
                 HOME
               </a>
               <Link href="/voiceAssistant" className={clsx(classes.link, fonts.className, path === '/voiceAssistant' && classes.links)}>
-                VOICE ASSISTANT
+                VOICE NAVIGATOR
               </Link>
               <a href="/tourGenerator" className={clsx(classes.link, fonts.className, path === '/tourGenerator' && classes.links)}>
                 TOUR GENERATOR

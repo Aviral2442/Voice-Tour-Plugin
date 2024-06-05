@@ -19,7 +19,7 @@ const HeroBulletLeft = () => {
                 </Group>
 
                 <Group className={classes.Left}>
-                    <Title className={classes.Title}> Enhance Your Projects with Voice Assistant</Title>
+                    <Title className={classes.Title}> Enhance Your Projects with Voice Navigator</Title>
                     <p className={classes.P}> Discover seamless website navigation like never before with our Voice Assistant feature. Say goodbye to traditional browsing methods and embrace the future of hands-free interaction. Experience convenience, efficiency, and accessibility at your fingertips.</p>
                        
                         <Flex
