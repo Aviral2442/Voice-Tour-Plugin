@@ -19,6 +19,7 @@
     "@mantinex/mantine-logo": "^1.0.1",
     "@react-oauth/google": "^0.12.1",
     "@tabler/icons-react": "^2.47.0",
+    "@vercel/speed-insights": "^1.0.11",
     "aos": "^2.3.4",
     "clsx": "^2.1.0",
     "embla-carousel-autoplay": "^8.0.1",

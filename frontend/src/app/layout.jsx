@@ -6,6 +6,7 @@ import Navbar from './(main)/navbar';
 import { Footer } from "./(main)/footer";
 import { Notifications } from "@mantine/notifications";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <Notifications />
           <div style={myStyles}>
             {children}
+            <SpeedInsights />
           </div>
           </GoogleOAuthProvider>
         </MantineProvider>
