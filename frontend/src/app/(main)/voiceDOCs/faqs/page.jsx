@@ -111,14 +111,14 @@ const Faqs = () => {
                             <Accordion.Control>
                                 Q2: What are the prerequisites for installing the Voice Navigation Plugin?
                             </Accordion.Control>
-                            <Accordion.Panel>Ensure you have access to your website's HTML files and the ability to edit them.</Accordion.Panel>
+                            <Accordion.Panel>Ensure you have access to your website&apos;s HTML files and the ability to edit them.</Accordion.Panel>
                         </Accordion.Item>
 
                         <Accordion.Item className={classes.item} value="newsletter">
                             <Accordion.Control>
                                 Q3: Do I need any special software to install the Voice Navigation Plugin?
                             </Accordion.Control>
-                            <Accordion.Panel>No special software is needed. You only need access to your website's HTML files to add the necessary tags and scripts.</Accordion.Panel>
+                            <Accordion.Panel>No special software is needed. You only need access to your website&apos;s HTML files to add the necessary tags and scripts.</Accordion.Panel>
                         </Accordion.Item>
 
                         <Accordion.Item className={classes.item} value="credit-card">

@@ -26,15 +26,15 @@ const Setup = () => {
 
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 2:</span> Navigate to
                 Create Web Pages</Title>
-            <Text className={classes.para} ml={10}  >Go to the "<Anchor href="/user/manage-webpage" underline="hover">Create Web
-                Pages</Anchor>"  section to start the submission process for your web pages.</Text>
+            <Text className={classes.para} ml={10}  >Go to the &quot;<Anchor href="/user/manage-webpage" underline="hover">Create Web
+                Pages</Anchor>&quot;  section to start the submission process for your web pages.</Text>
 
                 <Image src="/webpage.jpeg" h={420} mt={20} radius="md" alt="setup" className={classes.image} />
 
 
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 3:</span> Click on
                 Submit Web Pages</Title>
-            <Text className={classes.para} ml={10}  >Click the "Submit Web Pages" button to access the submission form.</Text>
+            <Text className={classes.para} ml={10}  >Click the &quot;Submit Web Pages&quot; button to access the submission form.</Text>
 
             <Image src="/webpageform.png" h={420} mt={20} radius="md" alt="setup" className={classes.image} />
 
@@ -54,7 +54,7 @@ const Setup = () => {
             <Title order={5} mb={18} ml={90}> <span className={classes.subSteps} >Page Description: </span>
                 <span className={classes.subPara} ml={10}  > Write a brief description of the web page.</span>
             </Title>
-            <Text className={classes.para} ml={10}  >Once all fields are completed, click on the "Submit Web Pages" button to
+            <Text className={classes.para} ml={10}  >Once all fields are completed, click on the &quot;Submit Web Pages&quot; button to
                 submit your web page.</Text>
                 </Grid.Col>
                 <Grid.Col span={4}>
@@ -89,7 +89,7 @@ const Setup = () => {
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 7: </span>
                 Copy Your Unique User ID</Title>
             <Text className={classes.para} ml={10}  >On the profile page, you will see a list of all the web pages you
-                have submitted. Locate and copy your unique "User ID" to proceed with the setup.</Text>
+                have submitted. Locate and copy your unique &quot;User ID&quot; to proceed with the setup.</Text>
 
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 8: </span>
                 Insert the Search Box Tag Inside the Body Tag</Title>
@@ -119,9 +119,9 @@ const Setup = () => {
             />
 
             <Title order={3} className={classes.title} mt={8} ml={9}> <span className={classes.steps} >Step 9: </span>
-                Insert Link Tags Inside Your Website's Head Tag</Title>
+                Insert Link Tags Inside Your Website&apos;s Head Tag</Title>
             <Text className={classes.para} ml={10}  >Inside the head tag, use these two link tags to import the CSS files
-                for the Voice Navigation Plugin. Copy and paste the following tags into your website's  head tag
+                for the Voice Navigation Plugin. Copy and paste the following tags into your website&apos;s  head tag
                 section:</Text>
 
 
