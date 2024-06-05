@@ -35,6 +35,7 @@ import { Allura, Josefin_Sans, Jost, Poppins, Rammetto_One, Whisper } from 'next
 import clsx from 'clsx'
 import UseCases from './UseCases'
 import Keyfeatures from './Keyfeatures'
+import Link from 'next/link'
 
 const fontbutton = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
@@ -116,7 +117,7 @@ const Page = () => {
                       {/* <Menu.Label>DOCs</Menu.Label> */}
 
                       <Menu.Item
-                        component="a"
+                        component={Link}
                         href="/voiceDOCs"
                         ta={"center"}
                         c={"#24C41C"}
@@ -126,7 +127,7 @@ const Page = () => {
                         Voice DOCs
                       </Menu.Item>
                       <Menu.Item
-                        component="a"
+                        component={Link}
                         href="/tourDOCs"
                         ta={"center"}
                         c={"#24C41C"}
@@ -141,7 +142,7 @@ const Page = () => {
 
 
                   <Button
-                    component="a"
+                    component={Link}
                     href="https://github.com/Aviral2442/Voice-Tour-Plugin"
                     size="sm"
                     variant="outline"

@@ -64,7 +64,7 @@ const data = [
     { label: "Create Webpage", link: "/user/manage-webpage" },
     { label: "Generate Tour", link: "/user/generate-tour" },
     { label: "Home", link: "/" },
-    { label: "Voice Assistant", link: "/voiceAssistant" },
+    { label: "Voice Navigator", link: "/voiceAssistant" },
     { label: "Tour Generator", link: "/tourGenerator" },
     { label: "About Us", link: "/about" },
     { label: "Contact Us", link: "/contact" },   
@@ -254,7 +254,7 @@ export function UserNavbar() {
             <header className={classes.header}>
                 <div className={classes.inner}>
                     <Group>
-                        <Anchor href="http://localhost:3000/" underline="never">
+                        <Anchor component={Link} href="http://localhost:3000/" underline="never">
                             <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
                         </Anchor>
                     </Group>

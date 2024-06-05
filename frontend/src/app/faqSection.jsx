@@ -27,8 +27,8 @@ export default function Faqsection() {
             <Accordion variant="separated" >
                 <Accordion.Item className={classes.item} value="reset-password" data-aos="fade-up">
                     <Accordion.Control className={font.className}>
-                        How does the Voice Assistant work?</Accordion.Control>
-                    <Accordion.Panel>Our Voice Assistant utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.</Accordion.Panel>
+                        How does the Voice Navigator work?</Accordion.Control>
+                    <Accordion.Panel>Our Voice Navigator utilizes advanced voice recognition technology to interpret user commands and navigate through website content accordingly. Simply activate the assistant and speak your commands to browse effortlessly.</Accordion.Panel>
                 </Accordion.Item>
 
                 <Accordion.Item className={classes.item} value="another-account" data-aos="fade-up">
@@ -47,9 +47,9 @@ export default function Faqsection() {
 
                 <Accordion.Item className={classes.item} value="credit-card" data-aos="fade-up">
                     <Accordion.Control className={font.className}>
-                        Is the Voice Assistant compatible with all websites?
+                        Is the Voice Navigator compatible with all websites?
                     </Accordion.Control>
-                    <Accordion.Panel>While our Voice Assistant is designed to work with most websites, there may be some compatibility limitations depending on the website&apos;s structure and functionality. However, we continuously strive to improve compatibility and usability across a wide range of websites.</Accordion.Panel>
+                    <Accordion.Panel>While our Voice Navigator is designed to work with most websites, there may be some compatibility limitations depending on the website&apos;s structure and functionality. However, we continuously strive to improve compatibility and usability across a wide range of websites.</Accordion.Panel>
                 </Accordion.Item>
 
                 <Accordion.Item className={classes.item} value="payment" data-aos="fade-up">

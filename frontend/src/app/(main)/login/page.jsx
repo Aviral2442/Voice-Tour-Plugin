@@ -143,12 +143,12 @@ export function Login() {
                           checked={form.values.terms}
                           onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
                         />
-                        <Anchor component={Link} href="/resetPassword" size="sm">
+                        <Anchor component={Link} href="/resetPassword" c={"#24C41C"} size="sm">
                           Forgot password?
                         </Anchor>
                       </Group>
                       <Group justify="space-between" mt="xl">
-                        <Anchor component={Link} underline="hover" c="dimmed" href="/signup" size="xs">
+                        <Anchor component={Link} underline="hover" c="dimmed" href="/signup" size="sm">
                           Don&apos;t have an account? Register
                         </Anchor>
                         <Button type="submit" className={classes.button} variant="outline" color="black">

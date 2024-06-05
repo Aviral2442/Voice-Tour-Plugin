@@ -155,7 +155,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px 15px;
+	padding: 10px 32px;
 	gap: 15px;
 	background-color: #24C41C;
 	outline: 3px #24C41C solid;
@@ -166,12 +166,12 @@
 	transition: 400ms;
 }
 
-.button .text {
+.button .p {
 	position: relative;
 	text-align: center;
-	color: white;
+	color: black;
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 16px;
 	transition: 400ms;
 }
 
@@ -182,8 +182,8 @@
 	color: #24C41C;
 }
 
-.button:hover .text {
-	color: rgb(61, 106, 255);
+.button:hover .p {
+	color:#24C41C;
 }
 
 .button:hover svg path {
