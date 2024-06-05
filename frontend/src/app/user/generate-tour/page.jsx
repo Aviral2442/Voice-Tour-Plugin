@@ -101,7 +101,7 @@ const GenerateTour = () => {
       }),
       headers: {
         'Content-Type': 'application/json',
-        'x-auth-token': currentUser.token
+        'x-auth-token': currentUser !== null ? currentUser.token : '',
       }
     })
       .then((response) => {
