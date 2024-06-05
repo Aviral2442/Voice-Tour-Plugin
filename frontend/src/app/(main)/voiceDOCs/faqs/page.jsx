@@ -7,6 +7,8 @@ const Faqs = () => {
     return (
         <div>
 
+            <Title ta="center" order={1} mt={50} mb={30} >Frequently Asked Question</Title>
+
             <Grid justify="center" grow gutter="sm" p={10}>
 
                 <Grid.Col span={4}>
@@ -17,13 +19,13 @@ const Faqs = () => {
                         href="#si"
                         // target="_blank"
                     >
-                        <Card.Section>
+                        {/* <Card.Section>
                             <Image
-                                src="https://images.unsplash.com/photo-1579227114347-15d08fc37cae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
-                                h={160}
+                                src="/setup-Installation.png"
+                                h={200}
                                 alt="No way!"
                             />
-                        </Card.Section>
+                        </Card.Section> */}
 
                         <Text fw={500} size="lg" mt="md">
                             Setup and Installation
@@ -42,15 +44,15 @@ const Faqs = () => {
                         padding="xl"
                         component="a"
                         href="#cu"
-                        // target="_blank"
                     >
-                        <Card.Section>
+                        {/* <Card.Section className={classes.cardsec} >
                             <Image
-                                src="banner.png"
-                                h={160}
+                                src="/customization.png"
+                                h={200}
+                                w={280}
                                 alt="No way!"
                             />
-                        </Card.Section>
+                        </Card.Section> */}
 
                         <Text fw={500} size="lg" mt="md">
                             Customization and Usage
@@ -69,15 +71,14 @@ const Faqs = () => {
                         padding="xl"
                         component="a"
                         href="#qt"
-                        // target="_blank"
                     >
-                        <Card.Section>
+                        {/* <Card.Section>
                             <Image
-                                src="https://images.unsplash.com/photo-1579227114347-15d08fc37cae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
-                                h={160}
+                                src="/troubleshooting.png"
+                                h={200}
                                 alt="No way!"
                             />
-                        </Card.Section>
+                        </Card.Section> */}
 
                         <Text fw={500} size="lg" mt="md">
                             Quarry & Troubleshoot
@@ -165,9 +166,9 @@ const Faqs = () => {
                 </Container>
             </div>
 
-            <div className='Customization and Usage'>
+            <div className='Customization and Usage' id='cu'>
                 <Container size="sm" className={classes.wrapper}>
-                    <Title ta="center" id='cu'>
+                    <Title ta="center">
                         Frequently Asked Questions
                     </Title>
                     <Title ta="center" order={3} className={classes.title} mt={12}>
@@ -227,9 +228,9 @@ const Faqs = () => {
                 </Container>
             </div>
 
-            <div className='Quarry & Troubleshoot'>
+            <div className='Quarry & Troubleshoot' id='qt'>
                 <Container size="sm" className={classes.wrapper}>
-                    <Title ta="center" id='qt' >
+                    <Title ta="center" >
                         Frequently Asked Questions
                     </Title>
                     <Title ta="center" order={3} className={classes.title} mt={12}>
