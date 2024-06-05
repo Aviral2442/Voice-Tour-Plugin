@@ -17,14 +17,14 @@ import {
 
 const data = [
     { link: "/voiceDOCs", label: "Introduction", icon: IconBellRinging },
-    { link: "/voiceDocs/features", label: "Features", icon: IconKey },
+    { link: "/voiceDOCs/features", label: "Features", icon: IconKey },
     { link: "/voiceDOCs/setup", label: "Setup", icon: IconFingerprint },
-    { link: "", label: "Customization", icon: Icon2fa },
-    { link: "", label: "Integration Guides", icon: IconSettings },
+    // { link: "", label: "Customization", icon: Icon2fa },
+    // { link: "", label: "Integration Guides", icon: IconSettings },
     { link: "/voiceDOCs/faqs", label: "FAQs", icon: IconSettings },
-    { link: "", label: "Troubleshooting", icon: IconSettings },
-    { link: "", label: "Community and Support", icon: IconSettings },
-    { link: "", label: "User Feedback & Suggestions", icon: IconSettings }
+    // { link: "", label: "Troubleshooting", icon: IconSettings },
+    // { link: "", label: "Community and Support", icon: IconSettings },
+    { link: "/voiceDOCs/feedback", label: "User Feedback & Suggestions", icon: IconSettings }
 ]
 
 const Sidebar = () => {
