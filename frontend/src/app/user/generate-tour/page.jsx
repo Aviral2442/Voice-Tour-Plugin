@@ -10,6 +10,7 @@ import toast from 'react-hot-toast';
 import { Josefin_Sans, Jost } from 'next/font/google';
 import clsx from 'clsx';
 import { title } from 'process';
+const ISSERVER = typeof window === "undefined";
 
 const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
@@ -27,7 +28,7 @@ const GenerateTour = () => {
   const overlaycolorRef = useRef();
   const widthRef = useRef();
 
-  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
+  const [currentUser, setCurrentUser] = useState(JSON.parseif (!ISSERVER) {(localStorage.getItem('user'))});
 
   const [steps, setSteps] = useState([
     {
