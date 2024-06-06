@@ -5,7 +5,6 @@ import { ContactIconsList } from './ContactIcons';
 import classes from './GetInTouch.module.css';
 import Navbar from '../navbar';
 import { Footer } from '../footer';
-import { Input } from 'postcss';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
 import * as Yup from "yup";

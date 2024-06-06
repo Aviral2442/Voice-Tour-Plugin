@@ -2,8 +2,6 @@
 import React from 'react'
 import { AppShell, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-// import Sidebar from './sidebar';
-// import Navbar from './navbar';
 import TableOfContent from './tableOfContent';
 
 const Layout = ({children}) => {

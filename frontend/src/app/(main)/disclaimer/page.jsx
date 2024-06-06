@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem, Paper, Divider } from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
+import { Container, Title, Text, Paper, Divider } from '@mantine/core';
 import classes from './disclamer.module.css';
 import { Cormorant_Garamond, Josefin_Sans } from 'next/font/google';
 import clsx from 'clsx';
@@ -68,13 +67,10 @@ export function Disclaimer() {
 
           </Text>
           <br />
-
-
+          
           <Title order={4}  mt="md">User Responsibility </Title>
           <Text className={clsx(classes.text, font.className)}> Remind users to use their own discretion and judgment when accessing or relying on information obtained from the website.
           </Text>
-
-
 
         </Paper>
       </Container>

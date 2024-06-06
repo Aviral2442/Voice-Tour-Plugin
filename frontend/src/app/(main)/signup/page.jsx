@@ -9,7 +9,6 @@ import {
   Paper,
   Group,
   Button,
-  Divider,
   Checkbox,
   Anchor,
   Stack,
@@ -29,7 +28,7 @@ import { IconX, IconCheck } from "@tabler/icons-react"
 import { Progress, Popover, rem } from "@mantine/core"
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
-import { Cormorant_Garamond, Josefin_Sans, Rammetto_One } from 'next/font/google';
+import { Josefin_Sans, Rammetto_One } from 'next/font/google';
 import clsx from 'clsx';
 import { Container } from '@mantine/core';
 

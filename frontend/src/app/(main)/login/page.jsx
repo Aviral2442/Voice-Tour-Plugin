@@ -1,17 +1,15 @@
 'use client'
 import React from 'react';
-import { Form, useForm } from "@mantine/form"
+import { useForm } from "@mantine/form"
 import {
   TextInput,
   PasswordInput,
-  Text,
   Paper,
   Group,
   Button,
   Divider,
   Checkbox,
   Anchor,
-  Stack,
   Title
 } from "@mantine/core"
 import { GoogleButton } from "./GoogleButton"
@@ -48,7 +46,6 @@ const theme = createTheme({
 export function Login() {
 
   const router = useRouter();
-
   const { setLoggedIn, setCurrentUser } = useAppContext();
 
   const form = useForm({

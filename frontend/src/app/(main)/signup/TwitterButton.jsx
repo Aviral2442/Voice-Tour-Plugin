@@ -1,5 +1,4 @@
 import { Button, ButtonProps } from '@mantine/core';
-import { TwitterIcon } from '@mantinex/dev-icons';
 import { IconBrandFacebook } from '@tabler/icons-react';
 
 export function TwitterButton(props) {

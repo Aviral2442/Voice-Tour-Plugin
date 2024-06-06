@@ -1,3 +1,4 @@
+'use client'
 import { Anchor, Container } from '@mantine/core';
 import React from 'react';
 import classes from './community.module.css';

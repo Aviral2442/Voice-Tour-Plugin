@@ -31,11 +31,8 @@ const HelpCenter = () => {
           <Anchor href="/subscriptions">Subscriptions</Anchor><br />
           <Anchor href="/billing">Billing</Anchor><br />
         </section>
-        {/* Add more help categories and links as needed */}
       </div>
-
     </div>
-
   )
 }
 

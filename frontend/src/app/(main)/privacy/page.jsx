@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem, Paper, Divider } from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
+import { Container, Title, Text, Paper, Divider } from '@mantine/core';
 import classes from './privacy.module.css';
 import { Cormorant_Garamond, Josefin_Sans } from 'next/font/google';
 import clsx from 'clsx';

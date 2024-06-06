@@ -12,7 +12,6 @@ import {
 } from "@mantine/core"
 import classes from './faq.module.css'
 import faqData from './faqData'
-import { ContactIconsList } from '../contact/ContactIcons'
 import Lottie from 'lottie-react'
 import FAQ from './FAQ.json'
 import Navbar from '../navbar'
@@ -59,8 +58,6 @@ const Faq = () => {
     </UnstyledButton>
   ))
 
-
-
   return (
     <>
 
@@ -86,7 +83,6 @@ const Faq = () => {
             Frequently Asked Questions
           </Title>
           
-
           <Accordion variant="separated">
             {
               faqList[selFaq].map((faqItem, index) => (

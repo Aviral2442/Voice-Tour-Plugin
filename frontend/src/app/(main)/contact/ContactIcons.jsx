@@ -1,5 +1,5 @@
 import { Text, Box, Stack, rem } from '@mantine/core';
-import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
+import { IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
 import classes from './ContactIcons.module.css';
 import { Josefin_Sans } from 'next/font/google';
 import clsx from 'clsx';
@@ -28,7 +28,6 @@ const MOCKDATA = [
   { title: 'Email', description: 'voicetourps@gmail.com', icon: IconAt },
   { title: 'Phone', description: '9260973330', icon: IconPhone },
   { title: 'Address', description: 'Lucknow', icon: IconMapPin },
-  // { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {

@@ -1,13 +1,12 @@
 'use client'
 import React from 'react'
 import classes from './faq.module.css'
-import { Text, Title } from '@mantine/core'
+import { Title } from '@mantine/core'
 
 const Faq = () => {
     return (
         <div >
             <div className={classes.mainContainer} >
-                {/* <Title order={1} c="#ffffff" >Getting started</Title> */}
 
                 <Title pt={'20'} order={1} c="#ffffff">FAQ&apos;s & Troubleshooting</Title>
 
@@ -58,8 +57,6 @@ const Faq = () => {
                         <p className={classes.para}>Yes, you can customize the behavior of tour elements, including tooltips, hotspots, and navigation buttons, to create interactive and dynamic tour experiences.</p>
                     </section>
 
-
-                    {/* Add more FAQ sections as needed */}
                 </div>
 
                 <div className="troubleshooting-page">

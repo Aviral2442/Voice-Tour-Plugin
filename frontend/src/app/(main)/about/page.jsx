@@ -3,7 +3,6 @@ import React from 'react'
 import classes from './about.module.css'
 import Navbar from '../navbar';
 import { Footer } from '../footer';
-import cx from "clsx"
 import { Title, Text, Container, Button, Overlay, Group, Paper, Card, Image } from "@mantine/core"
 import Testimonial from '@/app/Testimonial';
 import { StatsRing } from './progress';
@@ -24,7 +23,7 @@ const About = () => {
 
       {/* Navbar */}
       <Navbar />
-      
+
       <div className={classes.wrapper1}>
         <Title className={clsx(classes.title1, fontss.className)}>About <span style={{ color: '#66ff00' }}>Us</span></Title>
       </div>
@@ -36,9 +35,6 @@ const About = () => {
         <div className={classes.inner}>
           <Title className={clsx(classes.title, font.className)}>
             Voice <span style={{ color: '#66ff00' }}>&</span> Tour <span style={{ color: '#66ff00' }}>Plugin System</span>
-            {/* <Text component="span" inherit className={classes.highlight}>
-              SYSTEM
-            </Text> */}
           </Title>
 
           <Container size={1200}>
@@ -48,7 +44,7 @@ const About = () => {
             </Text>
           </Container>
           <div className={classes.controls}>
-            <a href='http://localhost:3000/signup/'>
+            <a href='/signup'>
               <Button className={classes.control} variant="filled" color='white' radius="md">
                 Started for Free
               </Button></a>

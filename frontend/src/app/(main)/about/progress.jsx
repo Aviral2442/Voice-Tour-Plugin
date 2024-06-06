@@ -75,6 +75,6 @@ export function StatsRing() {
         )
     })
 
-    return <SimpleGrid  cols={{ base: 1, sm: 3 }}>{stats}</SimpleGrid>
+    return <SimpleGrid cols={{ base: 1, sm: 3 }}>{stats}</SimpleGrid>
 }
 
