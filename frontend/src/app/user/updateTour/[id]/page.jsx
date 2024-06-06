@@ -38,7 +38,7 @@ const Page = () => {
 
   const fetchTourData = async (values) => {
     console.log(values);
-    const res = await fetch("http://localhost:5000/tour/getbyid/" + id);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/getbyid/` + id);
     console.log(res.status);
     const data = await res.json();
     console.log(data);
@@ -62,7 +62,7 @@ const Page = () => {
   const addTour = () => {
     console.log(steps);
 
-    fetch('http://localhost:5000/tour/update/' + id, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/update/` + id, {
       method: 'PUT',
       body: JSON.stringify({
         steps: steps,

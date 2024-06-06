@@ -9,7 +9,6 @@ import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { Josefin_Sans, Jost } from 'next/font/google';
 import clsx from 'clsx';
-import { title } from 'process';
 const ISSERVER = typeof window === "undefined";
 
 const font = Jost({ subsets: ['latin'], weight: ['100', '400'] });
@@ -17,8 +16,6 @@ const fonts = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 
 
 const GenerateTour = () => {
-
-
   const [webpageList, setWebpageList] = useState([]);
   const titleRef = useRef();
   const colorRef = useRef();
@@ -89,7 +86,7 @@ const GenerateTour = () => {
   const addTour = () => {
     console.log(steps);
 
-    fetch('http://localhost:5000/tour/add', {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/tour/add`, {
       method: 'POST',
       body: JSON.stringify({
         steps: steps,

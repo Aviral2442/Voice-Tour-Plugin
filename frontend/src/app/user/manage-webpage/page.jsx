@@ -52,7 +52,7 @@ const WebPage = () => {
 
       console.log(values);
 
-      fetch('http://localhost:5000/webpage/add', {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/webpage/add`, {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {

@@ -23,7 +23,7 @@ const UpdateWebpage = () => {
   const router = useRouter();
 
   const fetchWebpagetData = async () => {
-    const res = await fetch("http://localhost:5000/webpage/getbyid/" + id);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/webpage/getbyid/` + id);
     console.log(res.status);
     const data = await res.json();
     console.log(data);
@@ -56,7 +56,7 @@ const UpdateWebpage = () => {
     onSubmit: (values) => {
       console.log(values);
 
-      fetch('http://localhost:5000/webpage/update/' + id, {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/webpage/update/` + id, {
         method: 'PUT',
         body: JSON.stringify(values),
         headers: {

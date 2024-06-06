@@ -40,7 +40,7 @@ const ManageUser = () => {
   const deleteUser = async (id) => {
     console.log(id);
 
-    const res = await fetch("http://localhost:5000/user/delete/" + id, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/delete/` + id, {
       method: "DELETE",
     });
     console.log(res.status);
@@ -52,7 +52,7 @@ const ManageUser = () => {
   }
   const rows = userList.map(row => (
     <Table.Tr key={row._id}>
-      <Table.Td><Avatar src={"http://localhost:5000/" + row.avatar} alt="" size="xl" /></Table.Td>
+      <Table.Td><Avatar src={`${process.env.NEXT_PUBLIC_API_URL}` + row.avatar} alt="" size="xl" /></Table.Td>
       <Table.Td>{row.name}</Table.Td>
       <Table.Td>{row.email}</Table.Td>
       <Table.Td>{row.password}</Table.Td>
