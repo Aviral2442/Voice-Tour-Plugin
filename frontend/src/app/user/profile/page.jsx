@@ -98,7 +98,7 @@ const Profile = () => {
   const deleteWebpage = async (id) => {
     console.log(id);
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}webpage/delete/` + id, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/webpage/delete/` + id, {
       method: "DELETE",
     });
     console.log(res.status);
@@ -132,7 +132,7 @@ const Profile = () => {
               <Group mt="md" mb="xs">
                 <ThemeIcon radius="md" size={80} variant='filled' color={"white"}>
                   {
-                    <Avatar src={`${process.env.NEXT_PUBLIC_API_URL}` + currentUser.avatar} alt={currentUser.name} radius="xl" size={70} />
+                    <Avatar src={`${process.env.NEXT_PUBLIC_API_URL}/` + currentUser.avatar} alt={currentUser.name} radius="xl" size={70} />
                   }
                 </ThemeIcon>
                 <Flex direction="column" >
