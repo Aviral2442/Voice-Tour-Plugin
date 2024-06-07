@@ -57,7 +57,6 @@ export default function Faqsection() {
                         How can I provide feedback or report issues with the platform?
                     </Accordion.Control>
                     <Accordion.Panel>We value your feedback and are always here to assist you. Feel free to reach out to our support team through the contact form on our website, and we&apos;ll be happy to address any questions, concerns, or feedback you may have.</Accordion.Panel>
-                    {/* <Accordion.Panel>{placeholder}</Accordion.Panel> */}
                 </Accordion.Item>
             </Accordion>
         </Container>

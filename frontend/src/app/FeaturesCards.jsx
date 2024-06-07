@@ -12,7 +12,7 @@ import {
     useMantineTheme,
     Box
 } from "@mantine/core"
-import { IconGauge, IconUser, IconCookie, IconMicrophone, IconMapSearch, IconPlugConnected } from "@tabler/icons-react"
+import {  IconMicrophone, IconMapSearch, IconPlugConnected } from "@tabler/icons-react"
 import classes from "./FeaturesCards.module.css"
 import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'

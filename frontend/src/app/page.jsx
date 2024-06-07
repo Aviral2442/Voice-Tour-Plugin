@@ -10,9 +10,7 @@ import {
   List,
   ThemeIcon,
   rem,
-  Overlay,
   Box,
-  BackgroundImage,
   Menu,
   Center,
   Flex
@@ -77,10 +75,7 @@ const Page = () => {
                     </ThemeIcon>
                   }
                 >
-                  {/* <List.Item>
-                  <b>Voice-Based Navigation</b> – build type safe applications, all
-                  components and hooks export types
-                </List.Item> */}
+                  
                   <List.Item>
                     <b>Voice-Based Navigation</b>
                   </List.Item>
@@ -114,7 +109,6 @@ const Page = () => {
                       </Button>
                     </Menu.Target>
                     <Menu.Dropdown bg={"#262525"} w={190} ta={"center"}>
-                      {/* <Menu.Label>DOCs</Menu.Label> */}
 
                       <Menu.Item
                         component={Link}

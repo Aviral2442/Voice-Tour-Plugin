@@ -71,8 +71,7 @@ const Feedback = () => {
             { label: 'Other', value: 'other' },
           ]}
         />
-
-
+        
         <Divider my="md" mt={30} />
         <Text mt={30} mb={10} fw={900}>
           Feedback Details

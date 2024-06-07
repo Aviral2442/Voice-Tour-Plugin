@@ -8,10 +8,7 @@ import {
   Title,
   Button,
   Group,
-  Text,
-  List,
-  ThemeIcon,
-  rem
+  Text
 } from "@mantine/core"
 import { IconCheck } from "@tabler/icons-react"
 import classes from "./tourGenerator.module.css"
@@ -41,7 +38,6 @@ const page = () => {
             <div className={classes.content}>
               <Title className={clsx(classes.title, font.className)}>
                 Tour <span className={classes.highlight}>Generator</span> <span style={{ color: '#24C41C' }}>Plugin</span> <br />{" "}
-                {/* Welcome to the */}
               </Title>
               <Text fz='lg' mt="md" className={fonts.className}>
                 Where you&apos;ll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature
@@ -55,7 +51,6 @@ const page = () => {
                   size="md"
                   className={classes.control}
                   component={Link}
-                  // href="/user/generate-tour"
                   variant='outline'
                   color='#24C41C'
                   href="/tourDOCs"

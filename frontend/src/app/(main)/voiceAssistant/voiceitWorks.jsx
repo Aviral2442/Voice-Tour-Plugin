@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect } from 'react'
 import { ThemeIcon, Text, Title, Container, SimpleGrid, rem, Group, Card, Center } from '@mantine/core';
 import classes from './voiceitWorks.module.css';
@@ -5,9 +6,7 @@ import { Josefin_Sans, Lora, Playfair_Display } from 'next/font/google';
 import clsx from 'clsx';
 import Aos from 'aos';
 
-
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
-
 
 export const MOCKDATA = [
     {
@@ -27,19 +26,14 @@ export const MOCKDATA = [
     },
 
     {
-
         title: 'Customize Settings',
         description:
             ' Personalize your Voice Assistant experience by adjusting settings such as voice sensitivity, language preferences, and command recognition.',
-
-
     },
     {
-
         title: 'Compatibility',
         description:
             ' Our Voice Assistant is compatible with most modern web browsers and websites. While we strive to ensure compatibility across a wide range of platforms, please note that certain website structures or functionalities may impact the performance of the Voice Assistant.',
-
     },
 ];
 
@@ -54,7 +48,6 @@ export function Feature({ title, description, Number }) {
                 <Text size="sm" lh={1.6} className={classes.Descript} ta={"center"}>
                     {description}
                 </Text>
-
             </Card>
         </div>
     );

@@ -127,9 +127,7 @@ const GenerateTour = () => {
       });
   }
 
-  const router = useRouter();
-
-
+  const router = useRouter();  
 
   return (
     <div >
@@ -146,7 +144,7 @@ const GenerateTour = () => {
             <Title order={1} align="start" mb={20} className={clsx(classes.title, fonts.className)}>Design Tour</Title>
             <Grid grow>
 
-              <Grid.Col span={6}> <TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} /></Grid.Col>
+              <Grid.Col span={6}><TextInput ref={titleRef} label="Title" type='text' placeholder="Enter your Tour Name " mb={20} /></Grid.Col>
               <Grid.Col span={6}><TextInput ref={colorRef} label="Primary Color" type='color' placeholder="Enter your Primary Color " mb={20} /> </Grid.Col>
               <Grid.Col span={6}><TextInput ref={bgcolorRef} label="Background Color" type='color' placeholder="Enter your Background Color " mb={20} /> </Grid.Col>
               <Grid.Col span={6}><TextInput ref={textcolorRef} label="Text Color" type='color' placeholder="Enter your Text Color " mb={20} /> </Grid.Col>
@@ -165,7 +163,6 @@ const GenerateTour = () => {
                   <Stepper.Step label={step.stepTitle} description={step.stepDescription} key={index} pt={"20"}>
                     <Container size={'md'} className={clsx(classes.innerContainer, fonts.className)}>
 
-                      {/* <form onSubmit={form.onSubmit(Tourgen)}> */}
                       <Radio.Group value={step.selectorType} onChange={v => updateStep(index, 'selectorType', v)} mb={20} >
                         <Group mt="xs" >
                           <Radio value="id" label="id" color="gray" />
@@ -188,7 +185,6 @@ const GenerateTour = () => {
                         value={step.stepTitle}
                         label="Selector Value"
                         placeholder="Enter selector value"
-
                       />
 
                       <Textarea
@@ -197,12 +193,9 @@ const GenerateTour = () => {
                         value={step.stepDescription}
                         label="Description"
                         placeholder="Enter Description"
-
                       />
 
-                      {/* </form> */}
                     </Container>
-
                   </Stepper.Step>
                 )
               })

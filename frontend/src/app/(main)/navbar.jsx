@@ -42,8 +42,6 @@ import { usePathname, useRouter } from 'next/navigation';
 const font = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 const fonts = Jost({ subsets: ['latin'], weight: ['100', '400'] });
 
-
-
 const data = [
 
   { label: "Home", link: "/" },
@@ -61,8 +59,6 @@ function Navbar() {
 
   const { logout, loggedIn, currentUser } = useAppContext();
 
-
-
   const [query, setQuery] = useState("");
 
   const [userMenuOpened, setUserMenuOpened] = useState(false);
@@ -77,7 +73,6 @@ function Navbar() {
       key={label}
       onClick={() => router.push(link)}
     />)
-
 
   const displayLoginOptions = () => {
     if (loggedIn) {
@@ -98,7 +93,7 @@ function Navbar() {
           >
             <Group gap={7}>
 
-              <Avatar src={"http://localhost:5000/" + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
+              <Avatar src={`${process.env.NEXT_PUBLIC_API_URL}/` + currentUser.avatar} alt={currentUser.name} radius="xl" size={40} />
 
               <Text fw={500} size="md" lh={1} mr={3} className={fonts.className}>
                 {currentUser.name}
@@ -113,7 +108,6 @@ function Navbar() {
             fz={16}
             className={fonts.className}
             leftSection={
-              // <IconMail style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
               <svg style={{ width: rem(16), height: rem(16) }}   viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0h256v256H0z" fill="none" />
                 <path
@@ -145,7 +139,6 @@ function Navbar() {
             fz={16}
             className={fonts.className}
             leftSection={
-              // <IconUser style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
               <svg style={{ width: rem(16), height: rem(16) }} stroke={1.5} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path
                   className="color000000 svgShape"
@@ -163,7 +156,6 @@ function Navbar() {
             fz={16}
             className={fonts.className}
             leftSection={
-              // <IconLogout style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
               <svg style={{ width: rem(16), height: rem(16) }} stroke={1.5} viewBox="0 0 6.35 6.35" xmlns="http://www.w3.org/2000/svg">
                 <path
                   className="color svgShape"
@@ -199,7 +191,6 @@ function Navbar() {
       </Menu>
     } else {
       return <Button component={Link} href='/login' variant='outline' color='#24C41C' className={clsx(classes.button, fonts.className)}>
-        {/* <Lottie animationData={avatar} className={classes.avi} />  */}
         Login
       </Button>
     }
@@ -284,15 +275,6 @@ function Navbar() {
           <a href="/voiceAssistant" className={classes.link}>
             Voice Assistant
           </a>
-          {/* <UnstyledButton className={classes.link} onClick={toggleLinks}>
-            <Center inline>
-              <Box component="span" mr={5}>
-                Voice Assistant
-              </Box>
-             
-            </Center>
-          </UnstyledButton> */}
-          {/* <Collapse in={linksOpened}>{links}</Collapse> */}
           <a href="/tourGenerator" className={classes.link}>
             Tour Generator
           </a>

@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect } from 'react'
 import { Text, Title, TextInput, Button, Image } from '@mantine/core';
 import classes from './banner3.module.css';

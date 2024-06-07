@@ -17,7 +17,6 @@ import Aos from 'aos';
 const font = Josefin_Sans({ subsets: ['latin'], weight: ['400'] });
 const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
-
 const data = [
     {
         image: "caseicon1.png",
@@ -43,10 +42,6 @@ const data = [
       }
       
 ]
-
-
-
-
 
 const UseCases = () => {
 
@@ -77,11 +72,7 @@ const UseCases = () => {
     ))
     return (
         <Container size={"lg"} className={classes.wrapper}>
-            {/* <Group justify="center" data-aos="fade-up">
-                <Badge variant="filled" size="lg" radius="sm" bg='#39FF14' c='#262525'>
-                    Use Cases
-                </Badge>
-            </Group> */}
+        
             <Title mt={"20"} mb={"15"} className={clsx(classes.title,fonts.className)} ta={"center"} data-aos="fade-up">
                 Unlock <span className={classes.highlight}>Endless</span> Possibilities
 
@@ -91,8 +82,7 @@ const UseCases = () => {
                     Discover how our platform can be applied to various scenarios and industries, empowering users to navigate websites, conduct research, and streamline workflows with ease.
                 </Text>
             </Container>
-
-
+            
             <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={50} data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom">
                 {items}

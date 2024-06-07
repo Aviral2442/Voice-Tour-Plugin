@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect } from 'react'
 import {
     Image,
@@ -41,10 +42,6 @@ const data = [
     }
 ]
 
-
-
-
-
 const KeyFeatures = () => {
 
     useEffect(() => {
@@ -78,9 +75,7 @@ const KeyFeatures = () => {
             <Title className={clsx(classes.title,fonts.className)} mb={60} ta={"center"} data-aos="fade-up">
                 Key <span className={classes.highlight}>Features</span>
             </Title>
-
-
-
+            
             <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={30} data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom">
                 {items}

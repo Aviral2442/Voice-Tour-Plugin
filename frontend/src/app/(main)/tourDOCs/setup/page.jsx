@@ -8,7 +8,6 @@ const ISSERVER = typeof window === "undefined";
 
 
 const Setup = () => {
-    // const id = 'jhgh'
 
     const { currentUser } = useAppContext();
     const [tourIdList, settourIdList] = useState([]);

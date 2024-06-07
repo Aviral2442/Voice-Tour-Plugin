@@ -52,7 +52,7 @@ const ManageUser = () => {
   }
   const rows = userList.map(row => (
     <Table.Tr key={row._id}>
-      <Table.Td><Avatar src={`${process.env.NEXT_PUBLIC_API_URL}` + row.avatar} alt="" size="xl" /></Table.Td>
+      <Table.Td><Avatar src={`${process.env.NEXT_PUBLIC_API_URL}/` + row.avatar} alt="" size="xl" /></Table.Td>
       <Table.Td>{row.name}</Table.Td>
       <Table.Td>{row.email}</Table.Td>
       <Table.Td>{row.password}</Table.Td>

@@ -57,9 +57,10 @@ const Page = () => {
 
               </Title>
               <Text fz='lg' mt="md" c={"#C0C0C0"} className={fonts.className}>
-                Where you&apos;ll embark on a journey into the future of website navigation. Our innovative Voice Assistant feature revolutionizes the way you interact with websites by harnessing the power of natural language commands. Say goodbye to cumbersome mouse clicks and keyboard typing – with our Voice Assistant, browsing becomes intuitive and effortless.</Text>
-
-              
+                Where you&apos;ll embark on a journey into the future of website navigation. Our innovative Voice 
+                Assistant feature revolutionizes the way you interact with websites by harnessing the power of 
+                natural language commands. Say goodbye to cumbersome mouse clicks and keyboard typing – with our 
+                Voice Assistant, browsing becomes intuitive and effortless.</Text>
 
               <Group mt={30}>
                 <Button

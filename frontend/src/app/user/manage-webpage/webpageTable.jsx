@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import cx from "clsx"
-// import { useState } from "react"
 import { Table, ScrollArea, TextInput, Card } from "@mantine/core"
 import classes from "./webpageTable.module.css"
 import { IconSearch } from '@tabler/icons-react'

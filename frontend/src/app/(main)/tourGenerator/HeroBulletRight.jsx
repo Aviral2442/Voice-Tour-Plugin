@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem, Card, Flex, Paper } from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
+import { Image, Container, Title, Button, Group, Card, Flex, Paper } from '@mantine/core';
 import classes from './HeroBulletRight.module.css';
 import clsx from 'clsx';
 

@@ -17,7 +17,7 @@ const Faqs = () => {
                         padding="xl"
                         component="a"
                         href="#si"
-                        // target="_blank"
+                    // target="_blank"
                     >
                         {/* <Card.Section>
                             <Image
@@ -287,25 +287,25 @@ const Faqs = () => {
 
                         <Accordion.Item className={classes.item} value="payment">
                             <Accordion.Control>
-                            Q8: Can I get help from other users if I have a problem?
+                                Q8: Can I get help from other users if I have a problem?
                             </Accordion.Control>
                             <Accordion.Panel>Yes, you can visit our community forums to get help from other users and our support team.</Accordion.Panel>
                         </Accordion.Item>
 
                         <Accordion.Item className={classes.item} value="payment">
                             <Accordion.Control>
-                            Q9: How do I contact support for help?
+                                Q9: How do I contact support for help?
                             </Accordion.Control>
                             <Accordion.Panel>You can contact our support team through the help center on our website or by emailing voicetourps@gmail.com</Accordion.Panel>
                         </Accordion.Item>
 
                         <Accordion.Item className={classes.item} value="payment">
                             <Accordion.Control>
-                            Q10: Is there a user manual available for the Voice Navigation Plugin?
+                                Q10: Is there a user manual available for the Voice Navigation Plugin?
                             </Accordion.Control>
                             <Accordion.Panel>Yes, a detailed user manual is available on our documentation page for download.
 
-</Accordion.Panel>
+                            </Accordion.Panel>
                         </Accordion.Item>
                     </Accordion>
                 </Container>

@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef, useState } from 'react';
 import classes from './resetpassword.module.css';
-import { Button, Container, Image, Paper, PasswordInput, TextInput, Title, rem } from '@mantine/core';
+import { Button, Container, Paper, PasswordInput, TextInput, Title, rem } from '@mantine/core';
 import { IconAt, IconLock } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
 import { useRouter } from 'next/navigation';
