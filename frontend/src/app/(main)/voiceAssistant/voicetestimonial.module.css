@@ -7,8 +7,9 @@
     margin: 0 30px;
     margin-bottom: 60px;
 
-    @media (max-width: $mantine-breakpoint-md) {
-        margin: 0;
+    @media (max-width: $mantine-breakpoint-sm) {
+        margin: 0px;
+        padding: 0px;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -20,9 +21,9 @@
     align-items: center;
     padding: 50px;
 
-    @media (max-width: $mantine-breakpoint-md) {
-        margin: 0;
-        padding: 0;
+    @media (max-width: $mantine-breakpoint-sm) {
+       
+        padding: 50px;
 
     }
 }
@@ -38,22 +39,17 @@
     -webkit-backdrop-filter: blur(11.5px);
     border-radius: 10px;
 
-    @media (max-width: $mantine-breakpoint-md) {
-        margin: 0;
-        padding: 0;
-        margin-top: 0;
-
-    }
+  
 }
 
 .name {
-    color: #32B531;
+    color: #ADFF2F;
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .review {
-    color: #C0C0C0;
+    color: #E5E4E2;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
     margin-top: -10px;
@@ -65,7 +61,7 @@
     width: rem(12px);
     height: rem(4px);
     transition: width 250ms ease;
-    background-color: #32B531;
+    background-color: #ADFF2F;
 
     &[data-active] {
         width: rem(40px);
@@ -84,12 +80,11 @@
 }
 
 .bg {
-    background-color: #32B531;
+    background-color: #ADFF2F;
     /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74VtjO-gaZKBwI5WZoaZWYWWTQOy4oXgwcgzmhM0iHQ&s"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     height: 60px;
 }
 
@@ -99,7 +94,7 @@
     text-align: center;
     margin-top: 30px;
 
-    @media (max-width: $mantine-breakpoint-md) {
+    @media (max-width: $mantine-breakpoint-sm) {
         padding: 5px;
 
     }
@@ -109,8 +104,13 @@
     font-size: rem(36px);
     font-weight: 900;
     margin-bottom: 25px;
+    text-align: center;
 
     @media (max-width: $mantine-breakpoint-sm) {
+        padding: 10px;
         font-size: rem(24px);
+        text-align: start;
+        margin-bottom: -30px;
+
     }
 }

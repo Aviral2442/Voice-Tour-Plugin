@@ -10,7 +10,8 @@ import {
   Divider,
   Checkbox,
   Anchor,
-  Title
+  Title,
+  LoadingOverlay
 } from "@mantine/core"
 import { GoogleButton } from "./GoogleButton"
 import { TwitterButton } from "./TwitterButton"
@@ -27,6 +28,7 @@ import { Josefin_Sans, Rammetto_One } from 'next/font/google';
 import clsx from 'clsx';
 import useAppContext from '@/context/AppContext';
 import { useGoogleLogin } from '@react-oauth/google';
+import { useDisclosure } from '@mantine/hooks';
 const ISSERVER = typeof window === "undefined";
 
 const font = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
@@ -94,21 +96,32 @@ export function Login() {
 
 
   const login = useGoogleLogin({
-    onSuccess: tokenResponse => {
-
-    },
+    onSuccess: tokenResponse => console.log(tokenResponse),
+    flow: 'auth-code',
   });
 
+  //loading overlay
+  const [visible, { toggle }] = useDisclosure(false);
+
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} >
       <div className={classes.body}>
         <MantineProvider theme={theme} >
           <Box mx="auto" >
+
             <BackgroundImage src=''
               radius="md">
               <Center p="md">
+
                 <Container size="responsive" w={700} >
-                  <Paper shadow="md" p={30} mt={10} mb={30} radius="md" className={classes.Paper}>
+
+                  <Paper shadow="md" p={30} mt={10} mb={30} radius="md" className={classes.Paper} pos="relative">
+                    <LoadingOverlay
+                      visible={visible}
+                      zIndex={1000}
+                      overlayProps={{ radius: 'sm', blur: 2 }}
+                      loaderProps={{ color: '#ADFF2F', type: 'bars' }}
+                    />
                     <Title className={classes.title} >
                       <span className={clsx(classes.subtitle, font.className)}>Login</span> </Title>
                     {/* <Text className={classes.text}>Login with</Text> */}
@@ -119,7 +132,7 @@ export function Login() {
                     </Group>
 
                     <Divider label={
-                      <p style={{ color: '#4ECA3E' }}>Or continue with email</p>
+                      <p style={{ color: '#ADFF2F' }}>Or continue with email</p>
                     } labelPosition="center" my="lg" color='white' />
 
                     <form onSubmit={form.onSubmit(loginSubmit)} className={fonts.className}>
@@ -140,16 +153,17 @@ export function Login() {
                           checked={form.values.terms}
                           onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
                         />
-                        <Anchor component={Link} href="/resetPassword" c={"#24C41C"} size="sm">
+                        <Anchor component={Link} href="/resetPassword" c={"#ADFF2F"} size="sm">
                           Forgot password?
                         </Anchor>
                       </Group>
                       <Group justify="space-between" mt="xl">
+
                         <Anchor component={Link} underline="hover" c="dimmed" href="/signup" size="sm">
                           Don&apos;t have an account? Register
                         </Anchor>
-                        <Button type="submit" className={classes.button} variant="outline" color="black">
-                          <p className={classes.p}>Login</p>
+                        <Button type="submit" onClick={toggle} className={classes.button} variant="outline" color="black">
+                          <span className={classes.p}>Login</span>
                         </Button>
                       </Group>
                     </form>

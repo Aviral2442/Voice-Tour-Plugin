@@ -65,7 +65,7 @@ export function Footer() {
                             />
                         </div>
                         <div>
-                            <Text className={font.className} mt={"-20"}>
+                            <Text c="#E5E4E2" className={font.className} mt={"-20"}>
                                 Users can navigate websites effortlessly using natural language voice commands, eliminating the need for traditional mouse clicks and keyboard inputs.</Text>
                         </div>
                         <div>
@@ -106,24 +106,24 @@ export function Footer() {
                     </Group>
                     <Group className={classes.colms0} >
                         <div>
-                            <Title order={3} className={fonts.className}> Quick Links</Title>
-                            <p><Anchor c="#C0C0C0" component={Link} href="/faq" className={font.className}>Faq&apos;s</Anchor> </p>
-                            <p><Anchor c="#C0C0C0" component={Link} href="/contact" className={font.className}>Contact Us </Anchor> </p>
+                            <Title order={3} c="#ADFF2F" className={fonts.className}> Quick Links</Title>
+                            <p><Anchor c="#E5E4E2" component={Link} href="/faq" className={font.className}>Faq&apos;s</Anchor> </p>
+                            <p><Anchor c="#E5E4E2" component={Link} href="/contact" className={font.className}>Contact Us </Anchor> </p>
                         </div>
                     </Group>
                     <Group className={classes.colms} >
                         <div>
-                            <Title order={3} className={fonts.className}>Documentation&apos;s</Title>
-                            <p><Anchor c="#C0C0C0" component={Link} href="/voiceAssistant" className={font.className}>Voice Navigator</Anchor> </p>
-                            <p><Anchor c="#C0C0C0" component={Link} href="/tourGenerator" className={font.className}>Tour Generator</Anchor> </p>
+                            <Title order={3} c="#ADFF2F" className={fonts.className}>Documentation&apos;s</Title>
+                            <p><Anchor c="#E5E4E2" component={Link} href="/voiceAssistant" className={font.className}>Voice Navigator</Anchor> </p>
+                            <p><Anchor c="#E5E4E2" component={Link} href="/tourGenerator" className={font.className}>Tour Generator</Anchor> </p>
                         </div>
                     </Group>
                     <Group className={classes.colms2} >
                         <div>
-                            <Title order={3} className={fonts.className}>Policies</Title>
-                            <p><Anchor c="#C0C0C0" component={Link} href="/terms" className={font.className}>Terms & Conditions</Anchor> </p>
-                            <p><Anchor c="#C0C0C0" component={Link} href="/privacy" className={font.className}>Privacy policy</Anchor> </p>
-                            <p><Anchor c="#C0C0C0" component={Link} href="/disclaimer" className={font.className}>Disclaimer </Anchor> </p>
+                            <Title order={3} c="#ADFF2F" className={fonts.className}>Policies</Title>
+                            <p><Anchor c="#E5E4E2" component={Link} href="/terms" className={font.className}>Terms & Conditions</Anchor> </p>
+                            <p><Anchor c="#E5E4E2" component={Link} href="/privacy" className={font.className}>Privacy policy</Anchor> </p>
+                            <p><Anchor c="#E5E4E2" component={Link} href="/disclaimer" className={font.className}>Disclaimer </Anchor> </p>
                         </div>
                     </Group>
 
@@ -140,7 +140,7 @@ export function Footer() {
                                     />
 
                                     <Button
-                                        color={subscribed ? 'green' : '#24C41C'}
+                                        color={subscribed ? 'green' : '#ADFF2F'}
                                         onClick={handleSubscribe}
                                         // disabled={!email || subscribed || invalidEmail}
                                         mt={8} variant='outline' fullWidth type="submit" className={font.className}>
@@ -159,18 +159,18 @@ export function Footer() {
                                             classNames: classes,
                                         })
                                     }
-                                    mt={8} variant='outline' color='#24C41C' fullWidth type="submit" className={font.className}>
+                                    mt={8} variant='outline' color='#ADFF2F' fullWidth type="submit" className={font.className}>
                                     Successfully Subscribed
                                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 96 96">
                                         <path
                                             d="M40.2 12.6c4.5-3.8 11.1-3.8 15.6 0l2.1 1.8c1.9 1.6 4.3 2.6 6.8 2.8l2.8.2c5.9.5 10.5 5.1 11 11l.2 2.8c.2 2.5 1.2 4.9 2.8 6.8l1.8 2.1c3.8 4.5 3.8 11.1 0 15.6l-1.8 2.1c-1.6 1.9-2.6 4.3-2.8 6.8l-.2 2.8c-.5 5.9-5.1 10.5-11 11l-2.8.2c-2.5.2-4.9 1.2-6.8 2.8l-2.1 1.8c-4.5 3.8-11.1 3.8-15.6 0l-2.1-1.8c-1.9-1.6-4.3-2.6-6.8-2.8l-2.8-.2c-5.9-.5-10.5-5.1-11-11l-.2-2.8c-.2-2.5-1.2-4.9-2.8-6.8l-1.8-2.1c-3.8-4.5-3.8-11.1 0-15.6l1.8-2.1c1.6-1.9 2.6-4.3 2.8-6.8l.2-2.8c.5-5.9 5.1-10.5 11-11l2.8-.2c2.5-.2 4.9-1.2 6.8-2.8l2.1-1.8z"
-                                            fill="#24C41C"
+                                            fill="#ADFF2F"
                                             stroke="#000"
                                             strokeWidth="5"
                                         />
                                         <path
                                             d="M35.5 49.9l5.1 5.1c2 2 5.1 2 7.1 0l14.8-14.8"
-                                            fill="#24C41C"
+                                            fill="#ADFF2F"
                                             stroke="#000"
                                             strokeLinecap="round"
                                             strokeWidth="5"

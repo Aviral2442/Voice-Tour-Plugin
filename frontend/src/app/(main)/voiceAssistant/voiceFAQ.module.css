@@ -26,26 +26,24 @@
   
     @media (max-width: $mantine-breakpoint-xs) {
       font-size: rem(28px);
-      text-align: center;
+      text-align: start;
     }
   }
   
   .highlight {
     /* color: light-dark(var(--mantine-color-blue-6), var(--mantine-color-blue-4));
      */
-     color: #24C41C;
+     color: #ADFF2F;
   }
   
   .description {
     margin: auto;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-    color: #C0C0C0;
+    color: #E5E4E2;
   
-    @media (max-width: $mantine-breakpoint-xs) {
-      text-align: center;
-      font-size: var(--mantine-font-size-md);
+    @media (max-width: $mantine-breakpoint-sm) {
+      text-align: start;
     }
   }
   
@@ -60,8 +58,8 @@
   }
   
   .control {
-    border: 2px solid #24C41C;
-    color: #24C41C;
+    border: 2px solid #ADFF2F;
+    color: #ADFF2F;
     letter-spacing: 1px;
     background-color: black;
     &:not(:first-of-type) {
@@ -79,7 +77,7 @@
     }
   }
   .controls :hover {
-    color: #24C41C;
+    color: #ADFF2F;
    background-color: #28282B;
   }
 

@@ -250,7 +250,7 @@ export function SignUp(props) {
             </Anchor>
             <Button type="submit" variant="outline" color="black" className={classes.button}
             >
-              <p className={classes.p}>Sign Up</p>
+              <span className={classes.p}>Sign Up</span>
             </Button>
           </Group>
         </form>

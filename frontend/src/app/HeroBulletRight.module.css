@@ -97,12 +97,12 @@ font-size: 17px;
   }
 }
 .Button  {
-  color: #66ff00;
+  color: #ADFF2F;
   background: transparent;
 }
 .Button:hover {
-  color: #66ff00;
-  border: 1px solid #66ff00;
+  color: #ADFF2F;
+  border: 1px solid #ADFF2F;
   border-radius: 10px;
   background: transparent;
   

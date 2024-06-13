@@ -50,114 +50,113 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section  >
-        <Box mx="auto" className={classes.Box} >
 
-          <Container size='lg'>
-            <div className={classes.inner}>
-              <div className={classes.content} data-aos="fade-up">
-                <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br />
-                  <span className={clsx(classes.subtitle, font.className)}>VoiceTourNavigator </span><br />
-                  Plugin System</Title>
-                <Text mt="md" size='lg' className={clsx(classes.description, fontss.className)}>
-                  Revolutionizing Website Navigation with Voice Technology
-                </Text>
 
-                <List className={clsx(classes.List, fontss.className)} size="md" mt="xl" spacing="sm"
+      <Box mx="auto" className={classes.Box} >
+        <Container size='lg'>
+          <div className={classes.inner}>
+            <div className={classes.content} data-aos="fade-up">
+              <Title className={classes.title}><span className={clsx(classes.highlight, whisper.className)}>Welcome to</span> <br />
+                <span className={clsx(classes.subtitle, font.className)}>VoiceTourNavigator</span><br />
+                Plugin System</Title>
+              <Text mt="md" size='lg' className={clsx(classes.description, fontss.className)}>
+                Revolutionizing Website Navigation with Voice Technology
+              </Text>
 
-                  icon={
-                    <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#24C41C' }} >
-                      <IconCheck
-                        style={{ width: rem(12), height: rem(12) }}
-                        stroke={5}
-                        color='black'
-                      />
-                    </ThemeIcon>
-                  }
+              <List className={clsx(classes.List, fontss.className)} size="md" mt="xl" spacing="sm"
+                icon={
+                  <ThemeIcon size={20} radius="xl" style={{ backgroundColor: '#ADFF2F' }} >
+                    <IconCheck
+                      style={{ width: rem(12), height: rem(12) }}
+                      stroke={5}
+                      color='black'
+                    />
+                  </ThemeIcon>
+                }
+              >
+
+                <List.Item>
+                  <b>Voice-Based Navigation</b>
+                </List.Item>
+                <List.Item>
+                  <b>Personalized Website Tours</b>
+                </List.Item>
+                <List.Item>
+                  <b>Plugin Customization</b>
+                </List.Item>
+                <List.Item>
+                  <b>Intuitive User Experience</b>
+                </List.Item>
+                <List.Item>
+                  <b>Continuous Improvement</b>
+                </List.Item>
+              </List>
+
+
+              <Group className={clsx(classes.controls, fontbutton.className)} >
+                <Menu position="right" offset={1} withArrow arrowPosition="center" >
+                  <Menu.Target>
+                    <Button
+                      size="sm"
+                      className={classes.controlfirst}
+                      variant="outline"
+                      color='#ADFF2F'
+                      radius="md"
+                      fz={18}
+                    >
+                      Get started
+                    </Button>
+                  </Menu.Target>
+                  <Menu.Dropdown bg={"#262525"} w={190} ta={"center"}>
+
+                    <Menu.Item
+                      component={Link}
+                      href="/voiceDOCs"
+                      ta={"center"}
+                      c={"#ADFF2F"}
+                      fz={18}
+                      className={fontbutton.className}
+                    >
+                      Voice DOCs
+                    </Menu.Item>
+                    <Menu.Item
+                      component={Link}
+                      href="/tourDOCs"
+                      ta={"center"}
+                      c={"#ADFF2F"}
+                      fz={18}
+                      className={fontbutton.className}
+                    >
+                      Tour DOCs
+                    </Menu.Item>
+
+                  </Menu.Dropdown>
+                </Menu>
+
+
+                <Button
+                  component={Link}
+                  href="https://github.com/Aviral2442/Voice-Tour-Plugin"
+                  size="sm"
+                  variant="outline"
+                  color='#ADFF2F'
+                  radius="md"
+                  fz={18}
+                  className={classes.control}
+                  leftSection={<GithubIcon size={24} />}
                 >
-                  
-                  <List.Item>
-                    <b>Voice-Based Navigation</b>
-                  </List.Item>
-                  <List.Item>
-                    <b>Personalized Website Tours</b>
-                  </List.Item>
-                  <List.Item>
-                    <b>Plugin Customization</b>
-                  </List.Item>
-                  <List.Item>
-                    <b>Intuitive User Experience</b>
-                  </List.Item>
-                  <List.Item>
-                    <b>Continuous Improvement</b>
-                  </List.Item>
-                </List>
-
-
-                <Group className={clsx(classes.controls,fontbutton.className)} >
-                  <Menu position="right" offset={1} withArrow arrowPosition="center" >
-                    <Menu.Target>
-                      <Button
-                        size="sm"
-                        className={classes.controlfirst}
-                        variant="outline"
-                        color='#24C41C'
-                        radius="md"
-                        fz={18}                        
-                      >
-                        Get started
-                      </Button>
-                    </Menu.Target>
-                    <Menu.Dropdown bg={"#262525"} w={190} ta={"center"}>
-
-                      <Menu.Item
-                        component={Link}
-                        href="/voiceDOCs"
-                        ta={"center"}
-                        c={"#24C41C"}
-                        fz={18}
-                        className={fontbutton.className}
-                      >
-                        Voice DOCs
-                      </Menu.Item>
-                      <Menu.Item
-                        component={Link}
-                        href="/tourDOCs"
-                        ta={"center"}
-                        c={"#24C41C"}
-                        fz={18}
-                        className={fontbutton.className}
-                      >
-                        Tour DOCs
-                      </Menu.Item>
-
-                    </Menu.Dropdown>
-                  </Menu>
-
-
-                  <Button
-                    component={Link}
-                    href="https://github.com/Aviral2442/Voice-Tour-Plugin"
-                    size="sm"
-                    variant="outline"
-                    color='#24C41C'
-                    radius="md"
-                    fz={18}
-                    className={classes.control}
-                    leftSection={<GithubIcon size={24} />}
-                  >
-                    GitHub
-                  </Button>
-                </Group>
-
-              </div>
-              <Image src="voicesearchmain.jpg" alt='voice search ' className={classes.image} data-aos="fade-up" />
+                  GitHub
+                </Button>
+              </Group>
 
             </div>
-          </Container>
+            <Image src="voicesearchmain.jpg" alt='voice search ' className={classes.image} data-aos="fade-up" />
 
-        </Box>
-      </section>
+          </div>
+        </Container>
+
+      </Box>
+
 
       <FeaturesCards />
 

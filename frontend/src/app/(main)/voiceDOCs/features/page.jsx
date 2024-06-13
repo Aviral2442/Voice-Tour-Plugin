@@ -1,12 +1,12 @@
 'use client'
 import React from 'react'
-import { Text, Title } from '@mantine/core'
+import { Container, Text, Title } from '@mantine/core'
 import { IconCornerDownRightDouble } from '@tabler/icons-react'
 import classes from './features.module.css'
 
 const Features = () => {
     return (
-        <div className={classes.mainContainer} >
+        <Container fluid className={classes.mainContainer} >
 
             <Title pt={'20'} order={1} c="#ffffff">Feature&apos;s </Title>
 
@@ -67,7 +67,7 @@ const Features = () => {
                 Voice Assistant plugin, adding new features and enhancements based on user feedback and technological advancements. Our support
                 team is always ready to assist you with any questions or issues.</Text>
 
-        </div>
+        </Container>
     )
 }
 

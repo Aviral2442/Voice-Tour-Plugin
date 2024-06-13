@@ -1,6 +1,5 @@
 'use client';
 import { AppProvider } from '@/context/AppContext';
-import { VoiceProvider } from '@/context/VoiceContext';
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
 

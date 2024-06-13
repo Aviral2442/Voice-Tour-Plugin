@@ -1,12 +1,20 @@
 .responsiveContainer {
 	max-width: rem(300px);
 
-	@media (min-width: em(400px)) {
-		max-width: rem(400px);
+	@media (min-width: em(900px)) {
+		max-width: rem(900px);
 	}
 
 	@media (min-width: em(600px)) {
 		max-width: rem(600px);
+	}
+
+	@media (max-width: $mantine-breakpoint-md) {
+		height: auto;
+		width: auto;
+
+
+
 	}
 
 }
@@ -17,6 +25,7 @@
 	@media (max-width: $mantine-breakpoint-sm) {
 		padding-right: 0;
 		margin-top: var(--mantine-spacing-xl);
+
 	}
 }
 
@@ -25,12 +34,12 @@
 	align-items: center;
 	padding: calc(var(--mantine-spacing-xl) * 2);
 	border-radius: var(--mantine-radius-md);
-	border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
 	background-color: black;
 
 	@media (max-width: $mantine-breakpoint-sm) {
 		flex-direction: column-reverse;
 		padding: var(--mantine-spacing-xl);
+
 	}
 }
 
@@ -39,43 +48,32 @@
 	backdrop-filter: blur(100px);
 	-webkit-backdrop-filter: blur(0px);
 	border-radius: 10px;
-	border-left: 5px solid #24C41C;
-	color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+	background-color: #262525;
+	border-left: 5px solid #ADFF2F;
+	color: white;
 
 
 }
 
 .title {
-	color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-	font-family:
-		Greycliff CF,
-		var(--mantine-font-family);
 	font-weight: 600;
 	text-align: center;
 	font-size: 25px;
 }
 
-.text {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-	text-align: center;
-	margin-top: 5px;
 
-	font-size: 17px;
-}
 
 .Button {
 	position: relative;
 	width: 50%;
 	padding: 10px 20px;
 	border-radius: 7px;
-	border: 1px solid #24C41C;
+	border: 1px solid #ADFF2F;
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 600;
 	letter-spacing: 2px;
 	background: transparent;
-	color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 	overflow: hidden;
 	box-shadow: 0 0 0 0 transparent;
 	-webkit-transition: all 0.2s ease-in;
@@ -84,7 +82,7 @@
 }
 
 .Button:hover {
-	background: #24C41C;
+	background: #ADFF2F;
 	color: black;
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
@@ -157,8 +155,8 @@
 	align-items: center;
 	padding: 10px 32px;
 	gap: 15px;
-	background-color: #24C41C;
-	outline: 3px #24C41C solid;
+	background-color: #ADFF2F;
+	outline: 3px #ADFF2F solid;
 	outline-offset: -3px;
 	border-radius: 5px;
 	border: none;
@@ -179,11 +177,11 @@
 
 .button:hover {
 	background-color: transparent;
-	color: #24C41C;
+	color: #ADFF2F;
 }
 
 .button:hover .p {
-	color:#24C41C;
+	color: #ADFF2F;
 }
 
 .button:hover svg path {
@@ -192,6 +190,5 @@
 
 .subtitle {
 	font-size: 35px;
-	color: #24C41C;
-
+	color: #ADFF2F;
 }

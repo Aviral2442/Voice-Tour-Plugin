@@ -5,6 +5,10 @@
 
 .item {
     display: flex;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        display: block;
+    }
 }
 
 .itemIcon {
@@ -18,7 +22,7 @@
 
 .itemDescription {
     max-width: 400px;
-    color: #D6D6E2;
+    color: #E5E4E2;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -35,13 +39,15 @@
     color: white;
     font-size: rem(36px);
     font-weight: 900;
+    text-align: center;
 
     @media (max-width: $mantine-breakpoint-sm) {
-        font-size: rem(24px);
+        font-size: rem(26px);
+        text-align: start;
     }
 }
 
 
 .highlight {
-    color: #24C41C;
+    color: #ADFF2F;
 }

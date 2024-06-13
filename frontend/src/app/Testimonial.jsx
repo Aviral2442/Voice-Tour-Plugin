@@ -19,14 +19,13 @@ const Testimonial = () => {
     const autoplay = useRef(Autoplay({ delay: 2000 }));
     return (
         <>
-            <Title order={1} align="center" className={clsx(classes.Title,fontss.className)}>
-                Read trusted <span style={{ color: '#24C41C' }}>reviews</span> from our <span style={{ color: '#24C41C' }}>customers</span>
+            <Title order={1}  className={clsx(classes.Title,fontss.className)}>
+                Read trusted <span style={{ color: '#ADFF2F' }}>reviews</span> from our <span style={{ color: '#ADFF2F' }}>customers</span>
             </Title>
             <Carousel
                 className={classes.Carousel}
                 withIndicators
                 classNames={classes}
-
                 height={350}
                 slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
                 nextControlIcon={<IconArrowBadgeRight style={{ width: rem(26), height: rem(26) }} />}
@@ -38,12 +37,12 @@ const Testimonial = () => {
                 onMouseLeave={autoplay.current.reset}
             >
                 <Carousel.Slide>
-                    <Container className={classes.Container}>
+                    <Container className={classes.Container} fluid>
                         <Paper radius="md" withBorder className={classes.cardsquare} >
 
                             <Grid grow gutter="xl" >
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#ADFF2F'  >
                                         <Avatar src='testimonial1.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -72,12 +71,12 @@ const Testimonial = () => {
                     </Container>
                 </Carousel.Slide>
                 <Carousel.Slide>
-                    <Container className={classes.Container} >
+                    <Container className={classes.Container} fluid>
                         <Paper radius="md" withBorder className={classes.cardsquare} >
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#ADFF2F'  >
                                         <Avatar src='testimonial2.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -107,12 +106,12 @@ const Testimonial = () => {
                 </Carousel.Slide>
 
                 <Carousel.Slide>
-                    <Container className={classes.Container}>
+                    <Container className={classes.Container} fluid>
                         <Paper radius="md" withBorder className={classes.cardsquare} >
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#ADFF2F'  >
                                         <Avatar src='testimonial3.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -143,12 +142,12 @@ const Testimonial = () => {
 
 
                 <Carousel.Slide>
-                    <Container className={classes.Container}>
+                    <Container className={classes.Container} fluid>
                         <Paper radius="md" withBorder className={classes.cardsquare} >
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#ADFF2F'  >
                                         <Avatar src='testimonial14.avif' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -178,12 +177,12 @@ const Testimonial = () => {
                 </Carousel.Slide>
 
                 <Carousel.Slide>
-                    <Container className={classes.Container}>
+                    <Container className={classes.Container} fluid>
                         <Paper radius="md" withBorder className={classes.cardsquare} >
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#ADFF2F'  >
                                         <Avatar src='testimonial5.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>
@@ -213,12 +212,12 @@ const Testimonial = () => {
                 </Carousel.Slide>
 
                 <Carousel.Slide>
-                    <Container className={classes.Container}>
+                    <Container className={classes.Container} fluid>
                         <Paper radius="md" withBorder className={classes.cardsquare} >
 
                             <Grid grow gutter="xl">
                                 <Grid.Col span={3} >
-                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#24C41C'  >
+                                    <ActionIcon className={classes.icon1} size={65} radius='xl' color='#ADFF2F'  >
                                         <Avatar src='testimonial6.jpg' alt="it's me" style={{ width: rem(62), height: rem(62) }} />
 
                                     </ActionIcon>

@@ -29,7 +29,7 @@
   }
   .text{
     margin-top: 10px;
-    
+    color: #E5E4E2;
   
     @media (max-width: $mantine-breakpoint-xs) {
       font-size: rem(16px);
@@ -40,7 +40,7 @@
   
   .highlight {
     position: relative;
-    background-color: #24C41C;
+    background-color: #ADFF2F;
     color: black;
     border-radius: var(--mantine-radius-sm);
     padding: rem(4px) rem(12px);

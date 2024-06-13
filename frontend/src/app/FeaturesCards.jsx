@@ -10,9 +10,10 @@ import {
     Container,
     rem,
     useMantineTheme,
-    Box
+    Box,
+    Image
 } from "@mantine/core"
-import {  IconMicrophone, IconMapSearch, IconPlugConnected } from "@tabler/icons-react"
+import { IconMicrophone, IconMapSearch, IconPlugConnected } from "@tabler/icons-react"
 import classes from "./FeaturesCards.module.css"
 import { Josefin_Sans, Rammetto_One } from 'next/font/google'
 import clsx from 'clsx'
@@ -21,26 +22,26 @@ import Aos from 'aos'
 
 const fonts = Rammetto_One({ subsets: ['latin'], weight: ['400'] });
 
-const font = Josefin_Sans({ subsets: ['latin'], weight: ['100','400'] });
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
 
 const mockdata = [
     {
         title: "Activate the Voice Navigator",
         description:
             "Simply click the Activate Assistant button or use the voice command to start interacting with our intelligent assistant.",
-        icon: IconMicrophone
+        image: "volume.png"
     },
     {
         title: "Navigate or Generate a Tour",
         description:
             "Choose between navigating the website using voice commands or generating a personalized tour to explore key sections.",
-        icon: IconMapSearch
+        image: "statistics.png"
     },
     {
         title: "Enhance with Plugins",
         description:
             "Customize your experience further by installing plugins to add new features or improve existing functionality.",
-        icon: IconPlugConnected
+        image: "solution.png"
     }
 ]
 
@@ -54,52 +55,55 @@ export default function FeaturesCards() {
             radius="md"
             className={classes.card}
             padding="xl"
-           
+
         >
-            <feature.icon
+            {/* <feature.icon
                 style={{ width: rem(50), height: rem(50) }}
                 stroke={2}
                 color='#24C41C'
                 
-            />
-            <Text fz="lg" fw={500} className={clsx(classes.cardTitle,font.className)} mt="md">
+            /> */}
+            <Image src={feature.image} alt='image ' style={{ width: rem(50), height: rem(50) }} />
+
+
+            <Text fz="lg" fw={500} className={clsx(classes.cardTitle, font.className)} mt="md">
                 {feature.title}
             </Text>
-            <Text fz="sm"  mt="sm" className={classes.cardDescription}>
+            <Text fz="sm" mt="sm" className={classes.cardDescription}>
                 {feature.description}
             </Text>
         </Card>
     ))
 
-    
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
 
 
     return (
-    
-        <Container size="lg" py="xl" data-aos="fade-up" pt={80} pb={130} >
-            <Group justify="center">
-                <Badge variant="filled" size="lg" radius="sm" bg='#24C41C' c='#262525' className={font.className}>
+
+        <Container size="lg" py="xl" className={classes.container} data-aos="fade-up" data-aos-duration="3000">
+            <Group className={classes.group}>
+                <Badge variant="filled" size="lg" radius="sm" bg='#ADFF2F' c='#262525' className={font.className}>
                     Best Navigator Plugin ever
                 </Badge>
             </Group>
 
-            <Title order={2} className={clsx(classes.title,fonts.className)} ta="center" mt="lg" c='white'>
-            Explore Our <span style={{color:'#24C41C'}}>Innovative</span>  Key Features
+            <Title order={2} className={clsx(classes.title, fonts.className)} mt="lg" c='white'>
+                Explore Our <span style={{ color: '#ADFF2F' }}>Innovative</span>  Key Features
             </Title>
 
-            <Text  className={classes.description} ta="center" mt="lg">
-            Discover our standout features: voice-based navigation, personalized tours, 
-            and customizable plugins, all designed to enhance your browsing
+            <Text className={classes.description} mt="lg">
+                Discover our standout features: voice-based navigation, personalized tours,
+                and customizable plugins, all designed to enhance your browsing
             </Text>
 
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={60}>
+            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={60} data-aos="zoom-in-up">
                 {features}
             </SimpleGrid>
         </Container>
-        
+
     )
 }
 

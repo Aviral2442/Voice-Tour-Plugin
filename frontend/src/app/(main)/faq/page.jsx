@@ -17,6 +17,10 @@ import FAQ from './FAQ.json'
 import Navbar from '../navbar'
 import { Footer } from '../footer'
 import clsx from 'clsx'
+import { Josefin_Sans } from 'next/font/google'
+
+const font = Josefin_Sans({ subsets: ['latin'], weight: ['100', '400'] });
+
 
 const categories = [
   {
@@ -86,7 +90,7 @@ const Faq = () => {
           <Accordion variant="separated">
             {
               faqList[selFaq].map((faqItem, index) => (
-                <Accordion.Item className={classes.item} value={faqItem.title} key={index}>
+                <Accordion.Item className={clsx(classes.item,font.className)} value={faqItem.title} key={index}>
                   <Accordion.Control>{faqItem.title}</Accordion.Control>
                   <Accordion.Panel>{faqItem.description}</Accordion.Panel>
                 </Accordion.Item>

@@ -53,7 +53,7 @@ const UseCases = () => {
         <div className={classes.item} key={item.image}>
             <ThemeIcon
                 className={classes.itemIcon}
-                size={60}
+                size={70}
                 color='black'
                 radius="md"
             >
@@ -61,7 +61,7 @@ const UseCases = () => {
             </ThemeIcon>
 
             <div>
-                <Text fw={700} fz="lg" className={clsx(classes.itemTitle, font.className)} c={"white"} >
+                <Text fw={700} fz="lg" className={clsx(classes.itemTitle, font.className)} >
                     {item.title}
                 </Text>
                 <Text 
@@ -71,20 +71,20 @@ const UseCases = () => {
         </div>
     ))
     return (
-        <Container size={"lg"} className={classes.wrapper}>
+        <Container size={"lg"} className={classes.wrapper} data-aos="fade-up"  data-aos-duration="3000"
+        >
         
-            <Title mt={"20"} mb={"15"} className={clsx(classes.title,fonts.className)} ta={"center"} data-aos="fade-up">
+            <Title mt={"20"} mb={"15"} className={clsx(classes.title,fonts.className)} >
                 Unlock <span className={classes.highlight}>Endless</span> Possibilities
 
             </Title>
-            <Container size={660} p={0} data-aos="fade-up">
+            <Container size={660} p={0} >
                 <Text  className={classes.description}>
                     Discover how our platform can be applied to various scenarios and industries, empowering users to navigate websites, conduct research, and streamline workflows with ease.
                 </Text>
             </Container>
             
-            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={50} data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
+            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={50} >
                 {items}
             </SimpleGrid>
         </Container>

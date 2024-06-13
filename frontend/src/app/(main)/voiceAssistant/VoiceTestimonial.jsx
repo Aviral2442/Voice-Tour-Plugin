@@ -17,8 +17,8 @@ const Testimonial = () => {
     const autoplay = useRef(Autoplay({ delay: 2000 }));
     return (
         <>
-            <Title order={1} align="center" className={clsx(classes.Title, fonts.className)}>
-                Read trusted <span style={{ color: '#24C41C' }}>reviews</span> from our <span style={{ color: '#32B531' }}>customers</span>
+            <Title order={1}  className={clsx(classes.Title, fonts.className)}>
+                Read trusted <span style={{ color: '#ADFF2F' }}>reviews</span> from our <span style={{ color: '#ADFF2F' }}>customers</span>
             </Title>
             <Carousel
                 className={classes.Carousel}

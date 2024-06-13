@@ -4,8 +4,8 @@
   padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
-  border-right: 2px solid #24C41C;
-  border-top: 2px solid #24C41C;
+  border-right: 2px solid #ADFF2F;
+  border-top: 2px solid #ADFF2F;
   background-color: black;
 }
 
@@ -22,18 +22,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #24C41C;
+  color: #ADFF2F;
 
   &:hover {
     color: black;
-    background-color: #24C41C;
+    background-color: #ADFF2F;
   }
 
   &[data-active] {
 
     &,
     &:hover {
-      background-color: #24C41C;
+      background-color: #ADFF2F;
       color: black;
     }
   }
@@ -58,7 +58,7 @@
 
     &,
     &:hover {
-      background-color: #24C41C;
+      background-color: #ADFF2F;
       color: black;
     }
   }

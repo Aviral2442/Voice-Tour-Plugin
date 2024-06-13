@@ -7,7 +7,7 @@
 .header {
   height: rem(400px);
   padding-top: var(--mantine-spacing-md);
-  background-color: #66ff00;
+  background-color: #ADFF2F;
   background-size: cover;
   display: flex;
   align-items: flex-end;
@@ -25,7 +25,7 @@
   }
 }
 .Title{
-  color: white;
+  color: black;
   position: relative;
   z-index: 1;
   font-size: rem(76px);
@@ -45,7 +45,7 @@
 }
 
 .title {
-  color: #66ff00;
+  color: #ADFF2F;
   position: relative;
   z-index: 1;
   font-size: rem(56px);
@@ -109,11 +109,14 @@
 .item {
     border-radius: var(--mantine-radius-md);
   margin-bottom: var(--mantine-spacing-lg);
-  border: rem(1px) solid #66ff00;
+}
+.item:hover {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+  border: 2px solid #ADFF2F;
 }
 
 .activeFaq{
-  border: 2px solid #66ff00;
+  border: 2px solid #ADFF2F;
   transform: scale(1.05);
   transition-duration: 0.3s;
 }

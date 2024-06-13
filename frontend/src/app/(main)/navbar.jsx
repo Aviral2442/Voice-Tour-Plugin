@@ -77,19 +77,18 @@ function Navbar() {
   const displayLoginOptions = () => {
     if (loggedIn) {
       return <Menu
-      withArrow
-      offset={5}
+        withArrow
+        offset={5}
         width={190}
         position="bottom-end"
         transitionProps={{ transition: 'pop-top-right' }}
         onClose={() => setUserMenuOpened(false)}
         onOpen={() => setUserMenuOpened(true)}
-        
         withinPortal
       >
         <Menu.Target>
           <UnstyledButton
-            className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
+            className={clsx(classes.user, { [classes.userActive]: userMenuOpened })}
           >
             <Group gap={7}>
 
@@ -108,7 +107,7 @@ function Navbar() {
             fz={16}
             className={fonts.className}
             leftSection={
-              <svg style={{ width: rem(16), height: rem(16) }}   viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <svg style={{ width: rem(16), height: rem(16) }} viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0h256v256H0z" fill="none" />
                 <path
                   className="colorStroke000000 svgStroke"
@@ -202,7 +201,7 @@ function Navbar() {
         <Group justify='space-between' h="100%" >
 
           <Anchor href="http://localhost:3000/" underline="never">
-            <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
+            <Image src="LOGO2-removebg-preview.png" alt="VoiceTour Navigator" className={classes.Image} />
           </Anchor>
 
 
@@ -229,7 +228,7 @@ function Navbar() {
 
             <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
               from: '#24C41C',
-              to: '#39FF14', deg: 0
+              to: '#ADFF2F', deg: 0
             }}>
               <IconSearch style={{ width: '70%', height: '70%', color: '#282828' }} stroke={2} />
             </ActionIcon>

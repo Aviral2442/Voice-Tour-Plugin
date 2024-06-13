@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border-bottom: 6px solid #24C41C;
+  border-bottom: 6px solid #ADFF2F;
   border-radius: 1rem;
   background-color: #28282B;
   width: 100%;
@@ -31,29 +31,29 @@
 }
 
 .questionmark {
-  color: #24C41C;
+  color: #ADFF2F;
   font-size: 3rem;
 
 }
 
 .Title {
-  color: #24C41C;
+  color: #ADFF2F;
   font-size: 4rem;
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(38px);
     font-weight: 500;
-    text-align: center;
+    text-align: start;
   }
 }
 
 .Descript {
-  color: #C0C0C0;
+  color: #E5E4E2;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: var(--mantine-font-size-md);
-    text-align: center;
+    text-align: start;
   }
 }

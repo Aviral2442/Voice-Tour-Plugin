@@ -9,11 +9,12 @@
   color: white;
   font-size: rem(36px);
   font-weight: 900;
+  text-align: center;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(24px);
-
+    font-size: rem(26px);
     margin-top: -120px;
+    text-align: start;
   }
 }
 
@@ -25,18 +26,24 @@
   background: rgb(173, 179, 200);
   background: linear-gradient(180deg, rgba(173, 179, 200, 1) 20%, rgba(206, 208, 226, 1) 80%);
   -webkit-background-clip: text;
-
+text-align: center;
 
   &::after {
     content: '';
     display: block;
-    background-color: #24C41C;
+    background-color: #ADFF2F;
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: none;
+   }
   }
+  @media (max-width: $mantine-breakpoint-sm) {
+    text-align: start;
+ }
 }
 
 .card {
@@ -44,7 +51,7 @@
   color: black;
   font-weight: bold;
   background-color: #28282B;
-  border-bottom: 4px solid #24C41C;
+  border-bottom: 4px solid #ADFF2F;
 
   box-sizing: border-box;
   box-shadow: 12px 17px 51px rgba(119, 107, 107, 0.22);
@@ -78,7 +85,7 @@
     content: ' ';
 
     display: block;
-    background-color: #24C41C;
+    background-color: #ADFF2F;
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
@@ -89,6 +96,6 @@
 
 .cardDescription {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #C0C0C0;
+  color: #E5E4E2;
 
 }

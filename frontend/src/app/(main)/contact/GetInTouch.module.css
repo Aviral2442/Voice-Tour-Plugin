@@ -4,7 +4,7 @@
     background-color: black;
     border-radius: var(--mantine-radius-lg);
     padding: rem(4px);
-    border: 2px solid #24C41C;
+    border: 2px solid #ADFF2F;
   
     @media (max-width: $mantine-breakpoint-sm) {
       flex-direction: column;
@@ -57,7 +57,7 @@
     border: rem(1px) solid transparent;
     padding: var(--mantine-spacing-xl);
     flex: 0 0 rem(280px);
-    background-color:#24C41C; 
+    background-color:#ADFF2F; 
   
     @media (max-width: $mantine-breakpoint-sm) {
       margin-bottom: var(--mantine-spacing-sm);
@@ -78,7 +78,7 @@
   }
   
   .control {
-    background-color: #24C41C;
+    background-color: #ADFF2F;
     color: black;
     @media (max-width: $mantine-breakpoint-sm) {
       flex: 1;

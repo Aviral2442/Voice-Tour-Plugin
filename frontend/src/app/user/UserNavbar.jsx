@@ -177,8 +177,8 @@ export function UserNavbar() {
 
 
                         <ActionIcon onClick={spotlight.open} variant="gradient" aria-label="Settings" size="lg" gradient={{
-                            from: '#24C41C',
-                            to: '#24C41C', deg: 0
+                            from: '#ADFF2F',
+                            to: '#ADFF2F', deg: 0
                         }}>
                             <IconSearch style={{ width: '70%', height: '70%', color: 'black' }} stroke={2} />
                         </ActionIcon>
@@ -255,13 +255,13 @@ export function UserNavbar() {
                 <div className={classes.inner}>
                     <Group>
                         <Anchor component={Link} href="http://localhost:3000/" underline="never">
-                            <Image src="/logo2.png" alt="VoiceTour Navigator" className={classes.Image} />
+                            <Image src="/LOGO2-removebg-preview.png" alt="VoiceTour Navigator" className={classes.Image} />
                         </Anchor>
                     </Group>
 
                     <Group>
                        
-                        <Button onClick={spotlight.open} bg={"#24C41C"} c={"black"} radius={"md"}>Search</Button>
+                        <Button onClick={spotlight.open} bg={"#ADFF2F"} c={"black"} radius={"md"}>Search</Button>
 
                         <Spotlight.Root query={query} onQueryChange={setQuery} >
                             <Spotlight.Search

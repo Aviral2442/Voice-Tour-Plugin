@@ -1,16 +1,18 @@
-
 .Paper {
-	background-color: #28282B;
+	background-color: #262525;
 	backdrop-filter: blur(100px);
 	-webkit-backdrop-filter: blur(0px);
 	border-radius: 10px;
-	border-left: 5px solid #24C41C;
+	border-left: 5px solid #ADFF2F;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
 	color: white;
 
 }
 
 .title {
-	color: #24C41C;
+	color: #ADFF2F;
 	margin-bottom: 10px;
 	font-weight: 600;
 	text-align: center;
@@ -44,7 +46,7 @@
 
 .control {
 
-	border-color: #24C41C;
+	border-color: #ADFF2F;
 }
 
 .button {
@@ -53,8 +55,8 @@
 	align-items: center;
 	padding: 10px 32px;
 	gap: 15px;
-	background-color: #24C41C;
-	outline: 3px #24C41C solid;
+	background-color: #ADFF2F;
+	outline: 3px #ADFF2F solid;
 	outline-offset: -3px;
 	border-radius: 5px;
 	border: none;
@@ -76,11 +78,11 @@
 
 .button:hover {
 	background-color: transparent;
-	color: #24C41C;
+	color: #ADFF2F;
 }
 
 .button:hover .p {
-	color: #24C41C;
+	color: #ADFF2F;
 }
 
 
@@ -90,7 +92,7 @@
 	width: 50%;
 	padding: 10px 20px;
 	border-radius: 7px;
-	border: 1px solid #24C41C;
+	border: 1px solid #ADFF2F;
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -105,7 +107,7 @@
 }
 
 .Button:hover {
-	background: #24C41C;
+	background: #ADFF2F;
 
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
@@ -158,7 +160,8 @@
 	-moz-transition: box-shadow 0.2s ease-in;
 	transition: box-shadow 0.2s ease-in;
 }
-.file{
+
+.file {
 	margin-top: 10px;
 	font-size: 15px;
 }

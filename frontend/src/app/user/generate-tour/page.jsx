@@ -165,8 +165,8 @@ const GenerateTour = () => {
 
                       <Radio.Group value={step.selectorType} onChange={v => updateStep(index, 'selectorType', v)} mb={20} >
                         <Group mt="xs" >
-                          <Radio value="id" label="id" color="gray" />
-                          <Radio value="class" label="class" color="green" />
+                          <Radio value="id" label="id" color="#ADFF2F" />
+                          <Radio value="class" label="class" color="#ADFF2F" />
                         </Group>
                       </Radio.Group>
 

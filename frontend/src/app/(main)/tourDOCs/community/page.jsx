@@ -26,7 +26,7 @@ const CommunityAndSupportPage = () => {
                 <p className={classes.para}>Explore our knowledge base for helpful articles, tutorials, and troubleshooting guides.</p>
                 <Anchor href="https://example.com/knowledge-base" target="_blank" rel="noopener noreferrer">
                     Visit Knowledge Base
-                    </Anchor>
+                </Anchor>
             </section>
         </Container>
     );

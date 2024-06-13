@@ -1,27 +1,55 @@
-.title {
-  font-size: rem(36px);
+.container {
+  padding-top: 100px;
+  margin-bottom: 100px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(24px);
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.group {
+  justify-content: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    justify-content: start;
+  }
+}
+
+.title {
+  font-size: rem(36px);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(26px);
+    text-align: start;
   }
 }
 
 .description {
-  max-width: rem(800px);
+  max-width: rem(900px);
   margin: auto;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #C0C0C0;
-
+  color: #E5E4E2;
+  text-align: center;
 
   &::after {
     content: '';
     display: block;
-    background-color: #24C41C;
+    background-color: #ADFF2F;
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    text-align: start;
   }
 }
 
@@ -47,7 +75,7 @@
 }
 
 .card:hover {
-  border: rem(2px) solid #24C41C;
+  border: rem(2px) solid #ADFF2F;
   /* transform: translateY(-10px); */
   /* border: 1px solid black; */
   transform: scale(1.09);
@@ -64,7 +92,7 @@
     content: ' ';
 
     display: block;
-    background-color: #24C41C;
+    background-color: #ADFF2F;
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
@@ -75,6 +103,6 @@
 
 .cardDescription {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #C0C0C0;
+  color: #E5E4E2;
 
 }

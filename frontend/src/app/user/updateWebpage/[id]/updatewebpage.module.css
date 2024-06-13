@@ -1,7 +1,7 @@
 .title {
  
   font-weight: 900;
-  color: #66ff00;
+  color: #ADFF2F;
 }
 
 .Button {
@@ -18,18 +18,18 @@
   margin-top: 10px;
   letter-spacing: 1px;
   padding: 10px;
-  background-color: #66ff00;
+  background-color: #ADFF2F;
   color: black;
 }
 
 .control:hover {
-  background-color: #66ff00;
+  background-color: #ADFF2F;
   color: black;
 }
 
 .paper {
   height: 80vh;
-  border-left: 3px solid #66ff00;
+  border-left: 3px solid #ADFF2F;
   backdrop-filter: blur(100px);
 	-webkit-backdrop-filter: blur(0px);
   color: white;

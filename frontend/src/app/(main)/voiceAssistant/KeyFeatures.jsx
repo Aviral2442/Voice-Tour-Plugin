@@ -60,7 +60,7 @@ const KeyFeatures = () => {
             </ThemeIcon>
 
             <div>
-                <Text fw={700} fz="lg" className={clsx(classes.itemTitle, font.className)} c={"white"} >
+                <Text fw={700} fz="lg" className={clsx(classes.itemTitle, font.className)} c={"#ADFF2F"} >
                     {item.title}
                 </Text>
                 <Text
@@ -70,14 +70,13 @@ const KeyFeatures = () => {
         </div>
     ))
     return (
-        <Container size={"lg"} className={classes.wrapper}>
+        <Container size={"lg"} className={classes.wrapper}  data-aos="fade-up">
 
-            <Title className={clsx(classes.title,fonts.className)} mb={60} ta={"center"} data-aos="fade-up">
+            <Title className={clsx(classes.title,fonts.className)} mb={60} >
                 Key <span className={classes.highlight}>Features</span>
             </Title>
             
-            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={30} data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
+            <SimpleGrid cols={{ base: 1, xs: 2 }} spacing={50} mt={30} >
                 {items}
             </SimpleGrid>
         </Container>

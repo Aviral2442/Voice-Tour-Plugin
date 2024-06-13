@@ -142,7 +142,7 @@ const Profile = () => {
                 </Flex>
               </Group>
               <Group >
-                <Button variant="filled" mr={"70"} c="black" bg="#fff" component="a" href="/user/profile" className={font.className}>
+                <Button variant="filled" mr={"70"} c="black" bg="#fff" component={Link} href="/user/profile" className={font.className}>
                   Refresh
                 </Button>
               </Group>
@@ -152,7 +152,7 @@ const Profile = () => {
       }
       {/* data for Tour Navigator */}
       <Container fluid p={10} className={classes.Container}>
-        <Badge radius="sm" size="xl" mb={10} bg={"#24C41C"} c={"black"} className={font.className}>Tours </Badge>
+        <Badge radius="sm" size="xl" mb={10} bg={"#ADFF2F"} c={"black"} className={font.className}>Tours </Badge>
         <Table className={clsx(classes.table, font.className)} horizontalSpacing="xl" highlightOnHover withColumnBorders withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}
@@ -177,7 +177,7 @@ const Profile = () => {
       </Container>
       {/* data for Voice Search */}
       <Container fluid p={10} mt={20} className={classes.Container}>
-        <Badge radius="sm" size="xl" mb={10} bg={"#24C41C"} c={"black"} className={font.className}>Webpages </Badge>
+        <Badge radius="sm" size="xl" mb={10} bg={"#ADFF2F"} c={"black"} className={font.className}>Webpages </Badge>
         <Table miw={500} className={clsx(classes.table, font.className)} horizontalSpacing="xl" highlightOnHover withColumnBorders withTableBorder>
           <Table.Thead
             className={clsx(classes.header, classes.scrolled)}

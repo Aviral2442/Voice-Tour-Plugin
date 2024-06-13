@@ -35,23 +35,22 @@
 }
 
 .title {
-
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+color: white;  
   line-height: 1;
   font-size: 45px;
   margin-bottom: 30px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: 24px;
-    text-align: center;
+    font-size: 30px;
+    text-align: start;
   }
 }
 .description{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #C0C0C0;
+  color: #E5E4E2;
+  @media (max-width: $mantine-breakpoint-sm) {
+    text-align: start;
+  }
 
 }
 

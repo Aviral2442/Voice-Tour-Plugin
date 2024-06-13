@@ -1,11 +1,11 @@
 'use client'
 import React from 'react'
-import { Card, Grid, Container, Title, Image, Text, Accordion } from "@mantine/core"
+import { Card, Grid, Container, Title, Image, Text, Accordion, Paper } from "@mantine/core"
 import classes from './faqs.module.css'
 
 const Faqs = () => {
     return (
-        <div>
+        <Container>
 
             <Title ta="center" order={1} mt={50} mb={30} >Frequently Asked Question</Title>
 
@@ -92,8 +92,8 @@ const Faqs = () => {
                 </Grid.Col>
             </Grid>
 
-            <div className='setup-and-installation' id='si'>
-                <Container size="sm" className={classes.wrapper}>
+            <Container  className='setup-and-installation' id='si'>
+                <Paper size="sm" bg={"black"} className={classes.wrapper}>
                     <Title ta="center">
                         Frequently Asked Questions
                     </Title>
@@ -163,11 +163,11 @@ const Faqs = () => {
                             <Accordion.Panel>Updates will be available on our website. You will receive notifications for any new updates, which can be applied by replacing the old script and CSS files with the new ones.</Accordion.Panel>
                         </Accordion.Item>
                     </Accordion>
-                </Container>
-            </div>
+                </Paper>
+            </Container>
 
-            <div className='Customization and Usage' id='cu'>
-                <Container size="sm" className={classes.wrapper}>
+            <Container className='Customization and Usage' id='cu'>
+                <Paper bg={"black"} size="sm" className={classes.wrapper}>
                     <Title ta="center">
                         Frequently Asked Questions
                     </Title>
@@ -225,11 +225,11 @@ const Faqs = () => {
                             <Accordion.Panel>Ensure that the script and CSS files are properly optimized and up-to-date. You can also contact our support team for further optimization tips.</Accordion.Panel>
                         </Accordion.Item>
                     </Accordion>
-                </Container>
-            </div>
+                </Paper>
+            </Container>
 
-            <div className='Quarry & Troubleshoot' id='qt'>
-                <Container size="sm" className={classes.wrapper}>
+            <Container className='Quarry & Troubleshoot' id='qt'>
+                <Paper bg={"black"} size="sm" className={classes.wrapper}>
                     <Title ta="center" >
                         Frequently Asked Questions
                     </Title>
@@ -308,10 +308,10 @@ const Faqs = () => {
                             </Accordion.Panel>
                         </Accordion.Item>
                     </Accordion>
-                </Container>
-            </div>
+                </Paper>
+            </Container>
 
-        </div>
+        </Container>
     )
 }
 

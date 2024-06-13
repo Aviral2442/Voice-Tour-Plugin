@@ -142,7 +142,7 @@ const Contact = () => {
                 </div>
 
                 <Group justify="flex-end" mt="md">
-                  <Button type="submit" variant='outline' color='#66ff00'
+                  <Button type="submit" variant='outline' color='#ADFF2F'
                     className={classes.control}>
                     Send message
                   </Button>

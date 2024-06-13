@@ -47,7 +47,7 @@ const VisionMission = () => {
       <feature.icon
         style={{ width: rem(50), height: rem(50) }}
         stroke={2}
-        color="#24C41C"
+        color="#ADFF2F"
       />
       <Text fz="lg" fw={500} className={clsx(classes.cardTitle, font.className)} mt="md">
         {feature.title}
@@ -65,11 +65,11 @@ const VisionMission = () => {
   return (
     <Container size="lg" py="xl" pt={180} pb={180} className={classes.Container}>
 
-      <Title className={clsx(classes.title,fonts.className)} ta="center"  c='white' data-aos="fade-up">
-        Embracing  <span style={{ color: '#24C41C' }}>Voice</span>  Technology
+      <Title className={clsx(classes.title,fonts.className)}   c='white' data-aos="fade-up">
+        Embracing  <span style={{ color: '#ADFF2F' }}>Voice</span>  Technology
       </Title>
 
-      <Text className={classes.description} ta="center" mt="sm" data-aos="fade-up">
+      <Text className={classes.description}  mt="sm" data-aos="fade-up">
         Explore the transformative power of voice technology in website interaction, redefining engagement and accessibility.
       </Text>
 

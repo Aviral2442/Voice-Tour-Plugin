@@ -9,7 +9,6 @@
   @media (max-width: $mantine-breakpoint-md) {
     margin: 0;
     padding: 0;
-
   }
 }
 
@@ -23,12 +22,12 @@
   color: white;
   height: 250px;
   width: 380px;
-  border: rem(2px) solid #413c3c;
+  border: rem(2px) solid #413c3c; 
 
 }
 
 .cardsquare:hover {
-  border: rem(2px) solid #24C41C;
+  border: rem(2px) solid #ADFF2F;
 }
 
 .icon {
@@ -36,11 +35,15 @@
   top: rem(-20px);
   left: calc(95% - rem(30px));
   background-color: black;
-  border: 1px solid #24C41C;
+  border: 1px solid #ADFF2F;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    display: none;
+  }
 }
 
 .name {
-  color: #24C41C;
+  color: #ADFF2F;
   font-size: 25px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.1;
@@ -50,11 +53,11 @@
   padding-top: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 13px;
-
+  
 }
 
 .icon1 {
-  background-color: #24C41C;
+  background-color: #ADFF2F;
   left: calc(70% - rem(30px));
 }
 
@@ -62,11 +65,12 @@
   width: rem(12px);
   height: rem(4px);
   transition: width 250ms ease;
-  background-color: #24C41C;
+  background-color: #ADFF2F;
 
   &[data-active] {
     width: rem(40px);
   }
+
 }
 
 .Container {
@@ -75,14 +79,22 @@
   align-items: center;
   padding: 50px;
 
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 50px;
+    justify-content: start;
+  }
 }
 
 .Title {
   color: white;
   font-size: rem(36px);
   margin-bottom: 25px;
+  text-align: center;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(24px);
+    padding: 10px;
+    font-size: rem(26px);
+    text-align: start;
+    margin-bottom: -30px;
   }
 }
