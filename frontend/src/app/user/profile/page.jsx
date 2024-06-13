@@ -67,7 +67,7 @@ const Profile = () => {
       <Table.Td>{row.overlaycolor}</Table.Td>
       <Table.Td>{row.width}</Table.Td>
       {/* <Table.Td>{new Date(row.createdAt).toLocaleString()}</Table.Td> */}
-      <Table.Th><Anchor href={"/user/updateTour/" + row._id} >Edit</Anchor></Table.Th>
+      <Table.Th><Link href={"/user/updateTour/" + row._id} >Edit</Link></Table.Th>
       <Table.Th><Button varient='light' color='red' onClick={e => deleteTour(row._id)} >Trash</Button></Table.Th>
 
     </Table.Tr>
@@ -115,7 +115,7 @@ const Profile = () => {
       <Table.Td>{row2.user}</Table.Td>
       <Table.Td>{row2.description}</Table.Td>
       <Table.Td>{new Date(row2.createdAt).toLocaleString()}</Table.Td>
-      <Table.Th><Anchor href={"/user/updateWebpage/" + row2._id} >Edit</Anchor></Table.Th>
+      <Table.Th><Link href={"/user/updateWebpage/" + row2._id} >Edit</Link></Table.Th>
 
       <Table.Td><Button varient='light' color='red' onClick={e => deleteWebpage(row2._id)} >Trash</Button></Table.Td>
 

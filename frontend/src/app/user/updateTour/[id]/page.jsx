@@ -82,7 +82,7 @@ const Page = () => {
       .then((response) => {
         console.log(response.status);
         if (response.status === 200) {
-          toast.success('Tour successfully created !');
+          toast.success('Tour Successfully Updated!');
           router.push('/user/profile');
 
         } else {

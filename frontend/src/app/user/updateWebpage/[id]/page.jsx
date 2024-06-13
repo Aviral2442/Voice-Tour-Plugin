@@ -67,7 +67,7 @@ const UpdateWebpage = () => {
         .then((response) => {
           console.log(response.status);
           if (response.status === 200) {
-            toast.success('Webpage Updated successfully');
+            toast.success('Webpage Successfully Updated!');
             router.push("/user/manage-webpage");
 
           } else {
